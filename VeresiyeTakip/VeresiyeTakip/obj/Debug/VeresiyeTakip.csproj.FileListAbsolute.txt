@@ -1,0 +1,314 @@
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\VeresiyeTakip\VeresiyeTakip\bin\Debug\VeresiyeTakip.exe
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\VeresiyeTakip\VeresiyeTakip\bin\Debug\VeresiyeTakip.pdb
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\VeresiyeTakip\VeresiyeTakip\bin\Debug\DevExpress.BonusSkins.v18.2.dll
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\VeresiyeTakip\VeresiyeTakip\bin\Debug\DevExpress.Data.v18.2.dll
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\VeresiyeTakip\VeresiyeTakip\bin\Debug\DevExpress.Printing.v18.2.Core.dll
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\VeresiyeTakip\VeresiyeTakip\bin\Debug\DevExpress.Sparkline.v18.2.Core.dll
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\VeresiyeTakip\VeresiyeTakip\bin\Debug\DevExpress.Utils.v18.2.dll
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\VeresiyeTakip\VeresiyeTakip\bin\Debug\DevExpress.XtraBars.v18.2.dll
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\VeresiyeTakip\VeresiyeTakip\bin\Debug\DevExpress.XtraEditors.v18.2.dll
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\VeresiyeTakip\VeresiyeTakip\bin\Debug\DevExpress.Pdf.v18.2.Core.dll
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\VeresiyeTakip\VeresiyeTakip\bin\Debug\DevExpress.Data.v18.2.xml
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\VeresiyeTakip\VeresiyeTakip\bin\Debug\DevExpress.Utils.v18.2.xml
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\VeresiyeTakip\VeresiyeTakip\bin\Debug\DevExpress.Sparkline.v18.2.Core.xml
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\VeresiyeTakip\VeresiyeTakip\bin\Debug\DevExpress.XtraBars.v18.2.xml
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\VeresiyeTakip\VeresiyeTakip\bin\Debug\DevExpress.XtraEditors.v18.2.xml
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\VeresiyeTakip\VeresiyeTakip\bin\Debug\DevExpress.Printing.v18.2.Core.xml
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\VeresiyeTakip\VeresiyeTakip\bin\Debug\DevExpress.Pdf.v18.2.Core.xml
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\VeresiyeTakip\VeresiyeTakip\bin\Debug\de\DevExpress.Data.v18.2.resources.dll
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\VeresiyeTakip\VeresiyeTakip\bin\Debug\es\DevExpress.Data.v18.2.resources.dll
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\VeresiyeTakip\VeresiyeTakip\bin\Debug\ja\DevExpress.Data.v18.2.resources.dll
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\VeresiyeTakip\VeresiyeTakip\bin\Debug\ru\DevExpress.Data.v18.2.resources.dll
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\VeresiyeTakip\VeresiyeTakip\bin\Debug\de\DevExpress.Utils.v18.2.resources.dll
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\VeresiyeTakip\VeresiyeTakip\bin\Debug\es\DevExpress.Utils.v18.2.resources.dll
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\VeresiyeTakip\VeresiyeTakip\bin\Debug\ja\DevExpress.Utils.v18.2.resources.dll
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\VeresiyeTakip\VeresiyeTakip\bin\Debug\ru\DevExpress.Utils.v18.2.resources.dll
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\VeresiyeTakip\VeresiyeTakip\bin\Debug\de\DevExpress.Sparkline.v18.2.Core.resources.dll
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\VeresiyeTakip\VeresiyeTakip\bin\Debug\es\DevExpress.Sparkline.v18.2.Core.resources.dll
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\VeresiyeTakip\VeresiyeTakip\bin\Debug\ja\DevExpress.Sparkline.v18.2.Core.resources.dll
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\VeresiyeTakip\VeresiyeTakip\bin\Debug\ru\DevExpress.Sparkline.v18.2.Core.resources.dll
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\VeresiyeTakip\VeresiyeTakip\bin\Debug\de\DevExpress.XtraBars.v18.2.resources.dll
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\VeresiyeTakip\VeresiyeTakip\bin\Debug\es\DevExpress.XtraBars.v18.2.resources.dll
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\VeresiyeTakip\VeresiyeTakip\bin\Debug\ja\DevExpress.XtraBars.v18.2.resources.dll
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\VeresiyeTakip\VeresiyeTakip\bin\Debug\ru\DevExpress.XtraBars.v18.2.resources.dll
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\VeresiyeTakip\VeresiyeTakip\bin\Debug\de\DevExpress.XtraEditors.v18.2.resources.dll
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\VeresiyeTakip\VeresiyeTakip\bin\Debug\es\DevExpress.XtraEditors.v18.2.resources.dll
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\VeresiyeTakip\VeresiyeTakip\bin\Debug\ja\DevExpress.XtraEditors.v18.2.resources.dll
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\VeresiyeTakip\VeresiyeTakip\bin\Debug\ru\DevExpress.XtraEditors.v18.2.resources.dll
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\VeresiyeTakip\VeresiyeTakip\bin\Debug\de\DevExpress.Printing.v18.2.Core.resources.dll
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\VeresiyeTakip\VeresiyeTakip\bin\Debug\es\DevExpress.Printing.v18.2.Core.resources.dll
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\VeresiyeTakip\VeresiyeTakip\bin\Debug\ja\DevExpress.Printing.v18.2.Core.resources.dll
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\VeresiyeTakip\VeresiyeTakip\bin\Debug\ru\DevExpress.Printing.v18.2.Core.resources.dll
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\VeresiyeTakip\VeresiyeTakip\bin\Debug\de\DevExpress.Pdf.v18.2.Core.resources.dll
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\VeresiyeTakip\VeresiyeTakip\bin\Debug\es\DevExpress.Pdf.v18.2.Core.resources.dll
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\VeresiyeTakip\VeresiyeTakip\bin\Debug\ja\DevExpress.Pdf.v18.2.Core.resources.dll
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\VeresiyeTakip\VeresiyeTakip\bin\Debug\ru\DevExpress.Pdf.v18.2.Core.resources.dll
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\VeresiyeTakip\VeresiyeTakip\obj\Debug\VeresiyeTakip.Ayarlar.resources
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\VeresiyeTakip\VeresiyeTakip\obj\Debug\VeresiyeTakip.Uygulama.resources
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\VeresiyeTakip\VeresiyeTakip\obj\Debug\VeresiyeTakip.Giris.resources
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\VeresiyeTakip\VeresiyeTakip\obj\Debug\VeresiyeTakip.Hakkinda.resources
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\VeresiyeTakip\VeresiyeTakip\obj\Debug\VeresiyeTakip.Properties.Resources.resources
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\VeresiyeTakip\VeresiyeTakip\obj\Debug\VeresiyeTakip.YedeklemeSistemi.resources
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\VeresiyeTakip\VeresiyeTakip\obj\Debug\VeresiyeTakip.csproj.GenerateResource.Cache
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\VeresiyeTakip\VeresiyeTakip\obj\Debug\VeresiyeTakip.exe.licenses
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\VeresiyeTakip\VeresiyeTakip\obj\Debug\VeresiyeTakip.exe
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\VeresiyeTakip\VeresiyeTakip\obj\Debug\VeresiyeTakip.pdb
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\VeresiyeTakip\VeresiyeTakip\bin\Debug\VeresiyeTakip.exe.config
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\VeresiyeTakip\VeresiyeTakip\bin\Debug\EntityFramework.dll
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\VeresiyeTakip\VeresiyeTakip\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\VeresiyeTakip\VeresiyeTakip\bin\Debug\EntityFramework.xml
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\VeresiyeTakip\VeresiyeTakip\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\VeresiyeTakip\VeresiyeTakip\obj\Debug\VeresiyeTakip.csprojAssemblyReference.cache
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\VeresiyeTakip\VeresiyeTakip\obj\Debug\VeresiyeTakip.csproj.CoreCompileInputs.cache
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\VeresiyeTakip\VeresiyeTakip\obj\Debug\VeresiyeTakip.csproj.CopyComplete
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\VeresiyeTakip\VeresiyeTakip\obj\Debug\VeresiyeTakip.Forms.CariKartEkle.resources
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\VeresiyeTakip\VeresiyeTakip\obj\Debug\VeresiyeTakip.Forms.CariKartGüncelle.resources
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\Yeni klasör\VeresiyeTakip\VeresiyeTakip\obj\Debug\VeresiyeTakip.csprojAssemblyReference.cache
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\Yeni klasör\VeresiyeTakip\VeresiyeTakip\obj\Debug\VeresiyeTakip.Ayarlar.resources
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\Yeni klasör\VeresiyeTakip\VeresiyeTakip\obj\Debug\VeresiyeTakip.Forms.CariKartEkle.resources
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\Yeni klasör\VeresiyeTakip\VeresiyeTakip\obj\Debug\VeresiyeTakip.Uygulama.resources
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\Yeni klasör\VeresiyeTakip\VeresiyeTakip\obj\Debug\VeresiyeTakip.Giris.resources
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\Yeni klasör\VeresiyeTakip\VeresiyeTakip\obj\Debug\VeresiyeTakip.Hakkinda.resources
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\Yeni klasör\VeresiyeTakip\VeresiyeTakip\obj\Debug\VeresiyeTakip.Properties.Resources.resources
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\Yeni klasör\VeresiyeTakip\VeresiyeTakip\obj\Debug\VeresiyeTakip.YedeklemeSistemi.resources
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\Yeni klasör\VeresiyeTakip\VeresiyeTakip\obj\Debug\VeresiyeTakip.csproj.GenerateResource.cache
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\Yeni klasör\VeresiyeTakip\VeresiyeTakip\obj\Debug\VeresiyeTakip.exe.licenses
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\Yeni klasör\VeresiyeTakip\VeresiyeTakip\obj\Debug\VeresiyeTakip.csproj.CoreCompileInputs.cache
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\Yeni klasör\VeresiyeTakip\VeresiyeTakip\obj\Debug\VeresiyeTakip.exe
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\Yeni klasör\VeresiyeTakip\VeresiyeTakip\obj\Debug\VeresiyeTakip.pdb
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\Yeni klasör\VeresiyeTakip\VeresiyeTakip\bin\Debug\VeresiyeTakip.exe.config
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\Yeni klasör\VeresiyeTakip\VeresiyeTakip\bin\Debug\VeresiyeTakip.exe
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\Yeni klasör\VeresiyeTakip\VeresiyeTakip\bin\Debug\VeresiyeTakip.pdb
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\Yeni klasör\VeresiyeTakip\VeresiyeTakip\bin\Debug\DevExpress.BonusSkins.v18.2.dll
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\Yeni klasör\VeresiyeTakip\VeresiyeTakip\bin\Debug\DevExpress.Data.v18.2.dll
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\Yeni klasör\VeresiyeTakip\VeresiyeTakip\bin\Debug\DevExpress.Printing.v18.2.Core.dll
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\Yeni klasör\VeresiyeTakip\VeresiyeTakip\bin\Debug\DevExpress.Sparkline.v18.2.Core.dll
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\Yeni klasör\VeresiyeTakip\VeresiyeTakip\bin\Debug\DevExpress.Utils.v18.2.dll
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\Yeni klasör\VeresiyeTakip\VeresiyeTakip\bin\Debug\DevExpress.XtraBars.v18.2.dll
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\Yeni klasör\VeresiyeTakip\VeresiyeTakip\bin\Debug\DevExpress.XtraEditors.v18.2.dll
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\Yeni klasör\VeresiyeTakip\VeresiyeTakip\bin\Debug\EntityFramework.dll
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\Yeni klasör\VeresiyeTakip\VeresiyeTakip\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\Yeni klasör\VeresiyeTakip\VeresiyeTakip\bin\Debug\DevExpress.Pdf.v18.2.Core.dll
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\Yeni klasör\VeresiyeTakip\VeresiyeTakip\bin\Debug\DevExpress.Data.v18.2.xml
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\Yeni klasör\VeresiyeTakip\VeresiyeTakip\bin\Debug\DevExpress.Utils.v18.2.xml
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\Yeni klasör\VeresiyeTakip\VeresiyeTakip\bin\Debug\DevExpress.Sparkline.v18.2.Core.xml
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\Yeni klasör\VeresiyeTakip\VeresiyeTakip\bin\Debug\DevExpress.XtraBars.v18.2.xml
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\Yeni klasör\VeresiyeTakip\VeresiyeTakip\bin\Debug\DevExpress.XtraEditors.v18.2.xml
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\Yeni klasör\VeresiyeTakip\VeresiyeTakip\bin\Debug\DevExpress.Printing.v18.2.Core.xml
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\Yeni klasör\VeresiyeTakip\VeresiyeTakip\bin\Debug\EntityFramework.xml
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\Yeni klasör\VeresiyeTakip\VeresiyeTakip\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\Yeni klasör\VeresiyeTakip\VeresiyeTakip\bin\Debug\DevExpress.Pdf.v18.2.Core.xml
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\Yeni klasör\VeresiyeTakip\VeresiyeTakip\bin\Debug\de\DevExpress.Data.v18.2.resources.dll
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\Yeni klasör\VeresiyeTakip\VeresiyeTakip\bin\Debug\es\DevExpress.Data.v18.2.resources.dll
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\Yeni klasör\VeresiyeTakip\VeresiyeTakip\bin\Debug\ja\DevExpress.Data.v18.2.resources.dll
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\Yeni klasör\VeresiyeTakip\VeresiyeTakip\bin\Debug\ru\DevExpress.Data.v18.2.resources.dll
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\Yeni klasör\VeresiyeTakip\VeresiyeTakip\bin\Debug\de\DevExpress.Utils.v18.2.resources.dll
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\Yeni klasör\VeresiyeTakip\VeresiyeTakip\bin\Debug\es\DevExpress.Utils.v18.2.resources.dll
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\Yeni klasör\VeresiyeTakip\VeresiyeTakip\bin\Debug\ja\DevExpress.Utils.v18.2.resources.dll
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\Yeni klasör\VeresiyeTakip\VeresiyeTakip\bin\Debug\ru\DevExpress.Utils.v18.2.resources.dll
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\Yeni klasör\VeresiyeTakip\VeresiyeTakip\bin\Debug\de\DevExpress.Sparkline.v18.2.Core.resources.dll
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\Yeni klasör\VeresiyeTakip\VeresiyeTakip\bin\Debug\es\DevExpress.Sparkline.v18.2.Core.resources.dll
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\Yeni klasör\VeresiyeTakip\VeresiyeTakip\bin\Debug\ja\DevExpress.Sparkline.v18.2.Core.resources.dll
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\Yeni klasör\VeresiyeTakip\VeresiyeTakip\bin\Debug\ru\DevExpress.Sparkline.v18.2.Core.resources.dll
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\Yeni klasör\VeresiyeTakip\VeresiyeTakip\bin\Debug\de\DevExpress.XtraBars.v18.2.resources.dll
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\Yeni klasör\VeresiyeTakip\VeresiyeTakip\bin\Debug\es\DevExpress.XtraBars.v18.2.resources.dll
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\Yeni klasör\VeresiyeTakip\VeresiyeTakip\bin\Debug\ja\DevExpress.XtraBars.v18.2.resources.dll
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\Yeni klasör\VeresiyeTakip\VeresiyeTakip\bin\Debug\ru\DevExpress.XtraBars.v18.2.resources.dll
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\Yeni klasör\VeresiyeTakip\VeresiyeTakip\bin\Debug\de\DevExpress.XtraEditors.v18.2.resources.dll
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\Yeni klasör\VeresiyeTakip\VeresiyeTakip\bin\Debug\es\DevExpress.XtraEditors.v18.2.resources.dll
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\Yeni klasör\VeresiyeTakip\VeresiyeTakip\bin\Debug\ja\DevExpress.XtraEditors.v18.2.resources.dll
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\Yeni klasör\VeresiyeTakip\VeresiyeTakip\bin\Debug\ru\DevExpress.XtraEditors.v18.2.resources.dll
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\Yeni klasör\VeresiyeTakip\VeresiyeTakip\bin\Debug\de\DevExpress.Printing.v18.2.Core.resources.dll
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\Yeni klasör\VeresiyeTakip\VeresiyeTakip\bin\Debug\es\DevExpress.Printing.v18.2.Core.resources.dll
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\Yeni klasör\VeresiyeTakip\VeresiyeTakip\bin\Debug\ja\DevExpress.Printing.v18.2.Core.resources.dll
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\Yeni klasör\VeresiyeTakip\VeresiyeTakip\bin\Debug\ru\DevExpress.Printing.v18.2.Core.resources.dll
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\Yeni klasör\VeresiyeTakip\VeresiyeTakip\bin\Debug\de\DevExpress.Pdf.v18.2.Core.resources.dll
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\Yeni klasör\VeresiyeTakip\VeresiyeTakip\bin\Debug\es\DevExpress.Pdf.v18.2.Core.resources.dll
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\Yeni klasör\VeresiyeTakip\VeresiyeTakip\bin\Debug\ja\DevExpress.Pdf.v18.2.Core.resources.dll
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\Yeni klasör\VeresiyeTakip\VeresiyeTakip\bin\Debug\ru\DevExpress.Pdf.v18.2.Core.resources.dll
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\Yeni klasör\VeresiyeTakip\VeresiyeTakip\obj\Debug\VeresiyeTakip.csproj.CopyComplete
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\Yeni klasör\VeresiyeTakip\VeresiyeTakip\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\Yeni klasör\VeresiyeTakip\VeresiyeTakip\bin\Debug\CrystalDecisions.ReportSource.dll
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\Yeni klasör\VeresiyeTakip\VeresiyeTakip\bin\Debug\CrystalDecisions.Shared.dll
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\Yeni klasör\VeresiyeTakip\VeresiyeTakip\bin\Debug\CrystalDecisions.ReportAppServer.DataDefModel.dll
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\Yeni klasör\VeresiyeTakip\VeresiyeTakip\bin\Debug\CrystalDecisions.ReportAppServer.ClientDoc.dll
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\Yeni klasör\VeresiyeTakip\VeresiyeTakip\bin\Debug\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\Yeni klasör\VeresiyeTakip\VeresiyeTakip\bin\Debug\CrystalDecisions.ReportAppServer.Controllers.dll
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\Yeni klasör\VeresiyeTakip\VeresiyeTakip\bin\Debug\CrystalDecisions.ReportAppServer.CommLayer.dll
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\Yeni klasör\VeresiyeTakip\VeresiyeTakip\bin\Debug\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\Yeni klasör\VeresiyeTakip\VeresiyeTakip\bin\Debug\CrystalDecisions.ReportAppServer.Prompting.dll
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\Yeni klasör\VeresiyeTakip\VeresiyeTakip\bin\Debug\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\Yeni klasör\VeresiyeTakip\VeresiyeTakip\bin\Debug\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\Yeni klasör\VeresiyeTakip\VeresiyeTakip\bin\Debug\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\Yeni klasör\VeresiyeTakip\VeresiyeTakip\bin\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\Yeni klasör\VeresiyeTakip\VeresiyeTakip\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\Yeni klasör\VeresiyeTakip\VeresiyeTakip\bin\Debug\stdole.dll
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\Yeni klasör\VeresiyeTakip\VeresiyeTakip\bin\Debug\CrystalDecisions.Windows.Forms.dll
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\Yeni klasör\VeresiyeTakip\VeresiyeTakip\bin\Debug\FlashControlV71.dll
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\Yeni klasör\VeresiyeTakip\VeresiyeTakip\bin\Debug\ShockwaveFlashObjects.dll
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\Yeni klasör\VeresiyeTakip\VeresiyeTakip\obj\Debug\VeresiyeTakip.Forms.frmYazdir.resources
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\Yeni klasör\VeresiyeTakip\VeresiyeTakip\obj\Debug\VeresiyeTakip.Forms.frmListeToplamları.resources
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\Yeni klasör\VeresiyeTakip\VeresiyeTakip\obj\Debug\VeresiyeTakip.Forms.frmFirmaİslemleri.resources
+C:\Users\Eminn\Desktop\VeresiyeTakipProje\Yeni klasör\VeresiyeTakip\VeresiyeTakip\obj\Debug\VeresiyeTakip.Forms.XtraForm1.resources
+C:\Users\Eminn\Desktop\VeresiyeTakip\VeresiyeTakip\bin\Debug\VeresiyeTakip.exe.config
+C:\Users\Eminn\Desktop\VeresiyeTakip\VeresiyeTakip\bin\Debug\VeresiyeTakip.exe
+C:\Users\Eminn\Desktop\VeresiyeTakip\VeresiyeTakip\bin\Debug\VeresiyeTakip.pdb
+C:\Users\Eminn\Desktop\VeresiyeTakip\VeresiyeTakip\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
+C:\Users\Eminn\Desktop\VeresiyeTakip\VeresiyeTakip\bin\Debug\CrystalDecisions.ReportSource.dll
+C:\Users\Eminn\Desktop\VeresiyeTakip\VeresiyeTakip\bin\Debug\CrystalDecisions.Shared.dll
+C:\Users\Eminn\Desktop\VeresiyeTakip\VeresiyeTakip\bin\Debug\CrystalDecisions.Windows.Forms.dll
+C:\Users\Eminn\Desktop\VeresiyeTakip\VeresiyeTakip\bin\Debug\DevExpress.BonusSkins.v18.2.dll
+C:\Users\Eminn\Desktop\VeresiyeTakip\VeresiyeTakip\bin\Debug\DevExpress.Data.v18.2.dll
+C:\Users\Eminn\Desktop\VeresiyeTakip\VeresiyeTakip\bin\Debug\DevExpress.Printing.v18.2.Core.dll
+C:\Users\Eminn\Desktop\VeresiyeTakip\VeresiyeTakip\bin\Debug\DevExpress.Sparkline.v18.2.Core.dll
+C:\Users\Eminn\Desktop\VeresiyeTakip\VeresiyeTakip\bin\Debug\DevExpress.Utils.v18.2.dll
+C:\Users\Eminn\Desktop\VeresiyeTakip\VeresiyeTakip\bin\Debug\DevExpress.XtraBars.v18.2.dll
+C:\Users\Eminn\Desktop\VeresiyeTakip\VeresiyeTakip\bin\Debug\DevExpress.XtraEditors.v18.2.dll
+C:\Users\Eminn\Desktop\VeresiyeTakip\VeresiyeTakip\bin\Debug\EntityFramework.dll
+C:\Users\Eminn\Desktop\VeresiyeTakip\VeresiyeTakip\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Eminn\Desktop\VeresiyeTakip\VeresiyeTakip\bin\Debug\FlashControlV71.dll
+C:\Users\Eminn\Desktop\VeresiyeTakip\VeresiyeTakip\bin\Debug\CrystalDecisions.ReportAppServer.DataDefModel.dll
+C:\Users\Eminn\Desktop\VeresiyeTakip\VeresiyeTakip\bin\Debug\CrystalDecisions.ReportAppServer.ClientDoc.dll
+C:\Users\Eminn\Desktop\VeresiyeTakip\VeresiyeTakip\bin\Debug\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+C:\Users\Eminn\Desktop\VeresiyeTakip\VeresiyeTakip\bin\Debug\CrystalDecisions.ReportAppServer.Controllers.dll
+C:\Users\Eminn\Desktop\VeresiyeTakip\VeresiyeTakip\bin\Debug\CrystalDecisions.ReportAppServer.CommLayer.dll
+C:\Users\Eminn\Desktop\VeresiyeTakip\VeresiyeTakip\bin\Debug\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+C:\Users\Eminn\Desktop\VeresiyeTakip\VeresiyeTakip\bin\Debug\CrystalDecisions.ReportAppServer.Prompting.dll
+C:\Users\Eminn\Desktop\VeresiyeTakip\VeresiyeTakip\bin\Debug\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+C:\Users\Eminn\Desktop\VeresiyeTakip\VeresiyeTakip\bin\Debug\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+C:\Users\Eminn\Desktop\VeresiyeTakip\VeresiyeTakip\bin\Debug\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+C:\Users\Eminn\Desktop\VeresiyeTakip\VeresiyeTakip\bin\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+C:\Users\Eminn\Desktop\VeresiyeTakip\VeresiyeTakip\bin\Debug\DevExpress.Pdf.v18.2.Core.dll
+C:\Users\Eminn\Desktop\VeresiyeTakip\VeresiyeTakip\bin\Debug\ShockwaveFlashObjects.dll
+C:\Users\Eminn\Desktop\VeresiyeTakip\VeresiyeTakip\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
+C:\Users\Eminn\Desktop\VeresiyeTakip\VeresiyeTakip\bin\Debug\stdole.dll
+C:\Users\Eminn\Desktop\VeresiyeTakip\VeresiyeTakip\bin\Debug\DevExpress.Data.v18.2.xml
+C:\Users\Eminn\Desktop\VeresiyeTakip\VeresiyeTakip\bin\Debug\DevExpress.Utils.v18.2.xml
+C:\Users\Eminn\Desktop\VeresiyeTakip\VeresiyeTakip\bin\Debug\DevExpress.Sparkline.v18.2.Core.xml
+C:\Users\Eminn\Desktop\VeresiyeTakip\VeresiyeTakip\bin\Debug\DevExpress.XtraBars.v18.2.xml
+C:\Users\Eminn\Desktop\VeresiyeTakip\VeresiyeTakip\bin\Debug\DevExpress.XtraEditors.v18.2.xml
+C:\Users\Eminn\Desktop\VeresiyeTakip\VeresiyeTakip\bin\Debug\DevExpress.Printing.v18.2.Core.xml
+C:\Users\Eminn\Desktop\VeresiyeTakip\VeresiyeTakip\bin\Debug\EntityFramework.xml
+C:\Users\Eminn\Desktop\VeresiyeTakip\VeresiyeTakip\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Eminn\Desktop\VeresiyeTakip\VeresiyeTakip\bin\Debug\DevExpress.Pdf.v18.2.Core.xml
+C:\Users\Eminn\Desktop\VeresiyeTakip\VeresiyeTakip\bin\Debug\de\DevExpress.Data.v18.2.resources.dll
+C:\Users\Eminn\Desktop\VeresiyeTakip\VeresiyeTakip\bin\Debug\es\DevExpress.Data.v18.2.resources.dll
+C:\Users\Eminn\Desktop\VeresiyeTakip\VeresiyeTakip\bin\Debug\ja\DevExpress.Data.v18.2.resources.dll
+C:\Users\Eminn\Desktop\VeresiyeTakip\VeresiyeTakip\bin\Debug\ru\DevExpress.Data.v18.2.resources.dll
+C:\Users\Eminn\Desktop\VeresiyeTakip\VeresiyeTakip\bin\Debug\de\DevExpress.Utils.v18.2.resources.dll
+C:\Users\Eminn\Desktop\VeresiyeTakip\VeresiyeTakip\bin\Debug\es\DevExpress.Utils.v18.2.resources.dll
+C:\Users\Eminn\Desktop\VeresiyeTakip\VeresiyeTakip\bin\Debug\ja\DevExpress.Utils.v18.2.resources.dll
+C:\Users\Eminn\Desktop\VeresiyeTakip\VeresiyeTakip\bin\Debug\ru\DevExpress.Utils.v18.2.resources.dll
+C:\Users\Eminn\Desktop\VeresiyeTakip\VeresiyeTakip\bin\Debug\de\DevExpress.Sparkline.v18.2.Core.resources.dll
+C:\Users\Eminn\Desktop\VeresiyeTakip\VeresiyeTakip\bin\Debug\es\DevExpress.Sparkline.v18.2.Core.resources.dll
+C:\Users\Eminn\Desktop\VeresiyeTakip\VeresiyeTakip\bin\Debug\ja\DevExpress.Sparkline.v18.2.Core.resources.dll
+C:\Users\Eminn\Desktop\VeresiyeTakip\VeresiyeTakip\bin\Debug\ru\DevExpress.Sparkline.v18.2.Core.resources.dll
+C:\Users\Eminn\Desktop\VeresiyeTakip\VeresiyeTakip\bin\Debug\de\DevExpress.XtraBars.v18.2.resources.dll
+C:\Users\Eminn\Desktop\VeresiyeTakip\VeresiyeTakip\bin\Debug\es\DevExpress.XtraBars.v18.2.resources.dll
+C:\Users\Eminn\Desktop\VeresiyeTakip\VeresiyeTakip\bin\Debug\ja\DevExpress.XtraBars.v18.2.resources.dll
+C:\Users\Eminn\Desktop\VeresiyeTakip\VeresiyeTakip\bin\Debug\ru\DevExpress.XtraBars.v18.2.resources.dll
+C:\Users\Eminn\Desktop\VeresiyeTakip\VeresiyeTakip\bin\Debug\de\DevExpress.XtraEditors.v18.2.resources.dll
+C:\Users\Eminn\Desktop\VeresiyeTakip\VeresiyeTakip\bin\Debug\es\DevExpress.XtraEditors.v18.2.resources.dll
+C:\Users\Eminn\Desktop\VeresiyeTakip\VeresiyeTakip\bin\Debug\ja\DevExpress.XtraEditors.v18.2.resources.dll
+C:\Users\Eminn\Desktop\VeresiyeTakip\VeresiyeTakip\bin\Debug\ru\DevExpress.XtraEditors.v18.2.resources.dll
+C:\Users\Eminn\Desktop\VeresiyeTakip\VeresiyeTakip\bin\Debug\de\DevExpress.Printing.v18.2.Core.resources.dll
+C:\Users\Eminn\Desktop\VeresiyeTakip\VeresiyeTakip\bin\Debug\es\DevExpress.Printing.v18.2.Core.resources.dll
+C:\Users\Eminn\Desktop\VeresiyeTakip\VeresiyeTakip\bin\Debug\ja\DevExpress.Printing.v18.2.Core.resources.dll
+C:\Users\Eminn\Desktop\VeresiyeTakip\VeresiyeTakip\bin\Debug\ru\DevExpress.Printing.v18.2.Core.resources.dll
+C:\Users\Eminn\Desktop\VeresiyeTakip\VeresiyeTakip\bin\Debug\de\DevExpress.Pdf.v18.2.Core.resources.dll
+C:\Users\Eminn\Desktop\VeresiyeTakip\VeresiyeTakip\bin\Debug\es\DevExpress.Pdf.v18.2.Core.resources.dll
+C:\Users\Eminn\Desktop\VeresiyeTakip\VeresiyeTakip\bin\Debug\ja\DevExpress.Pdf.v18.2.Core.resources.dll
+C:\Users\Eminn\Desktop\VeresiyeTakip\VeresiyeTakip\bin\Debug\ru\DevExpress.Pdf.v18.2.Core.resources.dll
+C:\Users\Eminn\Desktop\VeresiyeTakip\VeresiyeTakip\obj\Debug\VeresiyeTakip.csprojAssemblyReference.cache
+C:\Users\Eminn\Desktop\VeresiyeTakip\VeresiyeTakip\obj\Debug\VeresiyeTakip.Ayarlar.resources
+C:\Users\Eminn\Desktop\VeresiyeTakip\VeresiyeTakip\obj\Debug\VeresiyeTakip.Forms.CariKartEkle.resources
+C:\Users\Eminn\Desktop\VeresiyeTakip\VeresiyeTakip\obj\Debug\VeresiyeTakip.Forms.frmFirmaİslemleri.resources
+C:\Users\Eminn\Desktop\VeresiyeTakip\VeresiyeTakip\obj\Debug\VeresiyeTakip.Forms.frmListeToplamları.resources
+C:\Users\Eminn\Desktop\VeresiyeTakip\VeresiyeTakip\obj\Debug\VeresiyeTakip.Uygulama.resources
+C:\Users\Eminn\Desktop\VeresiyeTakip\VeresiyeTakip\obj\Debug\VeresiyeTakip.Giris.resources
+C:\Users\Eminn\Desktop\VeresiyeTakip\VeresiyeTakip\obj\Debug\VeresiyeTakip.Hakkinda.resources
+C:\Users\Eminn\Desktop\VeresiyeTakip\VeresiyeTakip\obj\Debug\VeresiyeTakip.Forms.frmYazdir.resources
+C:\Users\Eminn\Desktop\VeresiyeTakip\VeresiyeTakip\obj\Debug\VeresiyeTakip.Forms.XtraForm1.resources
+C:\Users\Eminn\Desktop\VeresiyeTakip\VeresiyeTakip\obj\Debug\VeresiyeTakip.Properties.Resources.resources
+C:\Users\Eminn\Desktop\VeresiyeTakip\VeresiyeTakip\obj\Debug\VeresiyeTakip.YedeklemeSistemi.resources
+C:\Users\Eminn\Desktop\VeresiyeTakip\VeresiyeTakip\obj\Debug\VeresiyeTakip.csproj.GenerateResource.cache
+C:\Users\Eminn\Desktop\VeresiyeTakip\VeresiyeTakip\obj\Debug\VeresiyeTakip.exe.licenses
+C:\Users\Eminn\Desktop\VeresiyeTakip\VeresiyeTakip\obj\Debug\VeresiyeTakip.csproj.CoreCompileInputs.cache
+C:\Users\Eminn\Desktop\VeresiyeTakip\VeresiyeTakip\obj\Debug\VeresiyeTakip.csproj.CopyComplete
+C:\Users\Eminn\Desktop\VeresiyeTakip\VeresiyeTakip\obj\Debug\VeresiyeTakip.exe
+C:\Users\Eminn\Desktop\VeresiyeTakip\VeresiyeTakip\obj\Debug\VeresiyeTakip.pdb
+E:\Masaüstü -30-04-2018\VeresiyeTakip\VeresiyeTakip\bin\Debug\VeresiyeTakip.exe.config
+E:\Masaüstü -30-04-2018\VeresiyeTakip\VeresiyeTakip\bin\Debug\VeresiyeTakip.exe
+E:\Masaüstü -30-04-2018\VeresiyeTakip\VeresiyeTakip\bin\Debug\VeresiyeTakip.pdb
+E:\Masaüstü -30-04-2018\VeresiyeTakip\VeresiyeTakip\bin\Debug\EntityFramework.dll
+E:\Masaüstü -30-04-2018\VeresiyeTakip\VeresiyeTakip\bin\Debug\EntityFramework.SqlServer.dll
+E:\Masaüstü -30-04-2018\VeresiyeTakip\VeresiyeTakip\bin\Debug\CrystalDecisions.ReportAppServer.DataDefModel.dll
+E:\Masaüstü -30-04-2018\VeresiyeTakip\VeresiyeTakip\bin\Debug\CrystalDecisions.ReportAppServer.ClientDoc.dll
+E:\Masaüstü -30-04-2018\VeresiyeTakip\VeresiyeTakip\bin\Debug\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+E:\Masaüstü -30-04-2018\VeresiyeTakip\VeresiyeTakip\bin\Debug\CrystalDecisions.ReportAppServer.Controllers.dll
+E:\Masaüstü -30-04-2018\VeresiyeTakip\VeresiyeTakip\bin\Debug\CrystalDecisions.ReportAppServer.CommLayer.dll
+E:\Masaüstü -30-04-2018\VeresiyeTakip\VeresiyeTakip\bin\Debug\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+E:\Masaüstü -30-04-2018\VeresiyeTakip\VeresiyeTakip\bin\Debug\CrystalDecisions.ReportAppServer.Prompting.dll
+E:\Masaüstü -30-04-2018\VeresiyeTakip\VeresiyeTakip\bin\Debug\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+E:\Masaüstü -30-04-2018\VeresiyeTakip\VeresiyeTakip\bin\Debug\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+E:\Masaüstü -30-04-2018\VeresiyeTakip\VeresiyeTakip\bin\Debug\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+E:\Masaüstü -30-04-2018\VeresiyeTakip\VeresiyeTakip\bin\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+E:\Masaüstü -30-04-2018\VeresiyeTakip\VeresiyeTakip\bin\Debug\DevExpress.Pdf.v18.2.Core.dll
+E:\Masaüstü -30-04-2018\VeresiyeTakip\VeresiyeTakip\bin\Debug\ShockwaveFlashObjects.dll
+E:\Masaüstü -30-04-2018\VeresiyeTakip\VeresiyeTakip\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
+E:\Masaüstü -30-04-2018\VeresiyeTakip\VeresiyeTakip\bin\Debug\stdole.dll
+E:\Masaüstü -30-04-2018\VeresiyeTakip\VeresiyeTakip\bin\Debug\DevExpress.Data.v18.2.xml
+E:\Masaüstü -30-04-2018\VeresiyeTakip\VeresiyeTakip\bin\Debug\DevExpress.Utils.v18.2.xml
+E:\Masaüstü -30-04-2018\VeresiyeTakip\VeresiyeTakip\bin\Debug\DevExpress.Sparkline.v18.2.Core.xml
+E:\Masaüstü -30-04-2018\VeresiyeTakip\VeresiyeTakip\bin\Debug\DevExpress.XtraBars.v18.2.xml
+E:\Masaüstü -30-04-2018\VeresiyeTakip\VeresiyeTakip\bin\Debug\DevExpress.XtraEditors.v18.2.xml
+E:\Masaüstü -30-04-2018\VeresiyeTakip\VeresiyeTakip\bin\Debug\DevExpress.Printing.v18.2.Core.xml
+E:\Masaüstü -30-04-2018\VeresiyeTakip\VeresiyeTakip\bin\Debug\EntityFramework.xml
+E:\Masaüstü -30-04-2018\VeresiyeTakip\VeresiyeTakip\bin\Debug\EntityFramework.SqlServer.xml
+E:\Masaüstü -30-04-2018\VeresiyeTakip\VeresiyeTakip\bin\Debug\DevExpress.Pdf.v18.2.Core.xml
+E:\Masaüstü -30-04-2018\VeresiyeTakip\VeresiyeTakip\bin\Debug\de\DevExpress.Data.v18.2.resources.dll
+E:\Masaüstü -30-04-2018\VeresiyeTakip\VeresiyeTakip\bin\Debug\es\DevExpress.Data.v18.2.resources.dll
+E:\Masaüstü -30-04-2018\VeresiyeTakip\VeresiyeTakip\bin\Debug\ja\DevExpress.Data.v18.2.resources.dll
+E:\Masaüstü -30-04-2018\VeresiyeTakip\VeresiyeTakip\bin\Debug\ru\DevExpress.Data.v18.2.resources.dll
+E:\Masaüstü -30-04-2018\VeresiyeTakip\VeresiyeTakip\bin\Debug\de\DevExpress.Utils.v18.2.resources.dll
+E:\Masaüstü -30-04-2018\VeresiyeTakip\VeresiyeTakip\bin\Debug\es\DevExpress.Utils.v18.2.resources.dll
+E:\Masaüstü -30-04-2018\VeresiyeTakip\VeresiyeTakip\bin\Debug\ja\DevExpress.Utils.v18.2.resources.dll
+E:\Masaüstü -30-04-2018\VeresiyeTakip\VeresiyeTakip\bin\Debug\ru\DevExpress.Utils.v18.2.resources.dll
+E:\Masaüstü -30-04-2018\VeresiyeTakip\VeresiyeTakip\bin\Debug\de\DevExpress.Sparkline.v18.2.Core.resources.dll
+E:\Masaüstü -30-04-2018\VeresiyeTakip\VeresiyeTakip\bin\Debug\es\DevExpress.Sparkline.v18.2.Core.resources.dll
+E:\Masaüstü -30-04-2018\VeresiyeTakip\VeresiyeTakip\bin\Debug\ja\DevExpress.Sparkline.v18.2.Core.resources.dll
+E:\Masaüstü -30-04-2018\VeresiyeTakip\VeresiyeTakip\bin\Debug\ru\DevExpress.Sparkline.v18.2.Core.resources.dll
+E:\Masaüstü -30-04-2018\VeresiyeTakip\VeresiyeTakip\bin\Debug\de\DevExpress.XtraBars.v18.2.resources.dll
+E:\Masaüstü -30-04-2018\VeresiyeTakip\VeresiyeTakip\bin\Debug\es\DevExpress.XtraBars.v18.2.resources.dll
+E:\Masaüstü -30-04-2018\VeresiyeTakip\VeresiyeTakip\bin\Debug\ja\DevExpress.XtraBars.v18.2.resources.dll
+E:\Masaüstü -30-04-2018\VeresiyeTakip\VeresiyeTakip\bin\Debug\ru\DevExpress.XtraBars.v18.2.resources.dll
+E:\Masaüstü -30-04-2018\VeresiyeTakip\VeresiyeTakip\bin\Debug\de\DevExpress.XtraEditors.v18.2.resources.dll
+E:\Masaüstü -30-04-2018\VeresiyeTakip\VeresiyeTakip\bin\Debug\es\DevExpress.XtraEditors.v18.2.resources.dll
+E:\Masaüstü -30-04-2018\VeresiyeTakip\VeresiyeTakip\bin\Debug\ja\DevExpress.XtraEditors.v18.2.resources.dll
+E:\Masaüstü -30-04-2018\VeresiyeTakip\VeresiyeTakip\bin\Debug\ru\DevExpress.XtraEditors.v18.2.resources.dll
+E:\Masaüstü -30-04-2018\VeresiyeTakip\VeresiyeTakip\bin\Debug\de\DevExpress.Printing.v18.2.Core.resources.dll
+E:\Masaüstü -30-04-2018\VeresiyeTakip\VeresiyeTakip\bin\Debug\es\DevExpress.Printing.v18.2.Core.resources.dll
+E:\Masaüstü -30-04-2018\VeresiyeTakip\VeresiyeTakip\bin\Debug\ja\DevExpress.Printing.v18.2.Core.resources.dll
+E:\Masaüstü -30-04-2018\VeresiyeTakip\VeresiyeTakip\bin\Debug\ru\DevExpress.Printing.v18.2.Core.resources.dll
+E:\Masaüstü -30-04-2018\VeresiyeTakip\VeresiyeTakip\bin\Debug\de\DevExpress.Pdf.v18.2.Core.resources.dll
+E:\Masaüstü -30-04-2018\VeresiyeTakip\VeresiyeTakip\bin\Debug\es\DevExpress.Pdf.v18.2.Core.resources.dll
+E:\Masaüstü -30-04-2018\VeresiyeTakip\VeresiyeTakip\bin\Debug\ja\DevExpress.Pdf.v18.2.Core.resources.dll
+E:\Masaüstü -30-04-2018\VeresiyeTakip\VeresiyeTakip\bin\Debug\ru\DevExpress.Pdf.v18.2.Core.resources.dll
+E:\Masaüstü -30-04-2018\VeresiyeTakip\VeresiyeTakip\obj\Debug\VeresiyeTakip.Ayarlar.resources
+E:\Masaüstü -30-04-2018\VeresiyeTakip\VeresiyeTakip\obj\Debug\VeresiyeTakip.Forms.CariKartEkle.resources
+E:\Masaüstü -30-04-2018\VeresiyeTakip\VeresiyeTakip\obj\Debug\VeresiyeTakip.Forms.frmFirmaİslemleri.resources
+E:\Masaüstü -30-04-2018\VeresiyeTakip\VeresiyeTakip\obj\Debug\VeresiyeTakip.Forms.frmListeToplamları.resources
+E:\Masaüstü -30-04-2018\VeresiyeTakip\VeresiyeTakip\obj\Debug\VeresiyeTakip.Uygulama.resources
+E:\Masaüstü -30-04-2018\VeresiyeTakip\VeresiyeTakip\obj\Debug\VeresiyeTakip.Giris.resources
+E:\Masaüstü -30-04-2018\VeresiyeTakip\VeresiyeTakip\obj\Debug\VeresiyeTakip.Hakkinda.resources
+E:\Masaüstü -30-04-2018\VeresiyeTakip\VeresiyeTakip\obj\Debug\VeresiyeTakip.Forms.frmYazdir.resources
+E:\Masaüstü -30-04-2018\VeresiyeTakip\VeresiyeTakip\obj\Debug\VeresiyeTakip.Forms.XtraForm1.resources
+E:\Masaüstü -30-04-2018\VeresiyeTakip\VeresiyeTakip\obj\Debug\VeresiyeTakip.Properties.Resources.resources
+E:\Masaüstü -30-04-2018\VeresiyeTakip\VeresiyeTakip\obj\Debug\VeresiyeTakip.YedeklemeSistemi.resources
+E:\Masaüstü -30-04-2018\VeresiyeTakip\VeresiyeTakip\obj\Debug\VeresiyeTakip.csproj.GenerateResource.Cache
+E:\Masaüstü -30-04-2018\VeresiyeTakip\VeresiyeTakip\obj\Debug\VeresiyeTakip.exe.licenses
+E:\Masaüstü -30-04-2018\VeresiyeTakip\VeresiyeTakip\obj\Debug\VeresiyeTakip.exe
+E:\Masaüstü -30-04-2018\VeresiyeTakip\VeresiyeTakip\obj\Debug\VeresiyeTakip.pdb
+E:\Masaüstü -30-04-2018\VeresiyeTakip\VeresiyeTakip\obj\Debug\VeresiyeTakip.csprojAssemblyReference.cache
+E:\Masaüstü -30-04-2018\VeresiyeTakip\VeresiyeTakip\obj\Debug\VeresiyeTakip.csproj.CoreCompileInputs.cache
+E:\Masaüstü -30-04-2018\VeresiyeTakip\VeresiyeTakip\obj\Debug\VeresiyeTakip.csproj.CopyComplete

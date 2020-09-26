@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VsixLanguagePack Version="1.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema-lp/2010">
+  <LocalizedName>Azure AD Kimlik Doğrulaması Bağlı Hizmeti</LocalizedName>
+  <LocalizedDescription>Web projelerinde Azure AD Kimlik Doğrulaması Çoklu Oturum Açma'yı yapılandırmaya yönelik sihirbazı sağlar.</LocalizedDescription>
+  <MoreInfoUrl>https://go.microsoft.com/fwlink/?LinkId=534858</MoreInfoUrl>
+</VsixLanguagePack>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VsixLanguagePack Version="1.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema-lp/2010">
+  <LocalizedName>Microsoft 연결된 서비스</LocalizedName>
+  <LocalizedDescription>[연결된 서비스 추가] 대화 상자에 대한 기본 도구 및 확장성 프레임워크를 제공합니다.</LocalizedDescription>
+</VsixLanguagePack>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PackageLanguagePackManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011">
+  <Metadata>
+    <DisplayName xml:space="preserve">개발자 분석 도구</DisplayName>
+    <Description xml:space="preserve">Application Insights에 대한 원격 분석 검색, CodeLens 통합 및 기타 도구. HockeyApp에 대한 앱 배포 도구</Description>
+  </Metadata>
+</PackageLanguagePackManifest>

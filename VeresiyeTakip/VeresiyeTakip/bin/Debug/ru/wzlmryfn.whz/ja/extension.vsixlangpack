@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VsixLanguagePack Version="1.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema-lp/2010">
+  <LocalizedName>Microsoft 接続済みサービス</LocalizedName>
+  <LocalizedDescription>[接続済みサービスの追加] ダイアログの基本ツールと拡張機能のフレームワークを提供します。</LocalizedDescription>
+</VsixLanguagePack>

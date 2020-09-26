@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VsixLanguagePack Version="1.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema-lp/2010">
+  <LocalizedName>Microsoft Azure Storage - verbundener Dienst</LocalizedName>
+  <LocalizedDescription>Damit können Entwickler Azure Storage-Konten auf einfache Weise anhand der schrittweisen Anleitung erstellen und verbinden.</LocalizedDescription>
+  <MoreInfoUrl>https://go.microsoft.com/fwlink/?LinkId=534855</MoreInfoUrl>
+</VsixLanguagePack>

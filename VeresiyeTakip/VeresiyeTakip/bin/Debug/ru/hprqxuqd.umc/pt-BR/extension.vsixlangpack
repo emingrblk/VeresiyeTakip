@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PackageLanguagePackManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011">
+  <Metadata>
+    <DisplayName xml:space="preserve">Ferramentas de Análise para Desenvolvedor</DisplayName>
+    <Description xml:space="preserve">Pesquisa de telemetria, integração com CodeLens e outras ferramentas para o Application Insights. Ferramentas de implantação de aplicativos para HockeyApp.</Description>
+  </Metadata>
+</PackageLanguagePackManifest>

@@ -1,0 +1,14 @@
+tType" Value="Microsoft.SqlServer.Configuration.AnalysisServices.ASConfigurationPrivate" />
+    </ConfigurationAction>
+  </Configuration>
+  <Configuration Id="AS_SQL14_OldInstanceDumperUnconfig">
+    <ConfigurationAction Id="AS_SQL14_Dumper_uninstall_preuninstall" Scenario="uninstall" Timing="Preuninstall" Action="SlpConfigAction" ExtensionId="SqlConfigBase">
+      <ActionData Id="ConfigObjectType" Value="Microsoft.SqlServer.Configuration.SetupExtension.AsDumperPrivateConfig" />
+    </ConfigurationAction>
+  </Configuration>
+  <Configuration Id="AS_SQL14_InstanceIDConfig">
+    <ConfigurationAction Id="AS_SQL14_InstanceID_cleanup_finalize" Scenario="uninstall" Timing="Finalize" Action="SlpConfigAction" ExtensionId="SqlConfigBase">
+      <ActionData Id="ConfigObjectType" Value="Microsoft.SqlServer.Configuration.SetupExtension.AsInstanceIdPrivateConfigObject" />
+    </ConfigurationAction>
+  </Configuration>
+</Fe

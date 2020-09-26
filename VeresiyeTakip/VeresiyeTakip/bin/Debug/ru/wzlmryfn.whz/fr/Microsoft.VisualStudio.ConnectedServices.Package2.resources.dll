@@ -1,0 +1,989 @@
+           Gets or sets the sub-directory that code-based migrations are stored in.
+            Note that this property must be set to a relative path for a sub-directory under the
+            Visual Studio project root; it cannot be set to an absolute path.
+            </summary>
+        </member>
+        <member name="P:System.Data.Entity.Migrations.DbMigrationsConfiguration.CodeGenerator">
+            <summary>
+            Gets or sets the code generator to be used when scaffolding migrations.
+            </summary>
+        </member>
+        <member name="P:System.Data.Entity.Migrations.DbMigrationsConfiguration.MigrationsAssembly">
+            <summary>
+            Gets or sets the assembly containing code-based migrations.
+            </summary>
+        </member>
+        <member name="P:System.Data.Entity.Migrations.DbMigrationsConfiguration.TargetDatabase">
+            <summary>
+            Gets or sets a value to override the connection of the database to be migrated.
+            </summary>
+        </member>
+        <member name="P:System.Data.Entity.Migrations.DbMigrationsConfiguration.CommandTimeout">
+            <summary>
+            Gets or sets the timeout value used for the individual commands within a
+            migration. A null value indicates that the default value of the underlying
+            provider will be used.
+            </summary>
+        </member>
+        <member name="T:System.Data.Entity.Migrations.DbMigrationsConfiguration`1">
+            <summary>
+            Configuration relating to the use of migrations for a given model.
+            </summary>
+            <typeparam name="TContext"> The context representing the model that this configuration applies to. </typeparam>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.DbMigrationsConfiguration`1.#ctor">
+            <summary>
+            Initializes a new instance of the DbMigrationsConfiguration class.
+            </summary>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.DbMigrationsConfiguration`1.Seed(`0)">
+            <summary>
+            Runs after upgrading to the latest migration to allow seed data to be updated.
+            </summary>
+            <remarks>
+            Note that the database may already contain seed data when this method runs. This means that
+            implementations of this method must check whether or not seed data is present and/or up-to-date
+            and then only make changes if necessary and in a non-destructive way. The 
+            <see cref="M:System.Data.Entity.Migrations.DbSetMigrationsExtensions.AddOrUpdate``1(System.Data.Entity.IDbSet{``0},``0[])"/>
+            can be used to help with this, but for seeding large amounts of data it may be necessary to do less
+            granular checks if performance is an issue.
+            If the <see cref="T:System.Data.Entity.MigrateDatabaseToLatestVersion`2"/> database 
+            initializer is being used, then this method will be called each time that the initializer runs.
+            If one of the <see cref="T:System.Data.Entity.DropCreateDatabaseAlways`1"/>, <see cref="T:System.Data.Entity.DropCreateDatabaseIfModelChanges`1"/>,
+            or <see cref="T:System.Data.Entity.CreateDatabaseIfNotExists`1"/> initializers is being used, then this method will not be
+            called and the Seed method defined in the initializer should be used instead.
+            </remarks>
+            <param name="context"> Context to be used for updating seed data. </param>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.DbMigrationsConfiguration`1.ToString">
+            <inheritdoc />
+        </member>
+        <member name="M:System.Data.Entity.Migrations.DbMigrationsConfiguration`1.Equals(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:System.Data.Entity.Migrations.DbMigrationsConfiguration`1.GetHashCode">
+            <inheritdoc />
+        </member>
+        <member name="M:System.Data.Entity.Migrations.DbMigrationsConfiguration`1.GetType">
+            <inheritdoc />
+        </member>
+        <member name="M:System.Data.Entity.Migrations.DbMigrationsConfiguration`1.MemberwiseClone">
+            <inheritdoc />
+        </member>
+        <member name="T:System.Data.Entity.Migrations.DbMigrator">
+            <summary>
+            DbMigrator is used to apply existing migrations to a database.
+            DbMigrator can be used to upgrade and downgrade to any given migration.
+            To scaffold migrations based on changes to your model use <see cref="T:System.Data.Entity.Migrations.Design.MigrationScaffolder"/>
+            </summary>
+        </member>
+        <member name="T:System.Data.Entity.Migrations.Infrastructure.MigratorBase">
+            <summary>
+            Base class for decorators that wrap the core <see cref="T:System.Data.Entity.Migrations.DbMigrator"/>
+            </summary>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.Infrastructure.MigratorBase.#ctor(System.Data.Entity.Migrations.Infrastructure.MigratorBase)">
+            <summary>
+            Initializes a new instance of the MigratorBase class.
+            </summary>
+            <param name="innerMigrator"> The migrator that this decorator is wrapping. </param>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.Infrastructure.MigratorBase.GetPendingMigrations">
+            <summary>
+            Gets a list of the pending migrations that have not been applied to the database.
+            </summary>
+            <returns> List of migration Ids </returns>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.Infrastructure.MigratorBase.Update">
+            <summary>
+            Updates the target database to the latest migration.
+            </summary>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.Infrastructure.MigratorBase.Update(System.String)">
+            <summary>
+            Updates the target database to a given migration.
+            </summary>
+            <param name="targetMigration"> The migration to upgrade/downgrade to. </param>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.Infrastructure.MigratorBase.GetLocalMigrations">
+            <summary>
+            Gets a list of the migrations that are defined in the assembly.
+            </summary>
+            <returns> List of migration Ids </returns>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.Infrastructure.MigratorBase.GetDatabaseMigrations">
+            <summary>
+            Gets a list of the migrations that have been applied to the database.
+            </summary>
+            <returns> List of migration Ids </returns>
+        </member>
+        <member name="P:System.Data.Entity.Migrations.Infrastructure.MigratorBase.Configuration">
+            <summary>
+            Gets the configuration being used for the migrations process.
+            </summary>
+        </member>
+        <member name="F:System.Data.Entity.Migrations.DbMigrator.InitialDatabase">
+            <summary>
+            Migration Id representing the state of the database before any migrations are applied.
+            </summary>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.DbMigrator.#ctor(System.Data.Entity.Migrations.DbMigrationsConfiguration)">
+            <summary>
+            Initializes a new instance of the DbMigrator class.
+            </summary>
+            <param name="configuration"> Configuration to be used for the migration process. </param>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.DbMigrator.GetLocalMigrations">
+            <summary>
+            Gets all migrations that are defined in the configured migrations assembly.
+            </summary>
+            <returns>The list of migrations.</returns>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.DbMigrator.GetDatabaseMigrations">
+            <summary>
+            Gets all migrations that have been applied to the target database.
+            </summary>
+            <returns>The list of migrations.</returns>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.DbMigrator.GetPendingMigrations">
+            <summary>
+            Gets all migrations that are defined in the assembly but haven't been applied to the target database.
+            </summary>
+            <returns>The list of migrations.</returns>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.DbMigrator.Update(System.String)">
+            <summary>
+            Updates the target database to a given migration.
+            </summary>
+            <param name="targetMigration"> The migration to upgrade/downgrade to. </param>
+        </member>
+        <member name="P:System.Data.Entity.Migrations.DbMigrator.Configuration">
+            <summary>
+            Gets the configuration that is being used for the migration process.
+            </summary>
+        </member>
+        <member name="T:System.Data.Entity.Migrations.DbSetMigrationsExtensions">
+            <summary>
+            A set of extension methods for <see cref="T:System.Data.Entity.IDbSet`1"/>
+            </summary>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.DbSetMigrationsExtensions.AddOrUpdate``1(System.Data.Entity.IDbSet{``0},``0[])">
+            <summary>
+            Adds or updates entities by key when SaveChanges is called. Equivalent to an "upsert" operation
+            from database terminology.
+            This method can useful when seeding data using Migrations.
+            </summary>
+            <typeparam name="TEntity">The type of entities to add or update.</typeparam>
+            <param name="set">The set to which the entities belong.</param>
+            <param name="entities"> The entities to add or update. </param>
+            <remarks>
+            When the <paramref name="set" /> parameter is a custom or fake IDbSet implementation, this method will
+            attempt to locate and invoke a public, instance method with the same signature as this extension method.
+            </remarks>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.DbSetMigrationsExtensions.AddOrUpdate``1(System.Data.Entity.IDbSet{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Object}},``0[])">
+            <summary>
+            Adds or updates entities by a custom identification expression when SaveChanges is called.
+            Equivalent to an "upsert" operation from database terminology.
+            This method can useful when seeding data using Migrations.
+            </summary>
+            <typeparam name="TEntity">The type of entities to add or update.</typeparam>
+            <param name="set">The set to which the entities belong.</param>
+            <param name="identifierExpression"> An expression specifying the properties that should be used when determining whether an Add or Update operation should be performed. </param>
+            <param name="entities"> The entities to add or update. </param>
+            <remarks>
+            When the <paramref name="set" /> parameter is a custom or fake IDbSet implementation, this method will
+            attempt to locate and invoke a public, instance method with the same signature as this extension method.
+            </remarks>
+        </member>
+        <member name="T:System.Data.Entity.Migrations.Design.CSharpMigrationCodeGenerator">
+            <summary>
+            Generates C# code for a code-based migration.
+            </summary>
+        </member>
+        <member name="T:System.Data.Entity.Migrations.Design.MigrationCodeGenerator">
+            <summary>
+            Base class for providers that generate code for code-based migrations.
+            </summary>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.Design.MigrationCodeGenerator.Generate(System.String,System.Collections.Generic.IEnumerable{System.Data.Entity.Migrations.Model.MigrationOperation},System.String,System.String,System.String,System.String)">
+            <summary>
+            Generates the code that should be added to the users project.
+            </summary>
+            <param name="migrationId"> Unique identifier of the migration. </param>
+            <param name="operations"> Operations to be performed by the migration. </param>
+            <param name="sourceModel"> Source model to be stored in the migration metadata. </param>
+            <param name="targetModel"> Target model to be stored in the migration metadata. </param>
+            <param name="namespace"> Namespace that code should be generated in. </param>
+            <param name="className"> Name of the class that should be generated. </param>
+            <returns> The generated code. </returns>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.Design.MigrationCodeGenerator.GetNamespaces(System.Collections.Generic.IEnumerable{System.Data.Entity.Migrations.Model.MigrationOperation})">
+            <summary>
+            Gets the namespaces that must be output as "using" or "Imports" directives to handle
+            the code generated by the given operations.
+            </summary>
+            <param name="operations"> The operations for which code is going to be generated. </param>
+            <returns> An ordered list of namespace names. </returns>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.Design.MigrationCodeGenerator.GetDefaultNamespaces(System.Boolean)">
+            <summary>
+            Gets the default namespaces that must be output as "using" or "Imports" directives for
+            any code generated.
+            </summary>
+            <param name="designer"> A value indicating if this class is being generated for a code-behind file. </param>
+            <returns> An ordered list of namespace names. </returns>
+        </member>
+        <member name="P:System.Data.Entity.Migrations.Design.MigrationCodeGenerator.AnnotationGenerators">
+            <summary>
+            Gets the <see cref="T:System.Data.Entity.Infrastructure.Annotations.AnnotationCodeGenerator"/> instances that are being used.
+            </summary>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.Design.CSharpMigrationCodeGenerator.Generate(System.String,System.Collections.Generic.IEnumerable{System.Data.Entity.Migrations.Model.MigrationOperation},System.String,System.String,System.String,System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:System.Data.Entity.Migrations.Design.CSharpMigrationCodeGenerator.Generate(System.Collections.Generic.IEnumerable{System.Data.Entity.Migrations.Model.MigrationOperation},System.String,System.String)">
+            <summary>
+            Generates the primary code file that the user can view and edit.
+            </summary>
+            <param name="operations"> Operations to be performed by the migration. </param>
+            <param name="namespace"> Namespace that code should be generated in. </param>
+            <param name="className"> Name of the class that should be generated. </param>
+            <returns> The generated code. </returns>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.Design.CSharpMigrationCodeGenerator.Generate(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Generates the code behind file with migration metadata.
+            </summary>
+            <param name="migrationId"> Unique identifier of the migration. </param>
+            <param name="sourceModel"> Source model to be stored in the migration metadata. </param>
+            <param name="targetModel"> Target model to be stored in the migration metadata. </param>
+            <param name="namespace"> Namespace that code should be generated in. </param>
+            <param name="className"> Name of the class that should be generated. </param>
+            <returns> The generated code. </returns>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.Design.CSharpMigrationCodeGenerator.WriteProperty(System.String,System.String,System.Data.Entity.Migrations.Utilities.IndentedTextWriter)">
+            <summary>
+            Generates a property to return the source or target model in the code behind file.
+            </summary>
+            <param name="name"> Name of the property. </param>
+            <param name="value"> Value to be returned. </param>
+            <param name="writer"> Text writer to add the generated code to. </param>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.Design.CSharpMigrationCodeGenerator.WriteClassAttributes(System.Data.Entity.Migrations.Utilities.IndentedTextWriter,System.Boolean)">
+            <summary>
+            Generates class attributes.
+            </summary>
+            <param name="writer"> Text writer to add the generated code to. </param>
+            <param name="designer"> A value indicating if this class is being generated for a code-behind file. </param>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.Design.CSharpMigrationCodeGenerator.WriteClassStart(System.String,System.String,System.Data.Entity.Migrations.Utilities.IndentedTextWriter,System.String,System.Boolean,System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Generates a namespace, using statements and class definition.
+            </summary>
+            <param name="namespace"> Namespace that code should be generated in. </param>
+            <param name="className"> Name of the class that should be generated. </param>
+            <param name="writer"> Text writer to add the generated code to. </param>
+            <param name="base"> Base class for the generated class. </param>
+            <param name="designer"> A value indicating if this class is being generated for a code-behind file. </param>
+            <param name="namespaces"> Namespaces for which using directives will be added. If null, then the namespaces returned from GetDefaultNamespaces will be used. </param>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.Design.CSharpMigrationCodeGenerator.WriteClassEnd(System.String,System.Data.Entity.Migrations.Utilities.IndentedTextWriter)">
+            <summary>
+            Generates the closing code for a class that was started with WriteClassStart.
+            </summary>
+            <param name="namespace"> Namespace that code should be generated in. </param>
+            <param name="writer"> Text writer to add the generated code to. </param>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.Design.CSharpMigrationCodeGenerator.Generate(System.Data.Entity.Migrations.Model.AddColumnOperation,System.Data.Entity.Migrations.Utilities.IndentedTextWriter)">
+            <summary>
+            Generates code to perform an <see cref="T:System.Data.Entity.Migrations.Model.AddColumnOperation"/>.
+            </summary>
+            <param name="addColumnOperation"> The operation to generate code for. </param>
+            <param name="writer"> Text writer to add the generated code to. </param>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.Design.CSharpMigrationCodeGenerator.Generate(System.Data.Entity.Migrations.Model.DropColumnOperation,System.Data.Entity.Migrations.Utilities.IndentedTextWriter)">
+            <summary>
+            Generates code to perform a <see cref="T:System.Data.Entity.Migrations.Model.DropColumnOperation"/>.
+            </summary>
+            <param name="dropColumnOperation"> The operation to generate code for. </param>
+            <param name="writer"> Text writer to add the generated code to. </param>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.Design.CSharpMigrationCodeGenerator.Generate(System.Data.Entity.Migrations.Model.AlterColumnOperation,System.Data.Entity.Migrations.Utilities.IndentedTextWriter)">
+            <summary>
+            Generates code to perform an <see cref="T:System.Data.Entity.Migrations.Model.AlterColumnOperation"/>.
+            </summary>
+            <param name="alterColumnOperation"> The operation to generate code for. </param>
+            <param name="writer"> Text writer to add the generated code to. </param>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.Design.CSharpMigrationCodeGenerator.GenerateAnnotations(System.Collections.Generic.IDictionary{System.String,System.Object},System.Data.Entity.Migrations.Utilities.IndentedTextWriter)">
+            <summary>
+            Generates code for to re-create the given dictionary of annotations for use when passing
+            these annotations as a parameter of a <see cref="T:System.Data.Entity.Migrations.DbMigration"/>. call.
+            </summary>
+            <param name="annotations">The annotations to generate.</param>
+            <param name="writer">The writer to which generated code should be written.</param>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.Design.CSharpMigrationCodeGenerator.GenerateAnnotations(System.Collections.Generic.IDictionary{System.String,System.Data.Entity.Infrastructure.Annotations.AnnotationValues},System.Data.Entity.Migrations.Utilities.IndentedTextWriter)">
+            <summary>
+            Generates code for to re-create the given dictionary of annotations for use when passing
+            these annotations as a parameter of a <see cref="T:System.Data.Entity.Migrations.DbMigration"/>. call.
+            </summary>
+            <param name="annotations">The annotations to generate.</param>
+            <param name="writer">The writer to which generated code should be written.</param>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.Design.CSharpMigrationCodeGenerator.GenerateAnnotation(System.String,System.Object,System.Data.Entity.Migrations.Utilities.IndentedTextWriter)">
+            <summary>
+            Generates code for the given annotation value, which may be null. The default behavior is to use an
+            <see cref="T:System.Data.Entity.Infrastructure.Annotations.AnnotationCodeGenerator"/> if one is registered, otherwise call ToString on the annotation value.
+            </summary>
+            <remarks>
+            Note that a <see cref="T:System.Data.Entity.Infrastructure.Annotations.AnnotationCodeGenerator"/> can be registered to generate code for custom annotations
+            without the need to override the entire code generator.
+            </remarks>
+            <param name="name">The name of the annotation for which code is needed.</param>
+            <param name="annotation">The annotation value to generate.</param>
+            <param name="writer">The writer to which generated code should be written.</param>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.Design.CSharpMigrationCodeGenerator.Generate(System.Data.Entity.Migrations.Model.CreateProcedureOperation,System.Data.Entity.Migrations.Utilities.IndentedTextWriter)">
+            <summary>Generates code to perform a <see cref="T:System.Data.Entity.Migrations.Model.CreateProcedureOperation" />.</summary>
+            <param name="createProcedureOperation">The operation to generate code for.</param>
+            <param name="writer">Text writer to add the generated code to.</param>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.Design.CSharpMigrationCodeGenerator.Generate(System.Data.Entity.Migrations.Model.AlterProcedureOperation,System.Data.Entity.Migrations.Utilities.IndentedTextWriter)">
+            <summary>Generates code to perform a <see cref="T:System.Data.Entity.Migrations.Model.AlterProcedureOperation" />.</summary>
+            <param name="alterProcedureOperation">The operation to generate code for.</param>
+            <param name="writer">Text writer to add the generated code to.</param>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.Design.CSharpMigrationCodeGenerator.Generate(System.Data.Entity.Migrations.Model.ParameterModel,System.Data.Entity.Migrations.Utilities.IndentedTextWriter,System.Boolean)">
+            <summary>Generates code to specify the definition for a <see cref="T:System.Data.Entity.Migrations.Model.ParameterModel" />.</summary>
+            <param name="parameterModel">The parameter definition to generate code for.</param>
+            <param name="writer">Text writer to add the generated code to.</param>
+            <param name="emitName">A value indicating whether to include the column name in the definition.</param>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.Design.CSharpMigrationCodeGenerator.Generate(System.Data.Entity.Migrations.Model.DropProcedureOperation,System.Data.Entity.Migrations.Utilities.IndentedTextWriter)">
+            <summary>Generates code to perform a <see cref="T:System.Data.Entity.Migrations.Model.DropProcedureOperation" />.</summary>
+            <param name="dropProcedureOperation">The operation to generate code for.</param>
+            <param name="writer">Text writer to add the generated code to.</param>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.Design.CSharpMigrationCodeGenerator.Generate(System.Data.Entity.Migrations.Model.CreateTableOperation,System.Data.Entity.Migrations.Utilities.IndentedTextWriter)">
+            <summary>
+            Generates code to perform a <see cref="T:System.Data.Entity.Migrations.Model.CreateTableOperation"/>.
+            </summary>
+            <param name="createTableOperation"> The operation to generate code for. </param>
+            <param name="writer"> Text writer to add the generated code to. </param>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.Design.CSharpMigrationCodeGenerator.Generate(System.Data.Entity.Migrations.Model.AlterTableOperation,System.Data.Entity.Migrations.Utilities.IndentedTextWriter)">
+            <summary>
+            Generates code for an <see cref="T:System.Data.Entity.Migrations.Model.AlterTableOperation"/>.
+            </summary>
+            <param name="alterTableOperation">The operation for which code should be generated.</param>
+            <param name="writer">The writer to which generated code should be written.</param>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.Design.CSharpMigrationCodeGenerator.GenerateInline(System.Data.Entity.Migrations.Model.AddPrimaryKeyOperation,System.Data.Entity.Migrations.Utilities.IndentedTextWriter)">
+            <summary>
+            Generates code to perform an <see cref="T:System.Data.Entity.Migrations.Model.AddPrimaryKeyOperation"/> as part of a <see cref="T:System.Data.Entity.Migrations.Model.CreateTableOperation"/>.
+            </summary>
+            <param name="addPrimaryKeyOperation"> The operation to generate code for. </param>
+            <param name="writer"> Text writer to add the generated code to. </param>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.Design.CSharpMigrationCodeGenerator.GenerateInline(System.Data.Entity.Migrations.Model.AddForeignKeyOperation,System.Data.Entity.Migrations.Utilities.IndentedTextWriter)">
+            <summary>
+            Generates code to perform an <see cref="T:System.Data.Entity.Migrations.Model.AddForeignKeyOperation"/> as part of a <see cref="T:System.Data.Entity.Migrations.Model.CreateTableOperation"/>.
+            </summary>
+            <param name="addForeignKeyOperation"> The operation to generate code for. </param>
+            <param name="writer"> Text writer to add the generated code to. </param>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.Design.CSharpMigrationCodeGenerator.GenerateInline(System.Data.Entity.Migrations.Model.CreateIndexOperation,System.Data.Entity.Migrations.Utilities.IndentedTextWriter)">
+            <summary>
+            Generates code to perform a <see cref="T:System.Data.Entity.Migrations.Model.CreateIndexOperation"/> as part of a <see cref="T:System.Data.Entity.Migrations.Model.CreateTableOperation"/>.
+            </summary>
+            <param name="createIndexOperation"> The operation to generate code for. </param>
+            <param name="writer"> Text writer to add the generated code to. </param>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.Design.CSharpMigrationCodeGenerator.Generate(System.Collections.Generic.IEnumerable{System.String},System.Data.Entity.Migrations.Utilities.IndentedTextWriter)">
+            <summary>
+            Generates code to specify a set of column names using a lambda expression.
+            </summary>
+            <param name="columns"> The columns to generate code for. </param>
+            <param name="writer"> Text writer to add the generated code to. </param>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.Design.CSharpMigrationCodeGenerator.Generate(System.Data.Entity.Migrations.Model.AddPrimaryKeyOperation,System.Data.Entity.Migrations.Utilities.IndentedTextWriter)">
+            <summary>
+            Generates code to perform an <see cref="T:System.Data.Entity.Migrations.Model.AddPrimaryKeyOperation"/>.
+            </summary>
+            <param name="addPrimaryKeyOperation"> The operation to generate code for. </param>
+            <param name="writer"> Text writer to add the generated code to. </param>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.Design.CSharpMigrationCodeGenerator.Generate(System.Data.Entity.Migrations.Model.DropPrimaryKeyOperation,System.Data.Entity.Migrations.Utilities.IndentedTextWriter)">
+            <summary>
+            Generates code to perform a <see cref="T:System.Data.Entity.Migrations.Model.DropPrimaryKeyOperation"/>.
+            </summary>
+            <param name="dropPrimaryKeyOperation"> The operation to generate code for. </param>
+            <param name="writer"> Text writer to add the generated code to. </param>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.Design.CSharpMigrationCodeGenerator.Generate(System.Data.Entity.Migrations.Model.AddForeignKeyOperation,System.Data.Entity.Migrations.Utilities.IndentedTextWriter)">
+            <summary>
+            Generates code to perform an <see cref="T:System.Data.Entity.Migrations.Model.AddForeignKeyOperation"/>.
+            </summary>
+            <param name="addForeignKeyOperation"> The operation to generate code for. </param>
+            <param name="writer"> Text writer to add the generated code to. </param>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.Design.CSharpMigrationCodeGenerator.Generate(System.Data.Entity.Migrations.Model.DropForeignKeyOperation,System.Data.Entity.Migrations.Utilities.IndentedTextWriter)">
+            <summary>
+            Generates code to perform a <see cref="T:System.Data.Entity.Migrations.Model.DropForeignKeyOperation"/>.
+            </summary>
+            <param name="dropForeignKeyOperation"> The operation to generate code for. </param>
+            <param name="writer"> Text writer to add the generated code to. </param>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.Design.CSharpMigrationCodeGenerator.Generate(System.Data.Entity.Migrations.Model.CreateIndexOperation,System.Data.Entity.Migrations.Utilities.IndentedTextWriter)">
+            <summary>
+            Generates code to perform a <see cref="T:System.Data.Entity.Migrations.Model.CreateIndexOperation"/>.
+            </summary>
+            <param name="createIndexOperation"> The operation to generate code for. </param>
+            <param name="writer"> Text writer to add the generated code to. </param>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.Design.CSharpMigrationCodeGenerator.Generate(System.Data.Entity.Migrations.Model.DropIndexOperation,System.Data.Entity.Migrations.Utilities.IndentedTextWriter)">
+            <summary>
+            Generates code to perform a <see cref="T:System.Data.Entity.Migrations.Model.DropIndexOperation"/>.
+            </summary>
+            <param name="dropIndexOperation"> The operation to generate code for. </param>
+            <param name="writer"> Text writer to add the generated code to. </param>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.Design.CSharpMigrationCodeGenerator.Generate(System.Data.Entity.Migrations.Model.ColumnModel,System.Data.Entity.Migrations.Utilities.IndentedTextWriter,System.Boolean)">
+            <summary>
+            Generates code to specify the definition for a <see cref="T:System.Data.Entity.Migrations.Model.ColumnModel"/>.
+            </summary>
+            <param name="column"> The column definition to generate code for. </param>
+            <param name="writer"> Text writer to add the generated code to. </param>
+            <param name="emitName"> A value indicating whether to include the column name in the definition. </param>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.Design.CSharpMigrationCodeGenerator.Generate(System.Byte[])">
+            <summary>
+            Generates code to specify the default value for a <see cref="T:byte[]" /> column.
+            </summary>
+            <param name="defaultValue"> The value to be used as the default. </param>
+            <returns> Code representing the default value. </returns>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.Design.CSharpMigrationCodeGenerator.Generate(System.DateTime)">
+            <summary>
+            Generates code to specify the default value for a <see cref="T:System.DateTime"/> column.
+            </summary>
+            <param name="defaultValue"> The value to be used as the default. </param>
+            <returns> Code representing the default value. </returns>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.Design.CSharpMigrationCodeGenerator.Generate(System.DateTimeOffset)">
+            <summary>
+            Generates code to specify the default value for a <see cref="T:System.DateTimeOffset"/> column.
+            </summary>
+            <param name="defaultValue"> The value to be used as the default. </param>
+            <returns> Code representing the default value. </returns>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.Design.CSharpMigrationCodeGenerator.Generate(System.Decimal)">
+            <summary>
+            Generates code to specify the default value for a <see cref="T:System.Decimal"/> column.
+            </summary>
+            <param name="defaultValue"> The value to be used as the default. </param>
+            <returns> Code representing the default value. </returns>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.Design.CSharpMigrationCodeGenerator.Generate(System.Guid)">
+            <summary>
+            Generates code to specify the default value for a <see cref="T:System.Guid"/> column.
+            </summary>
+            <param name="defaultValue"> The value to be used as the default. </param>
+            <returns> Code representing the default value. </returns>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.Design.CSharpMigrationCodeGenerator.Generate(System.Int64)">
+            <summary>
+            Generates code to specify the default value for a <see cref="T:System.Int64"/> column.
+            </summary>
+            <param name="defaultValue"> The value to be used as the default. </param>
+            <returns> Code representing the default value. </returns>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.Design.CSharpMigrationCodeGenerator.Generate(System.Single)">
+            <summary>
+            Generates code to specify the default value for a <see cref="T:System.Single"/> column.
+            </summary>
+            <param name="defaultValue"> The value to be used as the default. </param>
+            <returns> Code representing the default value. </returns>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.Design.CSharpMigrationCodeGenerator.Generate(System.String)">
+            <summary>
+            Generates code to specify the default value for a <see cref="T:System.String"/> column.
+            </summary>
+            <param name="defaultValue"> The value to be used as the default. </param>
+            <returns> Code representing the default value. </returns>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.Design.CSharpMigrationCodeGenerator.Generate(System.TimeSpan)">
+            <summary>
+            Generates code to specify the default value for a <see cref="T:System.TimeSpan"/> column.
+            </summary>
+            <param name="defaultValue"> The value to be used as the default. </param>
+            <returns> Code representing the default value. </returns>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.Design.CSharpMigrationCodeGenerator.Generate(System.Data.Entity.Spatial.DbGeography)">
+            <summary>
+            Generates code to specify the default value for a <see cref="T:System.Data.Entity.Spatial.DbGeography"/> column.
+            </summary>
+            <param name="defaultValue"> The value to be used as the default. </param>
+            <returns> Code representing the default value. </returns>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.Design.CSharpMigrationCodeGenerator.Generate(System.Data.Entity.Spatial.DbGeometry)">
+            <summary>
+            Generates code to specify the default value for a <see cref="T:System.Data.Entity.Spatial.DbGeometry"/> column.
+            </summary>
+            <param name="defaultValue"> The value to be used as the default. </param>
+            <returns> Code representing the default value. </returns>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.Design.CSharpMigrationCodeGenerator.Generate(System.Object)">
+            <summary>
+            Generates code to specify the default value for a column of unknown data type.
+            </summary>
+            <param name="defaultValue"> The value to be used as the default. </param>
+            <returns> Code representing the default value. </returns>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.Design.CSharpMigrationCodeGenerator.Generate(System.Data.Entity.Migrations.Model.DropTableOperation,System.Data.Entity.Migrations.Utilities.IndentedTextWriter)">
+            <summary>
+            Generates code to perform a <see cref="T:System.Data.Entity.Migrations.Model.DropTableOperation"/>.
+            </summary>
+            <param name="dropTableOperation"> The operation to generate code for. </param>
+            <param name="writer"> Text writer to add the generated code to. </param>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.Design.CSharpMigrationCodeGenerator.Generate(System.Data.Entity.Migrations.Model.MoveTableOperation,System.Data.Entity.Migrations.Utilities.IndentedTextWriter)">
+            <summary>
+            Generates code to perform a <see cref="T:System.Data.Entity.Migrations.Model.MoveTableOperation"/>.
+            </summary>
+            <param name="moveTableOperation"> The operation to generate code for. </param>
+            <param name="writer"> Text writer to add the generated code to. </param>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.Design.CSharpMigrationCodeGenerator.Generate(System.Data.Entity.Migrations.Model.MoveProcedureOperation,System.Data.Entity.Migrations.Utilities.IndentedTextWriter)">
+            <summary>
+            Generates code to perform a <see cref="T:System.Data.Entity.Migrations.Model.MoveProcedureOperation"/>.
+            </summary>
+            <param name="moveProcedureOperation">The operation to generate code for.</param>
+            <param name="writer">Text writer to add the generated code to.</param>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.Design.CSharpMigrationCodeGenerator.Generate(System.Data.Entity.Migrations.Model.RenameTableOperation,System.Data.Entity.Migrations.Utilities.IndentedTextWriter)">
+            <summary>
+            Generates code to perform a <see cref="T:System.Data.Entity.Migrations.Model.RenameTableOperation"/>.
+            </summary>
+            <param name="renameTableOperation"> The operation to generate code for. </param>
+            <param name="writer"> Text writer to add the generated code to. </param>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.Design.CSharpMigrationCodeGenerator.Generate(System.Data.Entity.Migrations.Model.RenameProcedureOperation,System.Data.Entity.Migrations.Utilities.IndentedTextWriter)">
+            <summary>
+            Generates code to perform a <see cref="T:System.Data.Entity.Migrations.Model.RenameProcedureOperation"/>.
+            </summary>
+            <param name="renameProcedureOperation">The operation to generate code for.</param>
+            <param name="writer">Text writer to add the generated code to.</param>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.Design.CSharpMigrationCodeGenerator.Generate(System.Data.Entity.Migrations.Model.RenameColumnOperation,System.Data.Entity.Migrations.Utilities.IndentedTextWriter)">
+            <summary>
+            Generates code to perform a <see cref="T:System.Data.Entity.Migrations.Model.RenameColumnOperation"/>.
+            </summary>
+            <param name="renameColumnOperation"> The operation to generate code for. </param>
+            <param name="writer"> Text writer to add the generated code to. </param>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.Design.CSharpMigrationCodeGenerator.Generate(System.Data.Entity.Migrations.Model.RenameIndexOperation,System.Data.Entity.Migrations.Utilities.IndentedTextWriter)">
+            <summary>
+            Generates code to perform a <see cref="T:System.Data.Entity.Migrations.Model.RenameIndexOperation"/>.
+            </summary>
+            <param name="renameIndexOperation"> The operation to generate code for. </param>
+            <param name="writer"> Text writer to add the generated code to. </param>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.Design.CSharpMigrationCodeGenerator.Generate(System.Data.Entity.Migrations.Model.SqlOperation,System.Data.Entity.Migrations.Utilities.IndentedTextWriter)">
+            <summary>
+            Generates code to perform a <see cref="T:System.Data.Entity.Migrations.Model.SqlOperation"/>.
+            </summary>
+            <param name="sqlOperation"> The operation to generate code for. </param>
+            <param name="writer"> Text writer to add the generated code to. </param>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.Design.CSharpMigrationCodeGenerator.ScrubName(System.String)">
+            <summary>
+            Removes any invalid characters from the name of an database artifact.
+            </summary>
+            <param name="name"> The name to be scrubbed. </param>
+            <returns> The scrubbed name. </returns>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.Design.CSharpMigrationCodeGenerator.TranslateColumnType(System.Data.Entity.Core.Metadata.Edm.PrimitiveTypeKind)">
+            <summary>
+            Gets the type name to use for a column of the given data type.
+            </summary>
+            <param name="primitiveTypeKind"> The data type to translate. </param>
+            <returns> The type name to use in the generated migration. </returns>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.Design.CSharpMigrationCodeGenerator.Quote(System.String)">
+            <summary>
+            Quotes an identifier using appropriate escaping to allow it to be stored in a string.
+            </summary>
+            <param name="identifier"> The identifier to be quoted. </param>
+            <returns> The quoted identifier. </returns>
+        </member>
+        <member name="T:System.Data.Entity.Migrations.Design.MigrationScaffolder">
+            <summary>
+            Scaffolds code-based migrations to apply pending model changes to the database.
+            </summary>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.Design.MigrationScaffolder.#ctor(System.Data.Entity.Migrations.DbMigrationsConfiguration)">
+            <summary>
+            Initializes a new instance of the MigrationScaffolder class.
+            </summary>
+            <param name="migrationsConfiguration"> Configuration to be used for scaffolding. </param>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.Design.MigrationScaffolder.Scaffold(System.String)">
+            <summary>
+            Scaffolds a code based migration to apply any pending model changes to the database.
+            </summary>
+            <param name="migrationName"> The name to use for the scaffolded migration. </param>
+            <returns> The scaffolded migration. </returns>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.Design.MigrationScaffolder.Scaffold(System.String,System.Boolean)">
+            <summary>
+            Scaffolds a code based migration to apply any pending model changes to the database.
+            </summary>
+            <param name="migrationName"> The name to use for the scaffolded migration. </param>
+            <param name="ignoreChanges"> Whether or not to include model changes. </param>
+            <returns> The scaffolded migration. </returns>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.Design.MigrationScaffolder.ScaffoldInitialCreate">
+            <summary>
+            Scaffolds the initial code-based migration corresponding to a previously run database initializer.
+            </summary>
+            <returns> The scaffolded migration. </returns>
+        </member>
+        <member name="P:System.Data.Entity.Migrations.Design.MigrationScaffolder.Namespace">
+            <summary>
+            Gets or sets the namespace used in the migration's generated code.
+            By default, this is the same as MigrationsNamespace on the migrations
+            configuration object passed into the constructor. For VB.NET projects, this
+            will need to be updated to take into account the project's root namespace.
+            </summary>
+        </member>
+        <member name="T:System.Data.Entity.Migrations.Design.ScaffoldedMigration">
+            <summary>
+            Represents a code-based migration that has been scaffolded and is ready to be written to a file.
+            </summary>
+        </member>
+        <member name="P:System.Data.Entity.Migrations.Design.ScaffoldedMigration.MigrationId">
+            <summary>
+            Gets or sets the unique identifier for this migration.
+            Typically used for the file name of the generated code.
+            </summary>
+        </member>
+        <member name="P:System.Data.Entity.Migrations.Design.ScaffoldedMigration.UserCode">
+            <summary>
+            Gets or sets the scaffolded migration code that the user can edit.
+            </summary>
+        </member>
+        <member name="P:System.Data.Entity.Migrations.Design.ScaffoldedMigration.DesignerCode">
+            <summary>
+            Gets or sets the scaffolded migration code that should be stored in a code behind file.
+            </summary>
+        </member>
+        <member name="P:System.Data.Entity.Migrations.Design.ScaffoldedMigration.Language">
+            <summary>
+            Gets or sets the programming language used for this migration.
+            Typically used for the file extension of the generated code.
+            </summary>
+        </member>
+        <member name="P:System.Data.Entity.Migrations.Design.ScaffoldedMigration.Directory">
+            <summary>
+            Gets or sets the subdirectory in the user's project that this migration should be saved in.
+            </summary>
+        </member>
+        <member name="P:System.Data.Entity.Migrations.Design.ScaffoldedMigration.Resources">
+            <summary>
+            Gets a dictionary of string resources to add to the migration resource file.
+            </summary>
+        </member>
+        <member name="P:System.Data.Entity.Migrations.Design.ScaffoldedMigration.IsRescaffold">
+            <summary>
+            Gets or sets whether the migration was re-scaffolded.
+            </summary>
+        </member>
+        <member name="T:System.Data.Entity.Migrations.Design.ToolingFacade">
+            <summary>
+            Helper class that is used by design time tools to run migrations related
+            commands that need to interact with an application that is being edited
+            in Visual Studio.
+            Because the application is being edited the assemblies need to
+            be loaded in a separate AppDomain to ensure the latest version
+            is always loaded.
+            The App/Web.config file from the startup project is also copied
+            to ensure that any configuration is applied.
+            </summary>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.Design.ToolingFacade.#ctor(System.String,System.String,System.String,System.String,System.String,System.String,System.Data.Entity.Infrastructure.DbConnectionInfo)">
+            <summary>
+            Initializes a new instance of the ToolingFacade class.
+            </summary>
+            <param name="migrationsAssemblyName"> The name of the assembly that contains the migrations configuration to be used. </param>
+            <param name="contextAssemblyName"> The name of the assembly that contains the DbContext to be used. </param>
+            <param name="configurationTypeName"> The namespace qualified name of migrations configuration to be used. </param>
+            <param name="workingDirectory"> The working directory containing the compiled assemblies. </param>
+            <param name="configurationFilePath"> The path of the config file from the startup project. </param>
+            <param name="dataDirectory"> The path of the application data directory from the startup project. Typically the App_Data directory for web applications or the working directory for executables. </param>
+            <param name="connectionStringInfo"> The connection to the database to be migrated. If null is supplied, the default connection for the context will be used. </param>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.Design.ToolingFacade.Finalize">
+            <summary>
+            Releases all unmanaged resources used by the facade.
+            </summary>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.Design.ToolingFacade.GetContextTypes">
+            <summary>
+            Gets the fully qualified name of all types deriving from <see cref="T:System.Data.Entity.DbContext"/>.
+            </summary>
+            <returns> All context types found. </returns>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.Design.ToolingFacade.GetContextType(System.String)">
+            <summary>
+            Gets the fully qualified name of a type deriving from <see cref="T:System.Data.Entity.DbContext"/>.
+            </summary>
+            <param name="contextTypeName"> The name of the context type. If null, the single context type found in the assembly will be returned. </param>
+            <returns> The context type found. </returns>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.Design.ToolingFacade.GetDatabaseMigrations">
+            <summary>
+            Gets a list of all migrations that have been applied to the database.
+            </summary>
+            <returns> Ids of applied migrations. </returns>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.Design.ToolingFacade.GetPendingMigrations">
+            <summary>
+            Gets a list of all migrations that have not been applied to the database.
+            </summary>
+            <returns> Ids of pending migrations. </returns>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.Design.ToolingFacade.Update(System.String,System.Boolean)">
+            <summary>
+            Updates the database to the specified migration.
+            </summary>
+            <param name="targetMigration"> The Id of the migration to migrate to. If null is supplied, the database will be updated to the latest migration. </param>
+            <param name="force"> Value indicating if data loss during automatic migration is acceptable. </param>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.Design.ToolingFacade.ScriptUpdate(System.String,System.String,System.Boolean)">
+            <summary>
+            Generates a SQL script to migrate between two migrations.
+            </summary>
+            <param name="sourceMigration"> The migration to update from. If null is supplied, a script to update the current database will be produced. </param>
+            <param name="targetMigration"> The migration to update to. If null is supplied, a script to update to the latest migration will be produced. </param>
+            <param name="force"> Value indicating if data loss during automatic migration is acceptable. </param>
+            <returns> The generated SQL script. </returns>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.Design.ToolingFacade.Scaffold(System.String,System.String,System.String,System.Boolean)">
+            <summary>
+            Scaffolds a code-based migration to apply any pending model changes.
+            </summary>
+            <param name="migrationName"> The name for the generated migration. </param>
+            <param name="language"> The programming language of the generated migration. </param>
+            <param name="rootNamespace"> The root namespace of the project the migration will be added to. </param>
+            <param name="ignoreChanges"> Whether or not to include model changes. </param>
+            <returns> The scaffolded migration. </returns>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.Design.ToolingFacade.ScaffoldInitialCreate(System.String,System.String)">
+            <summary>
+            Scaffolds the initial code-based migration corresponding to a previously run database initializer.
+            </summary>
+            <param name="language"> The programming language of the generated migration. </param>
+            <param name="rootNamespace"> The root namespace of the project the migration will be added to. </param>
+            <returns> The scaffolded migration. </returns>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.Design.ToolingFacade.Dispose">
+            <inheritdoc />
+        </member>
+        <member name="M:System.Data.Entity.Migrations.Design.ToolingFacade.Dispose(System.Boolean)">
+            <summary>
+            Releases all resources used by the facade.
+            </summary>
+            <param name="disposing">
+            <c>true</c> to release both managed and unmanaged resources; <c>false</c> to release only unmanaged resources.
+            </param>
+        </member>
+        <member name="P:System.Data.Entity.Migrations.Design.ToolingFacade.LogInfoDelegate">
+            <summary>
+            Gets or sets an action to be run to log information.
+            </summary>
+        </member>
+        <member name="P:System.Data.Entity.Migrations.Design.ToolingFacade.LogWarningDelegate">
+            <summary>
+            Gets or sets an action to be run to log warnings.
+            </summary>
+        </member>
+        <member name="P:System.Data.Entity.Migrations.Design.ToolingFacade.LogVerboseDelegate">
+            <summary>
+            Gets or sets an action to be run to log verbose information.
+            </summary>
+        </member>
+        <member name="T:System.Data.Entity.Migrations.Infrastructure.MigrationsLogger">
+            <summary>
+            Base class for loggers that can be used for the migrations process.
+            </summary>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.Infrastructure.MigrationsLogger.Info(System.String)">
+            <summary>
+            Logs an informational message.
+            </summary>
+            <param name="message"> The message to be logged. </param>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.Infrastructure.MigrationsLogger.Warning(System.String)">
+            <summary>
+            Logs a warning that the user should be made aware of.
+            </summary>
+            <param name="message"> The message to be logged. </param>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.Infrastructure.MigrationsLogger.Verbose(System.String)">
+            <summary>
+            Logs some additional information that should only be presented to the user if they request verbose output.
+            </summary>
+            <param name="message"> The message to be logged. </param>
+        </member>
+        <member name="T:System.Data.Entity.Migrations.Design.VisualBasicMigrationCodeGenerator">
+            <summary>
+            Generates VB.Net code for a code-based migration.
+            </summary>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.Design.VisualBasicMigrationCodeGenerator.Generate(System.String,System.Collections.Generic.IEnumerable{System.Data.Entity.Migrations.Model.MigrationOperation},System.String,System.String,System.String,System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:System.Data.Entity.Migrations.Design.VisualBasicMigrationCodeGenerator.Generate(System.Collections.Generic.IEnumerable{System.Data.Entity.Migrations.Model.MigrationOperation},System.String,System.String)">
+            <summary>
+            Generates the primary code file that the user can view and edit.
+            </summary>
+            <param name="operations"> Operations to be performed by the migration. </param>
+            <param name="namespace"> Namespace that code should be generated in. </param>
+            <param name="className"> Name of the class that should be generated. </param>
+            <returns> The generated code. </returns>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.Design.VisualBasicMigrationCodeGenerator.Generate(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Generates the code behind file with migration metadata.
+            </summary>
+            <param name="migrationId"> Unique identifier of the migration. </param>
+            <param name="sourceModel"> Source model to be stored in the migration metadata. </param>
+            <param name="targetModel"> Target model to be stored in the migration metadata. </param>
+            <param name="namespace"> Namespace that code should be generated in. </param>
+            <param name="className"> Name of the class that should be generated. </param>
+            <returns> The generated code. </returns>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.Design.VisualBasicMigrationCodeGenerator.WriteProperty(System.String,System.String,System.Data.Entity.Migrations.Utilities.IndentedTextWriter)">
+            <summary>
+            Generates a property to return the source or target model in the code behind file.
+            </summary>
+            <param name="name"> Name of the property. </param>
+            <param name="value"> Value to be returned. </param>
+            <param name="writer"> Text writer to add the generated code to. </param>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.Design.VisualBasicMigrationCodeGenerator.WriteClassAttributes(System.Data.Entity.Migrations.Utilities.IndentedTextWriter,System.Boolean)">
+            <summary>
+            Generates class attributes.
+            </summary>
+            <param name="writer"> Text writer to add the generated code to. </param>
+            <param name="designer"> A value indicating if this class is being generated for a code-behind file. </param>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.Design.VisualBasicMigrationCodeGenerator.WriteClassStart(System.String,System.String,System.Data.Entity.Migrations.Utilities.IndentedTextWriter,System.String,System.Boolean,System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Generates a namespace, using statements and class definition.
+            </summary>
+            <param name="namespace"> Namespace that code should be generated in. </param>
+            <param name="className"> Name of the class that should be generated. </param>
+            <param name="writer"> Text writer to add the generated code to. </param>
+            <param name="base"> Base class for the generated class. </param>
+            <param name="designer"> A value indicating if this class is being generated for a code-behind file. </param>
+            <param name="namespaces"> Namespaces for which Imports directives will be added. If null, then the namespaces returned from GetDefaultNamespaces will be used. </param>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.Design.VisualBasicMigrationCodeGenerator.WriteClassEnd(System.String,System.Data.Entity.Migrations.Utilities.IndentedTextWriter)">
+            <summary>
+            Generates the closing code for a class that was started with WriteClassStart.
+            </summary>
+            <param name="namespace"> Namespace that code should be generated in. </param>
+            <param name="writer"> Text writer to add the generated code to. </param>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.Design.VisualBasicMigrationCodeGenerator.Generate(System.Data.Entity.Migrations.Model.AddColumnOperation,System.Data.Entity.Migrations.Utilities.IndentedTextWriter)">
+            <summary>
+            Generates code to perform an <see cref="T:System.Data.Entity.Migrations.Model.AddColumnOperation"/>.
+            </summary>
+            <param name="addColumnOperation"> The operation to generate code for. </param>
+            <param name="writer"> Text writer to add the generated code to. </param>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.Design.VisualBasicMigrationCodeGenerator.Generate(System.Data.Entity.Migrations.Model.DropColumnOperation,System.Data.Entity.Migrations.Utilities.IndentedTextWriter)">
+            <summary>
+            Generates code to perform a <see cref="T:System.Data.Entity.Migrations.Model.DropColumnOperation"/>.
+            </summary>
+            <param name="dropColumnOperation"> The operation to generate code for. </param>
+            <param name="writer"> Text writer to add the generated code to. </param>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.Design.VisualBasicMigrationCodeGenerator.Generate(System.Data.Entity.Migrations.Model.AlterColumnOperation,System.Data.Entity.Migrations.Utilities.IndentedTextWriter)">
+            <summary>
+            Generates code to perform an <see cref="T:System.Data.Entity.Migrations.Model.AlterColumnOperation"/>.
+            </summary>
+            <param name="alterColumnOperation"> The operation to generate code for. </param>
+            <param name="writer"> Text writer to add the generated code to. </param>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.Design.VisualBasicMigrationCodeGenerator.GenerateAnnotations(System.Collections.Generic.IDictionary{System.String,System.Object},System.Data.Entity.Migrations.Utilities.IndentedTextWriter)">
+            <summary>
+            Generates code for to re-create the given dictionary of annotations for use when passing
+            these annotations as a parameter of a <see cref="T:System.Data.Entity.Migrations.DbMigration"/>. call.
+            </summary>
+            <param name="annotations">The annotations to generate.</param>
+            <param name="writer">The writer to which generated code should be written.</param>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.Design.VisualBasicMigrationCodeGenerator.GenerateAnnotations(System.Collections.Generic.IDictionary{System.String,System.Data.Entity.Infrastructure.Annotations.AnnotationValues},System.Data.Entity.Migrations.Utilities.IndentedTextWriter)">
+            <summary>
+            Generates code for to re-create the given dictionary of annotations for use when passing
+            these annotations as a parameter of a <see cref="T:System.Data.Entity.Migrations.DbMigration"/>. call.
+            </summary>
+            <param name="annotations">The annotations to generate.</param>
+            <param name="writer">The writer to which generated code should be written.</param>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.Design.VisualBasicMigrationCodeGenerator.GenerateAnnotation(System.String,System.Object,System.Data.Entity.Migrations.Utilities.IndentedTextWriter)">
+            <summary>
+            Generates code for the given annotation value, which may be null. The default behavior is to use an
+            <see cref="T:System.Data.Entity.Infrastructure.Annotations.AnnotationCodeGenerator"/> if one is registered, otherwise call ToString on the annotation value.
+            </summary>
+            <remarks>
+            Note that a <see cref="T:System.Data.Entity.Infrastructure.Annotations.AnnotationCodeGenerator"/> can be registered to generate code for custom annotations
+            without the need to override the entire code generator.
+            </remarks>
+            <param name="name">The name of the annotation for which code is needed.</param>
+            <param name="annotation">The annotation value to generate.</param>
+            <param name="writer">The writer to which generated code should be written.</param>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.Design.VisualBasicMigrationCodeGenerator.Generate(System.Data.Entity.Migrations.Model.CreateProcedureOperation,System.Data.Entity.Migrations.Utilities.IndentedTextWriter)">
+            <summary>Generates code to perform a <see cref="T:System.Data.Entity.Migrations.Model.CreateProcedureOperation" />.</summary>
+            <param name="createProcedureOperation">The operation to generate code for.</param>
+            <param name="writer">Text writer to add the generated code to.</param>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.Design.VisualBasicMigrationCodeGenerator.Generate(System.Data.Entity.Migrations.Model.AlterProcedureOperation,System.Data.Entity.Migrations.Utilities.IndentedTextWriter)">
+            <summary>Generates code to perform a <see cref="T:System.Data.Entity.Migrations.Model.AlterProcedureOperation" />.</summary>
+            <param name="alterProcedureOperation">The operation to generate code for.</param>
+            <param name="writer">Text writer to add the generated code to.</param>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.Design.VisualBasicMigrationCodeGenerator.Generate(System.Data.Entity.Migrations.Model.ParameterModel,System.Data.Entity.Migrations.Utilities.IndentedTextWriter,System.Boolean)">
+            <summary>Generates code to perform a <see cref="T:System.Data.Entity.Migrations.Model.ParameterModel" />.</summary>
+            <param name="parameterModel">The parameter model definition to generate code for.</param>
+            <param name="writer">Text writer to add the generated code to.</param>
+            <param name="emitName">true to include the column name in the definition; otherwise, false.</param>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.Design.VisualBasicMigrationCodeGenerator.Generate(System.Data.Entity.Migrations.Model.DropProcedureOperation,System.Data.Entity.Migrations.Utilities.IndentedTextWriter)">
+            <summary>Generates code to perform a <see cref="T:System.Data.Entity.Migrations.Model.DropProcedureOperation" />.</summary>
+            <param name="dropProcedureOperation">The operation to generate code for.</param>
+            <param name="writer">Text writer to add the generated code to.</param>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.Design.VisualBasicMigrationCodeGenerator.Generate(System.Data.Entity.Migrations.Model.CreateTableOperation,System.Data.Entity.Migrations.Utilities.IndentedTextWriter)">
+            <summary>
+            Generates code to perform a <see cref="T:System.Data.Entity.Migrations.Model.CreateTableOperation"/>.
+            </summary>
+            <param name="createTableOperation"> The operation to generate code for. </param>
+            <param name="writer"> Text writer to add the generated code to. </param>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.Design.VisualBasicMigrationCodeGenerator.Generate(System.Data.Entity.Migrations.Model.AlterTableOperation,System.Data.Entity.Migrations.Utilities.IndentedTextWriter)">
+            <summary>
+            Generates code for an <see cref="T:System.Data.Entity.Migrations.Model.AlterTableOperation"/>.
+            </summary>
+            <param name="alterTableOperation">The operation for which code should be generated.</param>
+            <param name="writer">The writer to which generated code should be written.</param>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.Design.VisualBasicMigrationCodeGenerator.GenerateInline(System.Data.Entity.Migrations.Model.AddPrimaryKeyOperation,System.Data.Entity.Migrations.Utilities.IndentedTextWriter)">
+            <summary>
+            Generates code to perform an <see cref="T:System.Data.Entity.Migrations.Model.AddPrimaryKeyOperation"/> as part of a <see cref="T:System.D

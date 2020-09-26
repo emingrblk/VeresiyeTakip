@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VsixLanguagePack Version="1.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema-lp/2010">
+  <LocalizedName>Serviço Conectado do Microsoft Azure Mobile Apps</LocalizedName>
+  <LocalizedDescription>Permite que os desenvolvedores criem e se conectem aos Azure Mobile Apps facilmente e com orientação passo a passo.</LocalizedDescription>
+  <MoreInfoUrl>https://go.microsoft.com/fwlink/?LinkId=534856</MoreInfoUrl>
+</VsixLanguagePack>

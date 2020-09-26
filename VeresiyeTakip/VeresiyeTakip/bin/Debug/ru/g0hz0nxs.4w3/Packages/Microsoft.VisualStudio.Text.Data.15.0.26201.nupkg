@@ -1,0 +1,1191 @@
+ef="T:System.Object" /> to attach.
+            </param>
+            <exception cref="T:System.ArgumentNullException">The  entity  is null. </exception>
+            <exception cref="T:System.InvalidOperationException">
+            Invalid entity set  or the object has a temporary key or the object has an
+            <see
+                cref="T:System.Data.Entity.Core.EntityKey" />
+            and the
+            <see
+                cref="T:System.Data.Entity.Core.Metadata.Edm.EntitySet" />
+            does not match with the entity set passed in as an argument of the method or the object does not have an
+            <see
+                cref="T:System.Data.Entity.Core.EntityKey" />
+            and no entity set is provided or any object from the object graph has a temporary
+            <see
+                cref="T:System.Data.Entity.Core.EntityKey" />
+             or any object from the object graph has an invalid
+            <see
+                cref="T:System.Data.Entity.Core.EntityKey" />
+            (for example, values in the key do not match values in the object) or the entity set could not be found from a given  entitySetName  name and entity container name or any object from the object graph already exists in another state manager.
+            </exception>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ObjectContext.Attach(System.Data.Entity.Core.Objects.DataClasses.IEntityWithKey)">
+            <summary>Attaches an object or object graph to the object context when the object has an entity key. </summary>
+            <param name="entity">The object to attach.</param>
+            <exception cref="T:System.ArgumentNullException">The  entity  is null. </exception>
+            <exception cref="T:System.InvalidOperationException">Invalid entity key. </exception>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ObjectContext.CreateEntityKey(System.String,System.Object)">
+            <summary>Creates the entity key for a specific object, or returns the entity key if it already exists. </summary>
+            <returns>
+            The <see cref="T:System.Data.Entity.Core.EntityKey" /> of the object.
+            </returns>
+            <param name="entitySetName">The fully qualified name of the entity set to which the entity object belongs.</param>
+            <param name="entity">The object for which the entity key is being retrieved. </param>
+            <exception cref="T:System.ArgumentNullException">When either parameter is null. </exception>
+            <exception cref="T:System.ArgumentException">When  entitySetName  is empty or when the type of the  entity  object does not exist in the entity set or when the  entitySetName  is not fully qualified.</exception>
+            <exception cref="T:System.InvalidOperationException">When the entity key cannot be constructed successfully based on the supplied parameters.</exception>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ObjectContext.CreateObjectSet``1">
+            <summary>
+            Creates a new <see cref="T:System.Data.Entity.Core.Objects.ObjectSet`1" /> instance that is used to query, add, modify, and delete objects of the specified entity type.
+            </summary>
+            <returns>
+            The new <see cref="T:System.Data.Entity.Core.Objects.ObjectSet`1" /> instance.
+            </returns>
+            <typeparam name="TEntity">
+            Entity type of the requested <see cref="T:System.Data.Entity.Core.Objects.ObjectSet`1" />.
+            </typeparam>
+            <exception cref="T:System.InvalidOperationException">
+            The <see cref="P:System.Data.Entity.Core.Objects.ObjectContext.DefaultContainerName" /> property is not set on the
+            <see
+                cref="T:System.Data.Entity.Core.Objects.ObjectContext" />
+             or the specified type belongs to more than one entity set.
+            </exception>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ObjectContext.CreateObjectSet``1(System.String)">
+            <summary>
+            Creates a new <see cref="T:System.Data.Entity.Core.Objects.ObjectSet`1" /> instance that is used to query, add, modify, and delete objects of the specified type and with the specified entity set name.
+            </summary>
+            <returns>
+            The new <see cref="T:System.Data.Entity.Core.Objects.ObjectSet`1" /> instance.
+            </returns>
+            <param name="entitySetName">
+            Name of the entity set for the returned <see cref="T:System.Data.Entity.Core.Objects.ObjectSet`1" />. The string must be qualified by the default container name if the
+            <see
+                cref="P:System.Data.Entity.Core.Objects.ObjectContext.DefaultContainerName" />
+            property is not set on the
+            <see
+                cref="T:System.Data.Entity.Core.Objects.ObjectContext" />
+            .
+            </param>
+            <typeparam name="TEntity">
+            Entity type of the requested <see cref="T:System.Data.Entity.Core.Objects.ObjectSet`1" />.
+            </typeparam>
+            <exception cref="T:System.InvalidOperationException">
+            The <see cref="T:System.Data.Entity.Core.Metadata.Edm.EntitySet" /> from  entitySetName  does not match the
+            <see
+                cref="T:System.Data.Entity.Core.Metadata.Edm.EntitySet" />
+            of the object
+            <see
+                cref="T:System.Data.Entity.Core.EntityKey" />
+             or the
+            <see
+                cref="P:System.Data.Entity.Core.Objects.ObjectContext.DefaultContainerName" />
+            property is not set on the
+            <see
+                cref="T:System.Data.Entity.Core.Objects.ObjectContext" />
+            and the name is not qualified as part of the  entitySetName  parameter or the specified type belongs to more than one entity set.
+            </exception>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ObjectContext.CreateQuery``1(System.String,System.Data.Entity.Core.Objects.ObjectParameter[])">
+            <summary>
+            Creates an <see cref="T:System.Data.Entity.Core.Objects.ObjectQuery`1" /> in the current object context by using the specified query string.
+            </summary>
+            <returns>
+            An <see cref="T:System.Data.Entity.Core.Objects.ObjectQuery`1" /> of the specified type.
+            </returns>
+            <param name="queryString">The query string to be executed.</param>
+            <param name="parameters">Parameters to pass to the query.</param>
+            <typeparam name="T">
+            The entity type of the returned <see cref="T:System.Data.Entity.Core.Objects.ObjectQuery`1" />.
+            </typeparam>
+            <exception cref="T:System.ArgumentNullException">The  queryString  or  parameters  parameter is null.</exception>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ObjectContext.DeleteObject(System.Object)">
+            <summary>Marks an object for deletion. </summary>
+            <param name="entity">
+            An object that specifies the entity to delete. The object can be in any state except
+            <see
+                cref="F:System.Data.Entity.EntityState.Detached" />
+            .
+            </param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ObjectContext.Detach(System.Object)">
+            <summary>Removes the object from the object context.</summary>
+            <param name="entity">
+            Object to be detached. Only the  entity  is removed; if there are any related objects that are being tracked by the same
+            <see
+                cref="T:System.Data.Entity.Core.Objects.ObjectStateManager" />
+            , those will not be detached automatically.
+            </param>
+            <exception cref="T:System.ArgumentNullException">The  entity  is null. </exception>
+            <exception cref="T:System.InvalidOperationException">
+            The  entity  is not associated with this <see cref="T:System.Data.Entity.Core.Objects.ObjectContext" /> (for example, was newly created and not associated with any context yet, or was obtained through some other context, or was already detached).
+            </exception>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ObjectContext.Finalize">
+            <summary>
+            Finalizes an instance of the <see cref="T:System.Data.Entity.Core.Objects.ObjectContext"/> class.
+            </summary>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ObjectContext.Dispose">
+            <summary>Releases the resources used by the object context.</summary>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ObjectContext.Dispose(System.Boolean)">
+            <summary>
+            Releases the resources used by the object context.
+            </summary>
+            <param name="disposing">
+            <c>true</c> to release both managed and unmanaged resources; <c>false</c> to release only unmanaged resources.
+            </param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ObjectContext.GetObjectByKey(System.Data.Entity.Core.EntityKey)">
+            <summary>Returns an object that has the specified entity key.</summary>
+            <returns>
+            An <see cref="T:System.Object" /> that is an instance of an entity type.
+            </returns>
+            <param name="key">The key of the object to be found.</param>
+            <exception cref="T:System.ArgumentNullException">The  key  parameter is null.</exception>
+            <exception cref="T:System.Data.Entity.Core.ObjectNotFoundException">
+            The object is not found in either the <see cref="T:System.Data.Entity.Core.Objects.ObjectStateManager" /> or the data source.
+            </exception>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ObjectContext.Refresh(System.Data.Entity.Core.Objects.RefreshMode,System.Collections.IEnumerable)">
+            <summary>Updates a collection of objects in the object context with data from the database. </summary>
+            <param name="refreshMode">
+            A <see cref="T:System.Data.Entity.Core.Objects.RefreshMode" /> value that indicates whether 
+            property changes in the object context are overwritten with property values from the database.
+            </param>
+            <param name="collection">
+            An <see cref="T:System.Collections.IEnumerable" /> collection of objects to refresh.
+            </param>
+            <exception cref="T:System.ArgumentNullException"> collection  is null.</exception>
+            <exception cref="T:System.ArgumentOutOfRangeException"> refreshMode  is not valid.</exception>
+            <exception cref="T:System.ArgumentException"> collection is empty or an object is not attached to the context. </exception>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ObjectContext.Refresh(System.Data.Entity.Core.Objects.RefreshMode,System.Object)">
+            <summary>Updates an object in the object context with data from the database. </summary>
+            <param name="refreshMode">
+            A <see cref="T:System.Data.Entity.Core.Objects.RefreshMode" /> value that indicates whether 
+            property changes in the object context are overwritten with property values from the database.
+            </param>
+            <param name="entity">The object to be refreshed. </param>
+            <exception cref="T:System.ArgumentNullException"> entity  is null.</exception>
+            <exception cref="T:System.ArgumentOutOfRangeException"> refreshMode  is not valid.</exception>
+            <exception cref="T:System.ArgumentException"> entity is not attached to the context. </exception>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ObjectContext.RefreshAsync(System.Data.Entity.Core.Objects.RefreshMode,System.Collections.IEnumerable)">
+            <summary>Asynchronously updates a collection of objects in the object context with data from the database. </summary>
+            <remarks>
+            Multiple active operations on the same context instance are not supported.  Use 'await' to ensure
+            that any asynchronous operations have completed before calling another method on this context.
+            </remarks>
+            <param name="refreshMode">
+            A <see cref="T:System.Data.Entity.Core.Objects.RefreshMode" /> value that indicates whether 
+            property changes in the object context are overwritten with property values from the database.
+            </param>
+            <param name="collection">
+            An <see cref="T:System.Collections.IEnumerable" /> collection of objects to refresh.
+            </param>
+            <returns>
+            A task that represents the asynchronous operation.
+            </returns>
+            <exception cref="T:System.ArgumentNullException"> collection  is null.</exception>
+            <exception cref="T:System.ArgumentOutOfRangeException"> refreshMode  is not valid.</exception>
+            <exception cref="T:System.ArgumentException"> collection is empty or an object is not attached to the context. </exception>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ObjectContext.RefreshAsync(System.Data.Entity.Core.Objects.RefreshMode,System.Collections.IEnumerable,System.Threading.CancellationToken)">
+            <summary>Asynchronously updates a collection of objects in the object context with data from the database. </summary>
+            <remarks>
+            Multiple active operations on the same context instance are not supported.  Use 'await' to ensure
+            that any asynchronous operations have completed before calling another method on this context.
+            </remarks>
+            <param name="refreshMode">
+            A <see cref="T:System.Data.Entity.Core.Objects.RefreshMode"/> value that indicates whether 
+            property changes in the object context are overwritten with property values from the database.
+            </param>
+            <param name="collection">
+            An <see cref="T:System.Collections.IEnumerable"/> collection of objects to refresh.
+            </param>
+             <param name="cancellationToken">
+            A <see cref="T:System.Threading.CancellationToken"/> to observe while waiting for the task to complete.
+            </param>
+            <returns>
+            A task that represents the asynchronous operation.
+            </returns>
+            <exception cref="T:System.ArgumentNullException"> collection  is null.</exception>
+            <exception cref="T:System.ArgumentOutOfRangeException"> refreshMode  is not valid.</exception>
+            <exception cref="T:System.ArgumentException"> collection is empty or an object is not attached to the context. </exception>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ObjectContext.RefreshAsync(System.Data.Entity.Core.Objects.RefreshMode,System.Object)">
+            <summary>Asynchronously updates an object in the object context with data from the database. </summary>
+            <remarks>
+            Multiple active operations on the same context instance are not supported.  Use 'await' to ensure
+            that any asynchronous operations have completed before calling another method on this context.
+            </remarks>
+            <param name="refreshMode">
+            A <see cref="T:System.Data.Entity.Core.Objects.RefreshMode" /> value that indicates whether 
+            property changes in the object context are overwritten with property values from the database.
+            </param>
+            <param name="entity">The object to be refreshed. </param>
+            <returns>
+            A task that represents the asynchronous operation.
+            </returns>
+            <exception cref="T:System.ArgumentNullException"> entity  is null.</exception>
+            <exception cref="T:System.ArgumentOutOfRangeException"> refreshMode  is not valid.</exception>
+            <exception cref="T:System.ArgumentException"> entity is not attached to the context. </exception>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ObjectContext.RefreshAsync(System.Data.Entity.Core.Objects.RefreshMode,System.Object,System.Threading.CancellationToken)">
+            <summary>Asynchronously updates an object in the object context with data from the database. </summary>
+            <remarks>
+            Multiple active operations on the same context instance are not supported.  Use 'await' to ensure
+            that any asynchronous operations have completed before calling another method on this context.
+            </remarks>
+            <param name="refreshMode">
+            A <see cref="T:System.Data.Entity.Core.Objects.RefreshMode"/> value that indicates whether 
+            property changes in the object context are overwritten with property values from the database.
+            </param>
+            <param name="entity">The object to be refreshed. </param>
+            <param name="cancellationToken">
+            A <see cref="T:System.Threading.CancellationToken"/> to observe while waiting for the task to complete.
+            </param>
+            <returns>
+            A task that represents the asynchronous operation.
+            </returns>
+            <exception cref="T:System.ArgumentNullException"> entity  is null.</exception>
+            <exception cref="T:System.ArgumentOutOfRangeException"> refreshMode  is not valid.</exception>
+            <exception cref="T:System.ArgumentException"> entity is not attached to the context. </exception>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ObjectContext.SaveChanges">
+            <summary>Persists all updates to the database and resets change tracking in the object context.</summary>
+            <returns>
+            The number of state entries written to the underlying database. This can include
+            state entries for entities and/or relationships. Relationship state entries are created for 
+            many-to-many relationships and relationships where there is no foreign key property
+            included in the entity class (often referred to as independent associations).
+            </returns>
+            <exception cref="T:System.Data.Entity.Core.OptimisticConcurrencyException">An optimistic concurrency violation has occurred while saving changes.</exception>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ObjectContext.SaveChangesAsync">
+            <summary>Asynchronously persists all updates to the database and resets change tracking in the object context.</summary>
+            <remarks>
+            Multiple active operations on the same context instance are not supported.  Use 'await' to ensure
+            that any asynchronous operations have completed before calling another method on this context.
+            </remarks>
+            <returns>
+            A task that represents the asynchronous save operation.
+            The task result contains the number of state entries written to the underlying database. This can include
+            state entries for entities and/or relationships. Relationship state entries are created for 
+            many-to-many relationships and relationships where there is no foreign key property
+            included in the entity class (often referred to as independent associations).
+            </returns>
+            <exception cref="T:System.Data.Entity.Core.OptimisticConcurrencyException">An optimistic concurrency violation has occurred while saving changes.</exception>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ObjectContext.SaveChangesAsync(System.Threading.CancellationToken)">
+            <summary>Asynchronously persists all updates to the database and resets change tracking in the object context.</summary>
+            <remarks>
+            Multiple active operations on the same context instance are not supported.  Use 'await' to ensure
+            that any asynchronous operations have completed before calling another method on this context.
+            </remarks>
+            <param name="cancellationToken">
+            A <see cref="T:System.Threading.CancellationToken"/> to observe while waiting for the task to complete.
+            </param>
+            <returns>
+            A task that represents the asynchronous save operation.
+            The task result contains the number of state entries written to the underlying database. This can include
+            state entries for entities and/or relationships. Relationship state entries are created for 
+            many-to-many relationships and relationships where there is no foreign key property
+            included in the entity class (often referred to as independent associations).
+            </returns>
+            <exception cref="T:System.Data.Entity.Core.OptimisticConcurrencyException">An optimistic concurrency violation has occurred while saving changes.</exception>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ObjectContext.SaveChanges(System.Boolean)">
+            <summary>Persists all updates to the database and optionally resets change tracking in the object context.</summary>
+            <param name="acceptChangesDuringSave">
+            This parameter is needed for client-side transaction support. If true, the change tracking on all objects is reset after
+            <see cref="M:System.Data.Entity.Core.Objects.ObjectContext.SaveChanges(System.Boolean)" />
+            finishes. If false, you must call the <see cref="M:System.Data.Entity.Core.Objects.ObjectContext.AcceptAllChanges" />
+            method after <see cref="M:System.Data.Entity.Core.Objects.ObjectContext.SaveChanges(System.Boolean)" />.
+            </param>
+            <returns>
+            The number of state entries written to the underlying database. This can include
+            state entries for entities and/or relationships. Relationship state entries are created for 
+            many-to-many relationships and relationships where there is no foreign key property
+            included in the entity class (often referred to as independent associations).
+            </returns>
+            <exception cref="T:System.Data.Entity.Core.OptimisticConcurrencyException">An optimistic concurrency violation has occurred while saving changes.</exception>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ObjectContext.SaveChanges(System.Data.Entity.Core.Objects.SaveOptions)">
+            <summary>Persists all updates to the database and optionally resets change tracking in the object context.</summary>
+            <param name="options">
+            A <see cref="T:System.Data.Entity.Core.Objects.SaveOptions" /> value that determines the behavior of the operation.
+            </param>
+            <returns>
+            The number of state entries written to the underlying database. This can include
+            state entries for entities and/or relationships. Relationship state entries are created for 
+            many-to-many relationships and relationships where there is no foreign key property
+            included in the entity class (often referred to as independent associations).
+            </returns>
+            <exception cref="T:System.Data.Entity.Core.OptimisticConcurrencyException">An optimistic concurrency violation has occurred while saving changes.</exception>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ObjectContext.SaveChangesAsync(System.Data.Entity.Core.Objects.SaveOptions)">
+            <summary>Asynchronously persists all updates to the database and optionally resets change tracking in the object context.</summary>
+            <remarks>
+            Multiple active operations on the same context instance are not supported.  Use 'await' to ensure
+            that any asynchronous operations have completed before calling another method on this context.
+            </remarks>
+            <param name="options">
+            A <see cref="T:System.Data.Entity.Core.Objects.SaveOptions" /> value that determines the behavior of the operation.
+            </param>
+            <returns>
+            A task that represents the asynchronous save operation.
+            The task result contains the number of state entries written to the underlying database. This can include
+            state entries for entities and/or relationships. Relationship state entries are created for 
+            many-to-many relationships and relationships where there is no foreign key property
+            included in the entity class (often referred to as independent associations).
+            </returns>
+            <exception cref="T:System.Data.Entity.Core.OptimisticConcurrencyException">An optimistic concurrency violation has occurred while saving changes.</exception>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ObjectContext.SaveChangesAsync(System.Data.Entity.Core.Objects.SaveOptions,System.Threading.CancellationToken)">
+            <summary>Asynchronously persists all updates to the database and optionally resets change tracking in the object context.</summary>
+            <remarks>
+            Multiple active operations on the same context instance are not supported.  Use 'await' to ensure
+            that any asynchronous operations have completed before calling another method on this context.
+            </remarks>
+            <param name="options">
+            A <see cref="T:System.Data.Entity.Core.Objects.SaveOptions"/> value that determines the behavior of the operation.
+            </param>
+            <param name="cancellationToken">
+            A <see cref="T:System.Threading.CancellationToken"/> to observe while waiting for the task to complete.
+            </param>
+            <returns>
+            A task that represents the asynchronous save operation.
+            The task result contains the number of state entries written to the underlying database. This can include
+            state entries for entities and/or relationships. Relationship state entries are created for 
+            many-to-many relationships and relationships where there is no foreign key property
+            included in the entity class (often referred to as independent associations).
+            </returns>
+            <exception cref="T:System.Data.Entity.Core.OptimisticConcurrencyException">An optimistic concurrency violation has occurred while saving changes.</exception>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ObjectContext.DetectChanges">
+            <summary>
+            Ensures that <see cref="T:System.Data.Entity.Core.Objects.ObjectStateEntry" /> changes are synchronized with changes in all objects that are tracked by the
+            <see
+                cref="T:System.Data.Entity.Core.Objects.ObjectStateManager" />
+            .
+            </summary>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ObjectContext.TryGetObjectByKey(System.Data.Entity.Core.EntityKey,System.Object@)">
+            <summary>Returns an object that has the specified entity key.</summary>
+            <returns>true if the object was retrieved successfully. false if the  key  is temporary, the connection is null, or the  value  is null.</returns>
+            <param name="key">The key of the object to be found.</param>
+            <param name="value">When this method returns, contains the object.</param>
+            <exception cref="T:System.ArgumentException">Incompatible metadata for  key .</exception>
+            <exception cref="T:System.ArgumentNullException"> key  is null.</exception>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ObjectContext.ExecuteFunction``1(System.String,System.Data.Entity.Core.Objects.ObjectParameter[])">
+            <summary>
+            Executes a stored procedure or function that is defined in the data source and mapped in the conceptual model, with the specified parameters. Returns a typed
+            <see
+                cref="T:System.Data.Entity.Core.Objects.ObjectResult`1" />
+            .
+            </summary>
+            <returns>
+            An <see cref="T:System.Data.Entity.Core.Objects.ObjectResult`1" /> for the data that is returned by the stored procedure.
+            </returns>
+            <param name="functionName">The name of the stored procedure or function. The name can include the container name, such as &lt;Container Name&gt;.&lt;Function Name&gt;. When the default container name is known, only the function name is required.</param>
+            <param name="parameters">
+            An array of <see cref="T:System.Data.Entity.Core.Objects.ObjectParameter" /> objects. If output parameters are used, 
+            their values will not be available until the results have been read completely. This is due to the underlying behavior 
+            of DbDataReader, see http://go.microsoft.com/fwlink/?LinkID=398589 for more details.
+            </param>
+            <typeparam name="TElement">
+            The entity type of the <see cref="T:System.Data.Entity.Core.Objects.ObjectResult`1" /> returned when the function is executed against the data source. This type must implement
+            <see
+                cref="T:System.Data.Entity.Core.Objects.DataClasses.IEntityWithChangeTracker" />
+            .
+            </typeparam>
+            <exception cref="T:System.ArgumentException"> function  is null or empty or function  is not found.</exception>
+            <exception cref="T:System.InvalidOperationException">The entity reader does not support this  function or there is a type mismatch on the reader and the  function .</exception>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ObjectContext.ExecuteFunction``1(System.String,System.Data.Entity.Core.Objects.MergeOption,System.Data.Entity.Core.Objects.ObjectParameter[])">
+            <summary>
+            Executes the given stored procedure or function that is defined in the data source and expressed in the conceptual model, with the specified parameters, and merge option. Returns a typed
+            <see
+                cref="T:System.Data.Entity.Core.Objects.ObjectResult`1" />
+            .
+            </summary>
+            <returns>
+            An <see cref="T:System.Data.Entity.Core.Objects.ObjectResult`1" /> for the data that is returned by the stored procedure.
+            </returns>
+            <param name="functionName">The name of the stored procedure or function. The name can include the container name, such as &lt;Container Name&gt;.&lt;Function Name&gt;. When the default container name is known, only the function name is required.</param>
+            <param name="mergeOption">
+            The <see cref="T:System.Data.Entity.Core.Objects.MergeOption" /> to use when executing the query.
+            </param>
+            <param name="parameters">
+            An array of <see cref="T:System.Data.Entity.Core.Objects.ObjectParameter" /> objects. If output parameters are used, 
+            their values will not be available until the results have been read completely. This is due to the underlying behavior 
+            of DbDataReader, see http://go.microsoft.com/fwlink/?LinkID=398589 for more details.
+            </param>
+            <typeparam name="TElement">
+            The entity type of the <see cref="T:System.Data.Entity.Core.Objects.ObjectResult`1" /> returned when the function is executed against the data source. This type must implement
+            <see
+                cref="T:System.Data.Entity.Core.Objects.DataClasses.IEntityWithChangeTracker" />
+            .
+            </typeparam>
+            <exception cref="T:System.ArgumentException"> function  is null or empty or function  is not found.</exception>
+            <exception cref="T:System.InvalidOperationException">The entity reader does not support this  function or there is a type mismatch on the reader and the  function .</exception>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ObjectContext.ExecuteFunction``1(System.String,System.Data.Entity.Core.Objects.ExecutionOptions,System.Data.Entity.Core.Objects.ObjectParameter[])">
+            <summary>
+            Executes the given function on the default container.
+            </summary>
+            <typeparam name="TElement"> Element type for function results. </typeparam>
+            <param name="functionName">
+            Name of function. May include container (e.g. ContainerName.FunctionName) or just function name when DefaultContainerName is known.
+            </param>
+            <param name="executionOptions"> The options for executing this function. </param>
+            <param name="parameters"> 
+            The parameter values to use for the function. If output parameters are used, their values 
+            will not be available until the results have been read completely. This is due to the underlying 
+            behavior of DbDataReader, see http://go.microsoft.com/fwlink/?LinkID=398589 for more details.
+            </param>
+            <returns>An object representing the result of executing this function.</returns>
+            <exception cref="T:System.ArgumentException"> If function is null or empty </exception>
+            <exception cref="T:System.InvalidOperationException">
+            If function is invalid (syntax,
+            does not exist, refers to a function with return type incompatible with T)
+            </exception>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ObjectContext.ExecuteFunction(System.String,System.Data.Entity.Core.Objects.ObjectParameter[])">
+            <summary>Executes a stored procedure or function that is defined in the data source and expressed in the conceptual model; discards any results returned from the function; and returns the number of rows affected by the execution.</summary>
+            <returns>The number of rows affected.</returns>
+            <param name="functionName">The name of the stored procedure or function. The name can include the container name, such as &lt;Container Name&gt;.&lt;Function Name&gt;. When the default container name is known, only the function name is required.</param>
+            <param name="parameters">
+            An array of <see cref="T:System.Data.Entity.Core.Objects.ObjectParameter" /> objects. If output parameters are used, 
+            their values will not be available until the results have been read completely. This is due to the underlying 
+            behavior of DbDataReader, see http://go.microsoft.com/fwlink/?LinkID=398589 for more details.
+            </param>
+            <exception cref="T:System.ArgumentException"> function  is null or empty or function  is not found.</exception>
+            <exception cref="T:System.InvalidOperationException">The entity reader does not support this  function or there is a type mismatch on the reader and the  function .</exception>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ObjectContext.CreateProxyTypes(System.Collections.Generic.IEnumerable{System.Type})">
+            <summary>Generates an equivalent type that can be used with the Entity Framework for each type in the supplied enumeration.</summary>
+            <param name="types">
+            An enumeration of <see cref="T:System.Type" /> objects that represent custom data classes that map to the conceptual model.
+            </param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ObjectContext.GetKnownProxyTypes">
+            <summary>Returns all the existing proxy types.</summary>
+            <returns>
+            An <see cref="T:System.Collections.Generic.IEnumerable`1" /> of all the existing proxy types.
+            </returns>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ObjectContext.GetObjectType(System.Type)">
+            <summary>Returns the entity type of the POCO entity associated with a proxy object of a specified type.</summary>
+            <returns>
+            The <see cref="T:System.Type" /> of the associated POCO entity.
+            </returns>
+            <param name="type">
+            The <see cref="T:System.Type" /> of the proxy object.
+            </param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ObjectContext.CreateObject``1">
+            <summary>Creates and returns an instance of the requested type .</summary>
+            <returns>An instance of the requested type  T , or an instance of a derived type that enables  T  to be used with the Entity Framework. The returned object is either an instance of the requested type or an instance of a derived type that enables the requested type to be used with the Entity Framework.</returns>
+            <typeparam name="T">Type of object to be returned.</typeparam>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ObjectContext.ExecuteStoreCommand(System.String,System.Object[])">
+             <summary>
+             Executes an arbitrary command directly against the data source using the existing connection.
+             The command is specified using the server's native query language, such as SQL.
+            
+             As with any API that accepts SQL it is important to parameterize any user input to protect against a SQL injection attack. You can include parameter place holders in the SQL query string and then supply parameter values as additional arguments. Any parameter values you supply will automatically be converted to a DbParameter.
+             context.ExecuteStoreCommand("UPDATE dbo.Posts SET Rating = 5 WHERE Author = @p0", userSuppliedAuthor);
+             Alternatively, you can also construct a DbParameter and supply it to SqlQuery. This allows you to use named parameters in the SQL query string.
+             context.ExecuteStoreCommand("UPDATE dbo.Posts SET Rating = 5 WHERE Author = @author", new SqlParameter("@author", userSuppliedAuthor));
+             </summary>
+             <remarks>
+             If there isn't an existing local transaction a new transaction will be used
+             to execute the command.
+             </remarks>
+             <param name="commandText">The command specified in the server's native query language.</param>
+             <param name="parameters"> The parameter values to use for the query. </param>
+             <returns>The number of rows affected.</returns>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ObjectContext.ExecuteStoreCommand(System.Data.Entity.TransactionalBehavior,System.String,System.Object[])">
+             <summary>
+             Executes an arbitrary command directly against the data source using the existing connection.
+             The command is specified using the server's native query language, such as SQL.
+            
+             As with any API that accepts SQL it is important to parameterize any user input to protect against a SQL injection attack. You can include parameter place holders in the SQL query string and then supply parameter values as additional arguments. Any parameter values you supply will automatically be converted to a DbParameter.
+             context.ExecuteStoreCommand("UPDATE dbo.Posts SET Rating = 5 WHERE Author = @p0", userSuppliedAuthor);
+             Alternatively, you can also construct a DbParameter and supply it to SqlQuery. This allows you to use named parameters in the SQL query string.
+             context.ExecuteStoreCommand("UPDATE dbo.Posts SET Rating = 5 WHERE Author = @author", new SqlParameter("@author", userSuppliedAuthor));
+             </summary>
+             <param name="transactionalBehavior"> Controls the creation of a transaction for this command. </param>
+             <param name="commandText">The command specified in the server's native query language.</param>
+             <param name="parameters"> The parameter values to use for the query. </param>
+             <returns>The number of rows affected.</returns>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ObjectContext.ExecuteStoreCommandAsync(System.String,System.Object[])">
+             <summary>
+             Asynchronously executes an arbitrary command directly against the data source using the existing connection.
+             The command is specified using the server's native query language, such as SQL.
+            
+             As with any API that accepts SQL it is important to parameterize any user input to protect against a SQL injection attack. You can include parameter place holders in the SQL query string and then supply parameter values as additional arguments. Any parameter values you supply will automatically be converted to a DbParameter.
+             context.ExecuteStoreCommandAsync("UPDATE dbo.Posts SET Rating = 5 WHERE Author = @p0", userSuppliedAuthor);
+             Alternatively, you can also construct a DbParameter and supply it to SqlQuery. This allows you to use named parameters in the SQL query string.
+             context.ExecuteStoreCommandAsync("UPDATE dbo.Posts SET Rating = 5 WHERE Author = @author", new SqlParameter("@author", userSuppliedAuthor));
+             </summary>
+             <remarks>
+             Multiple active operations on the same context instance are not supported.  Use 'await' to ensure
+             that any asynchronous operations have completed before calling another method on this context.
+             
+             If there isn't an existing local transaction a new transaction will be used
+             to execute the command.
+             </remarks>
+             <param name="commandText">The command specified in the server's native query language.</param>
+             <param name="parameters"> The parameter values to use for the query. </param>
+             <returns>
+              A task that represents the asynchronous operation.
+             The task result contains the number of rows affected.
+             </returns>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ObjectContext.ExecuteStoreCommandAsync(System.Data.Entity.TransactionalBehavior,System.String,System.Object[])">
+             <summary>
+             Asynchronously executes an arbitrary command directly against the data source using the existing connection.
+             The command is specified using the server's native query language, such as SQL.
+            
+             As with any API that accepts SQL it is important to parameterize any user input to protect against a SQL injection attack. You can include parameter place holders in the SQL query string and then supply parameter values as additional arguments. Any parameter values you supply will automatically be converted to a DbParameter.
+             context.ExecuteStoreCommandAsync("UPDATE dbo.Posts SET Rating = 5 WHERE Author = @p0", userSuppliedAuthor);
+             Alternatively, you can also construct a DbParameter and supply it to SqlQuery. This allows you to use named parameters in the SQL query string.
+             context.ExecuteStoreCommandAsync("UPDATE dbo.Posts SET Rating = 5 WHERE Author = @author", new SqlParameter("@author", userSuppliedAuthor));
+             </summary>
+             <remarks>
+             Multiple active operations on the same context instance are not supported.  Use 'await' to ensure
+             that any asynchronous operations have completed before calling another method on this context.
+             </remarks>
+             <param name="transactionalBehavior"> Controls the creation of a transaction for this command. </param>
+             <param name="commandText">The command specified in the server's native query language.</param>
+             <param name="parameters"> The parameter values to use for the query. </param>
+             <returns>
+              A task that represents the asynchronous operation.
+             The task result contains the number of rows affected.
+             </returns>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ObjectContext.ExecuteStoreCommandAsync(System.String,System.Threading.CancellationToken,System.Object[])">
+             <summary>
+             Asynchronously executes an arbitrary command directly against the data source using the existing connection.
+             The command is specified using the server's native query language, such as SQL.
+            
+             As with any API that accepts SQL it is important to parameterize any user input to protect against a SQL injection attack. You can include parameter place holders in the SQL query string and then supply parameter values as additional arguments. Any parameter values you supply will automatically be converted to a DbParameter.
+             context.ExecuteStoreCommandAsync("UPDATE dbo.Posts SET Rating = 5 WHERE Author = @p0", userSuppliedAuthor);
+             Alternatively, you can also construct a DbParameter and supply it to SqlQuery. This allows you to use named parameters in the SQL query string.
+             context.ExecuteStoreCommandAsync("UPDATE dbo.Posts SET Rating = 5 WHERE Author = @author", new SqlParameter("@author", userSuppliedAuthor));
+             </summary>
+             <remarks>
+             Multiple active operations on the same context instance are not supported.  Use 'await' to ensure
+             that any asynchronous operations have completed before calling another method on this context.
+             
+             If there isn't an existing local transaction a new transaction will be used
+             to execute the command.
+             </remarks>
+             <param name="commandText">The command specified in the server's native query language.</param>
+             <param name="cancellationToken">
+             A <see cref="T:System.Threading.CancellationToken"/> to observe while waiting for the task to complete.
+             </param>
+             <param name="parameters"> The parameter values to use for the query. </param>
+             <returns>
+              A task that represents the asynchronous operation.
+             The task result contains the number of rows affected.
+             </returns>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ObjectContext.ExecuteStoreCommandAsync(System.Data.Entity.TransactionalBehavior,System.String,System.Threading.CancellationToken,System.Object[])">
+             <summary>
+             Asynchronously executes an arbitrary command directly against the data source using the existing connection.
+             The command is specified using the server's native query language, such as SQL.
+            
+             As with any API that accepts SQL it is important to parameterize any user input to protect against a SQL injection attack. You can include parameter place holders in the SQL query string and then supply parameter values as additional arguments. Any parameter values you supply will automatically be converted to a DbParameter.
+             context.ExecuteStoreCommandAsync("UPDATE dbo.Posts SET Rating = 5 WHERE Author = @p0", userSuppliedAuthor);
+             Alternatively, you can also construct a DbParameter and supply it to SqlQuery. This allows you to use named parameters in the SQL query string.
+             context.ExecuteStoreCommandAsync("UPDATE dbo.Posts SET Rating = 5 WHERE Author = @author", new SqlParameter("@author", userSuppliedAuthor));
+             </summary>
+             <remarks>
+             Multiple active operations on the same context instance are not supported.  Use 'await' to ensure
+             that any asynchronous operations have completed before calling another method on this context.
+             </remarks>
+             <param name="transactionalBehavior"> Controls the creation of a transaction for this command. </param>
+             <param name="commandText">The command specified in the server's native query language.</param>
+             <param name="cancellationToken">
+             A <see cref="T:System.Threading.CancellationToken"/> to observe while waiting for the task to complete.
+             </param>
+             <param name="parameters"> The parameter values to use for the query. </param>
+             <returns>
+              A task that represents the asynchronous operation.
+             The task result contains the number of rows affected.
+             </returns>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ObjectContext.ExecuteStoreQuery``1(System.String,System.Object[])">
+             <summary>
+             Executes a query directly against the data source and returns a sequence of typed results. 
+             The query is specified using the server's native query language, such as SQL.
+             Results are not tracked by the context, use the overload that specifies an entity set name to track results.
+            
+             As with any API that accepts SQL it is important to parameterize any user input to protect against a SQL injection attack. You can include parameter place holders in the SQL query string and then supply parameter values as additional arguments. Any parameter values you supply will automatically be converted to a DbParameter.
+             context.ExecuteStoreQuery&lt;Post&gt;("SELECT * FROM dbo.Posts WHERE Author = @p0", userSuppliedAuthor);
+             Alternatively, you can also construct a DbParameter and supply it to SqlQuery. This allows you to use named parameters in the SQL query string.
+             context.ExecuteStoreQuery&lt;Post&gt;("SELECT * FROM dbo.Posts WHERE Author = @author", new SqlParameter("@author", userSuppliedAuthor));
+             </summary>
+             <typeparam name="TElement"> The element type of the result sequence. </typeparam>
+             <param name="commandText"> The query specified in the server's native query language. </param>
+             <param name="parameters"> 
+             The parameter values to use for the query. If output parameters are used, their values will not be 
+             available until the results have been read completely. This is due to the underlying behavior 
+             of DbDataReader, see http://go.microsoft.com/fwlink/?LinkID=398589 for more details.
+             </param>
+             <returns>
+             An enumeration of objects of type <typeparamref name="TElement" /> .
+             </returns>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ObjectContext.ExecuteStoreQuery``1(System.String,System.Data.Entity.Core.Objects.ExecutionOptions,System.Object[])">
+             <summary>
+             Executes a query directly against the data source and returns a sequence of typed results. 
+             The query is specified using the server's native query language, such as SQL.
+             Results are not tracked by the context, use the overload that specifies an entity set name to track results.
+            
+             As with any API that accepts SQL it is important to parameterize any user input to protect against a SQL injection attack. You can include parameter place holders in the SQL query string and then supply parameter values as additional arguments. Any parameter values you supply will automatically be converted to a DbParameter.
+             context.ExecuteStoreQuery&lt;Post&gt;("SELECT * FROM dbo.Posts WHERE Author = @p0", userSuppliedAuthor);
+             Alternatively, you can also construct a DbParameter and supply it to SqlQuery. This allows you to use named parameters in the SQL query string.
+             context.ExecuteStoreQuery&lt;Post&gt;("SELECT * FROM dbo.Posts WHERE Author = @author", new SqlParameter("@author", userSuppliedAuthor));
+             </summary>
+             <typeparam name="TElement"> The element type of the result sequence. </typeparam>
+             <param name="commandText"> The query specified in the server's native query language. </param>
+             <param name="executionOptions"> The options for executing this query. </param>
+             <param name="parameters"> 
+             The parameter values to use for the query. If output parameters are used, their values will not be 
+             available until the results have been read completely. This is due to the underlying behavior of 
+             DbDataReader, see http://go.microsoft.com/fwlink/?LinkID=398589 for more details.
+             </param>
+             <returns>
+             An enumeration of objects of type <typeparamref name="TElement" /> .
+             </returns>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ObjectContext.ExecuteStoreQuery``1(System.String,System.String,System.Data.Entity.Core.Objects.MergeOption,System.Object[])">
+             <summary>
+             Executes a query directly against the data source and returns a sequence of typed results. 
+             The query is specified using the server's native query language, such as SQL.
+             If an entity set name is specified, results are tracked by the context.
+            
+             As with any API that accepts SQL it is important to parameterize any user input to protect against a SQL injection attack. You can include parameter place holders in the SQL query string and then supply parameter values as additional arguments. Any parameter values you supply will automatically be converted to a DbParameter.
+             context.ExecuteStoreQuery&lt;Post&gt;("SELECT * FROM dbo.Posts WHERE Author = @p0", userSuppliedAuthor);
+             Alternatively, you can also construct a DbParameter and supply it to SqlQuery. This allows you to use named parameters in the SQL query string.
+             context.ExecuteStoreQuery&lt;Post&gt;("SELECT * FROM dbo.Posts WHERE Author = @author", new SqlParameter("@author", userSuppliedAuthor));
+             </summary>
+             <typeparam name="TElement"> The element type of the result sequence. </typeparam>
+             <param name="commandText"> The query specified in the server's native query language. </param>
+             <param name="entitySetName">The entity set of the  TResult  type. If an entity set name is not provided, the results are not going to be tracked.</param>
+             <param name="mergeOption">
+             The <see cref="T:System.Data.Entity.Core.Objects.MergeOption" /> to use when executing the query. The default is
+             <see cref="F:System.Data.Entity.Core.Objects.MergeOption.AppendOnly" />.
+             </param>
+             <param name="parameters"> 
+             The parameter values to use for the query. If output parameters are used, their values will not be 
+             available until the results have been read completely. This is due to the underlying behavior 
+             of DbDataReader, see http://go.microsoft.com/fwlink/?LinkID=398589 for more details.
+             </param>
+             <returns>
+             An enumeration of objects of type <typeparamref name="TElement" /> .
+             </returns>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ObjectContext.ExecuteStoreQuery``1(System.String,System.String,System.Data.Entity.Core.Objects.ExecutionOptions,System.Object[])">
+             <summary>
+             Executes a query directly against the data source and returns a sequence of typed results. 
+             The query is specified using the server's native query language, such as SQL.
+             If an entity set name is specified, results are tracked by the context.
+            
+             As with any API that accepts SQL it is important to parameterize any user input to protect against a SQL injection attack. You can include parameter place holders in the SQL query string and then supply parameter values as additional arguments. Any parameter values you supply will automatically be converted to a DbParameter.
+             context.ExecuteStoreQuery&lt;Post&gt;("SELECT * FROM dbo.Posts WHERE Author = @p0", userSuppliedAuthor);
+             Alternatively, you can also construct a DbParameter and supply it to SqlQuery. This allows you to use named parameters in the SQL query string.
+             context.ExecuteStoreQuery&lt;Post&gt;("SELECT * FROM dbo.Posts WHERE Author = @author", new SqlParameter("@author", userSuppliedAuthor));
+             </summary>
+             <typeparam name="TElement"> The element type of the result sequence. </typeparam>
+             <param name="commandText"> The query specified in the server's native query language. </param>
+             <param name="entitySetName">The entity set of the  TResult  type. If an entity set name is not provided, the results are not going to be tracked.</param>
+             <param name="executionOptions"> The options for executing this query. </param>
+             <param name="parameters"> 
+             The parameter values to use for the query. If output parameters are used, their values will not be 
+             available until the results have been read completely. This is due to the underlying behavior 
+             of DbDataReader, see http://go.microsoft.com/fwlink/?LinkID=398589 for more details.
+             </param>
+             <returns>
+             An enumeration of objects of type <typeparamref name="TElement" /> .
+             </returns>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ObjectContext.ExecuteStoreQueryAsync``1(System.String,System.Object[])">
+             <summary>
+             Asynchronously executes a query directly against the data source and returns a sequence of typed results. 
+             The query is specified using the server's native query language, such as SQL.
+             Results are not tracked by the context, use the overload that specifies an entity set name to track results.
+            
+             As with any API that accepts SQL it is important to parameterize any user input to protect against a SQL injection attack. You can include parameter place holders in the SQL query string and then supply parameter values as additional arguments. Any parameter values you supply will automatically be converted to a DbParameter.
+             context.ExecuteStoreQueryAsync&lt;Post&gt;("SELECT * FROM dbo.Posts WHERE Author = @p0", userSuppliedAuthor);
+             Alternatively, you can also construct a DbParameter and supply it to SqlQuery. This allows you to use named parameters in the SQL query string.
+             context.ExecuteStoreQueryAsync&lt;Post&gt;("SELECT * FROM dbo.Posts WHERE Author = @author", new SqlParameter("@author", userSuppliedAuthor));
+             </summary>
+             <remarks>
+             Multiple active operations on the same context instance are not supported.  Use 'await' to ensure
+             that any asynchronous operations have completed before calling another method on this context.
+             </remarks>
+             <typeparam name="TElement"> The element type of the result sequence. </typeparam>
+             <param name="commandText"> The query specified in the server's native query language. </param>
+             <param name="parameters"> 
+             The parameter values to use for the query. If output parameters are used, their values will not be 
+             available until the results have been read completely. This is due to the underlying behavior 
+             of DbDataReader, see http://go.microsoft.com/fwlink/?LinkID=398589 for more details.
+             </param>
+             <returns>
+             A task that represents the asynchronous operation.
+             The task result contains an enumeration of objects of type <typeparamref name="TElement" /> .
+             </returns>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ObjectContext.ExecuteStoreQueryAsync``1(System.String,System.Threading.CancellationToken,System.Object[])">
+             <summary>
+             Asynchronously executes a query directly against the data source and returns a sequence of typed results. 
+             The query is specified using the server's native query language, such as SQL.
+             Results are not tracked by the context, use the overload that specifies an entity set name to track results.
+            
+             As with any API that accepts SQL it is important to parameterize any user input to protect against a SQL injection attack. You can include parameter place holders in the SQL query string and then supply parameter values as additional arguments. Any parameter values you supply will automatically be converted to a DbParameter.
+             context.ExecuteStoreQueryAsync&lt;Post&gt;("SELECT * FROM dbo.Posts WHERE Author = @p0", userSuppliedAuthor);
+             Alternatively, you can also construct a DbParameter and supply it to SqlQuery. This allows you to use named parameters in the SQL query string.
+             context.ExecuteStoreQueryAsync&lt;Post&gt;("SELECT * FROM dbo.Posts WHERE Author = @author", new SqlParameter("@author", userSuppliedAuthor));
+             </summary>
+             <remarks>
+             Multiple active operations on the same context instance are not supported.  Use 'await' to ensure
+             that any asynchronous operations have completed before calling another method on this context.
+             </remarks>
+             <typeparam name="TElement"> The element type of the result sequence. </typeparam>
+             <param name="commandText"> The query specified in the server's native query language. </param>
+             <param name="cancellationToken">
+             A <see cref="T:System.Threading.CancellationToken"/> to observe while waiting for the task to complete.
+             </param>
+             <param name="parameters"> 
+             The parameter values to use for the query. If output parameters are used, their values will not be 
+             available until the results have been read completely. This is due to the underlying behavior 
+             of DbDataReader, see http://go.microsoft.com/fwlink/?LinkID=398589 for more details.
+             </param>
+             <returns>
+             A task that represents the asynchronous operation.
+             The task result contains an enumeration of objects of type <typeparamref name="TElement"/> .
+             </returns>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ObjectContext.ExecuteStoreQueryAsync``1(System.String,System.Data.Entity.Core.Objects.ExecutionOptions,System.Object[])">
+             <summary>
+             Asynchronously executes a query directly against the data source and returns a sequence of typed results. 
+             The query is specified using the server's native query language, such as SQL.
+             Results are not tracked by the context, use the overload that specifies an entity set name to track results.
+            
+             As with any API that accepts SQL it is important to parameterize any user input to protect against a SQL injection attack. You can include parameter place holders in the SQL query string and then supply parameter values as additional arguments. Any parameter values you supply will automatically be converted to a DbParameter.
+             context.ExecuteStoreQueryAsync&lt;Post&gt;("SELECT * FROM dbo.Posts WHERE Author = @p0", userSuppliedAuthor);
+             Alternatively, you can also construct a DbParameter and supply it to SqlQuery. This allows you to use named parameters in the SQL query string.
+             context.ExecuteStoreQueryAsync&lt;Post&gt;("SELECT * FROM dbo.Posts WHERE Author = @author", new SqlParameter("@author", userSuppliedAuthor));
+             </summary>
+             <remarks>
+             Multiple active operations on the same context instance are not supported.  Use 'await' to ensure
+             that any asynchronous operations have completed before calling another method on this context.
+             </remarks>
+             <typeparam name="TElement"> The element type of the result sequence. </typeparam>
+             <param name="commandText"> The query specified in the server's native query language. </param>
+             <param name="executionOptions"> The options for executing this query. </param>
+             <param name="parameters"> 
+             The parameter values to use for the query. If output parameters are used, their values will not be 
+             available until the results have been read completely. This is due to the underlying behavior 
+             of DbDataReader, see http://go.microsoft.com/fwlink/?LinkID=398589 for more details.
+             </param>
+             <returns>
+             A task that represents the asynchronous operation.
+             The task result contains an enumeration of objects of type <typeparamref name="TElement" /> .
+             </returns>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ObjectContext.ExecuteStoreQueryAsync``1(System.String,System.Data.Entity.Core.Objects.ExecutionOptions,System.Threading.CancellationToken,System.Object[])">
+             <summary>
+             Asynchronously executes a query directly against the data source and returns a sequence of typed results. 
+             The query is specified using the server's native query language, such as SQL.
+             Results are not tracked by the context, use the overload that specifies an entity set name to track results.
+            
+             As with any API that accepts SQL it is important to parameterize any user input to protect against a SQL injection attack. You can include parameter place holders in the SQL query string and then supply parameter values as additional arguments. Any parameter values you supply will automatically be converted to a DbParameter.
+             context.ExecuteStoreQueryAsync&lt;Post&gt;("SELECT * FROM dbo.Posts WHERE Author = @p0", userSuppliedAuthor);
+             Alternatively, you can also construct a DbParameter and supply it to SqlQuery. This allows you to use named parameters in the SQL query string.
+             context.ExecuteStoreQueryAsync&lt;Post&gt;("SELECT * FROM dbo.Posts WHERE Author = @author", new SqlParameter("@author", userSuppliedAuthor));
+             </summary>
+             <remarks>
+             Multiple active operations on the same context instance are not supported.  Use 'await' to ensure
+             that any asynchronous operations have completed before calling another method on this context.
+             </remarks>
+             <typeparam name="TElement"> The element type of the result sequence. </typeparam>
+             <param name="commandText"> The query specified in the server's native query language. </param>
+             <param name="executionOptions"> The options for executing this query. </param>
+             <param name="cancellationToken">
+             A <see cref="T:System.Threading.CancellationToken"/> to observe while waiting for the task to complete.
+             </param>
+             <param name="parameters"> 
+             The parameter values to use for the query. If output parameters are used, their values will not be 
+             available until the results have been read completely. This is due to the underlying behavior 
+             of DbDataReader, see http://go.microsoft.com/fwlink/?LinkID=398589 for more details.
+             </param>
+             <returns>
+             A task that represents the asynchronous operation.
+             The task result contains an enumeration of objects of type <typeparamref name="TElement"/> .
+             </returns>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ObjectContext.ExecuteStoreQueryAsync``1(System.String,System.String,System.Data.Entity.Core.Objects.ExecutionOptions,System.Object[])">
+             <summary>
+             Asynchronously executes a query directly against the data source and returns a sequence of typed results. 
+             The query is specified using the server's native query language, such as SQL.
+             If an entity set name is specified, results are tracked by the context.
+            
+             As with any API that accepts SQL it is important to parameterize any user input to protect against a SQL injection attack. You can include parameter place holders in the SQL query string and then supply parameter values as additional arguments. Any parameter values you supply will automatically be converted to a DbParameter.
+             context.ExecuteStoreQueryAsync&lt;Post&gt;("SELECT * FROM dbo.Posts WHERE Author = @p0", userSuppliedAuthor);
+             Alternatively, you can also construct a DbParameter and supply it to SqlQuery. This allows you to use named parameters in the SQL query string.
+             context.ExecuteStoreQueryAsync&lt;Post&gt;("SELECT * FROM dbo.Posts WHERE Author = @author", new SqlParameter("@author", userSuppliedAuthor));
+             </summary>
+             <remarks>
+             Multiple active operations on the same context instance are not supported.  Use 'await' to ensure
+             that any asynchronous operations have completed before calling another method on this context.
+             </remarks>
+             <typeparam name="TElement"> The element type of the result sequence. </typeparam>
+             <param name="commandText"> The query specified in the server's native query language. </param>
+             <param name="entitySetName">The entity set of the  TResult  type. If an entity set name is not provided, the results are not going to be tracked.</param>
+             <param name="executionOptions"> The options for executing this query. </param>
+             <param name="parameters"> 
+             The parameter values to use for the query. If output parameters are used, their values will not be 
+             available until the results have been read completely. This is due to the underlying behavior 
+             of DbDataReader, see http://go.microsoft.com/fwlink/?LinkID=398589 for more details.
+             </param>
+             <returns>
+             A task that represents the asynchronous operation.
+             The task result contains an enumeration of objects of type <typeparamref name="TElement" /> .
+             </returns>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ObjectContext.ExecuteStoreQueryAsync``1(System.String,System.String,System.Data.Entity.Core.Objects.ExecutionOptions,System.Threading.CancellationToken,System.Object[])">
+             <summary>
+             Asynchronously executes a query directly against the data source and returns a sequence of typed results. 
+             The query is specified using the server's native query language, such as SQL.
+             If an entity set name is specified, results are tracked by the context.
+            
+             As with any API that accepts SQL it is important to parameterize any user input to protect against a SQL injection attack. You can include parameter place holders in the SQL query string and then supply parameter values as additional arguments. Any parameter values you supply will automatically be converted to a DbParameter.
+             context.ExecuteStoreQueryAsync&lt;Post&gt;("SELECT * FROM dbo.Posts WHERE Author = @p0", userSuppliedAuthor);
+             Alternatively, you can also construct a DbParameter and supply it to SqlQuery. This allows you to use named parameters in the SQL query string.
+             context.ExecuteStoreQueryAsync&lt;Post&gt;("SELECT * FROM dbo.Posts WHERE Author = @author", new SqlParameter("@author", userSuppliedAuthor));
+             </summary>
+             <remarks>
+             Multiple active operations on the same context instance are not supported.  Use 'await' to ensure
+             that any asynchronous operations have completed before calling another method on this context.
+             </remarks>
+             <typeparam name="TElement"> The element type of the result sequence. </typeparam>
+             <param name="commandText"> The query specified in the server's native query language. </param>
+             <param name="entitySetName">The entity set of the  TResult  type. If an entity set name is not provided, the results are not going to be tracked.</param>
+             <param name="executionOptions"> The options for executing this query. </param>
+             <param name="cancellationToken">
+             A <see cref="T:System.Threading.CancellationToken"/> to observe while waiting for the task to complete.
+             </param>
+             <param name="parameters"> 
+             The parameter values to use for the query. If output parameters are used, their values will not be 
+             available until the results have been read completely. This is due to the underlying behavior 
+             of DbDataReader, see http://go.microsoft.com/fwlink/?LinkID=398589 for more details.
+             </param>
+             <returns>
+             A task that represents the asynchronous operation.
+             The task result contains an enumeration of objects of type <typeparamref name="TElement"/> .
+             </returns>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ObjectContext.Translate``1(System.Data.Common.DbDataReader)">
+            <summary>
+            Translates a <see cref="T:System.Data.Common.DbDataReader" /> that contains rows of entity data to objects of the requested entity type.
+            </summary>
+            <typeparam name="TElement">The entity type.</typeparam>
+            <returns>An enumeration of objects of type  TResult .</returns>
+            <param name="reader">
+            The <see cref="T:System.Data.Common.DbDataReader" /> that contains entity data to translate into entity objects.
+            </param>
+            <exception cref="T:System.ArgumentNullException">When  reader  is null.</exception>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ObjectContext.Translate``1(System.Data.Common.DbDataReader,System.String,System.Data.Entity.Core.Objects.MergeOption)">
+            <summary>
+            Translates a <see cref="T:System.Data.Common.DbDataReader" /> that contains rows of entity data to objects of the requested entity type, in a specific entity set, and with the specified merge option.
+            </summary>
+            <typeparam name="TEntity">The entity type.</typeparam>
+            <returns>An enumeration of objects of type  TResult .</returns>
+            <param name="reader">
+            The <see cref="T:System.Data.Common.DbDataReader" /> that contains entity data to translate into entity objects.
+            </param>
+            <param name="entitySetName">The entity set of the  TResult  type.</param>
+            <param name="mergeOption">
+            The <see cref="T:System.Data.Entity.Core.Objects.MergeOption" /> to use when translated objects are added to the object context. The default is
+            <see
+                cref="F:System.Data.Entity.Core.Objects.MergeOption.AppendOnly" />
+            .
+            </param>
+            <exception cref="T:System.ArgumentNullException">When  reader  is null.</exception>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            When the supplied  mergeOption  is not a valid <see cref="T:System.Data.Entity.Core.Objects.MergeOption" /> value.
+            </exception>
+            <exception cref="T:System.InvalidOperationException">When the supplied  entitySetName  is not a valid entity set for the  TResult  type. </exception>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ObjectContext.CreateDatabase">
+            <summary>
+            Creates the database by using the current data source connection and the metadata in the
+            <see
+                cref="T:System.Data.Entity.Core.Metadata.Edm.StoreItemCollection" />
+            .
+            </summary>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ObjectContext.DeleteDatabase">
+            <summary>Deletes the database that is specified as the database in the current data source connection.</summary>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ObjectContext.DatabaseExists">
+            <summary>
+            Checks if the database that is specified as the database in the current store connection exists on the store. Most of the actual work
+            is done by the DbProviderServices implementation for the current store connection.
+            </summary>
+            <returns>true if the database exists; otherwise, false.</returns>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ObjectContext.CreateDatabaseScript">
+            <summary>
+            Generates a data definition language (DDL) script that creates schema objects (tables, primary keys, foreign keys) for the metadata in the
+            <see
+                cref="T:System.Data.Entity.Core.Metadata.Edm.StoreItemCollection" />
+            . The
+            <see
+                cref="T:System.Data.Entity.Core.Metadata.Edm.StoreItemCollection" />
+            loads metadata from store schema definition language (SSDL) files.
+            </summary>
+            <returns>
+            A DDL script that creates schema objects for the metadata in the
+            <see
+                cref="T:System.Data.Entity.Core.Metadata.Edm.StoreItemCollection" />
+            .
+            </returns>
+        </member>
+        <member name="P:System.Data.Entity.Core.Objects.ObjectContext.Connection">
+            <summary>Gets the connection used by the object context.</summary>
+            <returns>
+            A <see cref="T:System.Data.Common.DbConnection" /> object that is the connection.
+            </returns>
+            <exception cref="T:System.ObjectDisposedException">
+            When the <see cref="T:System.Data.Entity.Core.Objects.ObjectContext" /> instance has been disposed.
+            </exception>
+        </member>
+        <member name="P:System.Data.Entity.Core.Objects.ObjectContext.DefaultContainerName">
+            <summary>Gets or sets the default container name.</summary>
+            <returns>
+            A <see cref="T:System.String" /> that is the default container name.
+            </returns>
+        </member>
+        <member name="P:System.Data.Entity.Core.Objects.ObjectContext.MetadataWorkspace">
+            <summary>Gets the metadata workspace used by the object context. </summary>
+            <returns>
+            The <see cref="T:System.Data.Entity.Core.Metadata.Edm.MetadataWorkspace" /> object associated with this
+            <see
+                cref="T:System.Data.Entity.Core.Objects.ObjectContext" />
+            .
+            </returns>
+        </member>
+        <member name="P:System.Data.Entity.Core.Objects.ObjectContext.ObjectStateManager">
+            <summary>Gets the object state manager used by the object context to track object changes.</summary>
+            <returns>
+            The <see cref="T:System.Data.Entity.Core.Objects.ObjectStateManager" /> used by this
+            <see
+                cref="T:System.Data.Entity.Core.Objects.ObjectContext" />
+            .
+            </returns>
+        </member>
+        <member name="P:System.Data.Entity.Core.Objects.ObjectContext.CommandTimeout">
+            <summary>Gets or sets the timeout value, in seconds, for all object context operations. A null value indicates that the default value of the underlying provider will be used.</summary>
+            <returns>
+            An <see cref="T:System.Int32" /> value that is the timeout value, in seconds.
+            </returns>
+            <exception cref="T:System.ArgumentException">The timeout value is less than 0. </exception>
+        </member>
+        <member name="P:System.Data.Entity.Core.Objects.ObjectContext.QueryProvider">
+            <summary>Gets the LINQ query provider associated with this object context.</summary>
+            <returns>
+            The <see cref="T:System.Linq.IQueryProvider" /> instance used by this object context.
+            </returns>
+        </member>
+        <member name="P:System.Data.Entity.Core.Objects.ObjectContext.ContextOptions">
+            <summary>
+            Gets the <see cref="T:System.Data.Entity.Core.Objects.ObjectContextOptions" /> instance that contains options that affect the behavior of the
+            <see
+                cref="T:System.Data.Entity.Core.Objects.ObjectContext" />
+            .
+            </summary>
+            <returns>
+            The <see cref="T:System.Data.Entity.Core.Objects.ObjectContextOptions" /> instance that contains options that affect the behavior of the
+            <see
+                cref="T:System.Data.Entity.Core.Objects.ObjectContext" />
+            .
+            </returns>
+        </member>
+        <member name="P:System.Data.Entity.Core.Objects.ObjectContext.System#Data#Entity#Infrastructure#IObjectContextAdapter#ObjectContext">
+            <summary>
+            Returns itself. ObjectContext implements <see cref="T:System.Data.Entity.Infrastructure.IObjectContextAdapter"/> to provide a common
+            interface for <see cref="T:System.Data.Entity.DbContext"/> and ObjectContext both of which will return the underlying
+            ObjectContext.
+            </summary>
+        </member>
+        <member name="P:System.Data.Entity.Core.Objects.ObjectContext.TransactionHandler">
+            <summary>
+            Gets the transaction handler in use by this context. May be null if no transaction have been started.
+            </summary>
+            <value>
+            The transaction handler.
+            </value>
+        </member>
+        <member name="P:System.Data.Entity.Core.Objects.ObjectContext.InterceptionContext">
+            <summary>
+            Returns the <see cref="T:System.Data.Entity.Infrastructure.Interception.DbInterceptionContext"/> being used for this context.
+            </summary>
+        </member>
+        <member name="E:System.Data.Entity.Core.Objects.ObjectContext.SavingChanges">
+            <summary>Occurs when changes are saved to the data source. </summary>
+        </member>
+        <member name="E:System.Data.Entity.Core.Objects.ObjectContext.ObjectMaterialized">
+            <summary>Occurs when a new entity object is created from data in the data source as part of a query or load operation. </summary>
+        </member>
+        <member name="T:System.Data.Entity.Core.Objects.ObjectContextOptions">
+            <summary>
+            Defines options that affect the behavior of the ObjectContext.
+            </summary>
+        </member>
+        <member name="P:System.Data.Entity.Core.Objects.ObjectContextOptions.EnsureTransactionsForFunctionsAndCommands">
+            <summary>
+            Gets or sets the value that determines whether SQL functions and commands should be always executed in a transaction.
+            </summary>
+            <remarks>
+            This flag determines whether a new transaction will be started when methods such as <see cref="M:System.Data.Entity.Core.Objects.ObjectContext.ExecuteFunction(System.String,System.Data.Entity.Core.Objects.ObjectParameter[])"/>
+            and <see cref="M:System.Data.Entity.Core.Objects.ObjectContext.ExecuteStoreCommand(System.String,System.Object[])"/> are executed outside of a transaction.
+            Note that this does not change the behavior of <see cref="M:System.Data.Entity.Core.Objects.ObjectContext.SaveChanges"/>.
+            </remarks>
+            <value>
+            The default transactional behavior.
+            </value>
+        </member>
+        <member name="P:System.Data.Entity.Core.Objects.ObjectContextOptions.LazyLoadingEnabled">
+            <summary>Gets or sets a Boolean value that determines whether related objects are loaded automatically when a navigation property is accessed.</summary>
+            <returns>true if lazy loading is enabled; otherwise, false.</returns>
+        </member>
+        <member name="P:System.Data.Entity.Core.Objects.ObjectContextOptions.ProxyCreationEnabled">
+            <summary>Gets or sets a Boolean value that determines whether proxy instances are created for custom data classes that are persistence ignorant.</summary>
+            <returns>true if proxies are created; otherwise, false. The default value is true.</returns>
+        </member>
+        <member name="P:System.Data.Entity.Core.Objects.ObjectContextOptions.UseLegacyPreserveChangesBehavior">
+            <summary>Gets or sets a Boolean value that determines whether to use the legacy PreserveChanges behavior.</summary>
+            <returns>true if the legacy PreserveChanges behavior should be used; otherwise, false.</returns>
+        </member>
+        <member name="P:System.Data.Entity.Core.Objects.ObjectContextOptions.UseConsistentNullReferenceBehavior">
+            <summary>Gets or sets a Boolean value that determines whether to use the consistent NullReference behavior.</summary>
+            <remarks>
+            If this flag is set to false then setting the Value property of the <see cref="T:System.Data.Entity.Core.Objects.DataClasses.EntityReference`1"/> for an
+            FK relationship to null when it is already null will have no effect. When this flag is set to true, then
+            setting the value to null will always cause the FK to be nulled and the relationship to be deleted
+            even if the value is currently null. The default value is false when using ObjectContext and true
+            when using DbContext.
+            </remarks>
+            <returns>true if the consistent NullReference behavior should be used; otherwise, false.</returns>
+        </member>
+        <member name="P:System.Data.Entity.Core.Objects.ObjectContextOptions.UseCSharpNullComparisonBehavior">
+            <summary>Gets or sets a Boolean value that determines whether to use the C# NullComparison behavior.</summary>
+            <remarks>
+            This flag determines whether C# behavior should be exhibited when comparing null values in LinqToEntities.
+            If this flag is set, then any equality comparison between two operands, both of which are potentially
+            nullable, will be rewritten to show C# null comparison semantics. As an example:
+            (operand1 = operand2) will be rewritten as
+            (((operand1 = operand2) AND NOT (operand1 IS NULL OR operand2 IS NULL)) || (operand1 IS NULL &amp;&amp; operand2 IS NULL))
+            The default value is false when using <see cref="T:System.Data.Entity.Core.Objects.ObjectContext"/>.
+            </remarks>
+            <returns>true if the C# NullComparison behavior should be used; otherwise, false.</returns>
+        </member>
+        <member name="T:System.Data.Entity.Core.Objects.ObjectMaterializedEventArgs">
+            <summary>
+            EventArgs for the ObjectMaterialized event.
+            </summary>
+        </member>
+        <member name="P:System.Data.Entity.Core.Objects.ObjectMaterializedEventArgs.Entity">
+            <summary>Gets the entity object that was created.</summary>
+            <returns>The entity object that was created.</returns>
+        </member>
+        <member name="T:System.Data.Entity.Core.Objects.ObjectMaterializedEventHandler">
+            <summary>
+            Delegate for the ObjectMaterialized event.
+            </summary>
+            <param name="sender"> The ObjectContext responsable for materializing the object. </param>
+            <param name="e"> EventArgs containing a reference to the materialized object. </param>
+        </member>
+        <member name="T:System.Data.Entity.Core.Objects.ObjectParameter">
+            <summary>
+            This class represents a query parameter at the object layer, which consists
+            of a Name, a Type and a Value.
+            </summary>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ObjectParameter.#ctor(System.String,System.Type)">
+            <summary>
+            Initializes a new instance of the <see cref="T:System.Data.Entity.Core.Objects.ObjectParameter" /> class with the specified name and type.
+            </summary>
+            <param name="name">The parameter name. This name should not include the "@" parameter marker that is used in the Entity SQL statements, only the actual name. The first character of the expression must be a letter. Any successive characters in the expression must be either letters, numbers, or an underscore (_) character.</param>
+            <param name="type">The common language runtime (CLR) type of the parameter.</param>
+            <exception cref="T:System.ArgumentNullException">If the value of either argument is null.</exception>
+            <exception cref="T:System.ArgumentOutOfRangeException">If the value of the name argument is invalid. Parameter names must start with a letter and can only contain letters, numbers, and underscores.</exception>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ObjectParameter.#ctor(System.String,System.Object)">
+            <summary>
+            Initializes a new instance of the <see cref="T:System.Data.Entity.Core.Objects.ObjectParameter" /> class with the specified name and value.
+            </summary>
+            <param name="name">The parameter name. This name should not include the "@" parameter marker that is used in Entity SQL statements, only the actual name. The first character of the expression must be a letter. Any successive characters in the expression must be either letters, numbers, or an underscore (_) character.</param>
+            <param name="value">The initial value (and inherently, the type) of the parameter.</param>
+            <exception cref="T:System.ArgumentNullException">If the value of either argument is null.</exception>
+            <exception cref="T:System.ArgumentOutOfRangeException">If the value of the name argument is not valid. Parameter names must start with a letter and can only contain letters, numbers, and underscores.</exception>
+        </member>
+        <member name="P:System.Data.Entity.Core.Objects.ObjectParameter.Name">
+            <summary>Gets the parameter name, which can only be set through a constructor.</summary>
+            <returns>The parameter name, which can only be set through a constructor.</returns>
+        </member>
+        <member name="P:System.Data.Entity.Core.Objects.ObjectParameter.ParameterType">
+            <summary>Gets the parameter type.</summary>
+            <returns>
+            The <see cref="T:System.Type" /> of the parameter.
+            </returns>
+        </member>
+        <member name="P:System.Data.Entity.Core.Objects.ObjectParameter.Value">
+            <summary>Gets or sets the parameter value.</summary>
+            <returns>The parameter value.</returns>
+        </member>
+        <member name="T:System.Data.Entity.Core.Objects.ObjectParameterCollection">
+            <summary>
+            This class represents a collection of query parameters at the object layer.
+            </summary>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ObjectParameterCollection.Add(System.Data.Entity.Core.Objects.ObjectParameter)">
+            <summary>
+            Adds the specified <see cref="T:System.Data.Entity.Core.Objects.ObjectParameter" /> to the collection.
+            </summary>
+            <param name="item">The parameter to add to the collection.</param>
+            <exception cref="T:System.ArgumentNullException">The  parameter  argument is null.</exception>
+            <exception cref="T:System.ArgumentException">
+            The  parameter  argument already exists in the collection. This behavior differs from that of most collections that allow duplicate entries. -or-Another parameter with the same name as the  parameter  argument already exists in the collection. Note that the lookup is case-insensitive. This behavior differs from that of most collections, and is more like that of a
+            <see
+                cref="T:System.Collections.Generic.Dictionary" />
+            .
+            </exception>
+            <exception cref="T:System.ArgumentOutOfRangeException">The type of the  parameter  is not valid.</exception>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ObjectParameterCollection.Clear">
+            <summary>
+            Deletes all <see cref="T:System.Data.Entity.Core.Objects.ObjectParameter" /> instances from the collection.
+            </summary>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ObjectParameterCollection.Contains(System.Data.Entity.Core.Objects.ObjectParameter)">
+            <summary>
+            Checks for the existence of a sp

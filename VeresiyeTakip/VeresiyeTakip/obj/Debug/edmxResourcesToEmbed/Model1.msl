@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="VeresiyeDBModelStoreContainer" CdmEntityContainer="VeresiyeDBEntities">
+    <EntitySetMapping Name="CariKart">
+      <EntityTypeMapping TypeName="VeresiyeDBModel.CariKart">
+        <MappingFragment StoreEntitySet="CariKart">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="unvani" ColumnName="unvani" />
+          <ScalarProperty Name="yetkili" ColumnName="yetkili" />
+          <ScalarProperty Name="telefonNo" ColumnName="telefonNo" />
+          <ScalarProperty Name="vergiDairesi" ColumnName="vergiDairesi" />
+          <ScalarProperty Name="adres" ColumnName="adres" />
+          <ScalarProperty Name="ePosta" ColumnName="ePosta" />
+          <ScalarProperty Name="gsm" ColumnName="gsm" />
+          <ScalarProperty Name="faksNo" ColumnName="faksNo" />
+          <ScalarProperty Name="webAdresi" ColumnName="webAdresi" />
+          <ScalarProperty Name="cariLimit" ColumnName="cariLimit" />
+          <ScalarProperty Name="notu" ColumnName="notu" />
+          <ScalarProperty Name="tarih" ColumnName="tarih" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Hesap">
+      <EntityTypeMapping TypeName="VeresiyeDBModel.Hesap">
+        <MappingFragment StoreEntitySet="Hesap">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="durum" ColumnName="durum" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VsixLanguagePack Version="1.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema-lp/2010">
+  <LocalizedName>Microsoft Azure Mobile Apps 已连接的服务</LocalizedName>
+  <LocalizedDescription>借助分步指南，开发人员可以轻松创建并连接到 Azure 移动应用。</LocalizedDescription>
+  <MoreInfoUrl>https://go.microsoft.com/fwlink/?LinkId=534856</MoreInfoUrl>
+</VsixLanguagePack>

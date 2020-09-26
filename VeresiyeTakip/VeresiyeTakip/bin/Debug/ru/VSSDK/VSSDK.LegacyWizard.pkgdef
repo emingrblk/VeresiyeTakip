@@ -1,0 +1,5 @@
+[$RootKey$\CLSID\{7B038EC5-A6F9-4B5B-9C78-3FD64037CC22}]
+"Class"="PackageWizard.Wizard90"
+"Codebase"="$ShellFolder$\VSSDK\VisualStudioIntegration\Tools\Bin\PackageWizard.dll"
+"InprocServer32"="$System$\mscoree.dll"
+"ThreadingModel"="Both"

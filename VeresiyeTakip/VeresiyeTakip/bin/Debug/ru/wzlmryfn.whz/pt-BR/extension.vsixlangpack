@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VsixLanguagePack Version="1.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema-lp/2010">
+  <LocalizedName>Serviços Conectados da Microsoft</LocalizedName>
+  <LocalizedDescription>Fornece as ferramentas de base e a estrutura de extensibilidade para a caixa de diálogo Adicionar Serviço Conectado.</LocalizedDescription>
+</VsixLanguagePack>

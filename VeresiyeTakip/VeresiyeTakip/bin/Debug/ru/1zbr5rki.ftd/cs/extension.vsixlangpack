@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VsixLanguagePack Version="1.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema-lp/2010">
+  <LocalizedName>Azure AD Authentication Connected Service</LocalizedName>
+  <LocalizedDescription>Poskytuje průvodce konfigurací jednotného přihlašování pro ověřování Azure AD ve webových projektech.</LocalizedDescription>
+  <MoreInfoUrl>https://go.microsoft.com/fwlink/?LinkId=534858</MoreInfoUrl>
+</VsixLanguagePack>

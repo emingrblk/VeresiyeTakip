@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PackageLanguagePackManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011">
+  <Metadata>
+    <DisplayName xml:space="preserve">开发人员分析工具</DisplayName>
+    <Description xml:space="preserve">遥测搜索、CodeLens 集成和 Application Insights 的其他工具。HockeyApp 的应用部署工具。</Description>
+  </Metadata>
+</PackageLanguagePackManifest>

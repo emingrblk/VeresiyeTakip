@@ -1,0 +1,996 @@
+nly) - provided that the
+            implementation the collection belongs to has not locked its parameters
+            because it's command definition has been prepared.
+            </summary>
+        </member>
+        <member name="P:System.Data.Entity.Core.Objects.ObjectParameterCollection.Item(System.String)">
+            <summary>Provides an indexer that allows callers to retrieve parameters by name.</summary>
+            <returns>
+            The <see cref="T:System.Data.Entity.Core.Objects.ObjectParameter" /> instance.
+            </returns>
+            <param name="name">The name of the parameter to find. This name should not include the "@" parameter marker that is used in the Entity SQL statements, only the actual name.</param>
+            <exception cref="T:System.ArgumentOutOfRangeException">No parameter with the specified name is found in the collection.</exception>
+        </member>
+        <member name="T:System.Data.Entity.Core.Objects.ObjectQuery">
+            <summary>
+            This class implements untyped queries at the object-layer.
+            </summary>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ObjectQuery.ToTraceString">
+            <summary>Returns the commands to execute against the data source.</summary>
+            <returns>A string that represents the commands that the query executes against the data source.</returns>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ObjectQuery.GetResultType">
+            <summary>Returns information about the result type of the query.</summary>
+            <returns>
+            A <see cref="T:System.Data.Entity.Core.Metadata.Edm.TypeUsage" /> value that contains information about the result type of the query.
+            </returns>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ObjectQuery.Execute(System.Data.Entity.Core.Objects.MergeOption)">
+            <summary>Executes the untyped object query with the specified merge option.</summary>
+            <param name="mergeOption">
+            The <see cref="T:System.Data.Entity.Core.Objects.MergeOption" /> to use when executing the query. 
+            The default is <see cref="F:System.Data.Entity.Core.Objects.MergeOption.AppendOnly" />.
+            </param>
+            <returns>
+            An <see cref="T:System.Data.Entity.Core.Objects.ObjectResult`1" /> that contains a collection of entity objects returned by the query.
+            </returns>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ObjectQuery.ExecuteAsync(System.Data.Entity.Core.Objects.MergeOption)">
+            <summary>
+            Asynchronously executes the untyped object query with the specified merge option.
+            </summary>
+            <remarks>
+            Multiple active operations on the same context instance are not supported.  Use 'await' to ensure
+            that any asynchronous operations have completed before calling another method on this context.
+            </remarks>
+            <param name="mergeOption">
+            The <see cref="T:System.Data.Entity.Core.Objects.MergeOption" /> to use when executing the query. 
+            The default is <see cref="F:System.Data.Entity.Core.Objects.MergeOption.AppendOnly" />.
+            </param>
+            <returns>
+            A task that represents the asynchronous operation.
+            The task result contains an an <see cref="T:System.Data.Entity.Core.Objects.ObjectResult`1" /> 
+            that contains a collection of entity objects returned by the query.
+            </returns>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ObjectQuery.ExecuteAsync(System.Data.Entity.Core.Objects.MergeOption,System.Threading.CancellationToken)">
+            <summary>
+            Asynchronously executes the untyped object query with the specified merge option.
+            </summary>
+            <remarks>
+            Multiple active operations on the same context instance are not supported.  Use 'await' to ensure
+            that any asynchronous operations have completed before calling another method on this context.
+            </remarks>
+            <param name="mergeOption">
+            The <see cref="T:System.Data.Entity.Core.Objects.MergeOption"/> to use when executing the query. 
+            The default is <see cref="F:System.Data.Entity.Core.Objects.MergeOption.AppendOnly"/>.
+            </param>
+            <param name="cancellationToken">
+            A <see cref="T:System.Threading.CancellationToken"/> to observe while waiting for the task to complete.
+            </param>
+            <returns>
+            A task that represents the asynchronous operation.
+            The task result contains an an <see cref="T:System.Data.Entity.Core.Objects.ObjectResult`1"/> 
+            that contains a collection of entity objects returned by the query.
+            </returns>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ObjectQuery.System#ComponentModel#IListSource#GetList">
+            <summary>
+            Returns the collection as an <see cref="T:System.Collections.IList" /> used for data binding.
+            </summary>
+            <returns>
+            An <see cref="T:System.Collections.IList" /> of entity objects.
+            </returns>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ObjectQuery.System#Collections#IEnumerable#GetEnumerator">
+            <summary>Returns an enumerator that iterates through a collection.</summary>
+            <returns>
+            An <see cref="T:System.Collections.IEnumerator" /> that can be used to iterate through the collection.
+            </returns>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ObjectQuery.System#Data#Entity#Infrastructure#IDbAsyncEnumerable#GetAsyncEnumerator">
+            <summary>
+            Returns an <see cref="T:System.Data.Entity.Infrastructure.IDbAsyncEnumerator"/> which when enumerated will execute the given SQL query against the database.
+            </summary>
+            <returns> The query results. </returns>
+        </member>
+        <member name="P:System.Data.Entity.Core.Objects.ObjectQuery.CommandText">
+            <summary>Returns the command text for the query.</summary>
+            <returns>A string value.</returns>
+        </member>
+        <member name="P:System.Data.Entity.Core.Objects.ObjectQuery.Context">
+            <summary>Gets the object context associated with this object query.</summary>
+            <returns>
+            The <see cref="T:System.Data.Entity.Core.Objects.ObjectContext" /> associated with this
+            <see
+                cref="T:System.Data.Entity.Core.Objects.ObjectQuery`1" />
+            instance.
+            </returns>
+        </member>
+        <member name="P:System.Data.Entity.Core.Objects.ObjectQuery.MergeOption">
+            <summary>Gets or sets how objects returned from a query are added to the object context. </summary>
+            <returns>
+            The query <see cref="T:System.Data.Entity.Core.Objects.MergeOption" />.
+            </returns>
+        </member>
+        <member name="P:System.Data.Entity.Core.Objects.ObjectQuery.Streaming">
+            <summary>
+            Whether the query is streaming or buffering
+            </summary>
+        </member>
+        <member name="P:System.Data.Entity.Core.Objects.ObjectQuery.Parameters">
+            <summary>Gets the parameter collection for this object query.</summary>
+            <returns>
+            The parameter collection for this <see cref="T:System.Data.Entity.Core.Objects.ObjectQuery`1" />.
+            </returns>
+        </member>
+        <member name="P:System.Data.Entity.Core.Objects.ObjectQuery.EnablePlanCaching">
+            <summary>Gets or sets a value that indicates whether the query plan should be cached.</summary>
+            <returns>A value that indicates whether the query plan should be cached.</returns>
+        </member>
+        <member name="P:System.Data.Entity.Core.Objects.ObjectQuery.System#Linq#IQueryable#ElementType">
+            <summary>
+            Gets the result element type for this query instance.
+            </summary>
+        </member>
+        <member name="P:System.Data.Entity.Core.Objects.ObjectQuery.System#Linq#IQueryable#Expression">
+            <summary>
+            Gets the expression describing this query. For queries built using
+            LINQ builder patterns, returns a full LINQ expression tree; otherwise,
+            returns a constant expression wrapping this query. Note that the
+            default expression is not cached. This allows us to differentiate
+            between LINQ and Entity-SQL queries.
+            </summary>
+        </member>
+        <member name="P:System.Data.Entity.Core.Objects.ObjectQuery.System#Linq#IQueryable#Provider">
+            <summary>
+            Gets the <see cref="T:System.Linq.IQueryProvider"/> associated with this query instance.
+            </summary>
+        </member>
+        <member name="T:System.Data.Entity.Core.Objects.ObjectQuery`1">
+            <summary>
+            ObjectQuery implements strongly-typed queries at the object-layer.
+            Queries are specified using Entity-SQL strings and may be created by calling
+            the Entity-SQL-based query builder methods declared by ObjectQuery.
+            </summary>
+            <typeparam name="T"> The result type of this ObjectQuery </typeparam>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ObjectQuery`1.#ctor(System.String,System.Data.Entity.Core.Objects.ObjectContext)">
+            <summary>
+            Creates a new <see cref="T:System.Data.Entity.Core.Objects.ObjectQuery`1" /> instance using the specified Entity SQL command as the initial query.
+            </summary>
+            <param name="commandText">The Entity SQL query.</param>
+            <param name="context">
+            The <see cref="T:System.Data.Entity.Core.Objects.ObjectContext" /> on which to execute the query.
+            </param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ObjectQuery`1.#ctor(System.String,System.Data.Entity.Core.Objects.ObjectContext,System.Data.Entity.Core.Objects.MergeOption)">
+            <summary>
+            Creates a new <see cref="T:System.Data.Entity.Core.Objects.ObjectQuery`1" /> instance using the specified Entity SQL command as the initial query and the specified merge option.
+            </summary>
+            <param name="commandText">The Entity SQL query.</param>
+            <param name="context">
+            The <see cref="T:System.Data.Entity.Core.Objects.ObjectContext" /> on which to execute the query.
+            </param>
+            <param name="mergeOption">
+            Specifies how the entities that are retrieved through this query should be merged with the entities that have been returned from previous queries against the same
+            <see
+                cref="T:System.Data.Entity.Core.Objects.ObjectContext" />
+            .
+            </param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ObjectQuery`1.Execute(System.Data.Entity.Core.Objects.MergeOption)">
+            <summary>Executes the object query with the specified merge option.</summary>
+            <param name="mergeOption">
+            The <see cref="T:System.Data.Entity.Core.Objects.MergeOption" /> to use when executing the query. 
+            The default is <see cref="F:System.Data.Entity.Core.Objects.MergeOption.AppendOnly" />.
+            </param>
+            <returns>
+            An <see cref="T:System.Data.Entity.Core.Objects.ObjectResult`1" /> that contains a collection of entity objects returned by the query.
+            </returns>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ObjectQuery`1.ExecuteAsync(System.Data.Entity.Core.Objects.MergeOption)">
+            <summary>
+            Asynchronously executes the object query with the specified merge option.
+            </summary>
+            <remarks>
+            Multiple active operations on the same context instance are not supported.  Use 'await' to ensure
+            that any asynchronous operations have completed before calling another method on this context.
+            </remarks>
+            <param name="mergeOption">
+            The <see cref="T:System.Data.Entity.Core.Objects.MergeOption" /> to use when executing the query. 
+            The default is <see cref="F:System.Data.Entity.Core.Objects.MergeOption.AppendOnly" />.
+            </param>
+            <returns>
+            A task that represents the asynchronous operation.
+            The task result contains an <see cref="T:System.Data.Entity.Core.Objects.ObjectResult`1" /> 
+            that contains a collection of entity objects returned by the query.
+            </returns>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ObjectQuery`1.ExecuteAsync(System.Data.Entity.Core.Objects.MergeOption,System.Threading.CancellationToken)">
+            <summary>
+            Asynchronously executes the object query with the specified merge option.
+            </summary>
+            <remarks>
+            Multiple active operations on the same context instance are not supported.  Use 'await' to ensure
+            that any asynchronous operations have completed before calling another method on this context.
+            </remarks>
+            <param name="mergeOption">
+            The <see cref="T:System.Data.Entity.Core.Objects.MergeOption"/> to use when executing the query. 
+            The default is <see cref="F:System.Data.Entity.Core.Objects.MergeOption.AppendOnly"/>.
+            </param>
+            <param name="cancellationToken">
+            A <see cref="T:System.Threading.CancellationToken"/> to observe while waiting for the task to complete.
+            </param>
+            <returns>
+            A task that represents the asynchronous operation.
+            The task result contains an <see cref="T:System.Data.Entity.Core.Objects.ObjectResult`1"/> 
+            that contains a collection of entity objects returned by the query.
+            </returns>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ObjectQuery`1.Include(System.String)">
+            <summary>Specifies the related objects to include in the query results.</summary>
+            <returns>
+            A new <see cref="T:System.Data.Entity.Core.Objects.ObjectQuery`1" /> with the defined query path.
+            </returns>
+            <param name="path">Dot-separated list of related objects to return in the query results.</param>
+            <exception cref="T:System.ArgumentNullException"> path  is null.</exception>
+            <exception cref="T:System.ArgumentException"> path  is empty.</exception>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ObjectQuery`1.Distinct">
+            <summary>Limits the query to unique results.</summary>
+            <returns>
+            A new <see cref="T:System.Data.Entity.Core.Objects.ObjectQuery`1" /> instance that is equivalent to the original instance with SELECT DISTINCT applied.
+            </returns>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ObjectQuery`1.Except(System.Data.Entity.Core.Objects.ObjectQuery{`0})">
+            <summary>
+            This query-builder method creates a new query whose results are all of
+            the results of this query, except those that are also part of the other
+            query specified.
+            </summary>
+            <param name="query"> A query representing the results to exclude. </param>
+            <returns> a new ObjectQuery instance. </returns>
+            <exception cref="T:System.ArgumentNullException">If the query parameter is null.</exception>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ObjectQuery`1.GroupBy(System.String,System.String,System.Data.Entity.Core.Objects.ObjectParameter[])">
+            <summary>Groups the query results by the specified criteria.</summary>
+            <returns>
+            A new <see cref="T:System.Data.Entity.Core.Objects.ObjectQuery`1" /> instance of type
+            <see
+                cref="T:System.Data.Common.DbDataRecord" />
+            that is equivalent to the original instance with GROUP BY applied.
+            </returns>
+            <param name="keys">The key columns by which to group the results.</param>
+            <param name="projection">The list of selected properties that defines the projection. </param>
+            <param name="parameters">Zero or more parameters that are used in this method.</param>
+            <exception cref="T:System.ArgumentNullException">The  query  parameter is null or an empty string 
+            or the  projection  parameter is null or an empty string.</exception>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ObjectQuery`1.Intersect(System.Data.Entity.Core.Objects.ObjectQuery{`0})">
+            <summary>
+            This query-builder method creates a new query whose results are those that
+            are both in this query and the other query specified.
+            </summary>
+            <param name="query"> A query representing the results to intersect with. </param>
+            <returns> a new ObjectQuery instance. </returns>
+            <exception cref="T:System.ArgumentNullException">If the query parameter is null.</exception>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ObjectQuery`1.OfType``1">
+            <summary>Limits the query to only results of a specific type.</summary>
+            <returns>
+            A new <see cref="T:System.Data.Entity.Core.Objects.ObjectQuery`1" /> instance that is equivalent to the original instance with OFTYPE applied.
+            </returns>
+            <typeparam name="TResultType">
+            The type of the <see cref="T:System.Data.Entity.Core.Objects.ObjectResult`1" /> returned when the query is executed with the applied filter.
+            </typeparam>
+            <exception cref="T:System.Data.Entity.Core.EntitySqlException">The type specified is not valid.</exception>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ObjectQuery`1.OrderBy(System.String,System.Data.Entity.Core.Objects.ObjectParameter[])">
+            <summary>Orders the query results by the specified criteria.</summary>
+            <returns>
+            A new <see cref="T:System.Data.Entity.Core.Objects.ObjectQuery`1" /> instance that is equivalent to the original instance with ORDER BY applied.
+            </returns>
+            <param name="keys">The key columns by which to order the results.</param>
+            <param name="parameters">Zero or more parameters that are used in this method.</param>
+            <exception cref="T:System.ArgumentNullException">The  keys  or  parameters  parameter is null.</exception>
+            <exception cref="T:System.ArgumentException">The  key  is an empty string.</exception>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ObjectQuery`1.Select(System.String,System.Data.Entity.Core.Objects.ObjectParameter[])">
+            <summary>Limits the query results to only the properties that are defined in the specified projection.</summary>
+            <returns>
+            A new <see cref="T:System.Data.Entity.Core.Objects.ObjectQuery`1" /> instance of type
+            <see
+                cref="T:System.Data.Common.DbDataRecord" />
+            that is equivalent to the original instance with SELECT applied.
+            </returns>
+            <param name="projection">The list of selected properties that defines the projection.</param>
+            <param name="parameters">Zero or more parameters that are used in this method.</param>
+            <exception cref="T:System.ArgumentNullException"> projection  is null or parameters is null.</exception>
+            <exception cref="T:System.ArgumentException">The  projection  is an empty string.</exception>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ObjectQuery`1.SelectValue``1(System.String,System.Data.Entity.Core.Objects.ObjectParameter[])">
+            <summary>Limits the query results to only the property specified in the projection.</summary>
+            <returns>
+            A new <see cref="T:System.Data.Entity.Core.Objects.ObjectQuery`1" /> instance of a type compatible with the specific projection. The returned
+            <see
+                cref="T:System.Data.Entity.Core.Objects.ObjectQuery`1" />
+            is equivalent to the original instance with SELECT VALUE applied.
+            </returns>
+            <param name="projection">The projection list.</param>
+            <param name="parameters">An optional set of query parameters that should be in scope when parsing.</param>
+            <typeparam name="TResultType">
+            The type of the <see cref="T:System.Data.Entity.Core.Objects.ObjectQuery`1" /> returned by the
+            <see
+                cref="M:System.Data.Entity.Core.Objects.ObjectQuery`1.SelectValue``1(System.String,System.Data.Entity.Core.Objects.ObjectParameter[])" />
+            method.
+            </typeparam>
+            <exception cref="T:System.ArgumentNullException"> projection  is null or parameters  is null.</exception>
+            <exception cref="T:System.ArgumentException">The  projection  is an empty string.</exception>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ObjectQuery`1.Skip(System.String,System.String,System.Data.Entity.Core.Objects.ObjectParameter[])">
+            <summary>Orders the query results by the specified criteria and skips a specified number of results.</summary>
+            <returns>
+            A new <see cref="T:System.Data.Entity.Core.Objects.ObjectQuery`1" /> instance that is equivalent to the original instance with both ORDER BY and SKIP applied.
+            </returns>
+            <param name="keys">The key columns by which to order the results.</param>
+            <param name="count">The number of results to skip. This must be either a constant or a parameter reference.</param>
+            <param name="parameters">An optional set of query parameters that should be in scope when parsing.</param>
+            <exception cref="T:System.ArgumentNullException">Any argument is null.</exception>
+            <exception cref="T:System.ArgumentException"> keys  is an empty string or count  is an empty string.</exception>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ObjectQuery`1.Top(System.String,System.Data.Entity.Core.Objects.ObjectParameter[])">
+            <summary>Limits the query results to a specified number of items.</summary>
+            <returns>
+            A new <see cref="T:System.Data.Entity.Core.Objects.ObjectQuery`1" /> instance that is equivalent to the original instance with TOP applied.
+            </returns>
+            <param name="count">The number of items in the results as a string. </param>
+            <param name="parameters">An optional set of query parameters that should be in scope when parsing.</param>
+            <exception cref="T:System.ArgumentNullException"> count  is null.</exception>
+            <exception cref="T:System.ArgumentException"> count  is an empty string.</exception>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ObjectQuery`1.Union(System.Data.Entity.Core.Objects.ObjectQuery{`0})">
+            <summary>
+            This query-builder method creates a new query whose results are all of
+            the results of this query, plus all of the results of the other query,
+            without duplicates (i.e., results are unique).
+            </summary>
+            <param name="query"> A query representing the results to add. </param>
+            <returns> a new ObjectQuery instance. </returns>
+            <exception cref="T:System.ArgumentNullException">If the query parameter is null.</exception>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ObjectQuery`1.UnionAll(System.Data.Entity.Core.Objects.ObjectQuery{`0})">
+            <summary>
+            This query-builder method creates a new query whose results are all of
+            the results of this query, plus all of the results of the other query,
+            including any duplicates (i.e., results are not necessarily unique).
+            </summary>
+            <param name="query"> A query representing the results to add. </param>
+            <returns> a new ObjectQuery instance. </returns>
+            <exception cref="T:System.ArgumentNullException">If the query parameter is null.</exception>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ObjectQuery`1.Where(System.String,System.Data.Entity.Core.Objects.ObjectParameter[])">
+            <summary>Limits the query to results that match specified filtering criteria.</summary>
+            <returns>
+            A new <see cref="T:System.Data.Entity.Core.Objects.ObjectQuery`1" /> instance that is equivalent to the original instance with WHERE applied.
+            </returns>
+            <param name="predicate">The filter predicate.</param>
+            <param name="parameters">Zero or more parameters that are used in this method.</param>
+            <exception cref="T:System.ArgumentNullException"> predicate  is null or parameters  is null.</exception>
+            <exception cref="T:System.ArgumentException">The  predicate  is an empty string.</exception>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ObjectQuery`1.System#Collections#Generic#IEnumerable{T}#GetEnumerator">
+            <summary>
+            Returns an <see cref="T:System.Collections.Generic.IEnumerator`1"/> which when enumerated will execute the given SQL query against the database.
+            </summary>
+            <returns> The query results. </returns>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ObjectQuery`1.System#Data#Entity#Infrastructure#IDbAsyncEnumerable{T}#GetAsyncEnumerator">
+            <summary>
+            Returns an <see cref="T:System.Data.Entity.Infrastructure.IDbAsyncEnumerator`1"/> which when enumerated will execute the given SQL query against the database.
+            </summary>
+            <returns> The query results. </returns>
+        </member>
+        <member name="P:System.Data.Entity.Core.Objects.ObjectQuery`1.Name">
+            <summary>Gets or sets the name of this object query.</summary>
+            <returns>
+            A string value that is the name of this <see cref="T:System.Data.Entity.Core.Objects.ObjectQuery`1" />.
+            </returns>
+            <exception cref="T:System.ArgumentException">The value specified on set is not valid.</exception>
+        </member>
+        <member name="T:System.Data.Entity.Core.Objects.ObjectResult">
+            <summary>
+            This class implements IEnumerable and IDisposable. Instance of this class
+            is returned from ObjectQuery.Execute method.
+            </summary>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ObjectResult.#ctor">
+            <summary>
+                This constructor is intended only for use when creating test doubles that will override members
+                with mocked or faked behavior. Use of this constructor for other purposes may result in unexpected
+                behavior including but not limited to throwing <see cref="T:System.NullReferenceException"/>.
+            </summary>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ObjectResult.System#Data#Entity#Infrastructure#IDbAsyncEnumerable#GetAsyncEnumerator">
+            <inheritdoc />
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ObjectResult.System#Collections#IEnumerable#GetEnumerator">
+            <summary>Returns an enumerator that iterates through the query results.</summary>
+            <returns>An enumerator that iterates through the query results.</returns>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ObjectResult.System#ComponentModel#IListSource#GetList">
+            <summary>Returns the results in a format useful for data binding.</summary>
+            <returns>
+            An <see cref="T:System.Collections.IList" /> of entity objects.
+            </returns>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ObjectResult.Dispose">
+            <summary>Performs tasks associated with freeing, releasing, or resetting resources.</summary>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ObjectResult.Dispose(System.Boolean)">
+            <summary>Releases the resources used by the object result.</summary>
+            <param name="disposing">true to release both managed and unmanaged resources; false to release only unmanaged resources.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ObjectResult.GetNextResult``1">
+            <summary>Gets the next result set of a stored procedure.</summary>
+            <returns>An ObjectResult that enumerates the values of the next result set. Null, if there are no more, or if the ObjectResult is not the result of a stored procedure call.</returns>
+            <typeparam name="TElement">The type of the element.</typeparam>
+        </member>
+        <member name="P:System.Data.Entity.Core.Objects.ObjectResult.System#ComponentModel#IListSource#ContainsListCollection">
+            <summary>
+            IListSource.ContainsListCollection implementation. Always returns false.
+            </summary>
+        </member>
+        <member name="P:System.Data.Entity.Core.Objects.ObjectResult.ElementType">
+            <summary>
+            When overridden in a derived class, gets the type of the generic
+            <see
+                cref="T:System.Data.Entity.Core.Objects.ObjectResult`1" />
+            .
+            </summary>
+            <returns>
+            The type of the generic <see cref="T:System.Data.Entity.Core.Objects.ObjectResult`1" />.
+            </returns>
+        </member>
+        <member name="T:System.Data.Entity.Core.Objects.ObjectResult`1">
+            <summary>
+            This class represents the result of the <see cref="M:System.Data.Entity.Core.Objects.ObjectQuery`1.Execute(System.Data.Entity.Core.Objects.MergeOption)"/> method.
+            </summary>
+            <typeparam name="T">The type of the result.</typeparam>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ObjectResult`1.#ctor">
+            <summary>
+                This constructor is intended only for use when creating test doubles that will override members
+                with mocked or faked behavior. Use of this constructor for other purposes may result in unexpected
+                behavior including but not limited to throwing <see cref="T:System.NullReferenceException"/>.
+            </summary>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ObjectResult`1.GetEnumerator">
+            <summary>Returns an enumerator that iterates through the query results.</summary>
+            <returns>An enumerator that iterates through the query results.</returns>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ObjectResult`1.System#Data#Entity#Infrastructure#IDbAsyncEnumerable{T}#GetAsyncEnumerator">
+            <inheritdoc />
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ObjectResult`1.Dispose(System.Boolean)">
+            <summary>Releases the unmanaged resources used by the <see cref="T:System.Data.Entity.Core.Objects.ObjectResult`1" /> and optionally releases the managed resources.</summary>
+            <param name="disposing">true to release managed and unmanaged resources; false to release only unmanaged resources.</param>
+        </member>
+        <member name="P:System.Data.Entity.Core.Objects.ObjectResult`1.ElementType">
+            <summary>
+            Gets the type of the <see cref="T:System.Data.Entity.Core.Objects.ObjectResult`1" />.
+            </summary>
+            <returns>
+            A <see cref="T:System.Type" /> that is the type of the <see cref="T:System.Data.Entity.Core.Objects.ObjectResult`1" />.
+            </returns>
+        </member>
+        <member name="T:System.Data.Entity.Core.Objects.ObjectSet`1">
+            <summary>
+            Represents a typed entity set that is used to perform create, read, update, and delete operations. 
+            </summary>
+            <typeparam name="TEntity">The type of the entity.</typeparam>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ObjectSet`1.AddObject(`0)">
+            <summary>Adds an object to the object context in the current entity set. </summary>
+            <param name="entity">The object to add.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ObjectSet`1.Attach(`0)">
+            <summary>Attaches an object or object graph to the object context in the current entity set. </summary>
+            <param name="entity">The object to attach.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ObjectSet`1.DeleteObject(`0)">
+            <summary>Marks an object for deletion. </summary>
+            <param name="entity">
+            An object that represents the entity to delete. The object can be in any state except
+            <see
+                cref="F:System.Data.Entity.EntityState.Detached" />
+            .
+            </param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ObjectSet`1.Detach(`0)">
+            <summary>Removes the object from the object context.</summary>
+            <param name="entity">
+            Object to be detached. Only the  entity  is removed; if there are any related objects that are being tracked by the same
+            <see
+                cref="T:System.Data.Entity.Core.Objects.ObjectStateManager" />
+            , those will not be detached automatically.
+            </param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ObjectSet`1.ApplyCurrentValues(`0)">
+            <summary>
+            Copies the scalar values from the supplied object into the object in the
+            <see
+                cref="T:System.Data.Entity.Core.Objects.ObjectContext" />
+            that has the same key.
+            </summary>
+            <returns>The updated object.</returns>
+            <param name="currentEntity">
+            The detached object that has property updates to apply to the original object. The entity key of  currentEntity  must match the
+            <see
+                cref="P:System.Data.Entity.Core.Objects.ObjectStateEntry.EntityKey" />
+            property of an entry in the
+            <see
+                cref="T:System.Data.Entity.Core.Objects.ObjectContext" />
+            .
+            </param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ObjectSet`1.ApplyOriginalValues(`0)">
+            <summary>
+            Sets the <see cref="P:System.Data.Entity.Core.Objects.ObjectStateEntry.OriginalValues" /> property of an
+            <see
+                cref="T:System.Data.Entity.Core.Objects.ObjectStateEntry" />
+            to match the property values of a supplied object.
+            </summary>
+            <returns>The updated object.</returns>
+            <param name="originalEntity">
+            The detached object that has property updates to apply to the original object. The entity key of  originalEntity  must match the
+            <see
+                cref="P:System.Data.Entity.Core.Objects.ObjectStateEntry.EntityKey" />
+            property of an entry in the
+            <see
+                cref="T:System.Data.Entity.Core.Objects.ObjectContext" />
+            .
+            </param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ObjectSet`1.CreateObject">
+            <summary>Creates a new entity type object.</summary>
+            <returns>The new entity type object, or an instance of a proxy type that corresponds to the entity type.</returns>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ObjectSet`1.CreateObject``1">
+            <summary>Creates an instance of the specified type.</summary>
+            <returns>An instance of the requested type  T , or an instance of a proxy type that corresponds to the type  T .</returns>
+            <typeparam name="T">Type of object to be returned.</typeparam>
+        </member>
+        <member name="P:System.Data.Entity.Core.Objects.ObjectSet`1.EntitySet">
+            <summary>
+            Gets the metadata of the entity set represented by this <see cref="T:System.Data.Entity.Core.Objects.ObjectSet`1" /> instance.
+            </summary>
+            <returns>
+            An <see cref="T:System.Data.Entity.Core.Metadata.Edm.EntitySet" /> object.
+            </returns>
+        </member>
+        <member name="T:System.Data.Entity.Core.Objects.OriginalValueRecord">
+            <summary>
+            The original values of the properties of an entity when it was retrieved from the database.
+            </summary>
+        </member>
+        <member name="T:System.Data.Entity.Core.Objects.ObjectStateManager">
+            <summary>
+            Maintains object state and identity management for entity type instances and relationship instances.
+            </summary>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ObjectStateManager.#ctor(System.Data.Entity.Core.Metadata.Edm.MetadataWorkspace)">
+            <summary>
+            Initializes a new instance of the <see cref="T:System.Data.Entity.Core.Objects.ObjectStateManager" /> class.
+            </summary>
+            <param name="metadataWorkspace">
+            The <see cref="T:System.Data.Entity.Core.Metadata.Edm.MetadataWorkspace" />, which supplies mapping and metadata information.
+            </param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ObjectStateManager.GetObjectStateEntries(System.Data.Entity.EntityState)">
+            <summary>
+            Returns a collection of <see cref="T:System.Data.Entity.Core.Objects.ObjectStateEntry" /> objects for objects or relationships with the given state.
+            </summary>
+            <returns>
+            A collection of <see cref="T:System.Data.Entity.Core.Objects.ObjectStateEntry" /> objects in the given
+            <see
+                cref="T:System.Data.Entity.EntityState" />
+            .
+            </returns>
+            <param name="state">
+            An <see cref="T:System.Data.Entity.EntityState" /> used to filter the returned
+            <see
+                cref="T:System.Data.Entity.Core.Objects.ObjectStateEntry" />
+            objects.
+            </param>
+            <exception cref="T:System.ArgumentException">
+            When  state  is <see cref="F:System.Data.Entity.EntityState.Detached" />.
+            </exception>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ObjectStateManager.ChangeObjectState(System.Object,System.Data.Entity.EntityState)">
+            <summary>
+            Changes state of the <see cref="T:System.Data.Entity.Core.Objects.ObjectStateEntry" /> for a specific object to the specified  entityState .
+            </summary>
+            <returns>
+            The <see cref="T:System.Data.Entity.Core.Objects.ObjectStateEntry" /> for the supplied  entity .
+            </returns>
+            <param name="entity">The object for which the state must be changed.</param>
+            <param name="entityState">The new state of the object.</param>
+            <exception cref="T:System.ArgumentNullException">When  entity  is null.</exception>
+            <exception cref="T:System.InvalidOperationException">
+            When the object is not detached and does not have an entry in the state manager
+            or when you try to change the state to <see cref="F:System.Data.Entity.EntityState.Detached" />
+            from any other <see cref="T:System.Data.Entity.EntityState." />
+            or when  state  is not a valid <see cref="T:System.Data.Entity.EntityState" /> value.
+            </exception>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ObjectStateManager.ChangeRelationshipState(System.Object,System.Object,System.String,System.Data.Entity.EntityState)">
+            <summary>Changes the state of the relationship between two entity objects that is specified based on the two related objects and the name of the navigation property.</summary>
+            <returns>
+            The <see cref="T:System.Data.Entity.Core.Objects.ObjectStateEntry" /> for the relationship that was changed.
+            </returns>
+            <param name="sourceEntity">
+            The object instance or <see cref="T:System.Data.Entity.Core.EntityKey" /> of the source entity at one end of the relationship.
+            </param>
+            <param name="targetEntity">
+            The object instance or <see cref="T:System.Data.Entity.Core.EntityKey" /> of the target entity at the other end of the relationship.
+            </param>
+            <param name="navigationProperty">The name of the navigation property on  source  that returns the specified  target .</param>
+            <param name="relationshipState">
+            The requested <see cref="T:System.Data.Entity.EntityState" /> of the specified relationship.
+            </param>
+            <exception cref="T:System.ArgumentNullException">When  source  or  target  is null.</exception>
+            <exception cref="T:System.InvalidOperationException">
+            When trying to change the state of the relationship to a state other than 
+                <see cref="F:System.Data.Entity.EntityState.Deleted" /> or <see cref="F:System.Data.Entity.EntityState.Detached" /> 
+            when either  source  or  target  is in a <see cref="F:System.Data.Entity.EntityState.Deleted" /> state 
+            or when you try to change the state of the relationship to a state other than
+            <see cref="F:System.Data.Entity.EntityState.Added" /> or <see cref="F:System.Data.Entity.EntityState.Detached" />
+            when either  source  or  target  is in an <see ref="F:System.Data.Entity.EntityState.Added" /> state 
+            or when  state  is not a valid <see cref="T:System.Data.Entity.EntityState" /> value
+            </exception>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ObjectStateManager.ChangeRelationshipState``1(``0,System.Object,System.Linq.Expressions.Expression{System.Func{``0,System.Object}},System.Data.Entity.EntityState)">
+            <summary>Changes the state of the relationship between two entity objects that is specified based on the two related objects and a LINQ expression that defines the navigation property.</summary>
+            <returns>
+            The <see cref="T:System.Data.Entity.Core.Objects.ObjectStateEntry" /> for the relationship that was changed.
+            </returns>
+            <param name="sourceEntity">
+            The object instance or <see cref="T:System.Data.Entity.Core.EntityKey" /> of the source entity at one end of the relationship.
+            </param>
+            <param name="targetEntity">
+            The object instance or <see cref="T:System.Data.Entity.Core.EntityKey" /> of the target entity at the other end of the relationship.
+            </param>
+            <param name="navigationPropertySelector">A LINQ expression that selects the navigation property on  source  that returns the specified  target .</param>
+            <param name="relationshipState">
+            The requested <see cref="T:System.Data.Entity.EntityState" /> of the specified relationship.
+            </param>
+            <typeparam name="TEntity">The entity type of the  source  object.</typeparam>
+            <exception cref="T:System.ArgumentNullException">When  source ,  target , or  selector  is null.</exception>
+            <exception cref="T:System.ArgumentException"> selector  is malformed or cannot return a navigation property.</exception>
+            <exception cref="T:System.InvalidOperationException">
+            When you try to change the state of the relationship to a state other than
+            <see cref="F:System.Data.Entity.EntityState.Deleted" />  or <see cref="F:System.Data.Entity.EntityState.Detached" /> 
+            when either  source  or  target  is in a
+            <see cref="F:System.Data.Entity.EntityState.Deleted" /> state
+            or when you try to change the state of the relationship to a state other than
+            <see  cref="F:System.Data.Entity.EntityState.Added" />  or <see  cref="F:System.Data.Entity.EntityState.Detached" />
+            when either  source  or  target  is in an <see cref="F:System.Data.Entity.EntityState.Added" /> state 
+            or when  state  is not a valid <see cref="T:System.Data.Entity.EntityState" /> value.
+            </exception>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ObjectStateManager.ChangeRelationshipState(System.Object,System.Object,System.String,System.String,System.Data.Entity.EntityState)">
+            <summary>Changes the state of the relationship between two entity objects that is specified based on the two related objects and the properties of the relationship.</summary>
+            <returns>
+            The <see cref="T:System.Data.Entity.Core.Objects.ObjectStateEntry" /> for the relationship that was changed.
+            </returns>
+            <param name="sourceEntity">
+            The object instance or <see cref="T:System.Data.Entity.Core.EntityKey" /> of the source entity at one end of the relationship.
+            </param>
+            <param name="targetEntity">
+            The object instance or <see cref="T:System.Data.Entity.Core.EntityKey" /> of the target entity at the other end of the relationship.
+            </param>
+            <param name="relationshipName">The name of the relationship.</param>
+            <param name="targetRoleName">The role name at the  target  end of the relationship.</param>
+            <param name="relationshipState">
+            The requested <see cref="T:System.Data.Entity.EntityState" /> of the specified relationship.
+            </param>
+            <exception cref="T:System.ArgumentNullException">When  source  or  target  is null.</exception>
+            <exception cref="T:System.InvalidOperationException">
+            When you try to change the state of the relationship to a state other than
+            <see cref="F:System.Data.Entity.EntityState.Deleted" /> or <see cref="F:System.Data.Entity.EntityState.Detached" /> 
+            when either  source  or  target  is in a <see cref="F:System.Data.Entity.EntityState.Deleted" /> state 
+            or when you try to change the state of the relationship to a state other than
+            <see cref="F:System.Data.Entity.EntityState.Added" /> or <see cref="F:System.Data.Entity.EntityState.Detached" />
+            when either  source  or  target  is in an
+            <see cref="F:System.Data.Entity.EntityState.Added" /> state 
+            or when  state  is not a valid  <see cref="T:System.Data.Entity.EntityState" /> value.
+            </exception>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ObjectStateManager.GetObjectStateEntry(System.Data.Entity.Core.EntityKey)">
+            <summary>
+            Returns an <see cref="T:System.Data.Entity.Core.Objects.ObjectStateEntry" /> for the object or relationship entry with the specified key.
+            </summary>
+            <returns>
+            The corresponding <see cref="T:System.Data.Entity.Core.Objects.ObjectStateEntry" /> for the given
+            <see
+                cref="T:System.Data.Entity.Core.EntityKey" />
+            .
+            </returns>
+            <param name="key">
+            The <see cref="T:System.Data.Entity.Core.EntityKey" />.
+            </param>
+            <exception cref="T:System.ArgumentNullException">When  key  is null.</exception>
+            <exception cref="T:System.ArgumentException">When the specified  key  cannot be found in the state manager.</exception>
+            <exception cref="T:System.InvalidOperationException">
+            No entity with the specified <see cref="T:System.Data.Entity.Core.EntityKey" /> exists in the
+            <see
+                cref="T:System.Data.Entity.Core.Objects.ObjectStateManager" />
+            .
+            </exception>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ObjectStateManager.GetObjectStateEntry(System.Object)">
+            <summary>
+            Returns an <see cref="T:System.Data.Entity.Core.Objects.ObjectStateEntry" /> for the specified object.
+            </summary>
+            <returns>
+            The corresponding <see cref="T:System.Data.Entity.Core.Objects.ObjectStateEntry" /> for the given
+            <see
+                cref="T:System.Object" />
+            .
+            </returns>
+            <param name="entity">
+            The <see cref="T:System.Object" /> to which the retrieved
+            <see
+                cref="T:System.Data.Entity.Core.Objects.ObjectStateEntry" />
+            belongs.
+            </param>
+            <exception cref="T:System.InvalidOperationException">
+            No entity for the specified <see cref="T:System.Object" /> exists in the
+            <see
+                cref="T:System.Data.Entity.Core.Objects.ObjectStateManager" />
+            .
+            </exception>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ObjectStateManager.TryGetObjectStateEntry(System.Object,System.Data.Entity.Core.Objects.ObjectStateEntry@)">
+            <summary>
+            Tries to retrieve the corresponding <see cref="T:System.Data.Entity.Core.Objects.ObjectStateEntry" /> for the specified
+            <see
+                cref="T:System.Object" />
+            .
+            </summary>
+            <returns>
+            A Boolean value that is true if there is a corresponding
+            <see
+                cref="T:System.Data.Entity.Core.Objects.ObjectStateEntry" />
+            for the given object; otherwise, false.
+            </returns>
+            <param name="entity">
+            The <see cref="T:System.Object" /> to which the retrieved
+            <see
+                cref="T:System.Data.Entity.Core.Objects.ObjectStateEntry" />
+            belongs.
+            </param>
+            <param name="entry">
+            When this method returns, contains the <see cref="T:System.Data.Entity.Core.Objects.ObjectStateEntry" /> for the given
+            <see
+                cref="T:System.Data.Entity.Core.EntityKey" />
+            This parameter is passed uninitialized.
+            </param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ObjectStateManager.TryGetObjectStateEntry(System.Data.Entity.Core.EntityKey,System.Data.Entity.Core.Objects.ObjectStateEntry@)">
+            <summary>
+            Tries to retrieve the corresponding <see cref="T:System.Data.Entity.Core.Objects.ObjectStateEntry" /> for the object or relationship with the specified
+            <see
+                cref="T:System.Data.Entity.Core.EntityKey" />
+            .
+            </summary>
+            <returns>
+            A Boolean value that is true if there is a corresponding
+            <see
+                cref="T:System.Data.Entity.Core.Objects.ObjectStateEntry" />
+            for the given
+            <see
+                cref="T:System.Data.Entity.Core.EntityKey" />
+            ; otherwise, false.
+            </returns>
+            <param name="key">
+            The given <see cref="T:System.Data.Entity.Core.EntityKey" />.
+            </param>
+            <param name="entry">
+            When this method returns, contains an <see cref="T:System.Data.Entity.Core.Objects.ObjectStateEntry" /> for the given
+            <see
+                cref="T:System.Data.Entity.Core.EntityKey" />
+            This parameter is passed uninitialized.
+            </param>
+            <exception cref="T:System.ArgumentNullException">A null (Nothing in Visual Basic) value is provided for  key .</exception>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ObjectStateManager.GetRelationshipManager(System.Object)">
+            <summary>
+            Returns the <see cref="T:System.Data.Entity.Core.Objects.DataClasses.RelationshipManager"/> that is used by the specified object.
+            </summary>
+            <returns>
+            The <see cref="T:System.Data.Entity.Core.Objects.DataClasses.RelationshipManager"/> for the specified object.
+            </returns>
+            <param name="entity">
+            The object for which to return the <see cref="T:System.Data.Entity.Core.Objects.DataClasses.RelationshipManager"/>.
+            </param>
+            <exception cref="T:System.InvalidOperationException">
+            The entity does not implement IEntityWithRelationships and is not tracked by this ObjectStateManager
+            </exception>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ObjectStateManager.TryGetRelationshipManager(System.Object,System.Data.Entity.Core.Objects.DataClasses.RelationshipManager@)">
+            <summary>
+            Returns the <see cref="T:System.Data.Entity.Core.Objects.DataClasses.RelationshipManager" /> that is used by the specified object.
+            </summary>
+            <returns>
+            true if a <see cref="T:System.Data.Entity.Core.Objects.DataClasses.RelationshipManager" /> instance was returned for the supplied  entity ; otherwise false.
+            </returns>
+            <param name="entity">
+            The object for which to return the <see cref="T:System.Data.Entity.Core.Objects.DataClasses.RelationshipManager" />.
+            </param>
+            <param name="relationshipManager">
+            When this method returns, contains the
+            <see
+                cref="T:System.Data.Entity.Core.Objects.DataClasses.RelationshipManager" />
+            for the  entity .
+            </param>
+        </member>
+        <member name="P:System.Data.Entity.Core.Objects.ObjectStateManager.MetadataWorkspace">
+            <summary>
+            Gets the <see cref="T:System.Data.Entity.Core.Metadata.Edm.MetadataWorkspace" /> associated with this state manager.
+            </summary>
+            <returns>
+            The <see cref="T:System.Data.Entity.Core.Metadata.Edm.MetadataWorkspace" /> associated with this
+            <see
+                cref="T:System.Data.Entity.Core.Objects.ObjectStateManager" />
+            .
+            </returns>
+        </member>
+        <member name="E:System.Data.Entity.Core.Objects.ObjectStateManager.ObjectStateManagerChanged">
+            <summary>Occurs when entities are added to or removed from the state manager.</summary>
+        </member>
+        <member name="T:System.Data.Entity.Core.Objects.ProxyDataContractResolver">
+            <summary>
+            A DataContractResolver that knows how to resolve proxy types created for persistent
+            ignorant classes to their base types. This is used with the DataContractSerializer.
+            </summary>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ProxyDataContractResolver.ResolveName(System.String,System.String,System.Type,System.Runtime.Serialization.DataContractResolver)">
+            <summary>During deserialization, maps any xsi:type information to the actual type of the persistence-ignorant object. </summary>
+            <returns>Returns the type that the xsi:type is mapped to. Returns null if no known type was found that matches the xsi:type.</returns>
+            <param name="typeName">The xsi:type information to map.</param>
+            <param name="typeNamespace">The namespace of the xsi:type.</param>
+            <param name="declaredType">The declared type.</param>
+            <param name="knownTypeResolver">
+            An instance of <see cref="T:System.Data.Entity.Core.Objects.ProxyDataContractResolver" />.
+            </param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ProxyDataContractResolver.TryResolveType(System.Type,System.Type,System.Runtime.Serialization.DataContractResolver,System.Xml.XmlDictionaryString@,System.Xml.XmlDictionaryString@)">
+            <summary>During serialization, maps actual types to xsi:type information.</summary>
+            <returns>true if the type was resolved; otherwise, false.  </returns>
+            <param name="type">The actual type of the persistence-ignorant object.</param>
+            <param name="declaredType">The declared type.</param>
+            <param name="knownTypeResolver">
+            An instance of <see cref="T:System.Data.Entity.Core.Objects.ProxyDataContractResolver" />.
+            </param>
+            <param name="typeName">When this method returns, contains a list of xsi:type declarations.</param>
+            <param name="typeNamespace">When this method returns, contains a list of namespaces used.</param>
+        </member>
+        <member name="T:System.Data.Entity.Core.Objects.RefreshMode">
+            <summary>
+            Defines the different ways to handle modified properties when refreshing in-memory data from the database.
+            </summary>
+        </member>
+        <member name="F:System.Data.Entity.Core.Objects.RefreshMode.ClientWins">
+            <summary>
+            For unmodified client objects, same behavior as StoreWins.  For modified client
+            objects, Refresh original values with store value, keeping all values on client
+            object. The next time an update happens, all the client change units will be
+            considered modified and require updating.
+            </summary>
+        </member>
+        <member name="F:System.Data.Entity.Core.Objects.RefreshMode.StoreWins">
+            <summary>
+            Discard all changes on the client and refresh values with store values.
+            Client original values is updated to match the store.
+            </summary>
+        </member>
+        <member name="T:System.Data.Entity.Core.Objects.SaveOptions">
+            <summary>
+            Flags used to modify behavior of ObjectContext.SaveChanges()
+            </summary>
+        </member>
+        <member name="F:System.Data.Entity.Core.Objects.SaveOptions.None">
+            <summary>
+            Changes are saved without the DetectChanges or the AcceptAllChangesAfterSave methods being called.
+            </summary>
+        </member>
+        <member name="F:System.Data.Entity.Core.Objects.SaveOptions.AcceptAllChangesAfterSave">
+            <summary>
+            After changes are saved, the AcceptAllChangesAfterSave method is called, which resets change tracking in the ObjectStateManager.
+            </summary>
+        </member>
+        <member name="F:System.Data.Entity.Core.Objects.SaveOptions.DetectChangesBeforeSave">
+            <summary>
+            Before changes are saved, the DetectChanges method is called to synchronize the property values of objects that are attached to the object context with data in the ObjectStateManager.
+            </summary>
+        </member>
+        <member name="T:System.Data.Entity.Core.OptimisticConcurrencyException">
+            <summary>
+            This exception is thrown when a update operation violates the concurrency constraint.
+            </summary>
+        </member>
+        <member name="T:System.Data.Entity.Core.UpdateException">
+            <summary>
+            Exception during save changes to store
+            </summary>
+        </member>
+        <member name="M:System.Data.Entity.Core.UpdateException.#ctor">
+            <summary>
+            Initializes a new instance of <see cref="T:System.Data.Entity.Core.UpdateException" />.
+            </summary>
+        </member>
+        <member name="M:System.Data.Entity.Core.UpdateException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of <see cref="T:System.Data.Entity.Core.UpdateException" /> with a specialized error message.
+            </summary>
+            <param name="message">The message that describes the error.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.UpdateException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the <see cref="T:System.Data.Entity.Core.UpdateException" /> class that uses a specified error message and a reference to the inner exception that is the cause of this exception.
+            </summary>
+            <param name="message">The error message that explains the reason for the exception. </param>
+            <param name="innerException">The exception that is the cause of the current exception, or a null reference (Nothing in Visual Basic) if no inner exception is specified.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.UpdateException.#ctor(System.String,System.Exception,System.Collections.Generic.IEnumerable{System.Data.Entity.Core.Objects.ObjectStateEntry})">
+            <summary>
+            Initializes a new instance of the <see cref="T:System.Data.Entity.Core.UpdateException" /> class that uses a specified error message, a reference to the inner exception, and an enumerable collection of
+            <see
+                cref="T:System.Data.Entity.Core.Objects.ObjectStateEntry" />
+            objects.
+            </summary>
+            <param name="message">The error message that explains the reason for the exception. </param>
+            <param name="innerException">The exception that is the cause of the current exception, or a null reference (Nothing in Visual Basic) if no inner exception is specified.</param>
+            <param name="stateEntries">
+            The collection of <see cref="T:System.Data.Entity.Core.Objects.ObjectStateEntry" /> objects.
+            </param>
+        </member>
+        <member name="M:System.Data.Entity.Core.UpdateException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Initializes a new instance of <see cref="T:System.Data.Entity.Core.UpdateException" /> with serialized data.
+            </summary>
+            <param name="info">
+            The <see cref="T:System.Runtime.Serialization.SerializationInfo" /> that holds the serialized object data about the exception being thrown.
+            </param>
+            <param name="context">
+            The <see cref="T:System.Runtime.Serialization.StreamingContext" /> that contains contextual information about the source or destination.
+            </param>
+        </member>
+        <member name="P:System.Data.Entity.Core.UpdateException.StateEntries">
+            <summary>
+            Gets the <see cref="T:System.Data.Entity.Core.Objects.ObjectStateEntry" /> objects for this
+            <see
+                cref="T:System.Data.Entity.Core.UpdateException" />
+            .
+            </summary>
+            <returns>
+            A collection of <see cref="T:System.Data.Entity.Core.Objects.ObjectStateEntry" /> objects comprised of either a single entity and 0 or more relationships, or 0 entities and 1 or more relationships.
+            </returns>
+        </member>
+        <member name="M:System.Data.Entity.Core.OptimisticConcurrencyException.#ctor">
+            <summary>
+            Initializes a new instance of <see cref="T:System.Data.Entity.Core.OptimisticConcurrencyException" />.
+            </summary>
+        </member>
+        <member name="M:System.Data.Entity.Core.OptimisticConcurrencyException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of <see cref="T:System.Data.Entity.Core.OptimisticConcurrencyException" /> with a specialized error message.
+            </summary>
+            <param name="message">The message that describes the error.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.OptimisticConcurrencyException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of

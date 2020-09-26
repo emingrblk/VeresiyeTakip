@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="926ee87321314ce993ba1877c33d9bb1" Name="Diagram1" ZoomLevel="77">
+        <EntityTypeShape EntityType="VeresiyeDBModel.Aciklama" Width="1.5" PointX="0.75" PointY="1.25" />
+        <EntityTypeShape EntityType="VeresiyeDBModel.Ayarlar" Width="1.5" PointX="5.75" PointY="1.25" />
+        <EntityTypeShape EntityType="VeresiyeDBModel.Borc" Width="1.5" PointX="3" PointY="0.75" />
+        <EntityTypeShape EntityType="VeresiyeDBModel.CariKart" Width="1.5" PointX="6" PointY="5" />
+        <EntityTypeShape EntityType="VeresiyeDBModel.Firma" Width="1.5" PointX="3" PointY="6.25" />
+        <EntityTypeShape EntityType="VeresiyeDBModel.Hesap" Width="1.5" PointX="3" PointY="12" />
+        <EntityTypeShape EntityType="VeresiyeDBModel.ilceler" Width="1.5" PointX="9.375" PointY="6.125" />
+        <EntityTypeShape EntityType="VeresiyeDBModel.iller" Width="1.5" PointX="0.75" PointY="7.5" />
+        <EntityTypeShape EntityType="VeresiyeDBModel.ParaBirimi" Width="1.5" PointX="0.75" PointY="4.625" />
+        <EntityTypeShape EntityType="VeresiyeDBModel.Sifre" Width="1.5" PointX="0.75" PointY="10.875" />
+        <EntityTypeShape EntityType="VeresiyeDBModel.sysdiagrams" Width="1.5" PointX="8.75" PointY="1" />
+        <AssociationConnector Association="VeresiyeDBModel.FK_Borc_Aciklama" />
+        <AssociationConnector Association="VeresiyeDBModel.FK_CariKart_Borc" />
+        <AssociationConnector Association="VeresiyeDBModel.FK_CariKart_Firma1" />
+        <AssociationConnector Association="VeresiyeDBModel.FK_CariKart_Hesap" />
+        <AssociationConnector Association="VeresiyeDBModel.FK_CariKart_iller" />
+        <AssociationConnector Association="VeresiyeDBModel.FK_Firma_iller" />
+        <AssociationConnector Association="VeresiyeDBModel.FK_Firma_ParaBirimi" />
+        <AssociationConnector Association="VeresiyeDBModel.FK_Firma_Sifre" />
+        <AssociationConnector Association="VeresiyeDBModel.FK_ilceler_iller" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

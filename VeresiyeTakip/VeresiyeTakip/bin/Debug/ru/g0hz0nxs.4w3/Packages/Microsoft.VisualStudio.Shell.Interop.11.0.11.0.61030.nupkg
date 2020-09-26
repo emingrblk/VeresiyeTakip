@@ -1,0 +1,1606 @@
+ty.</param>
+            <exception cref="T:System.ArgumentNullException"> property  is null.</exception>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.ComplexObject.ReportPropertyChanged(System.String)">
+            <summary>Notifies the change tracker that a property of a complex object has changed.</summary>
+            <param name="property">The name of the changed property.</param>
+            <exception cref="T:System.ArgumentNullException"> property  is null.</exception>
+        </member>
+        <member name="T:System.Data.Entity.Core.Objects.DataClasses.EdmComplexPropertyAttribute">
+            <summary>
+            Attribute for complex properties
+            Implied default AttributeUsage properties Inherited=True, AllowMultiple=False,
+            The metadata system expects this and will only look at the first of each of these attributes, even if there are more.
+            </summary>
+        </member>
+        <member name="T:System.Data.Entity.Core.Objects.DataClasses.EdmPropertyAttribute">
+            <summary>
+            Base attribute for properties mapped to store elements.
+            Implied default AttributeUsage properties Inherited=True, AllowMultiple=False,
+            The metadata system expects this and will only look at the first of each of these attributes, even if there are more.
+            </summary>
+        </member>
+        <member name="T:System.Data.Entity.Core.Objects.DataClasses.EdmComplexTypeAttribute">
+            <summary>
+            attribute for complex types
+            </summary>
+        </member>
+        <member name="T:System.Data.Entity.Core.Objects.DataClasses.EdmTypeAttribute">
+            <summary>
+            Base attribute for schematized types
+            </summary>
+        </member>
+        <member name="P:System.Data.Entity.Core.Objects.DataClasses.EdmTypeAttribute.Name">
+            <summary>The name of the type in the conceptual schema that maps to the class to which this attribute is applied.</summary>
+            <returns>
+            A <see cref="T:System.String" /> that is the name.
+            </returns>
+        </member>
+        <member name="P:System.Data.Entity.Core.Objects.DataClasses.EdmTypeAttribute.NamespaceName">
+            <summary>The namespace name of the entity object type or complex type in the conceptual schema that maps to this type.</summary>
+            <returns>
+            A <see cref="T:System.String" /> that is the namespace name.
+            </returns>
+        </member>
+        <member name="T:System.Data.Entity.Core.Objects.DataClasses.EdmEntityTypeAttribute">
+            <summary>
+            Attribute identifying the Edm base class
+            </summary>
+        </member>
+        <member name="T:System.Data.Entity.Core.Objects.DataClasses.EdmEnumTypeAttribute">
+            <summary>
+            Attribute indicating an enum type.
+            </summary>
+        </member>
+        <member name="T:System.Data.Entity.Core.Objects.DataClasses.EdmRelationshipNavigationPropertyAttribute">
+            <summary>
+            Attribute identifying the Ends defined for a RelationshipSet
+            Implied default AttributeUsage properties Inherited=True, AllowMultiple=False,
+            The metadata system expects this and will only look at the first of each of these attributes, even if there are more.
+            </summary>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.EdmRelationshipNavigationPropertyAttribute.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Initializes a new instance of the
+            <see
+                cref="T:System.Data.Entity.Core.Objects.DataClasses.EdmRelationshipNavigationPropertyAttribute" />
+            class.
+            </summary>
+            <param name="relationshipNamespaceName">The namespace name of the relationship property.</param>
+            <param name="relationshipName">The name of the relationship. The relationship name is not namespace qualified.</param>
+            <param name="targetRoleName">The role name at the other end of the relationship.</param>
+        </member>
+        <member name="P:System.Data.Entity.Core.Objects.DataClasses.EdmRelationshipNavigationPropertyAttribute.RelationshipNamespaceName">
+            <summary>The namespace name of the navigation property.</summary>
+            <returns>
+            A <see cref="T:System.String" /> that is the namespace name.
+            </returns>
+        </member>
+        <member name="P:System.Data.Entity.Core.Objects.DataClasses.EdmRelationshipNavigationPropertyAttribute.RelationshipName">
+            <summary>Gets the unqualified relationship name. </summary>
+            <returns>The relationship name.</returns>
+        </member>
+        <member name="P:System.Data.Entity.Core.Objects.DataClasses.EdmRelationshipNavigationPropertyAttribute.TargetRoleName">
+            <summary>Gets the role name at the other end of the relationship.</summary>
+            <returns>The target role name is specified by the Role attribute of the other End element in the association that defines this relationship in the conceptual model. For more information, see Association (EDM).</returns>
+        </member>
+        <member name="T:System.Data.Entity.Core.Objects.DataClasses.EdmRelationshipAttribute">
+            <summary>
+            Defines a relationship between two entity types based on an association in the conceptual model.
+            </summary>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.EdmRelationshipAttribute.#ctor(System.String,System.String,System.String,System.Data.Entity.Core.Metadata.Edm.RelationshipMultiplicity,System.Type,System.String,System.Data.Entity.Core.Metadata.Edm.RelationshipMultiplicity,System.Type)">
+            <summary>
+            Creates an instance of the <see cref="T:System.Data.Entity.Core.Objects.DataClasses.EdmRelationshipAttribute" /> class.
+            </summary>
+            <param name="relationshipNamespaceName">The name of the namespace for the association in which this entity participates.</param>
+            <param name="relationshipName">The name of a relationship in which this entity participates. </param>
+            <param name="role1Name">Name of the role for the type at one end of the association.</param>
+            <param name="role1Multiplicity">
+            A value of <see cref="T:System.Data.Entity.Core.Metadata.Edm.RelationshipMultiplicity" /> that indicates the multiplicity at one end of the association, such as one or many.
+            </param>
+            <param name="role1Type">The type of the entity at one end of the association.</param>
+            <param name="role2Name">Name of the role for the type at the other end of the association.</param>
+            <param name="role2Multiplicity">
+            A value of <see cref="T:System.Data.Entity.Core.Metadata.Edm.RelationshipMultiplicity" /> that indicates the multiplicity at the other end of the association, such as one or many.
+            </param>
+            <param name="role2Type">The type of the entity at the other end of the association.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.EdmRelationshipAttribute.#ctor(System.String,System.String,System.String,System.Data.Entity.Core.Metadata.Edm.RelationshipMultiplicity,System.Type,System.String,System.Data.Entity.Core.Metadata.Edm.RelationshipMultiplicity,System.Type,System.Boolean)">
+            <summary>
+            Initializes a new instance of the
+            <see
+                cref="T:System.Data.Entity.Core.Objects.DataClasses.EdmRelationshipAttribute" />
+            class.
+            </summary>
+            <param name="relationshipNamespaceName">The name of the namespace for the association in which this entity participates.</param>
+            <param name="relationshipName">The name of a relationship in which this entity participates.</param>
+            <param name="role1Name">Name of the role for the type at one end of the association.</param>
+            <param name="role1Multiplicity">
+            A value of <see cref="T:System.Data.Entity.Core.Metadata.Edm.RelationshipMultiplicity" /> that indicates the multiplicity at one end of the association, such as one or many.
+            </param>
+            <param name="role1Type">The type of the entity at one end of the association.</param>
+            <param name="role2Name">Name of the role for the type at the other end of the association.</param>
+            <param name="role2Multiplicity">
+            A value of <see cref="T:System.Data.Entity.Core.Metadata.Edm.RelationshipMultiplicity" /> that indicates the multiplicity at the other end of the association, such as one or many.
+            </param>
+            <param name="role2Type">The type of the entity at the other end of the association.</param>
+            <param name="isForeignKey">A value that indicates whether the relationship is based on the foreign key value.</param>
+        </member>
+        <member name="P:System.Data.Entity.Core.Objects.DataClasses.EdmRelationshipAttribute.RelationshipNamespaceName">
+            <summary>The namespace for the relationship.</summary>
+            <returns>
+            A <see cref="T:System.String" /> that is the namespace for the relationship.
+            </returns>
+        </member>
+        <member name="P:System.Data.Entity.Core.Objects.DataClasses.EdmRelationshipAttribute.RelationshipName">
+            <summary>Name of the relationship. </summary>
+            <returns>
+            A <see cref="T:System.String" /> that is the name of a relationship that is defined by this
+            <see
+                cref="T:System.Data.Entity.Core.Objects.DataClasses.EdmRelationshipAttribute" />
+            .
+            </returns>
+        </member>
+        <member name="P:System.Data.Entity.Core.Objects.DataClasses.EdmRelationshipAttribute.Role1Name">
+            <summary>Name of the role at one end of the relationship.</summary>
+            <returns>
+            A <see cref="T:System.String" /> that is the name of the role.
+            </returns>
+        </member>
+        <member name="P:System.Data.Entity.Core.Objects.DataClasses.EdmRelationshipAttribute.Role1Multiplicity">
+            <summary>Multiplicity at one end of the relationship.</summary>
+            <returns>
+            A <see cref="T:System.Data.Entity.Core.Metadata.Edm.RelationshipMultiplicity" /> value that indicates the multiplicity.
+            </returns>
+        </member>
+        <member name="P:System.Data.Entity.Core.Objects.DataClasses.EdmRelationshipAttribute.Role1Type">
+            <summary>Type of the entity at one end of the relationship.</summary>
+            <returns>
+            A <see cref="T:System.Type" /> that is the type of the object at this end of the association.
+            </returns>
+        </member>
+        <member name="P:System.Data.Entity.Core.Objects.DataClasses.EdmRelationshipAttribute.Role2Name">
+            <summary>Name of the role at the other end of the relationship.</summary>
+            <returns>
+            A <see cref="T:System.String" /> that is the name of the role.
+            </returns>
+        </member>
+        <member name="P:System.Data.Entity.Core.Objects.DataClasses.EdmRelationshipAttribute.Role2Multiplicity">
+            <summary>Multiplicity at the other end of the relationship.</summary>
+            <returns>
+            A <see cref="T:System.Data.Entity.Core.Metadata.Edm.RelationshipMultiplicity" /> value that indicates the multiplicity.
+            </returns>
+        </member>
+        <member name="P:System.Data.Entity.Core.Objects.DataClasses.EdmRelationshipAttribute.Role2Type">
+            <summary>Type of the entity at the other end of the relationship.</summary>
+            <returns>
+            A <see cref="T:System.Type" /> that is the type of the object t the other end of the association.
+            </returns>
+        </member>
+        <member name="P:System.Data.Entity.Core.Objects.DataClasses.EdmRelationshipAttribute.IsForeignKey">
+            <summary>Gets a Boolean value that indicates whether the relationship is based on the foreign key value.</summary>
+            <returns>true if the relationship is based on the foreign key value; otherwise false.</returns>
+        </member>
+        <member name="T:System.Data.Entity.Core.Objects.DataClasses.EdmScalarPropertyAttribute">
+            <summary>
+            Attribute for scalar properties in an IEntity.
+            Implied default AttributeUsage properties Inherited=True, AllowMultiple=False,
+            The metadata system expects this and will only look at the first of each of these attributes, even if there are more.
+            </summary>
+        </member>
+        <member name="P:System.Data.Entity.Core.Objects.DataClasses.EdmScalarPropertyAttribute.IsNullable">
+            <summary>Gets or sets the value that indicates whether the property can have a null value.</summary>
+            <returns>The value that indicates whether the property can have a null value.</returns>
+        </member>
+        <member name="P:System.Data.Entity.Core.Objects.DataClasses.EdmScalarPropertyAttribute.EntityKeyProperty">
+            <summary>Gets or sets the value that indicates whether the property is part of the entity key.</summary>
+            <returns>The value that indicates whether the property is part of the entity key.</returns>
+        </member>
+        <member name="T:System.Data.Entity.Core.Objects.DataClasses.EdmSchemaAttribute">
+            <summary>
+            Attribute for static types
+            </summary>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.EdmSchemaAttribute.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:System.Data.Entity.Core.Objects.DataClasses.EdmSchemaAttribute" /> class.
+            </summary>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.EdmSchemaAttribute.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:System.Data.Entity.Core.Objects.DataClasses.EdmSchemaAttribute" /> class with a unique value for each model referenced by the assembly.
+            </summary>
+            <remarks>
+            Setting this parameter to a unique value for each model file in a Visual Basic
+            assembly will prevent the following error:
+            "'System.Data.Entity.Core.Objects.DataClasses.EdmSchemaAttribute' cannot be specified more than once in this project, even with identical parameter values."
+            </remarks>
+            <param name="assemblyGuid">A string that is a unique GUID value for the model in the assembly.</param>
+        </member>
+        <member name="T:System.Data.Entity.Core.Objects.DataClasses.EntityCollection`1">
+            <summary>
+            Collection of entities modeling a particular EDM construct
+            which can either be all entities of a particular type or
+            entities participating in a particular relationship.
+            </summary>
+            <typeparam name="TEntity">The type of entities in this collection.</typeparam>
+        </member>
+        <member name="T:System.Data.Entity.Core.Objects.DataClasses.RelatedEnd">
+            <summary>
+            Base class for EntityCollection and EntityReference
+            </summary>
+        </member>
+        <member name="T:System.Data.Entity.Core.Objects.DataClasses.IRelatedEnd">
+            <summary>
+            Represents one end of a relationship.
+            </summary>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.IRelatedEnd.Load">
+            <summary>Loads the related object or objects into this related end with the default merge option.</summary>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.IRelatedEnd.LoadAsync(System.Threading.CancellationToken)">
+            <summary>Asynchronously loads the related object or objects into this related end with the default merge option.</summary>
+            <remarks>
+            Multiple active operations on the same context instance are not supported.  Use 'await' to ensure
+            that any asynchronous operations have completed before calling another method on this context.
+            </remarks>
+            <param name="cancellationToken">
+            A <see cref="T:System.Threading.CancellationToken"/> to observe while waiting for the task to complete.
+            </param>
+            <returns>
+            A task that represents the asynchronous operation.
+            </returns>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.IRelatedEnd.Load(System.Data.Entity.Core.Objects.MergeOption)">
+            <summary>Loads the related object or objects into the related end with the specified merge option.</summary>
+            <param name="mergeOption">
+            The <see cref="T:System.Data.Entity.Core.Objects.MergeOption" /> to use when merging objects into an existing
+            <see cref="T:System.Data.Entity.Core.Objects.DataClasses.EntityCollection`1" />.
+            </param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.IRelatedEnd.LoadAsync(System.Data.Entity.Core.Objects.MergeOption,System.Threading.CancellationToken)">
+            <summary>Asynchronously loads the related object or objects into the related end with the specified merge option.</summary>
+            <remarks>
+            Multiple active operations on the same context instance are not supported.  Use 'await' to ensure
+            that any asynchronous operations have completed before calling another method on this context.
+            </remarks>
+            <param name="mergeOption">
+            The <see cref="T:System.Data.Entity.Core.Objects.MergeOption"/> to use when merging objects into an existing
+            <see cref="T:System.Data.Entity.Core.Objects.DataClasses.EntityCollection`1"/>.
+            </param>
+            <param name="cancellationToken">
+            A <see cref="T:System.Threading.CancellationToken"/> to observe while waiting for the task to complete.
+            </param>
+            <returns>
+            A task that represents the asynchronous operation.
+            </returns>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.IRelatedEnd.Add(System.Data.Entity.Core.Objects.DataClasses.IEntityWithRelationships)">
+            <summary>Adds an object to the related end.</summary>
+            <param name="entity">
+            An object to add to the collection.  entity  must implement
+            <see
+                cref="T:System.Data.Entity.Core.Objects.DataClasses.IEntityWithRelationships" />
+            .
+            </param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.IRelatedEnd.Add(System.Object)">
+            <summary>Adds an object to the related end.</summary>
+            <param name="entity">An object to add to the collection.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.IRelatedEnd.Remove(System.Data.Entity.Core.Objects.DataClasses.IEntityWithRelationships)">
+            <summary>Removes an object from the collection of objects at the related end.</summary>
+            <returns>
+            true if  entity  was successfully removed, false if  entity  was not part of the
+            <see
+                cref="T:System.Data.Entity.Core.Objects.DataClasses.IRelatedEnd" />
+            .
+            </returns>
+            <param name="entity">
+            The object to remove from the collection.  entity  must implement
+            <see
+                cref="T:System.Data.Entity.Core.Objects.DataClasses.IEntityWithRelationships" />
+            .
+            </param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.IRelatedEnd.Remove(System.Object)">
+            <summary>Removes an object from the collection of objects at the related end.</summary>
+            <returns>
+            true if  entity  was successfully removed; false if  entity  was not part of the
+            <see
+                cref="T:System.Data.Entity.Core.Objects.DataClasses.IRelatedEnd" />
+            .
+            </returns>
+            <param name="entity">An object to remove from the collection.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.IRelatedEnd.Attach(System.Data.Entity.Core.Objects.DataClasses.IEntityWithRelationships)">
+            <summary>Defines a relationship between two attached objects.</summary>
+            <param name="entity">
+            The object being attached.  entity  must implement
+            <see
+                cref="T:System.Data.Entity.Core.Objects.DataClasses.IEntityWithRelationships" />
+            .
+            </param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.IRelatedEnd.Attach(System.Object)">
+            <summary>Defines a relationship between two attached objects.</summary>
+            <param name="entity">The object being attached.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.IRelatedEnd.CreateSourceQuery">
+            <summary>
+            Returns an <see cref="T:System.Collections.IEnumerable" /> that represents the objects that belong to the related end.
+            </summary>
+            <returns>
+            An <see cref="T:System.Collections.IEnumerable" /> that represents the objects that belong to the related end.
+            </returns>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.IRelatedEnd.GetEnumerator">
+            <summary>
+            Returns an <see cref="T:System.Collections.IEnumerator" /> that iterates through the collection of related objects.
+            </summary>
+            <returns>
+            An <see cref="T:System.Collections.IEnumerator" /> that iterates through the collection of related objects.
+            </returns>
+        </member>
+        <member name="P:System.Data.Entity.Core.Objects.DataClasses.IRelatedEnd.IsLoaded">
+            <summary>
+            Gets or sets a value indicating whether the entity (for an <see cref="T:System.Data.Entity.Core.Objects.DataClasses.EntityReference"/> or all entities 
+            in the collection (for an <see cref="T:System.Data.Entity.Core.Objects.DataClasses.EntityCollection`1"/> have been loaded from the database.
+            </summary>
+            <remarks>
+            Loading the related entities from the database either using lazy-loading, as part of a query, or explicitly
+            with one of the Load methods will set the IsLoaded flag to true.
+            IsLoaded can be explicitly set to true to prevent the related entities from being lazy-loaded.
+            This can be useful if the application has caused a subset of related entities to be loaded
+            and wants to prevent any other entities from being loaded automatically.
+            Note that explicit loading using <see cref="M:System.Data.Entity.Core.Objects.DataClasses.IRelatedEnd.Load"/> will load all related entities from the database
+            regardless of whether or not IsLoaded is true.
+            When any related entity is detached the IsLoaded flag is reset to false indicating that not all related entities
+            are now loaded.
+            </remarks>
+            <value>
+            True if all the related entities are loaded or the IsLoaded has been explicitly set to true; otherwise false.
+            </value>
+        </member>
+        <member name="P:System.Data.Entity.Core.Objects.DataClasses.IRelatedEnd.RelationshipName">
+            <summary>Gets the name of the relationship in which this related end participates.</summary>
+            <returns>
+            The name of the relationship in which this <see cref="T:System.Data.Entity.Core.Objects.DataClasses.IRelatedEnd" /> is participating. The relationship name is not namespace qualified.
+            </returns>
+        </member>
+        <member name="P:System.Data.Entity.Core.Objects.DataClasses.IRelatedEnd.SourceRoleName">
+            <summary>Gets the role name at the source end of the relationship.</summary>
+            <returns>The role name at the source end of the relationship.</returns>
+        </member>
+        <member name="P:System.Data.Entity.Core.Objects.DataClasses.IRelatedEnd.TargetRoleName">
+            <summary>Gets the role name at the target end of the relationship.</summary>
+            <returns>The role name at the target end of the relationship.</returns>
+        </member>
+        <member name="P:System.Data.Entity.Core.Objects.DataClasses.IRelatedEnd.RelationshipSet">
+            <summary>Returns a reference to the metadata for the related end.</summary>
+            <returns>
+            A <see cref="T:System.Data.Entity.Core.Metadata.Edm.RelationshipSet" /> object that contains metadata for the end of a relationship.
+            </returns>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.RelatedEnd.System#Data#Entity#Core#Objects#DataClasses#IRelatedEnd#CreateSourceQuery">
+            <summary>
+            Returns an <see cref="T:System.Collections.IEnumerable" /> that represents the objects that belong to the related end.
+            </summary>
+            <returns>
+            An <see cref="T:System.Collections.IEnumerable" /> that represents the objects that belong to the related end.
+            </returns>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.RelatedEnd.Load">
+            <summary>
+            Loads the related object or objects into the related end with the default merge option.
+            </summary>
+            <exception cref="T:System.InvalidOperationException">
+            When the source object was retrieved by using a <see cref="F:System.Data.Entity.Core.Objects.MergeOption.NoTracking" /> query 
+            and the <see cref="T:System.Data.Entity.Core.Objects.MergeOption" /> is not <see cref="F:System.Data.Entity.Core.Objects.MergeOption.NoTracking" />
+            or the related objects are already loaded
+            or when the source object is not attached to the <see cref="T:System.Data.Entity.Core.Objects.ObjectContext" />
+            or when the source object is being tracked but is in the
+            <see cref="F:System.Data.Entity.EntityState.Added" /> or <see cref="F:System.Data.Entity.EntityState.Deleted" /> state
+            or the <see cref="T:System.Data.Entity.Core.Objects.MergeOption" />
+            used for <see cref="M:System.Data.Entity.Core.Objects.DataClasses.RelatedEnd.Load" />
+            is <see cref="F:System.Data.Entity.Core.Objects.MergeOption.NoTracking" />.
+            </exception>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.RelatedEnd.LoadAsync(System.Threading.CancellationToken)">
+            <summary>
+            Asynchronously loads the related object or objects into the related end with the default merge option.
+            </summary>
+            <remarks>
+            Multiple active operations on the same context instance are not supported.  Use 'await' to ensure
+            that any asynchronous operations have completed before calling another method on this context.
+            </remarks>
+            <param name="cancellationToken">
+            A <see cref="T:System.Threading.CancellationToken"/> to observe while waiting for the task to complete.
+            </param>
+            <returns>
+            A task that represents the asynchronous operation.
+            </returns>
+            <exception cref="T:System.InvalidOperationException">
+            When the source object was retrieved by using a <see cref="F:System.Data.Entity.Core.Objects.MergeOption.NoTracking"/> query 
+            and the <see cref="T:System.Data.Entity.Core.Objects.MergeOption"/> is not <see cref="F:System.Data.Entity.Core.Objects.MergeOption.NoTracking"/>
+            or the related objects are already loaded
+            or when the source object is not attached to the <see cref="T:System.Data.Entity.Core.Objects.ObjectContext"/>
+            or when the source object is being tracked but is in the
+            <see cref="F:System.Data.Entity.EntityState.Added"/> or <see cref="F:System.Data.Entity.EntityState.Deleted"/> state
+            or the <see cref="T:System.Data.Entity.Core.Objects.MergeOption"/>
+            used for <see cref="M:System.Data.Entity.Core.Objects.DataClasses.RelatedEnd.Load"/>
+            is <see cref="F:System.Data.Entity.Core.Objects.MergeOption.NoTracking"/>.
+            </exception>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.RelatedEnd.Load(System.Data.Entity.Core.Objects.MergeOption)">
+            <summary>
+            Loads an object or objects from the related end with the specified merge option.
+            </summary>
+            <param name="mergeOption">
+            The <see cref="T:System.Data.Entity.Core.Objects.MergeOption" /> to use when merging objects into an existing
+            <see cref="T:System.Data.Entity.Core.Objects.DataClasses.EntityCollection`1" />.
+            </param>
+            <exception cref="T:System.InvalidOperationException">
+            When the source object was retrieved by using a <see  cref="F:System.Data.Entity.Core.Objects.MergeOption.NoTracking" />  query 
+            and the <see cref="T:System.Data.Entity.Core.Objects.MergeOption" />
+            is not <see cref="F:System.Data.Entity.Core.Objects.MergeOption.NoTracking" />
+            or the related objects are already loaded
+            or when the source object is not attached to the <see cref="T:System.Data.Entity.Core.Objects.ObjectContext" />
+            or when the source object is being tracked but is in the
+            <see cref="F:System.Data.Entity.EntityState.Added" />  or <see cref="F:System.Data.Entity.EntityState.Deleted" /> state 
+            or the <see cref="T:System.Data.Entity.Core.Objects.MergeOption" />
+            used for <see cref="M:System.Data.Entity.Core.Objects.DataClasses.RelatedEnd.Load" />
+            is <see cref="F:System.Data.Entity.Core.Objects.MergeOption.NoTracking" />.
+            </exception>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.RelatedEnd.LoadAsync(System.Data.Entity.Core.Objects.MergeOption,System.Threading.CancellationToken)">
+            <summary>
+            Asynchronously loads an object or objects from the related end with the specified merge option.
+            </summary>
+            <remarks>
+            Multiple active operations on the same context instance are not supported.  Use 'await' to ensure
+            that any asynchronous operations have completed before calling another method on this context.
+            </remarks>
+            <param name="mergeOption">
+            The <see cref="T:System.Data.Entity.Core.Objects.MergeOption"/> to use when merging objects into an existing
+            <see cref="T:System.Data.Entity.Core.Objects.DataClasses.EntityCollection`1"/>.
+            </param>
+            <param name="cancellationToken">
+            A <see cref="T:System.Threading.CancellationToken"/> to observe while waiting for the task to complete.
+            </param>
+            <returns>
+            A task that represents the asynchronous operation.
+            </returns>
+            <exception cref="T:System.InvalidOperationException">
+            When the source object was retrieved by using a <see cref="F:System.Data.Entity.Core.Objects.MergeOption.NoTracking"/>  query 
+            and the <see cref="T:System.Data.Entity.Core.Objects.MergeOption"/>
+            is not <see cref="F:System.Data.Entity.Core.Objects.MergeOption.NoTracking"/>
+            or the related objects are already loaded
+            or when the source object is not attached to the <see cref="T:System.Data.Entity.Core.Objects.ObjectContext"/>
+            or when the source object is being tracked but is in the
+            <see cref="F:System.Data.Entity.EntityState.Added"/>  or <see cref="F:System.Data.Entity.EntityState.Deleted"/> state 
+            or the <see cref="T:System.Data.Entity.Core.Objects.MergeOption"/>
+            used for <see cref="M:System.Data.Entity.Core.Objects.DataClasses.RelatedEnd.Load"/>
+            is <see cref="F:System.Data.Entity.Core.Objects.MergeOption.NoTracking"/>.
+            </exception>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.RelatedEnd.System#Data#Entity#Core#Objects#DataClasses#IRelatedEnd#Attach(System.Data.Entity.Core.Objects.DataClasses.IEntityWithRelationships)">
+            <summary>
+            Attaches an entity to the related end.  This method works in exactly the same way as Attach(object).
+            It is maintained for backward compatibility with previous versions of IRelatedEnd.
+            </summary>
+            <param name="entity"> The entity to attach to the related end </param>
+            <exception cref="T:System.ArgumentNullException">
+            Thrown when
+            <paramref name="entity"/>
+            is null.
+            </exception>
+            <exception cref="T:System.InvalidOperationException">Thrown when the entity cannot be related via the current relationship end.</exception>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.RelatedEnd.System#Data#Entity#Core#Objects#DataClasses#IRelatedEnd#Attach(System.Object)">
+            <summary>
+            Attaches an entity to the related end. If the related end is already filled
+            or partially filled, this merges the existing entities with the given entity. The given
+            entity is not assumed to be the complete set of related entities.
+            Owner and all entities passed in must be in Unchanged or Modified state.
+            Deleted elements are allowed only when the state manager is already tracking the relationship
+            instance.
+            </summary>
+            <param name="entity"> The entity to attach to the related end </param>
+            <exception cref="T:System.ArgumentNullException">
+            Thrown when
+            <paramref name="entity"/>
+            is null.
+            </exception>
+            <exception cref="T:System.InvalidOperationException">Thrown when the entity cannot be related via the current relationship end.</exception>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.RelatedEnd.System#Data#Entity#Core#Objects#DataClasses#IRelatedEnd#Add(System.Data.Entity.Core.Objects.DataClasses.IEntityWithRelationships)">
+            <summary>
+            Adds an entity to the related end.  This method works in exactly the same way as Add(object).
+            It is maintained for backward compatibility with previous versions of IRelatedEnd.
+            </summary>
+            <param name="entity"> Entity instance to add to the related end </param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.RelatedEnd.System#Data#Entity#Core#Objects#DataClasses#IRelatedEnd#Add(System.Object)">
+            <summary>
+            Adds an entity to the related end.  If the owner is
+            attached to a cache then the all the connected ends are
+            added to the object cache and their corresponding relationships
+            are also added to the ObjectStateManager. The RelatedEnd of the
+            relationship is also fixed.
+            </summary>
+            <param name="entity"> Entity instance to add to the related end </param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.RelatedEnd.System#Data#Entity#Core#Objects#DataClasses#IRelatedEnd#Remove(System.Data.Entity.Core.Objects.DataClasses.IEntityWithRelationships)">
+            <summary>
+            Removes an entity from the related end.  This method works in exactly the same way as Remove(object).
+            It is maintained for backward compatibility with previous versions of IRelatedEnd.
+            </summary>
+            <param name="entity"> Entity instance to remove from the related end </param>
+            <returns> Returns true if the entity was successfully removed, false if the entity was not part of the RelatedEnd. </returns>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.RelatedEnd.System#Data#Entity#Core#Objects#DataClasses#IRelatedEnd#Remove(System.Object)">
+            <summary>
+            Removes an entity from the related end.  If owner is
+            attached to a cache, marks relationship for deletion and if
+            the relationship is composition also marks the entity for deletion.
+            </summary>
+            <param name="entity"> Entity instance to remove from the related end </param>
+            <returns> Returns true if the entity was successfully removed, false if the entity was not part of the RelatedEnd. </returns>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.RelatedEnd.GetEnumerator">
+            <summary>
+            Returns an <see cref="T:System.Collections.IEnumerator" /> that iterates through the collection of related objects.
+            </summary>
+            <returns>
+            An <see cref="T:System.Collections.IEnumerator" /> that iterates through the collection of related objects.
+            </returns>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.RelatedEnd.OnDeserialized(System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Used internally to deserialize entity objects along with the
+            <see
+                cref="T:System.Data.Entity.Core.Objects.DataClasses.RelationshipManager" />
+            instances.
+            </summary>
+            <param name="context">The serialized stream.</param>
+        </member>
+        <member name="E:System.Data.Entity.Core.Objects.DataClasses.RelatedEnd.AssociationChanged">
+            <summary>Occurs when a change is made to a related end.</summary>
+        </member>
+        <member name="P:System.Data.Entity.Core.Objects.DataClasses.RelatedEnd.RelationshipName">
+            <summary>Gets the name of the relationship in which this related end participates.</summary>
+            <returns>
+            The name of the relationship in which this <see cref="T:System.Data.Entity.Core.Objects.DataClasses.RelatedEnd" /> participates. The relationship name is not namespace qualified.
+            </returns>
+        </member>
+        <member name="P:System.Data.Entity.Core.Objects.DataClasses.RelatedEnd.SourceRoleName">
+            <summary>Gets the role name at the source end of the relationship.</summary>
+            <returns>
+            A <see cref="T:System.String" /> that is the role name.
+            </returns>
+        </member>
+        <member name="P:System.Data.Entity.Core.Objects.DataClasses.RelatedEnd.TargetRoleName">
+            <summary>Gets the role name at the target end of the relationship.</summary>
+            <returns>
+            A <see cref="T:System.String" /> that is the role name.
+            </returns>
+        </member>
+        <member name="P:System.Data.Entity.Core.Objects.DataClasses.RelatedEnd.RelationshipSet">
+            <summary>Gets a reference to the metadata for the related end.</summary>
+            <returns>
+            A <see cref="T:System.Data.Entity.Core.Metadata.Edm.RelationshipSet" /> object that contains metadata for the end of a relationship.
+            </returns>
+        </member>
+        <member name="P:System.Data.Entity.Core.Objects.DataClasses.RelatedEnd.IsLoaded">
+            <inheritdoc />
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.EntityCollection`1.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:System.Data.Entity.Core.Objects.DataClasses.EntityCollection`1" /> class.
+            </summary>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.EntityCollection`1.System#ComponentModel#IListSource#GetList">
+            <summary>
+            Returns the collection as an <see cref="T:System.Collections.IList" /> used for data binding.
+            </summary>
+            <returns>
+            An <see cref="T:System.Collections.IList" /> of entity objects.
+            </returns>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.EntityCollection`1.Load(System.Data.Entity.Core.Objects.MergeOption)">
+            <summary>Loads related objects into the collection, using the specified merge option.</summary>
+            <param name="mergeOption">
+            Specifies how the objects in this collection should be merged with the objects that might have been returned from previous queries against the same
+            <see
+                cref="T:System.Data.Entity.Core.Objects.ObjectContext" />
+            .
+            </param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.EntityCollection`1.LoadAsync(System.Data.Entity.Core.Objects.MergeOption,System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.EntityCollection`1.Attach(System.Collections.Generic.IEnumerable{`0})">
+            <summary>Defines relationships between an object and a collection of related objects in an object context.</summary>
+            <remarks>
+            Loads related entities into the local collection. If the collection is already filled
+            or partially filled, merges existing entities with the given entities. The given
+            entities are not assumed to be the complete set of related entities.
+            Owner and all entities passed in must be in Unchanged or Modified state. We allow
+            deleted elements only when the state manager is already tracking the relationship
+            instance.
+            </remarks>
+            <param name="entities">Collection of objects in the object context that are related to the source object.</param>
+            <exception cref="T:System.ArgumentNullException"> entities  collection is null.</exception>
+            <exception cref="T:System.InvalidOperationException">
+            The source object or an object in the  entities  collection is null or is not in an
+            <see
+                cref="F:System.Data.Entity.EntityState.Unchanged" />
+            or <see cref="F:System.Data.Entity.EntityState.Modified" /> state.-or-The relationship cannot be defined based on the EDM metadata. This can occur when the association in the conceptual schema does not support a relationship between the two types.
+            </exception>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.EntityCollection`1.Attach(`0)">
+            <summary>Defines a relationship between two attached objects in an object context.</summary>
+            <param name="entity">The object being attached.</param>
+            <exception cref="T:System.ArgumentNullException">When the  entity  is null.</exception>
+            <exception cref="T:System.InvalidOperationException">
+            When the  entity  cannot be related to the source object. This can occur when the association in the conceptual schema does not support a relationship between the two types.-or-When either object is null or is not in an
+            <see
+                cref="F:System.Data.Entity.EntityState.Unchanged" />
+            or <see cref="F:System.Data.Entity.EntityState.Modified" /> state.
+            </exception>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.EntityCollection`1.Add(`0)">
+            <summary>Adds an object to the collection.</summary>
+            <param name="item">
+            An object to add to the collection.  entity  must implement
+            <see
+                cref="T:System.Data.Entity.Core.Objects.DataClasses.IEntityWithRelationships" />
+            .
+            </param>
+            <exception cref="T:System.ArgumentNullException"> entity  is null.</exception>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.EntityCollection`1.Remove(`0)">
+            <summary>Removes an object from the collection and marks the relationship for deletion.</summary>
+            <returns>true if item was successfully removed; otherwise, false. </returns>
+            <param name="item">The object to remove from the collection.</param>
+            <exception cref="T:System.ArgumentNullException"> entity  object is null.</exception>
+            <exception cref="T:System.InvalidOperationException">The  entity  object is not attached to the same object context.-or-The  entity  object does not have a valid relationship manager.</exception>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.EntityCollection`1.GetEnumerator">
+            <summary>Returns an enumerator that is used to iterate through the objects in the collection.</summary>
+            <returns>
+            An <see cref="T:System.Collections.IEnumerator" /> that iterates through the set of values cached by
+            <see
+                cref="T:System.Data.Entity.Core.Objects.DataClasses.EntityCollection`1" />
+            .
+            </returns>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.EntityCollection`1.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            Returns an enumerator that is used to iterate through the set of values cached by
+            <see
+                cref="T:System.Data.Entity.Core.Objects.DataClasses.EntityCollection`1" />
+            .
+            </summary>
+            <returns>
+            An <see cref="T:System.Collections.IEnumerator" /> that iterates through the set of values cached by
+            <see
+                cref="T:System.Data.Entity.Core.Objects.DataClasses.EntityCollection`1" />
+            .
+            </returns>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.EntityCollection`1.Clear">
+            <summary>Removes all entities from the collection. </summary>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.EntityCollection`1.Contains(`0)">
+            <summary>Determines whether a specific object exists in the collection.</summary>
+            <returns>
+            true if the object is found in the <see cref="T:System.Data.Entity.Core.Objects.DataClasses.EntityCollection`1" />; otherwise, false.
+            </returns>
+            <param name="item">
+            The object to locate in the <see cref="T:System.Data.Entity.Core.Objects.DataClasses.EntityCollection`1" />.
+            </param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.EntityCollection`1.CopyTo(`0[],System.Int32)">
+            <summary>Copies all the contents of the collection to an array, starting at the specified index of the target array.</summary>
+            <param name="array">The array to copy to.</param>
+            <param name="arrayIndex">The zero-based index in the array at which copying begins.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.EntityCollection`1.OnSerializing(System.Runtime.Serialization.StreamingContext)">
+            <summary>Used internally to serialize entity objects.</summary>
+            <param name="context">The streaming context.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.EntityCollection`1.OnCollectionDeserialized(System.Runtime.Serialization.StreamingContext)">
+            <summary>Used internally to deserialize entity objects.</summary>
+            <param name="context">The streaming context.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.EntityCollection`1.CreateSourceQuery">
+            <summary>Returns an object query that, when it is executed, returns the same set of objects that exists in the current collection. </summary>
+            <returns>
+            An <see cref="T:System.Data.Entity.Core.Objects.ObjectQuery`1" /> that represents the entity collection.
+            </returns>
+            <exception cref="T:System.InvalidOperationException">
+            When the object is in an <see cref="F:System.Data.Entity.EntityState.Added" /> state 
+            or when the object is in a
+            <see cref="F:System.Data.Entity.EntityState.Detached" /> state with a
+            <see cref="T:System.Data.Entity.Core.Objects.MergeOption" /> other than
+            <see cref="F:System.Data.Entity.Core.Objects.MergeOption.NoTracking" />.
+            </exception>
+        </member>
+        <member name="P:System.Data.Entity.Core.Objects.DataClasses.EntityCollection`1.Count">
+            <summary>Gets the number of objects that are contained in the collection.</summary>
+            <returns>
+            The number of elements that are contained in the
+            <see
+                cref="T:System.Data.Entity.Core.Objects.DataClasses.EntityCollection`1" />
+            .
+            </returns>
+        </member>
+        <member name="P:System.Data.Entity.Core.Objects.DataClasses.EntityCollection`1.IsReadOnly">
+            <summary>
+            Gets a value that indicates whether the
+            <see
+                cref="T:System.Data.Entity.Core.Objects.DataClasses.EntityCollection`1" />
+            is read-only.
+            </summary>
+            <returns>Always returns false.</returns>
+        </member>
+        <member name="P:System.Data.Entity.Core.Objects.DataClasses.EntityCollection`1.System#ComponentModel#IListSource#ContainsListCollection">
+            <summary>
+            IListSource.ContainsListCollection implementation. Always returns false.
+            This means that the IList we return is the one which contains our actual data,
+            it is not a list of collections.
+            </summary>
+        </member>
+        <member name="T:System.Data.Entity.Core.Objects.DataClasses.EntityObject">
+            <summary>
+            This is the class is the basis for all perscribed EntityObject classes.
+            </summary>
+        </member>
+        <member name="T:System.Data.Entity.Core.Objects.DataClasses.IEntityWithKey">
+            <summary>
+            Interface that defines an entity containing a key.
+            </summary>
+        </member>
+        <member name="P:System.Data.Entity.Core.Objects.DataClasses.IEntityWithKey.EntityKey">
+            <summary>
+            Gets or sets the <see cref="T:System.Data.Entity.Core.EntityKey" /> for instances of entity types that implement this interface.
+            </summary>
+            <remarks>
+            If an object is being managed by a change tracker, it is expected that
+            IEntityChangeTracker methods EntityMemberChanging and EntityMemberChanged will be
+            used to report changes on EntityKey. This allows the change tracker to validate the
+            EntityKey's new value and to verify if the change tracker is in a state where it can
+            allow updates to the EntityKey.
+            </remarks>
+            <returns>
+            The <see cref="T:System.Data.Entity.Core.EntityKey" /> for instances of entity types that implement this interface.
+            </returns>
+        </member>
+        <member name="T:System.Data.Entity.Core.Objects.DataClasses.IEntityWithChangeTracker">
+            <summary>
+            Minimum interface that a data class must implement in order to be managed by a change tracker.
+            </summary>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.IEntityWithChangeTracker.SetChangeTracker(System.Data.Entity.Core.Objects.DataClasses.IEntityChangeTracker)">
+            <summary>
+            Gets or sets the <see cref="T:System.Data.Entity.Core.Objects.DataClasses.IEntityChangeTracker" /> used to report changes.
+            </summary>
+            <param name="changeTracker">
+            The <see cref="T:System.Data.Entity.Core.Objects.DataClasses.IEntityChangeTracker" /> used to report changes.
+            </param>
+        </member>
+        <member name="T:System.Data.Entity.Core.Objects.DataClasses.IEntityWithRelationships">
+            <summary>
+            Interface that a data class must implement if exposes relationships
+            </summary>
+        </member>
+        <member name="P:System.Data.Entity.Core.Objects.DataClasses.IEntityWithRelationships.RelationshipManager">
+            <summary>Returns the relationship manager that manages relationships for an instance of an entity type.</summary>
+            <remarks>
+            Classes that expose relationships must implement this property
+            by constructing and setting RelationshipManager in their constructor.
+            The implementation of this property should use the static method RelationshipManager.Create
+            to create a new RelationshipManager when needed. Once created, it is expected that this
+            object will be stored on the entity and will be provided through this property.
+            </remarks>
+            <returns>
+            The <see cref="T:System.Data.Entity.Core.Objects.DataClasses.RelationshipManager" /> for this entity.
+            </returns>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.EntityObject.System#Data#Entity#Core#Objects#DataClasses#IEntityWithChangeTracker#SetChangeTracker(System.Data.Entity.Core.Objects.DataClasses.IEntityChangeTracker)">
+            <summary>
+            Used by the ObjectStateManager to attach or detach this EntityObject to the cache.
+            </summary>
+            <param name="changeTracker"> Reference to the ObjectStateEntry that contains this entity </param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.EntityObject.ReportPropertyChanging(System.String)">
+            <summary>Notifies the change tracker that a property change is pending.</summary>
+            <param name="property">The name of the changing property.</param>
+            <exception cref="T:System.ArgumentNullException"> property  is null.</exception>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.EntityObject.ReportPropertyChanged(System.String)">
+            <summary>Notifies the change tracker that a property has changed.</summary>
+            <param name="property">The name of the changed property.</param>
+            <exception cref="T:System.ArgumentNullException"> property  is null.</exception>
+        </member>
+        <member name="P:System.Data.Entity.Core.Objects.DataClasses.EntityObject.EntityState">
+            <summary>Gets the entity state of the object.</summary>
+            <returns>
+            The <see cref="T:System.Data.Entity.EntityState" /> of this object.
+            </returns>
+        </member>
+        <member name="P:System.Data.Entity.Core.Objects.DataClasses.EntityObject.EntityKey">
+            <summary>Gets or sets the key for this object.</summary>
+            <returns>
+            The <see cref="T:System.Data.Entity.Core.EntityKey" /> for this object.
+            </returns>
+        </member>
+        <member name="P:System.Data.Entity.Core.Objects.DataClasses.EntityObject.System#Data#Entity#Core#Objects#DataClasses#IEntityWithRelationships#RelationshipManager">
+            <summary>
+            Returns the container for the lazily created relationship
+            navigation property objects, collections and refs.
+            </summary>
+        </member>
+        <member name="T:System.Data.Entity.Core.Objects.DataClasses.IEntityChangeTracker">
+            <summary>
+            This interface is implemented by a change tracker and is used by data classes to report changes
+            </summary>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.IEntityChangeTracker.EntityMemberChanging(System.String)">
+            <summary>Notifies the change tracker of a pending change to a property of an entity type.</summary>
+            <param name="entityMemberName">The name of the property that is changing.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.IEntityChangeTracker.EntityMemberChanged(System.String)">
+            <summary>Notifies the change tracker that a property of an entity type has changed.</summary>
+            <param name="entityMemberName">The name of the property that has changed.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.IEntityChangeTracker.EntityComplexMemberChanging(System.String,System.Object,System.String)">
+            <summary>Notifies the change tracker of a pending change to a complex property.</summary>
+            <param name="entityMemberName">The name of the top-level entity property that is changing.</param>
+            <param name="complexObject">The complex type that contains the property that is changing.</param>
+            <param name="complexObjectMemberName">The name of the property that is changing on complex type.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.IEntityChangeTracker.EntityComplexMemberChanged(System.String,System.Object,System.String)">
+            <summary>Notifies the change tracker that a property of a complex type has changed.</summary>
+            <param name="entityMemberName">The name of the complex property of the entity type that has changed.</param>
+            <param name="complexObject">The complex type that contains the property that changed.</param>
+            <param name="complexObjectMemberName">The name of the property that changed on complex type.</param>
+        </member>
+        <member name="P:System.Data.Entity.Core.Objects.DataClasses.IEntityChangeTracker.EntityState">
+            <summary>Gets current state of a tracked object.</summary>
+            <returns>
+            An <see cref="T:System.Data.Entity.EntityState" /> that is the state of the tracked object.For more information, see Identity Resolution, State Managment, and Change Tracking and Tracking Changes in POCO Entities.
+            </returns>
+        </member>
+        <member name="T:System.Data.Entity.Core.Objects.DataClasses.EntityReference">
+            <summary>
+            Models a relationship end with multiplicity 1.
+            </summary>
+        </member>
+        <member name="P:System.Data.Entity.Core.Objects.DataClasses.EntityReference.EntityKey">
+            <summary>Returns the key for the related object. </summary>
+            <remarks>
+            Returns the EntityKey of the target entity associated with this EntityReference.
+            Is non-null in the following scenarios:
+            (a) Entities are tracked by a context and an Unchanged or Added client-side relationships exists for this EntityReference's owner with the
+            same RelationshipName and source role. This relationship could have been created explicitly by the user (e.g. by setting
+            the EntityReference.Value, setting this property directly, or by calling EntityCollection.Add) or automatically through span queries.
+            (b) If the EntityKey was non-null before detaching an entity from the context, it will still be non-null after detaching, until any operation
+            occurs that would set it to null, as described below.
+            (c) Entities are detached and the EntityKey is explicitly set to non-null by the user.
+            (d) Entity graph was created using a NoTracking query with full span
+            Is null in the following scenarios:
+            (a) Entities are tracked by a context but there is no Unchanged or Added client-side relationship for this EntityReference's owner with the
+            same RelationshipName and source role.
+            (b) Entities are tracked by a context and a relationship exists, but the target entity has a temporary key (i.e. it is Added) or the key
+            is one of the special keys
+            (c) Entities are detached and the relationship was explicitly created by the user.
+            </remarks>
+            <returns>
+            An <see cref="T:System.Data.Entity.Core.EntityKey" /> that is the key of the related object.
+            </returns>
+        </member>
+        <member name="T:System.Data.Entity.Core.Objects.DataClasses.EntityReference`1">
+            <summary>
+            Models a relationship end with multiplicity 1.
+            </summary>
+            <typeparam name="TEntity">The type of the entity being referenced.</typeparam>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.EntityReference`1.#ctor">
+            <summary>
+            Creates a new instance of <see cref="T:System.Data.Entity.Core.Objects.DataClasses.EntityReference`1" />.
+            </summary>
+            <remarks>
+            The default constructor is required for some serialization scenarios. It should not be used to
+            create new EntityReferences. Use the GetRelatedReference or GetRelatedEnd methods on the RelationshipManager
+            class instead.
+            </remarks>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.EntityReference`1.Load(System.Data.Entity.Core.Objects.MergeOption)">
+            <summary>
+            Loads the related object for this <see cref="T:System.Data.Entity.Core.Objects.DataClasses.EntityReference`1" /> with the specified merge option.
+            </summary>
+            <param name="mergeOption">
+            Specifies how the object should be returned if it already exists in the
+            <see
+                cref="T:System.Data.Entity.Core.Objects.ObjectContext" />
+            .
+            </param>
+            <exception cref="T:System.InvalidOperationException">
+            The source of the <see cref="T:System.Data.Entity.Core.Objects.DataClasses.EntityReference`1" /> is null 
+            or a query returned more than one related end 
+            or a query returned zero related ends, and one related end was expected.
+            </exception>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.EntityReference`1.LoadAsync(System.Data.Entity.Core.Objects.MergeOption,System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.EntityReference`1.Attach(`0)">
+            <summary>Creates a many-to-one or one-to-one relationship between two objects in the object context.</summary>
+            <param name="entity">The object being attached.</param>
+            <exception cref="T:System.ArgumentNullException">When the  entity  is null.</exception>
+            <exception cref="T:System.InvalidOperationException">When the  entity  cannot be related to the current related end. This can occur when the association in the conceptual schema does not support a relationship between the two types.</exception>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.EntityReference`1.CreateSourceQuery">
+            <summary>Creates an equivalent object query that returns the related object.</summary>
+            <returns>
+            An <see cref="T:System.Data.Entity.Core.Objects.ObjectQuery`1" /> that returns the related object.
+            </returns>
+            <exception cref="T:System.InvalidOperationException">
+            When the object is in an <see cref="F:System.Data.Entity.EntityState.Added" /> state 
+            or when the object is in a <see cref="F:System.Data.Entity.EntityState.Detached" />
+            state with a <see cref="P:System.Data.Entity.Core.Objects.ObjectQuery.MergeOption" />
+            other than <see cref="F:System.Data.Entity.Core.Objects.MergeOption.NoTracking" />.
+            </exception>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.EntityReference`1.OnRefDeserialized(System.Runtime.Serialization.StreamingContext)">
+            <summary>This method is used internally to serialize related entity objects.</summary>
+            <param name="context">The serialized stream.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.EntityReference`1.OnSerializing(System.Runtime.Serialization.StreamingContext)">
+            <summary>This method is used internally to serialize related entity objects.</summary>
+            <param name="context">The serialized stream.</param>
+        </member>
+        <member name="P:System.Data.Entity.Core.Objects.DataClasses.EntityReference`1.Value">
+            <summary>
+            Gets or sets the related object returned by this
+            <see
+                cref="T:System.Data.Entity.Core.Objects.DataClasses.EntityReference`1" />
+            .
+            </summary>
+            <returns>
+            The object returned by this <see cref="T:System.Data.Entity.Core.Objects.DataClasses.EntityReference`1" />.
+            </returns>
+        </member>
+        <member name="T:System.Data.Entity.Core.Objects.DataClasses.RelationshipKind">
+            <summary>
+            Identifies the kind of a relationship
+            </summary>
+        </member>
+        <member name="F:System.Data.Entity.Core.Objects.DataClasses.RelationshipKind.Association">
+            <summary>
+            The relationship is an Association
+            </summary>
+        </member>
+        <member name="T:System.Data.Entity.Core.Objects.DataClasses.RelationshipManager">
+            <summary>
+            Container for the lazily created relationship navigation
+            property objects (collections and refs).
+            </summary>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.RelationshipManager.Create(System.Data.Entity.Core.Objects.DataClasses.IEntityWithRelationships)">
+            <summary>
+            Creates a new <see cref="T:System.Data.Entity.Core.Objects.DataClasses.RelationshipManager" /> object.
+            </summary>
+            <remarks>
+            Used by data classes that support relationships. If the change tracker
+            requests the RelationshipManager property and the data class does not
+            already have a reference to one of these objects, it calls this method
+            to create one, then saves a reference to that object. On subsequent accesses
+            to that property, the data class should return the saved reference.
+            The reason for using a factory method instead of a public constructor is to
+            emphasize that this is not something you would normally call outside of a data class.
+            By requiring that these objects are created via this method, developers should
+            give more thought to the operation, and will generally only use it when
+            they explicitly need to get an object of this type. It helps define the intended usage.
+            </remarks>
+            <returns>
+            The requested <see cref="T:System.Data.Entity.Core.Objects.DataClasses.RelationshipManager" />.
+            </returns>
+            <param name="owner">Reference to the entity that is calling this method.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.RelationshipManager.GetRelatedEnd(System.String,System.String)">
+            <summary>
+            Returns either an <see cref="T:System.Data.Entity.Core.Objects.DataClasses.EntityCollection`1" /> or
+            <see
+                cref="T:System.Data.Entity.Core.Objects.DataClasses.EntityReference`1" />
+            of the correct type for the specified target role in a relationship.
+            </summary>
+            <returns>
+            <see cref="T:System.Data.Entity.Core.Objects.DataClasses.IRelatedEnd" /> representing the
+            <see
+                cref="T:System.Data.Entity.Core.Objects.DataClasses.EntityCollection`1" />
+            or
+            <see
+                cref="T:System.Data.Entity.Core.Objects.DataClasses.EntityReference`1" />
+            that was retrieved.
+            </returns>
+            <param name="relationshipName">Name of the relationship in which  targetRoleName  is defined. The relationship name is not namespace qualified.</param>
+            <param name="targetRoleName">Target role to use to retrieve the other end of  relationshipName .</param>
+            <exception cref="T:System.ArgumentNullException"> relationshipName  or  targetRoleName  is null.</exception>
+            <exception cref="T:System.InvalidOperationException">The source type does not match the type of the owner.</exception>
+            <exception cref="T:System.ArgumentException"> targetRoleName  is invalid or unable to find the relationship type in the metadata.</exception>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.RelationshipManager.InitializeRelatedReference``1(System.String,System.String,System.Data.Entity.Core.Objects.DataClasses.EntityReference{``0})">
+            <summary>
+            Takes an existing EntityReference that was created with the default constructor and initializes it using the provided relationship and target role names.
+            This method is designed to be used during deserialization only, and will throw an exception if the provided EntityReference has already been initialized,
+            if the relationship manager already contains a relationship with this name and target role, or if the relationship manager is already attached to a ObjectContext.W
+            </summary>
+            <param name="relationshipName">The relationship name.</param>
+            <param name="targetRoleName">The role name of the related end.</param>
+            <param name="entityReference">
+            The <see cref="T:System.Data.Entity.Core.Objects.DataClasses.EntityReference`1" /> to initialize.
+            </param>
+            <typeparam name="TTargetEntity">
+            The type of the <see cref="T:System.Data.Entity.Core.Objects.DataClasses.EntityReference`1" /> being initialized.
+            </typeparam>
+            <exception cref="T:System.InvalidOperationException">
+            When the provided <see cref="T:System.Data.Entity.Core.Objects.DataClasses.EntityReference`1" /> 
+            is already initialized.-or-When the relationship manager is already attached to an
+            <see cref="T:System.Data.Entity.Core.Objects.ObjectContext" />
+            or when the relationship manager already contains a relationship with this name and target role.
+            </exception>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.RelationshipManager.InitializeRelatedCollection``1(System.String,System.String,System.Data.Entity.Core.Objects.DataClasses.EntityCollection{``0})">
+            <summary>
+            Takes an existing EntityCollection that was created with the default constructor and initializes it using the provided relationship and target role names.
+            This method is designed to be used during deserialization only, and will throw an exception if the provided EntityCollection has already been initialized,
+            or if the relationship manager is already attached to a ObjectContext.
+            </summary>
+            <param name="relationshipName">The relationship name.</param>
+            <param name="targetRoleName">The target role name.</param>
+            <param name="entityCollection">An existing EntityCollection.</param>
+            <typeparam name="TTargetEntity"> Type of the entity represented by targetRoleName </typeparam>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.RelationshipManager.GetRelatedCollection``1(System.String,System.String)">
+            <summary>
+            Gets an <see cref="T:System.Data.Entity.Core.Objects.DataClasses.EntityCollection`1" /> of related objects with the specified relationship name and target role name.
+            </summary>
+            <returns>
+            The <see cref="T:System.Data.Entity.Core.Objects.DataClasses.EntityCollection`1" /> of related objects.
+            </returns>
+            <param name="relationshipName">Name of the relationship to navigate. The relationship name is not namespace qualified.</param>
+            <param name="targetRoleName">Name of the target role for the navigation. Indicates the direction of navigation across the relationship.</param>
+            <typeparam name="TTargetEntity">
+            The type of the returned <see cref="T:System.Data.Entity.Core.Objects.DataClasses.EntityCollection`1" />.
+            </typeparam>
+            <exception cref="T:System.InvalidOperationException">
+            The specified role returned an <see cref="T:System.Data.Entity.Core.Objects.DataClasses.EntityReference`1" /> instead of an
+            <see
+                cref="T:System.Data.Entity.Core.Objects.DataClasses.EntityCollection`1" />
+            .
+            </exception>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.RelationshipManager.GetRelatedReference``1(System.String,System.String)">
+            <summary>
+            Gets the <see cref="T:System.Data.Entity.Core.Objects.DataClasses.EntityReference`1" /> for a related object by using the specified combination of relationship name and target role name.
+            </summary>
+            <returns>
+            The <see cref="T:System.Data.Entity.Core.Objects.DataClasses.EntityReference`1" /> of a related object.
+            </returns>
+            <param name="relationshipName">Name of the relationship to navigate. The relationship name is not namespace qualified.</param>
+            <param name="targetRoleName">Name of the target role for the navigation. Indicates the direction of navigation across the relationship.</param>
+            <typeparam name="TTargetEntity">
+            The type of the returned <see cref="T:System.Data.Entity.Core.Objects.DataClasses.EntityReference`1" />.
+            </typeparam>
+            <exception cref="T:System.InvalidOperationException">
+            The specified role returned an <see cref="T:System.Data.Entity.Core.Objects.DataClasses.EntityCollection`1" /> instead of an
+            <see
+                cref="T:System.Data.Entity.Core.Objects.DataClasses.EntityReference`1" />
+            .
+            </exception>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.RelationshipManager.GetAllRelatedEnds">
+            <summary>Returns an enumeration of all the related ends managed by the relationship manager.</summary>
+            <returns>
+            An <see cref="T:System.Collections.Generic.IEnumerable`1" /> of objects that implement
+            <see
+                cref="T:System.Data.Entity.Core.Objects.DataClasses.IRelatedEnd" />
+            . An empty enumeration is returned when the relationships have not yet been populated.
+            </returns>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.RelationshipManager.OnSerializing(System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Called by Object Services to prepare an <see cref="T:System.Data.Entity.Core.EntityKey" /> for binary serialization with a serialized relationship.
+            </summary>
+            <param name="context">Describes the source and destination of a given serialized stream, and provides an additional caller-defined context.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.RelationshipManager.OnDeserialized(System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Used internally to deserialize entity objects along with the
+            <see
+                cref="T:System.Data.Entity.Core.Objects.DataClasses.RelationshipManager" />
+            instances.
+            </summary>
+            <param name="context">The serialized stream.</param>
+        </member>
+        <member name="T:System.Data.Entity.Core.Objects.ObjectStateEntry">
+            <summary>
+            Represents either a entity, entity stub or relationship
+            </summary>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ObjectStateEntry.GetUpdatableOriginalValues">
+            <summary>
+            Gets the updatable version of original values of the object associated with this
+            <see
+                cref="T:System.Data.Entity.Core.Objects.ObjectStateEntry" />
+            .
+            </summary>
+            <returns>The updatable original values of object data.</returns>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ObjectStateEntry.AcceptChanges">
+            <summary>Accepts the current values as original values.</summary>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ObjectStateEntry.Delete">
+            <summary>Marks an entity as deleted.</summary>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ObjectStateEntry.GetModifiedProperties">
+            <summary>
+            Returns the names of an object’s properties that have changed since the last time
+            <see
+                cref="M:System.Data.Entity.Core.Objects.ObjectContext.SaveChanges" />
+            was called.
+            </summary>
+            <returns>
+            An <see cref="T:System.Collections.Generic.IEnumerable`1" /> collection of names as string.
+            </returns>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ObjectStateEntry.SetModified">
+            <summary>Sets the state of the object or relationship to modify.</summary>
+            <exception cref="T:System.InvalidOperationException">If State is not Modified or Unchanged</exception>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ObjectStateEntry.SetModifiedProperty(System.String)">
+            <summary>Marks the specified property as modified.</summary>
+            <param name="propertyName">The name of the property.</param>
+            <exception cref="T:System.InvalidOperationException"> If State is not Modified or Unchanged </exception>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ObjectStateEntry.RejectPropertyChanges(System.String)">
+            <summary>Rejects any changes made to the property with the given name since the property was last loaded, attached, saved, or changes were accepted. The orginal value of the property is stored and the property will no longer be marked as modified.</summary>
+            <param name="propertyName">The name of the property to change.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ObjectStateEntry.IsPropertyChanged(System.String)">
+            <summary>Uses DetectChanges to determine whether or not the current value of the property with the given name is different from its original value. Note that this may be different from the property being marked as modified since a property which has not changed can still be marked as modified.</summary>
+            <remarks>
+            Note that this property always returns the same result as the modified state of the property for change tracking 
+            proxies and entities that derive from the EntityObject base class. This is because original values are not tracked 
+            for these entity types and hence there is no way to know if the current value is really different from the 
+            original value.
+            </remarks>
+            <returns>true if the property has changed; otherwise, false.</returns>
+            <param name="propertyName">The name of the property.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ObjectStateEntry.ChangeState(System.Data.Entity.EntityState)">
+            <summary>
+            Changes state of the entry to the specified <see cref="T:System.Data.Entity.EntityState" /> value.
+            </summary>
+            <param name="state">
+            The <see cref="T:System.Data.Entity.EntityState" /> value to set for the
+            <see
+                cref="P:System.Data.Entity.Core.Objects.ObjectStateEntry.State" />
+            property of the entry.
+            </param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ObjectStateEntry.ApplyCurrentValues(System.Object)">
+            <summary>Sets the current values of the entry to match the property values of a supplied object.</summary>
+            <param name="currentEntity">The detached object that has updated values to apply to the object.  currentEntity  can also be the object’s entity key.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ObjectStateEntry.ApplyOriginalValues(System.Object)">
+            <summary>Sets the original values of the entry to match the property values of a supplied object.</summary>
+            <param name="originalEntity">The detached object that has original values to apply to the object.  originalEntity  can also be the object’s entity key.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ObjectStateEntry.System#Data#Entity#Core#Objects#DataClasses#IEntityChangeTracker#EntityMemberChanging(System.String)">
+            <summary>
+            Used to report that a scalar entity property is about to change
+            The current value of the specified property is cached when this method is called.
+            </summary>
+            <param name="entityMemberName"> The name of the entity property that is changing </param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ObjectStateEntry.System#Data#Entity#Core#Objects#DataClasses#IEntityChangeTracker#EntityMemberChanged(System.String)">
+            <summary>
+            Used to report that a scalar entity property has been changed
+            The property value that was cached during EntityMemberChanging is now
+            added to OriginalValues
+            </summary>
+            <param name="entityMemberName"> The name of the entity property that has changing </param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ObjectStateEntry.System#Data#Entity#Core#Objects#DataClasses#IEntityChangeTracker#EntityComplexMemberChanging(System.String,System.Object,System.String)">
+            <summary>
+            Used to report that a complex property is about to change
+            The current value of the specified property is cached when this method is called.
+            </summary>
+            <param name="entityMemberName"> The name of the top-level entity property that is changing </param>
+            <param name="complexObject"> The complex object that contains the property that is changing </param>
+            <param name="complexObjectMemberName"> The name of the property that is changing on complexObject </param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ObjectStateEntry.System#Data#Entity#Core#Objects#DataClasses#IEntityChangeTracker#EntityComplexMemberChanged(System.String,System.Object,System.String)">
+            <summary>
+            Used to report that a complex property has been changed
+            The property value that was cached during EntityMemberChanging is now added to OriginalValues
+            </summary>
+            <param name="entityMemberName"> The name of the top-level entity property that has changed </param>
+            <param name="complexObject"> The complex object that contains the property that changed </param>
+            <param name="complexObjectMemberName"> The name of the property that changed on complexObject </param>
+        </member>
+        <member name="P:System.Data.Entity.Core.Objects.ObjectStateEntry.ObjectStateManager">
+            <summary>
+            Gets the <see cref="T:System.Data.Entity.Core.Objects.ObjectStateManager" /> for the
+            <see
+                cref="T:System.Data.Entity.Core.Objects.ObjectStateEntry" />
+            .
+            </summary>
+            <returns>
+            The <see cref="T:System.Data.Entity.Core.Objects.ObjectStateManager" /> for the
+            <see
+                cref="T:System.Data.Entity.Core.Objects.ObjectStateEntry" />
+            .
+            </returns>
+        </member>
+        <member name="P:System.Data.Entity.Core.Objects.ObjectStateEntry.EntitySet">
+            <summary>
+            Gets the <see cref="T:System.Data.Entity.Core.Metadata.Edm.EntitySetBase" /> for the object or relationship.
+            </summary>
+            <returns>
+            The <see cref="T:System.Data.Entity.Core.Metadata.Edm.EntitySetBase" /> for the object or relationship.
+            </returns>
+        </member>
+        <member name="P:System.Data.Entity.Core.Objects.ObjectStateEntry.State">
+            <summary>
+            Gets the state of the <see cref="T:System.Data.Entity.Core.Objects.ObjectStateEntry" />.
+            </summary>
+            <returns>
+            The state of the <see cref="T:System.Data.Entity.Core.Objects.ObjectStateEntry" />.
+            </returns>
+        </member>
+        <member name="P:System.Data.Entity.Core.Objects.ObjectStateEntry.Entity">
+            <summary>Gets the entity object.</summary>
+            <returns>The entity object.</returns>
+        </member>
+        <member name="P:System.Data.Entity.Core.Objects.ObjectStateEntry.EntityKey">
+            <summary>Gets the entity key.</summary>
+            <returns>The entity key.</returns>
+        </member>
+        <member name="P:System.Data.Entity.Core.Objects.ObjectStateEntry.IsRelationship">
+            <summary>
+            Gets a value that indicates whether the <see cref="T:System.Data.Entity.Core.Objects.ObjectStateEntry" /> represents a relationship.
+            </summary>
+            <returns>
+            true if the <see cref="T:System.Data.Entity.Core.Objects.ObjectStateEntry" /> represents a relationship; otherwise, false.
+            </returns>
+        </member>
+        <member name="P:System.Data.Entity.Core.Objects.ObjectStateEntry.OriginalValues">
+            <summary>Gets the read-only version of original values of the object or relationship.</summary>
+            <returns>The read-only version of original values of the relationship set entry or entity.</returns>
+        </member>
+        <member name="P:System.Data.Entity.Core.Objects.ObjectStateEntry.CurrentValues">
+            <summary>
+            Gets the current property values of the object or relationship associated with this
+            <see
+                cref="T:System.Data.Entity.Core.Objects.ObjectStateEntry" />
+            .
+            </summary>
+            <returns>
+            A <see cref="T:System.Data.Entity.Core.Objects.CurrentValueRecord" /> that contains the current values of the object or relationship associated with this
+            <see
+                cref="T:System.Data.Entity.Core.Objects.ObjectStateEntry" />
+            .
+            </returns>
+        </member>
+        <member name="P:System.Data.Entity.Core.Objects.ObjectStateEntry.RelationshipManager">
+            <summary>
+            Gets the <see cref="T:System.Data.Entity.Core.Objects.DataClasses.RelationshipManager"/> instance for the object represented by entry.
+            </summary>
+            <returns>
+            The <see cref="T:System.Data.Entity.Core.Objects.DataClasses.RelationshipManager"/> object.
+            </returns>
+            <exception cref="T:System.InvalidOperationException">The entry is a stub or represents a relationship</exception>
+        </member>
+        <member name="P:System.Data.Entity.Core.Objects.ObjectStateEntry.System#Data#Entity#Core#Objects#DataClasses#IEntityChangeTracker#EntityState">
+            <summary>
+            Returns the EntityState from the ObjectStateEntry
+            </summary>
+        </member>
+        <member name="T:System.Data.Entity.Core.Objects.IObjectSet`1">
+            <summary>
+            Defines behavior for implementations of IQueryable that allow modifications to the membership of the resulting set.
+            </summary>
+            <typeparam name="TEntity"> Type of entities returned from the queryable. </typeparam>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.IObjectSet`1.AddObject(`0)">
+            <summary>Notifies the set that an object that represents a new entity must be added to the set.</summary>
+            <remarks>
+            Depending on the implementation, the change to the set may not be visible in an enumeration of the set
+            until changes to that set have been persisted in some manner.
+            </remarks>
+            <param name="entity">The new object to add to the set.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.IObjectSet`1.Attach(`0)">
+            <summary>Notifies the set that an object that represents an existing entity must be added to the set.</summary>
+            <remarks>
+            Depending on the implementation, the change to the set may not be visible in an enumeration of the set
+            until changes to that set have been persisted in some manner.
+            </remarks>
+            <param name="entity">The existing object to add to the set.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.IObjectSet`1.DeleteObject(`0)">
+            <summary>Notifies the set that an object that represents an existing entity must be deleted from the set. </summary>
+            <remarks>
+            Depending on the implementation, the change to the set may not be visible in an enumeration of the set
+            until changes to that set have been persisted in some manner.
+            </remarks>
+            <param name="entity">The existing object to delete from the set.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.IObjectSet`1.Detach(`0)">
+            <summary>Notifies the set that an object that represents an existing entity must be detached from the set.</summary>
+            <remarks>
+            Depending on the implementation, the change to the set may not be visible in an enumeration of the set
+            until changes to that set have been persisted in some manner.
+            </remarks>
+            <param name="entity">The object to detach from the set.</param>
+        </member>
+        <member name="T:System.Data.Entity.Core.Objects.MergeOption">
+            <summary>
+            The different ways that new objects loaded from the database can be merged with existing objects already in memory.
+            </summary>
+        </member>
+        <member name="F:System.Data.Entity.Core.Objects.MergeOption.AppendOnly">
+            <summary>
+            Will only append new (top level-unique) rows.  This is the default behavior.
+            </summary>
+        </member>
+        <member name="F:System.Data.Entity.Core.Objects.MergeOption.OverwriteChanges">
+            <summary>
+            Same behavior as LoadOption.OverwriteChanges.
+            </summary>
+        </member>
+        <member name="F:System.Data.Entity.Core.Objects.MergeOption.PreserveChanges">
+            <summary>
+            Same behavior as LoadOption.PreserveChanges.
+            </summary>
+        </member>
+        <member name="F:System.Data.Entity.Core.Objects.MergeOption.NoTracking">
+            <summary>
+            Will not modify cache.
+            </summary>
+        </member>
+        <member name="T:System.Data.Entity.Core.Objects.ObjectContext">
+            <summary>
+            ObjectContext is the top-level object that encapsulates a connection between the CLR and the database,
+            serving as a gateway for Create, Read, Update, and Delete operations.
+            </summary>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ObjectContext.#ctor(System.Data.Entity.Core.EntityClient.EntityConnection)">
+            <summary>
+            Initializes a new instance of the <see cref="T:System.Data.Entity.Core.Objects.ObjectContext" /> class with the given connection. During construction, the metadata workspace is extracted from the
+            <see
+                cref="T:System.Data.Entity.Core.EntityClient.EntityConnection" />
+            object.
+            </summary>
+            <param name="connection">
+            An <see cref="T:System.Data.Entity.Core.EntityClient.EntityConnection" /> that contains references to the model and to the data source connection.
+            </param>
+            <exception cref="T:System.ArgumentNullException">The  connection  is null.</exception>
+            <exception cref="T:System.ArgumentException">The  connection  is invalid or the metadata workspace is invalid. </exception>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ObjectContext.#ctor(System.Data.Entity.Core.EntityClient.EntityConnection,System.Boolean)">
+            <summary>
+            Creates an ObjectContext with the given connection and metadata workspace.
+            </summary>
+            <param name="connection"> connection to the store </param>
+            <param name="contextOwnsConnection"> If set to true the connection is disposed when the context is disposed, otherwise the caller must dispose the connection. </param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ObjectContext.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:System.Data.Entity.Core.Objects.ObjectContext" /> class with the given connection string and default entity container name.
+            </summary>
+            <param name="connectionString">The connection string, which also provides access to the metadata information.</param>
+            <exception cref="T:System.ArgumentNullException">The  connectionString  is null.</exception>
+            <exception cref="T:System.ArgumentException">The  connectionString  is invalid or the metadata workspace is not valid. </exception>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ObjectContext.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:System.Data.Entity.Core.Objects.ObjectContext" /> class with a given connection string and entity container name.
+            </summary>
+            <param name="connectionString">The connection string, which also provides access to the metadata information.</param>
+            <param name="defaultContainerName">The name of the default entity container. When the  defaultContainerName  is set through this method, the property becomes read-only.</param>
+            <exception cref="T:System.ArgumentNullException">The  connectionString  is null.</exception>
+            <exception cref="T:System.ArgumentException">The  connectionString ,  defaultContainerName , or metadata workspace is not valid.</exception>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ObjectContext.#ctor(System.Data.Entity.Core.EntityClient.EntityConnection,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:System.Data.Entity.Core.Objects.ObjectContext" /> class with a given connection and entity container name.
+            </summary>
+            <param name="connection">
+            An <see cref="T:System.Data.Entity.Core.EntityClient.EntityConnection" /> that contains references to the model and to the data source connection.
+            </param>
+            <param name="defaultContainerName">The name of the default entity container. When the  defaultContainerName  is set through this method, the property becomes read-only.</param>
+            <exception cref="T:System.ArgumentNullException">The  connection  is null.</exception>
+            <exception cref="T:System.ArgumentException">The  connection ,  defaultContainerName , or metadata workspace is not valid.</exception>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ObjectContext.AcceptAllChanges">
+            <summary>Accepts all changes made to objects in the object context.</summary>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ObjectContext.AddObject(System.String,System.Object)">
+            <summary>Adds an object to the object context. </summary>
+            <param name="entitySetName">Represents the entity set name, which may optionally be qualified by the entity container name. </param>
+            <param name="entity">
+            The <see cref="T:System.Object" /> to add.
+            </param>
+            <exception cref="T:System.ArgumentNullException">The  entity  parameter is null or the  entitySetName  does not qualify.</exception>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ObjectContext.LoadProperty(System.Object,System.String)">
+            <summary>Explicitly loads an object related to the supplied object by the specified navigation property and using the default merge option. </summary>
+            <param name="entity">The entity for which related objects are to be loaded.</param>
+            <param name="navigationProperty">The name of the navigation property that returns the related objects to be loaded.</param>
+            <exception cref="T:System.InvalidOperationException">
+            The  entity  is in a <see cref="F:System.Data.Entity.EntityState.Detached" />,
+            <see
+                cref="F:System.Data.Entity.EntityState.Added," />
+            or <see cref="F:System.Data.Entity.EntityState.Deleted" /> state or the  entity  is attached to another instance of
+            <see
+                cref="T:System.Data.Entity.Core.Objects.ObjectContext" />
+            .
+            </exception>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ObjectContext.LoadProperty(System.Object,System.String,System.Data.Entity.Core.Objects.MergeOption)">
+            <summary>Explicitly loads an object that is related to the supplied object by the specified navigation property and using the specified merge option. </summary>
+            <param name="entity">The entity for which related objects are to be loaded.</param>
+            <param name="navigationProperty">The name of the navigation property that returns the related objects to be loaded.</param>
+            <param name="mergeOption">
+            The <see cref="T:System.Data.Entity.Core.Objects.MergeOption" /> value to use when you load the related objects.
+            </param>
+            <exception cref="T:System.InvalidOperationException">
+            The  entity  is in a <see cref="F:System.Data.Entity.EntityState.Detached" />,
+            <see
+                cref="F:System.Data.Entity.EntityState.Added," />
+            or <see cref="F:System.Data.Entity.EntityState.Deleted" /> state or the  entity  is attached to another instance of
+            <see
+                cref="T:System.Data.Entity.Core.Objects.ObjectContext" />
+            .
+            </exception>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ObjectContext.LoadProperty``1(``0,System.Linq.Expressions.Expression{System.Func{``0,System.Object}})">
+            <summary>Explicitly loads an object that is related to the supplied object by the specified LINQ query and by using the default merge option. </summary>
+            <typeparam name="TEntity">The type of the entity.</typeparam>
+            <param name="entity">The source object for which related objects are to be loaded.</param>
+            <param name="selector">A LINQ expression that defines the related objects to be loaded.</param>
+            <exception cref="T:System.ArgumentException"> selector  does not supply a valid input parameter.</exception>
+            <exception cref="T:System.ArgumentNullException"> selector  is null.</exception>
+            <exception cref="T:System.InvalidOperationException">
+            The  entity  is in a <see cref="F:System.Data.Entity.EntityState.Detached" />,
+            <see
+                cref="F:System.Data.Entity.EntityState.Added," />
+            or <see cref="F:System.Data.Entity.EntityState.Deleted" /> state or the  entity  is attached to another instance of
+            <see
+                cref="T:System.Data.Entity.Core.Objects.ObjectContext" />
+            .
+            </exception>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ObjectContext.LoadProperty``1(``0,System.Linq.Expressions.Expression{System.Func{``0,System.Object}},System.Data.Entity.Core.Objects.MergeOption)">
+            <summary>Explicitly loads an object that is related to the supplied object by the specified LINQ query and by using the specified merge option. </summary>
+            <typeparam name="TEntity">The type of the entity.</typeparam>
+            <param name="entity">The source object for which related objects are to be loaded.</param>
+            <param name="selector">A LINQ expression that defines the related objects to be loaded.</param>
+            <param name="mergeOption">
+            The <see cref="T:System.Data.Entity.Core.Objects.MergeOption" /> value to use when you load the related objects.
+            </param>
+            <exception cref="T:System.ArgumentException"> selector  does not supply a valid input parameter.</exception>
+            <exception cref="T:System.ArgumentNullException"> selector  is null.</exception>
+            <exception cref="T:System.InvalidOperationException">
+            The  entity  is in a <see cref="F:System.Data.Entity.EntityState.Detached" />,
+            <see
+                cref="F:System.Data.Entity.EntityState.Added," />
+            or <see cref="F:System.Data.Entity.EntityState.Deleted" /> state or the  entity  is attached to another instance of
+            <see
+                cref="T:System.Data.Entity.Core.Objects.ObjectContext" />
+            .
+            </exception>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ObjectContext.ApplyPropertyChanges(System.String,System.Object)">
+            <summary>Applies property changes from a detached object to an object already attached to the object context.</summary>
+            <param name="entitySetName">The name of the entity set to which the object belongs.</param>
+            <param name="changed">The detached object that has property updates to apply to the original object.</param>
+            <exception cref="T:System.ArgumentNullException">When  entitySetName  is null or an empty string or when  changed  is null.</exception>
+            <exception cref="T:System.InvalidOperationException">
+            When the <see cref="T:System.Data.Entity.Core.Metadata.Edm.EntitySet" /> from  entitySetName  does not match the
+            <see
+                cref="T:System.Data.Entity.Core.Metadata.Edm.EntitySet" />
+            of the object
+            <see
+                cref="T:System.Data.Entity.Core.EntityKey" />
+            or when the entity is in a state other than
+            <see
+                cref="F:System.Data.Entity.EntityState.Modified" />
+            or
+            <see
+                cref="F:System.Data.Entity.EntityState.Unchanged" />
+            or the original object is not attached to the context.
+            </exception>
+            <exception cref="T:System.ArgumentException">When the type of the  changed  object is not the same type as the original object.</exception>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ObjectContext.ApplyCurrentValues``1(System.String,``0)">
+            <summary>
+            Copies the scalar values from the supplied object into the object in the
+            <see
+                cref="T:System.Data.Entity.Core.Objects.ObjectContext" />
+            that has the same key.
+            </summary>
+            <returns>The updated object.</returns>
+            <param name="entitySetName">The name of the entity set to which the object belongs.</param>
+            <param name="currentEntity">
+            The detached object that has property updates to apply to the original object. The entity key of  currentEntity  must match the
+            <see
+                cref="P:System.Data.Entity.Core.Objects.ObjectStateEntry.EntityKey" />
+            property of an entry in the
+            <see
+                cref="T:System.Data.Entity.Core.Objects.ObjectContext" />
+            .
+            </param>
+            <typeparam name="TEntity">The entity type of the object.</typeparam>
+            <exception cref="T:System.ArgumentNullException"> entitySetName  or  current  is null.</exception>
+            <exception cref="T:System.InvalidOperationException">
+            The <see cref="T:System.Data.Entity.Core.Metadata.Edm.EntitySet" /> from  entitySetName  does not match the
+            <see
+                cref="T:System.Data.Entity.Core.Metadata.Edm.EntitySet" />
+            of the object
+            <see
+                cref="T:System.Data.Entity.Core.EntityKey" />
+             or the object is not in the
+            <see
+                cref="T:System.Data.Entity.Core.Objects.ObjectStateManager" />
+            or it is in a
+            <see
+                cref="F:System.Data.Entity.EntityState.Detached" />
+            state or the entity key of the supplied object is invalid.
+            </exception>
+            <exception cref="T:System.ArgumentException"> entitySetName  is an empty string.</exception>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.ObjectContext.ApplyOriginalValues``1(System.String,``0)">
+            <summary>
+            Copies the scalar values from the supplied object into set of original values for the object in the
+            <see
+                cref="T:System.Data.Entity.Core.Objects.ObjectContext" />
+            that has the same key.
+            </summary>
+            <returns>The updated object.</returns>
+            <param name="entitySetName">The name of the entity set to which the object belongs.</param>
+            <param name="originalEntity">
+            The detached object that has original values to apply to the object. The entity key of  originalEntity  must match the
+            <see
+                cref="P:System.Data.Entity.Core.Objects.ObjectStateEntry.EntityKey" />
+            property of an entry in the
+            <see
+                cref="T:System.Data.Entity.Core.Objects.ObjectContext" />
+            .
+            </param>
+            <typeparam name="TEntity">The type of the entity object.</typeparam>
+            <exception cref="T:System.ArgumentNullException"> entitySetName  or  original  is null.</exception>
+            <exception cref="T:System.InvalidOperationException">
+            The <see cref="T:System.Data.Entity.Core.Metadata.Edm.EntitySet" /> from  entitySetName  does not match the
+            <see
+                cref="T:System.Data.Entity.Core.Metadata.Edm.EntitySet" />
+            of the object
+            <see
+                cref="T:System.Data.Entity.Core.EntityKey" />
+             or an
+            <see
+                cref="T:System.Data.Entity.Core.Objects.ObjectStateEntry" />
+            for the object cannot be found in the
+            <see
+                cref="T:System.Data.Entity.Core.Objects.ObjectStateManager" />
+             or the object is in an
+            <see
+            

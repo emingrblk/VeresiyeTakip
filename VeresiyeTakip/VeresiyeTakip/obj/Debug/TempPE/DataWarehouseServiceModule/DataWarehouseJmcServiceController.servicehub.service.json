@@ -1,0 +1,8 @@
+{
+  "entryPoint": {
+    "assemblyPath": "Microsoft.DiagnosticsHub.DataWarehouse.ServiceModule.dll",
+    "fullClassName": "Microsoft.DiagnosticsHub.DataWarehouse.ServiceModule.Controllers.DataWarehouseJmcServiceController"
+  },
+  "host": "desktopClr",
+  "hostId": "DataWarehouseHost"
+}

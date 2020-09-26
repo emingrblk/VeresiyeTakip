@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="VeresiyeDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="CariKart">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="unvani" Type="nvarchar" MaxLength="50" />
+    <Property Name="yetkili" Type="nvarchar" MaxLength="50" />
+    <Property Name="telefonNo" Type="nchar" MaxLength="16" />
+    <Property Name="vergiDairesi" Type="varchar" MaxLength="50" />
+    <Property Name="adres" Type="nvarchar" MaxLength="500" />
+    <Property Name="ePosta" Type="varchar" MaxLength="50" />
+    <Property Name="gsm" Type="nchar" MaxLength="16" />
+    <Property Name="faksNo" Type="nchar" MaxLength="16" />
+    <Property Name="webAdresi" Type="varchar" MaxLength="50" />
+    <Property Name="cariLimit" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="notu" Type="nvarchar(max)" />
+    <Property Name="tarih" Type="date" />
+  </EntityType>
+  <EntityType Name="Hesap">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="durum" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityContainer Name="VeresiyeDBModelStoreContainer">
+    <EntitySet Name="CariKart" EntityType="Self.CariKart" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Hesap" EntityType="Self.Hesap" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

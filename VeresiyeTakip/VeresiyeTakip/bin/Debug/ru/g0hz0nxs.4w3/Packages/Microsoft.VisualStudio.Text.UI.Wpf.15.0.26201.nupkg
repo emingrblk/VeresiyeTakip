@@ -1,0 +1,1002 @@
+remarks>
+            An instance of this class can be set on the <see cref="T:System.Data.Entity.Database"/> class or in the
+            app.config/web.config for the application to cause all DbContexts created with no
+            connection information or just a database name to use SQL Server LocalDb by default.
+            This class is immutable since multiple threads may access instances simultaneously
+            when creating connections.
+            </remarks>
+        </member>
+        <member name="T:System.Data.Entity.Infrastructure.IDbConnectionFactory">
+            <summary>
+            Implementations of this interface are used to create DbConnection objects for
+            a type of database server based on a given database name.
+            An Instance is set on the <see cref="T:System.Data.Entity.Database"/> class to
+            cause all DbContexts created with no connection information or just a database
+            name or connection string to use a certain type of database server by default.
+            Two implementations of this interface are provided: <see cref="T:System.Data.Entity.Infrastructure.SqlConnectionFactory"/>
+            is used to create connections to Microsoft SQL Server, including EXPRESS editions.
+            <see cref="T:System.Data.Entity.Infrastructure.SqlCeConnectionFactory"/> is used to create connections to Microsoft SQL
+            Server Compact Editions.
+            Other implementations for other database servers can be added as needed.
+            Note that implementations should be thread safe or immutable since they may
+            be accessed by multiple threads at the same time.
+            </summary>
+        </member>
+        <member name="M:System.Data.Entity.Infrastructure.IDbConnectionFactory.CreateConnection(System.String)">
+            <summary>
+            Creates a connection based on the given database name or connection string.
+            </summary>
+            <param name="nameOrConnectionString"> The database name or connection string. </param>
+            <returns> An initialized DbConnection. </returns>
+        </member>
+        <member name="M:System.Data.Entity.Infrastructure.LocalDbConnectionFactory.#ctor(System.String)">
+            <summary>
+            Creates a new instance of the connection factory for the given version of LocalDb.
+            For SQL Server 2012 LocalDb use "v11.0".
+            For SQL Server 2014 and later LocalDb use "mssqllocaldb".
+            </summary>
+            <param name="localDbVersion"> The LocalDb version to use. </param>
+        </member>
+        <member name="M:System.Data.Entity.Infrastructure.LocalDbConnectionFactory.#ctor(System.String,System.String)">
+            <summary>
+            Creates a new instance of the connection factory for the given version of LocalDb.
+            For SQL Server 2012 LocalDb use "v11.0".
+            For SQL Server 2014 and later LocalDb use "mssqllocaldb".
+            </summary>
+            <param name="localDbVersion"> The LocalDb version to use. </param>
+            <param name="baseConnectionString"> The connection string to use for options to the database other than the 'Initial Catalog', 'Data Source', and 'AttachDbFilename'. The 'Initial Catalog' and 'AttachDbFilename' will be prepended to this string based on the database name when CreateConnection is called. The 'Data Source' will be set based on the LocalDbVersion argument. </param>
+        </member>
+        <member name="M:System.Data.Entity.Infrastructure.LocalDbConnectionFactory.CreateConnection(System.String)">
+            <summary>
+            Creates a connection for SQL Server LocalDb based on the given database name or connection string.
+            If the given string contains an '=' character then it is treated as a full connection string,
+            otherwise it is treated as a database name only.
+            </summary>
+            <param name="nameOrConnectionString"> The database name or connection string. </param>
+            <returns> An initialized DbConnection. </returns>
+        </member>
+        <member name="P:System.Data.Entity.Infrastructure.LocalDbConnectionFactory.BaseConnectionString">
+            <summary>
+            The connection string to use for options to the database other than the 'Initial Catalog',
+            'Data Source', and 'AttachDbFilename'.
+            The 'Initial Catalog' and 'AttachDbFilename' will be prepended to this string based on the
+            database name when CreateConnection is called.
+            The 'Data Source' will be set based on the LocalDbVersion argument.
+            The default is 'Integrated Security=True;'.
+            </summary>
+        </member>
+        <member name="T:System.Data.Entity.MigrateDatabaseToLatestVersion`2">
+            <summary>
+            An implementation of <see cref="T:System.Data.Entity.IDatabaseInitializer`1"/> that will use Code First Migrations
+            to update the database to the latest version.
+            </summary>
+            <typeparam name="TContext">The type of the context.</typeparam>
+            <typeparam name="TMigrationsConfiguration">The type of the migrations configuration to use during initialization.</typeparam>
+        </member>
+        <member name="M:System.Data.Entity.MigrateDatabaseToLatestVersion`2.#ctor">
+            <summary>
+            Initializes a new instance of the MigrateDatabaseToLatestVersion class that will use
+            the connection information from a context constructed using the default constructor 
+            or registered factory if applicable
+            </summary>
+        </member>
+        <member name="M:System.Data.Entity.MigrateDatabaseToLatestVersion`2.#ctor(System.Boolean)">
+            <summary>
+            Initializes a new instance of the MigrateDatabaseToLatestVersion class specifying whether to
+            use the connection information from the context that triggered initialization to perform the migration.
+            </summary>
+            <param name="useSuppliedContext">
+            If set to <c>true</c> the initializer is run using the connection information from the context that 
+            triggered initialization. Otherwise, the connection information will be taken from a context constructed 
+            using the default constructor or registered factory if applicable. 
+            </param>
+        </member>
+        <member name="M:System.Data.Entity.MigrateDatabaseToLatestVersion`2.#ctor(System.Boolean,`1)">
+            <summary>
+            Initializes a new instance of the MigrateDatabaseToLatestVersion class specifying whether to
+            use the connection information from the context that triggered initialization to perform the migration.
+            Also allows specifying migrations configuration to use during initialization.
+            </summary>
+            <param name="useSuppliedContext">
+            If set to <c>true</c> the initializer is run using the connection information from the context that
+            triggered initialization. Otherwise, the connection information will be taken from a context constructed
+            using the default constructor or registered factory if applicable.
+            </param>
+            <param name="configuration"> Migrations configuration to use during initialization. </param>
+        </member>
+        <member name="M:System.Data.Entity.MigrateDatabaseToLatestVersion`2.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the MigrateDatabaseToLatestVersion class that will
+            use a specific connection string from the configuration file to connect to
+            the database to perform the migration.
+            </summary>
+            <param name="connectionStringName"> The name of the connection string to use for migration. </param>
+        </member>
+        <member name="M:System.Data.Entity.MigrateDatabaseToLatestVersion`2.InitializeDatabase(`0)">
+            <inheritdoc />
+        </member>
+        <member name="T:System.Data.Entity.Migrations.Builders.ColumnBuilder">
+             <summary>
+             Helper class that is used to configure a column.
+            
+             Entity Framework Migrations APIs are not designed to accept input provided by untrusted sources 
+             (such as the end user of an application). If input is accepted from such sources it should be validated 
+             before being passed to these APIs to protect against SQL injection attacks etc.
+             </summary>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.Builders.ColumnBuilder.Binary(System.Nullable{System.Boolean},System.Nullable{System.Int32},System.Nullable{System.Boolean},System.Byte[],System.String,System.Boolean,System.String,System.String,System.Collections.Generic.IDictionary{System.String,System.Data.Entity.Infrastructure.Annotations.AnnotationValues})">
+             <summary>
+             Creates a new column definition to store Binary data.
+            
+             Entity Framework Migrations APIs are not designed to accept input provided by untrusted sources 
+             (such as the end user of an application). If input is accepted from such sources it should be validated 
+             before being passed to these APIs to protect against SQL injection attacks etc.
+             </summary>
+             <param name="nullable"> Value indicating whether or not the column allows null values. </param>
+             <param name="maxLength"> The maximum allowable length of the array data. </param>
+             <param name="fixedLength"> Value indicating whether or not all data should be padded to the maximum length. </param>
+             <param name="defaultValue"> Constant value to use as the default value for this column. </param>
+             <param name="defaultValueSql"> SQL expression used as the default value for this column. </param>
+             <param name="timestamp"> Value indicating whether or not this column should be configured as a timestamp. </param>
+             <param name="name"> The name of the column. </param>
+             <param name="storeType"> Provider specific data type to use for this column. </param>
+             <param name="annotations"> Custom annotations usually from the Code First model. </param>
+             <returns> The newly constructed column definition. </returns>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.Builders.ColumnBuilder.Boolean(System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.String,System.String,System.String,System.Collections.Generic.IDictionary{System.String,System.Data.Entity.Infrastructure.Annotations.AnnotationValues})">
+             <summary>
+             Creates a new column definition to store Boolean data.
+            
+             Entity Framework Migrations APIs are not designed to accept input provided by untrusted sources 
+             (such as the end user of an application). If input is accepted from such sources it should be validated 
+             before being passed to these APIs to protect against SQL injection attacks etc.
+             </summary>
+             <param name="nullable"> Value indicating whether or not the column allows null values. </param>
+             <param name="defaultValue"> Constant value to use as the default value for this column. </param>
+             <param name="defaultValueSql"> SQL expression used as the default value for this column. </param>
+             <param name="name"> The name of the column. </param>
+             <param name="storeType"> Provider specific data type to use for this column. </param>
+             <param name="annotations"> Custom annotations usually from the Code First model. </param>
+             <returns> The newly constructed column definition. </returns>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.Builders.ColumnBuilder.Byte(System.Nullable{System.Boolean},System.Boolean,System.Nullable{System.Byte},System.String,System.String,System.String,System.Collections.Generic.IDictionary{System.String,System.Data.Entity.Infrastructure.Annotations.AnnotationValues})">
+             <summary>
+             Creates a new column definition to store Byte data.
+            
+             Entity Framework Migrations APIs are not designed to accept input provided by untrusted sources 
+             (such as the end user of an application). If input is accepted from such sources it should be validated 
+             before being passed to these APIs to protect against SQL injection attacks etc.
+             </summary>
+             <param name="nullable"> Value indicating whether or not the column allows null values. </param>
+             <param name="identity"> Value indicating whether or not the database will generate values for this column during insert. </param>
+             <param name="defaultValue"> Constant value to use as the default value for this column. </param>
+             <param name="defaultValueSql"> SQL expression used as the default value for this column. </param>
+             <param name="name"> The name of the column. </param>
+             <param name="storeType"> Provider specific data type to use for this column. </param>
+             <param name="annotations"> Custom annotations usually from the Code First model. </param>
+             <returns> The newly constructed column definition. </returns>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.Builders.ColumnBuilder.DateTime(System.Nullable{System.Boolean},System.Nullable{System.Byte},System.Nullable{System.DateTime},System.String,System.String,System.String,System.Collections.Generic.IDictionary{System.String,System.Data.Entity.Infrastructure.Annotations.AnnotationValues})">
+             <summary>
+             Creates a new column definition to store DateTime data.
+            
+             Entity Framework Migrations APIs are not designed to accept input provided by untrusted sources 
+             (such as the end user of an application). If input is accepted from such sources it should be validated 
+             before being passed to these APIs to protect against SQL injection attacks etc.
+             </summary>
+             <param name="nullable"> Value indicating whether or not the column allows null values. </param>
+             <param name="precision"> The precision of the column. </param>
+             <param name="defaultValue"> Constant value to use as the default value for this column. </param>
+             <param name="defaultValueSql"> SQL expression used as the default value for this column. </param>
+             <param name="name"> The name of the column. </param>
+             <param name="storeType"> Provider specific data type to use for this column. </param>
+             <param name="annotations"> Custom annotations usually from the Code First model. </param>
+             <returns> The newly constructed column definition. </returns>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.Builders.ColumnBuilder.Decimal(System.Nullable{System.Boolean},System.Nullable{System.Byte},System.Nullable{System.Byte},System.Nullable{System.Decimal},System.String,System.String,System.String,System.Boolean,System.Collections.Generic.IDictionary{System.String,System.Data.Entity.Infrastructure.Annotations.AnnotationValues})">
+             <summary>
+             Creates a new column definition to store Decimal data.
+            
+             Entity Framework Migrations APIs are not designed to accept input provided by untrusted sources 
+             (such as the end user of an application). If input is accepted from such sources it should be validated 
+             before being passed to these APIs to protect against SQL injection attacks etc.
+             </summary>
+             <param name="nullable"> Value indicating whether or not the column allows null values. </param>
+             <param name="precision"> The numeric precision of the column. </param>
+             <param name="scale"> The numeric scale of the column. </param>
+             <param name="defaultValue"> Constant value to use as the default value for this column. </param>
+             <param name="defaultValueSql"> SQL expression used as the default value for this column. </param>
+             <param name="name"> The name of the column. </param>
+             <param name="storeType"> Provider specific data type to use for this column. </param>
+             <param name="identity"> Value indicating whether or not the database will generate values for this column during insert. </param>
+             <param name="annotations"> Custom annotations usually from the Code First model. </param>
+             <returns> The newly constructed column definition. </returns>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.Builders.ColumnBuilder.Double(System.Nullable{System.Boolean},System.Nullable{System.Double},System.String,System.String,System.String,System.Collections.Generic.IDictionary{System.String,System.Data.Entity.Infrastructure.Annotations.AnnotationValues})">
+             <summary>
+             Creates a new column definition to store Double data.
+            
+             Entity Framework Migrations APIs are not designed to accept input provided by untrusted sources 
+             (such as the end user of an application). If input is accepted from such sources it should be validated 
+             before being passed to these APIs to protect against SQL injection attacks etc.
+             </summary>
+             <param name="nullable"> Value indicating whether or not the column allows null values. </param>
+             <param name="defaultValue"> Constant value to use as the default value for this column. </param>
+             <param name="defaultValueSql"> SQL expression used as the default value for this column. </param>
+             <param name="name"> The name of the column. </param>
+             <param name="storeType"> Provider specific data type to use for this column. </param>
+             <param name="annotations"> Custom annotations usually from the Code First model. </param>
+             <returns> The newly constructed column definition. </returns>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.Builders.ColumnBuilder.Guid(System.Nullable{System.Boolean},System.Boolean,System.Nullable{System.Guid},System.String,System.String,System.String,System.Collections.Generic.IDictionary{System.String,System.Data.Entity.Infrastructure.Annotations.AnnotationValues})">
+             <summary>
+             Creates a new column definition to store GUID data.
+            
+             Entity Framework Migrations APIs are not designed to accept input provided by untrusted sources 
+             (such as the end user of an application). If input is accepted from such sources it should be validated 
+             before being passed to these APIs to protect against SQL injection attacks etc.
+             </summary>
+             <param name="nullable"> Value indicating whether or not the column allows null values. </param>
+             <param name="identity"> Value indicating whether or not the database will generate values for this column during insert. </param>
+             <param name="defaultValue"> Constant value to use as the default value for this column. </param>
+             <param name="defaultValueSql"> SQL expression used as the default value for this column. </param>
+             <param name="name"> The name of the column. </param>
+             <param name="storeType"> Provider specific data type to use for this column. </param>
+             <param name="annotations"> Custom annotations usually from the Code First model. </param>
+             <returns> The newly constructed column definition. </returns>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.Builders.ColumnBuilder.Single(System.Nullable{System.Boolean},System.Nullable{System.Single},System.String,System.String,System.String,System.Collections.Generic.IDictionary{System.String,System.Data.Entity.Infrastructure.Annotations.AnnotationValues})">
+             <summary>
+             Creates a new column definition to store Single data.
+            
+             Entity Framework Migrations APIs are not designed to accept input provided by untrusted sources 
+             (such as the end user of an application). If input is accepted from such sources it should be validated 
+             before being passed to these APIs to protect against SQL injection attacks etc.
+             </summary>
+             <param name="nullable"> Value indicating whether or not the column allows null values. </param>
+             <param name="defaultValue"> Constant value to use as the default value for this column. </param>
+             <param name="defaultValueSql"> SQL expression used as the default value for this column. </param>
+             <param name="name"> The name of the column. </param>
+             <param name="storeType"> Provider specific data type to use for this column. </param>
+             <param name="annotations"> Custom annotations usually from the Code First model. </param>
+             <returns> The newly constructed column definition. </returns>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.Builders.ColumnBuilder.Short(System.Nullable{System.Boolean},System.Boolean,System.Nullable{System.Int16},System.String,System.String,System.String,System.Collections.Generic.IDictionary{System.String,System.Data.Entity.Infrastructure.Annotations.AnnotationValues})">
+             <summary>
+             Creates a new column definition to store Short data.
+            
+             Entity Framework Migrations APIs are not designed to accept input provided by untrusted sources 
+             (such as the end user of an application). If input is accepted from such sources it should be validated 
+             before being passed to these APIs to protect against SQL injection attacks etc.
+             </summary>
+             <param name="nullable"> Value indicating whether or not the column allows null values. </param>
+             <param name="identity"> Value indicating whether or not the database will generate values for this column during insert. </param>
+             <param name="defaultValue"> Constant value to use as the default value for this column. </param>
+             <param name="defaultValueSql"> SQL expression used as the default value for this column. </param>
+             <param name="name"> The name of the column. </param>
+             <param name="storeType"> Provider specific data type to use for this column. </param>
+             <param name="annotations"> Custom annotations usually from the Code First model. </param>
+             <returns> The newly constructed column definition. </returns>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.Builders.ColumnBuilder.Int(System.Nullable{System.Boolean},System.Boolean,System.Nullable{System.Int32},System.String,System.String,System.String,System.Collections.Generic.IDictionary{System.String,System.Data.Entity.Infrastructure.Annotations.AnnotationValues})">
+             <summary>
+             Creates a new column definition to store Integer data.
+            
+             Entity Framework Migrations APIs are not designed to accept input provided by untrusted sources 
+             (such as the end user of an application). If input is accepted from such sources it should be validated 
+             before being passed to these APIs to protect against SQL injection attacks etc.
+             </summary>
+             <param name="nullable"> Value indicating whether or not the column allows null values. </param>
+             <param name="identity"> Value indicating whether or not the database will generate values for this column during insert. </param>
+             <param name="defaultValue"> Constant value to use as the default value for this column. </param>
+             <param name="defaultValueSql"> SQL expression used as the default value for this column. </param>
+             <param name="name"> The name of the column. </param>
+             <param name="storeType"> Provider specific data type to use for this column. </param>
+             <param name="annotations"> Custom annotations usually from the Code First model. </param>
+             <returns> The newly constructed column definition. </returns>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.Builders.ColumnBuilder.Long(System.Nullable{System.Boolean},System.Boolean,System.Nullable{System.Int64},System.String,System.String,System.String,System.Collections.Generic.IDictionary{System.String,System.Data.Entity.Infrastructure.Annotations.AnnotationValues})">
+             <summary>
+             Creates a new column definition to store Long data.
+            
+             Entity Framework Migrations APIs are not designed to accept input provided by untrusted sources 
+             (such as the end user of an application). If input is accepted from such sources it should be validated 
+             before being passed to these APIs to protect against SQL injection attacks etc.
+             </summary>
+             <param name="nullable"> Value indicating whether or not the column allows null values. </param>
+             <param name="identity"> Value indicating whether or not the database will generate values for this column during insert. </param>
+             <param name="defaultValue"> Constant value to use as the default value for this column. </param>
+             <param name="defaultValueSql"> SQL expression used as the default value for this column. </param>
+             <param name="name"> The name of the column. </param>
+             <param name="storeType"> Provider specific data type to use for this column. </param>
+             <param name="annotations"> Custom annotations usually from the Code First model. </param>
+             <returns> The newly constructed column definition. </returns>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.Builders.ColumnBuilder.String(System.Nullable{System.Boolean},System.Nullable{System.Int32},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.String,System.String,System.String,System.String,System.Collections.Generic.IDictionary{System.String,System.Data.Entity.Infrastructure.Annotations.AnnotationValues})">
+             <summary>
+             Creates a new column definition to store String data.
+            
+             Entity Framework Migrations APIs are not designed to accept input provided by untrusted sources 
+             (such as the end user of an application). If input is accepted from such sources it should be validated 
+             before being passed to these APIs to protect against SQL injection attacks etc.
+             </summary>
+             <param name="nullable"> Value indicating whether or not the column allows null values. </param>
+             <param name="maxLength"> The maximum allowable length of the string data. </param>
+             <param name="fixedLength"> Value indicating whether or not all data should be padded to the maximum length. </param>
+             <param name="unicode"> Value indicating whether or not the column supports Unicode content. </param>
+             <param name="defaultValue"> Constant value to use as the default value for this column. </param>
+             <param name="defaultValueSql"> SQL expression used as the default value for this column. </param>
+             <param name="name"> The name of the column. </param>
+             <param name="storeType"> Provider specific data type to use for this column. </param>
+             <param name="annotations"> Custom annotations usually from the Code First model. </param>
+             <returns> The newly constructed column definition. </returns>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.Builders.ColumnBuilder.Time(System.Nullable{System.Boolean},System.Nullable{System.Byte},System.Nullable{System.TimeSpan},System.String,System.String,System.String,System.Collections.Generic.IDictionary{System.String,System.Data.Entity.Infrastructure.Annotations.AnnotationValues})">
+             <summary>
+             Creates a new column definition to store Time data.
+            
+             Entity Framework Migrations APIs are not designed to accept input provided by untrusted sources 
+             (such as the end user of an application). If input is accepted from such sources it should be validated 
+             before being passed to these APIs to protect against SQL injection attacks etc.
+             </summary>
+             <param name="nullable"> Value indicating whether or not the column allows null values. </param>
+             <param name="precision"> The precision of the column. </param>
+             <param name="defaultValue"> Constant value to use as the default value for this column. </param>
+             <param name="defaultValueSql"> SQL expression used as the default value for this column. </param>
+             <param name="name"> The name of the column. </param>
+             <param name="storeType"> Provider specific data type to use for this column. </param>
+             <param name="annotations"> Custom annotations usually from the Code First model. </param>
+             <returns> The newly constructed column definition. </returns>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.Builders.ColumnBuilder.DateTimeOffset(System.Nullable{System.Boolean},System.Nullable{System.Byte},System.Nullable{System.DateTimeOffset},System.String,System.String,System.String,System.Collections.Generic.IDictionary{System.String,System.Data.Entity.Infrastructure.Annotations.AnnotationValues})">
+             <summary>
+             Creates a new column definition to store DateTimeOffset data.
+            
+             Entity Framework Migrations APIs are not designed to accept input provided by untrusted sources 
+             (such as the end user of an application). If input is accepted from such sources it should be validated 
+             before being passed to these APIs to protect against SQL injection attacks etc.
+             </summary>
+             <param name="nullable"> Value indicating whether or not the column allows null values. </param>
+             <param name="precision"> The precision of the column. </param>
+             <param name="defaultValue"> Constant value to use as the default value for this column. </param>
+             <param name="defaultValueSql"> SQL expression used as the default value for this column. </param>
+             <param name="name"> The name of the column. </param>
+             <param name="storeType"> Provider specific data type to use for this column. </param>
+             <param name="annotations"> Custom annotations usually from the Code First model. </param>
+             <returns> The newly constructed column definition. </returns>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.Builders.ColumnBuilder.Geography(System.Nullable{System.Boolean},System.Data.Entity.Spatial.DbGeography,System.String,System.String,System.String,System.Collections.Generic.IDictionary{System.String,System.Data.Entity.Infrastructure.Annotations.AnnotationValues})">
+             <summary>
+             Creates a new column definition to store geography data.
+            
+             Entity Framework Migrations APIs are not designed to accept input provided by untrusted sources 
+             (such as the end user of an application). If input is accepted from such sources it should be validated 
+             before being passed to these APIs to protect against SQL injection attacks etc.
+             </summary>
+             <param name="nullable"> Value indicating whether or not the column allows null values. </param>
+             <param name="defaultValue"> Constant value to use as the default value for this column. </param>
+             <param name="defaultValueSql"> SQL expression used as the default value for this column. </param>
+             <param name="name"> The name of the column. </param>
+             <param name="storeType"> Provider specific data type to use for this column. </param>
+             <param name="annotations"> Custom annotations usually from the Code First model. </param>
+             <returns> The newly constructed column definition. </returns>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.Builders.ColumnBuilder.Geometry(System.Nullable{System.Boolean},System.Data.Entity.Spatial.DbGeometry,System.String,System.String,System.String,System.Collections.Generic.IDictionary{System.String,System.Data.Entity.Infrastructure.Annotations.AnnotationValues})">
+             <summary>
+             Creates a new column definition to store geometry data.
+            
+             Entity Framework Migrations APIs are not designed to accept input provided by untrusted sources 
+             (such as the end user of an application). If input is accepted from such sources it should be validated 
+             before being passed to these APIs to protect against SQL injection attacks etc.
+             </summary>
+             <param name="nullable"> Value indicating whether or not the column allows null values. </param>
+             <param name="defaultValue"> Constant value to use as the default value for this column. </param>
+             <param name="defaultValueSql"> SQL expression used as the default value for this column. </param>
+             <param name="name"> The name of the column. </param>
+             <param name="storeType"> Provider specific data type to use for this column. </param>
+             <param name="annotations"> Custom annotations usually from the Code First model. </param>
+             <returns> The newly constructed column definition. </returns>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.Builders.ColumnBuilder.ToString">
+            <inheritdoc />
+        </member>
+        <member name="M:System.Data.Entity.Migrations.Builders.ColumnBuilder.Equals(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:System.Data.Entity.Migrations.Builders.ColumnBuilder.GetHashCode">
+            <inheritdoc />
+        </member>
+        <member name="M:System.Data.Entity.Migrations.Builders.ColumnBuilder.GetType">
+            <summary>
+            Gets the <see cref="T:System.Type"/> of the current instance.
+            </summary>
+            <returns>The exact runtime type of the current instance.</returns>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.Builders.ColumnBuilder.MemberwiseClone">
+            <summary>
+            Creates a shallow copy of the current <see cref="T:System.Object"/>.
+            </summary>
+            <returns>A shallow copy of the current <see cref="T:System.Object"/>.</returns>
+        </member>
+        <member name="T:System.Data.Entity.Migrations.Builders.TableBuilder`1">
+             <summary>
+             Helper class that is used to further configure a table being created from a CreateTable call on
+             <see cref="T:System.Data.Entity.Migrations.DbMigration"/>
+             .
+            
+             Entity Framework Migrations APIs are not designed to accept input provided by untrusted sources 
+             (such as the end user of an application). If input is accepted from such sources it should be validated 
+             before being passed to these APIs to protect against SQL injection attacks etc.
+             </summary>
+             <typeparam name="TColumns">The type that represents the table's columns.</typeparam>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.Builders.TableBuilder`1.#ctor(System.Data.Entity.Migrations.Model.CreateTableOperation,System.Data.Entity.Migrations.DbMigration)">
+            <summary>
+            Initializes a new instance of the TableBuilder class.
+            </summary>
+            <param name="createTableOperation"> The table creation operation to be further configured. </param>
+            <param name="migration"> The migration the table is created in. </param>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.Builders.TableBuilder`1.PrimaryKey(System.Linq.Expressions.Expression{System.Func{`0,System.Object}},System.String,System.Boolean,System.Object)">
+             <summary>
+             Specifies a primary key for the table.
+            
+             Entity Framework Migrations APIs are not designed to accept input provided by untrusted sources 
+             (such as the end user of an application). If input is accepted from such sources it should be validated 
+             before being passed to these APIs to protect against SQL injection attacks etc.
+             </summary>
+             <param name="keyExpression"> A lambda expression representing the property to be used as the primary key. C#: t => t.Id VB.Net: Function(t) t.Id If the primary key is made up of multiple properties then specify an anonymous type including the properties. C#: t => new { t.Id1, t.Id2 } VB.Net: Function(t) New With { t.Id1, t.Id2 } </param>
+             <param name="name"> The name of the primary key. If null is supplied, a default name will be generated. </param>
+             <param name="clustered"> A value indicating whether or not this is a clustered primary key. </param>
+             <param name="anonymousArguments"> Additional arguments that may be processed by providers. Use anonymous type syntax to specify arguments e.g. 'new { SampleArgument = "MyValue" }'. </param>
+             <returns> Itself, so that multiple calls can be chained. </returns>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.Builders.TableBuilder`1.Index(System.Linq.Expressions.Expression{System.Func{`0,System.Object}},System.String,System.Boolean,System.Boolean,System.Object)">
+             <summary>
+             Specifies an index to be created on the table.
+            
+             Entity Framework Migrations APIs are not designed to accept input provided by untrusted sources 
+             (such as the end user of an application). If input is accepted from such sources it should be validated 
+             before being passed to these APIs to protect against SQL injection attacks etc.
+             </summary>
+             <param name="indexExpression"> A lambda expression representing the property to be indexed. C#: t => t.PropertyOne VB.Net: Function(t) t.PropertyOne If multiple properties are to be indexed then specify an anonymous type including the properties. C#: t => new { t.PropertyOne, t.PropertyTwo } VB.Net: Function(t) New With { t.PropertyOne, t.PropertyTwo } </param>
+             <param name="name"> The name of the index. </param>
+             <param name="unique"> A value indicating whether or not this is a unique index. </param>
+             <param name="clustered"> A value indicating whether or not this is a clustered index. </param>
+             <param name="anonymousArguments"> Additional arguments that may be processed by providers. Use anonymous type syntax to specify arguments e.g. 'new { SampleArgument = "MyValue" }'. </param>
+             <returns> Itself, so that multiple calls can be chained. </returns>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.Builders.TableBuilder`1.ForeignKey(System.String,System.Linq.Expressions.Expression{System.Func{`0,System.Object}},System.Boolean,System.String,System.Object)">
+             <summary>
+             Specifies a foreign key constraint to be created on the table.
+            
+             Entity Framework Migrations APIs are not designed to accept input provided by untrusted sources 
+             (such as the end user of an application). If input is accepted from such sources it should be validated 
+             before being passed to these APIs to protect against SQL injection attacks etc.
+             </summary>
+             <param name="principalTable"> Name of the table that the foreign key constraint targets. </param>
+             <param name="dependentKeyExpression"> A lambda expression representing the properties of the foreign key. C#: t => t.PropertyOne VB.Net: Function(t) t.PropertyOne If multiple properties make up the foreign key then specify an anonymous type including the properties. C#: t => new { t.PropertyOne, t.PropertyTwo } VB.Net: Function(t) New With { t.PropertyOne, t.PropertyTwo } </param>
+             <param name="cascadeDelete"> A value indicating whether or not cascade delete should be configured on the foreign key constraint. </param>
+             <param name="name"> The name of this foreign key constraint. If no name is supplied, a default name will be calculated. </param>
+             <param name="anonymousArguments"> Additional arguments that may be processed by providers. Use anonymous type syntax to specify arguments e.g. 'new { SampleArgument = "MyValue" }'. </param>
+             <returns> Itself, so that multiple calls can be chained. </returns>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.Builders.TableBuilder`1.ToString">
+            <inheritdoc />
+        </member>
+        <member name="M:System.Data.Entity.Migrations.Builders.TableBuilder`1.Equals(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:System.Data.Entity.Migrations.Builders.TableBuilder`1.GetHashCode">
+            <inheritdoc />
+        </member>
+        <member name="M:System.Data.Entity.Migrations.Builders.TableBuilder`1.GetType">
+            <summary>
+            Gets the <see cref="T:System.Type"/> of the current instance.
+            </summary>
+            <returns>The exact runtime type of the current instance.</returns>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.Builders.TableBuilder`1.MemberwiseClone">
+            <summary>
+            Creates a shallow copy of the current <see cref="T:System.Object"/>.
+            </summary>
+            <returns>A shallow copy of the current <see cref="T:System.Object"/>.</returns>
+        </member>
+        <member name="T:System.Data.Entity.Migrations.DbMigration">
+             <summary>
+             Base class for code-based migrations.
+            
+             Entity Framework Migrations APIs are not designed to accept input provided by untrusted sources 
+             (such as the end user of an application). If input is accepted from such sources it should be validated 
+             before being passed to these APIs to protect against SQL injection attacks etc.
+             </summary>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.DbMigration.Up">
+            <summary>
+            Operations to be performed during the upgrade process.
+            </summary>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.DbMigration.Down">
+            <summary>
+            Operations to be performed during the downgrade process.
+            </summary>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.DbMigration.CreateStoredProcedure(System.String,System.String,System.Object)">
+             <summary>
+             Adds an operation to create a new stored procedure.
+            
+             Entity Framework Migrations APIs are not designed to accept input provided by untrusted sources 
+             (such as the end user of an application). If input is accepted from such sources it should be validated 
+             before being passed to these APIs to protect against SQL injection attacks etc.
+             </summary>
+             <param name="name">
+             The name of the stored procedure. Schema name is optional, if no schema is specified then dbo is
+             assumed.
+             </param>
+             <param name="body">The body of the stored procedure.</param>
+             <param name="anonymousArguments">
+             The additional arguments that may be processed by providers. Use anonymous type syntax
+             to specify arguments. For example, 'new { SampleArgument = "MyValue" }'.
+             </param>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.DbMigration.CreateStoredProcedure``1(System.String,System.Func{System.Data.Entity.Migrations.Builders.ParameterBuilder,``0},System.String,System.Object)">
+             <summary>
+             Adds an operation to create a new stored procedure.
+            
+             Entity Framework Migrations APIs are not designed to accept input provided by untrusted sources 
+             (such as the end user of an application). If input is accepted from such sources it should be validated 
+             before being passed to these APIs to protect against SQL injection attacks etc.
+             </summary>
+             <param name="name">
+             The name of the stored procedure. Schema name is optional, if no schema is specified then dbo is
+             assumed.
+             </param>
+             <param name="parametersAction">The action that specifies the parameters of the stored procedure.</param>
+             <param name="body">The body of the stored procedure.</param>
+             <param name="anonymousArguments">
+             The additional arguments that may be processed by providers. Use anonymous type syntax
+             to specify arguments. For example, 'new { SampleArgument = "MyValue" }'.
+             </param>
+             <typeparam name="TParameters">
+             The parameters in this create stored procedure operation. You do not need to specify this
+             type, it will be inferred from the <paramref name="parametersAction" /> parameter you supply.
+             </typeparam>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.DbMigration.AlterStoredProcedure(System.String,System.String,System.Object)">
+             <summary>
+             Adds an operation to alter a stored procedure.
+            
+             Entity Framework Migrations APIs are not designed to accept input provided by untrusted sources 
+             (such as the end user of an application). If input is accepted from such sources it should be validated 
+             before being passed to these APIs to protect against SQL injection attacks etc.
+             </summary>
+             <param name="name">
+             The name of the stored procedure. Schema name is optional, if no schema is specified then dbo is
+             assumed.
+             </param>
+             <param name="body">The body of the stored procedure.</param>
+             <param name="anonymousArguments">
+             The additional arguments that may be processed by providers. Use anonymous type syntax
+             to specify arguments. For example, 'new { SampleArgument = "MyValue" }'.
+             </param>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.DbMigration.AlterStoredProcedure``1(System.String,System.Func{System.Data.Entity.Migrations.Builders.ParameterBuilder,``0},System.String,System.Object)">
+             <summary>
+             Adds an operation to alter a stored procedure.
+            
+             Entity Framework Migrations APIs are not designed to accept input provided by untrusted sources 
+             (such as the end user of an application). If input is accepted from such sources it should be validated 
+             before being passed to these APIs to protect against SQL injection attacks etc.
+             </summary>
+             <typeparam name="TParameters">
+             The parameters in this alter stored procedure operation. You do not need to specify this
+             type, it will be inferred from the <paramref name="parametersAction" /> parameter you supply.
+             </typeparam>
+             <param name="name">
+             The name of the stored procedure. Schema name is optional, if no schema is specified then dbo is
+             assumed.
+             </param>
+             <param name="parametersAction">The action that specifies the parameters of the stored procedure.</param>
+             <param name="body">The body of the stored procedure.</param>
+             <param name="anonymousArguments">
+             The additional arguments that may be processed by providers. Use anonymous type syntax
+             to specify arguments. For example, 'new { SampleArgument = "MyValue" }'.
+             </param>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.DbMigration.DropStoredProcedure(System.String,System.Object)">
+             <summary>
+             Adds an operation to drop an existing stored procedure with the specified name.
+            
+             Entity Framework Migrations APIs are not designed to accept input provided by untrusted sources 
+             (such as the end user of an application). If input is accepted from such sources it should be validated 
+             before being passed to these APIs to protect against SQL injection attacks etc.
+             </summary>
+             <param name="name">
+             The name of the procedure to drop. Schema name is optional, if no schema is specified then dbo is
+             assumed.
+             </param>
+             <param name="anonymousArguments">
+             The additional arguments that may be processed by providers. Use anonymous type syntax
+             to specify arguments. For example, 'new { SampleArgument = "MyValue" }'.
+             </param>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.DbMigration.CreateTable``1(System.String,System.Func{System.Data.Entity.Migrations.Builders.ColumnBuilder,``0},System.Object)">
+             <summary>
+             Adds an operation to create a new table.
+            
+             Entity Framework Migrations APIs are not designed to accept input provided by untrusted sources 
+             (such as the end user of an application). If input is accepted from such sources it should be validated 
+             before being passed to these APIs to protect against SQL injection attacks etc.
+             </summary>
+             <typeparam name="TColumns">
+             The columns in this create table operation. You do not need to specify this type, it will
+             be inferred from the columnsAction parameter you supply.
+             </typeparam>
+             <param name="name"> The name of the table. Schema name is optional, if no schema is specified then dbo is assumed. </param>
+             <param name="columnsAction">
+             An action that specifies the columns to be included in the table. i.e. t => new { Id =
+             t.Int(identity: true), Name = t.String() }
+             </param>
+             <param name="anonymousArguments">
+             Additional arguments that may be processed by providers. Use anonymous type syntax to
+             specify arguments e.g. 'new { SampleArgument = "MyValue" }'.
+             </param>
+             <returns> An object that allows further configuration of the table creation operation. </returns>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.DbMigration.CreateTable``1(System.String,System.Func{System.Data.Entity.Migrations.Builders.ColumnBuilder,``0},System.Collections.Generic.IDictionary{System.String,System.Object},System.Object)">
+             <summary>
+             Adds an operation to create a new table.
+            
+             Entity Framework Migrations APIs are not designed to accept input provided by untrusted sources 
+             (such as the end user of an application). If input is accepted from such sources it should be validated 
+             before being passed to these APIs to protect against SQL injection attacks etc.
+             </summary>
+             <typeparam name="TColumns">
+             The columns in this create table operation. You do not need to specify this type, it will
+             be inferred from the columnsAction parameter you supply.
+             </typeparam>
+             <param name="name"> The name of the table. Schema name is optional, if no schema is specified then dbo is assumed. </param>
+             <param name="columnsAction">
+             An action that specifies the columns to be included in the table. i.e. t => new { Id =
+             t.Int(identity: true), Name = t.String() }
+             </param>
+             <param name="annotations">Custom annotations that exist on the table to be created. May be null or empty.</param>
+             <param name="anonymousArguments">
+             Additional arguments that may be processed by providers. Use anonymous type syntax to
+             specify arguments e.g. 'new { SampleArgument = "MyValue" }'.
+             </param>
+             <returns> An object that allows further configuration of the table creation operation. </returns>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.DbMigration.AlterTableAnnotations``1(System.String,System.Func{System.Data.Entity.Migrations.Builders.ColumnBuilder,``0},System.Collections.Generic.IDictionary{System.String,System.Data.Entity.Infrastructure.Annotations.AnnotationValues},System.Object)">
+             <summary>
+             Adds an operation to handle changes in the annotations defined on tables.
+            
+             Entity Framework Migrations APIs are not designed to accept input provided by untrusted sources 
+             (such as the end user of an application). If input is accepted from such sources it should be validated 
+             before being passed to these APIs to protect against SQL injection attacks etc.
+             </summary>
+             <typeparam name="TColumns">
+             The columns in this operation. You do not need to specify this type, it will
+             be inferred from the columnsAction parameter you supply.
+             </typeparam>
+             <param name="name"> The name of the table. Schema name is optional, if no schema is specified then dbo is assumed. </param>
+             <param name="columnsAction">
+             An action that specifies the columns to be included in the table. i.e. t => new { Id =
+             t.Int(identity: true), Name = t.String() }
+             </param>
+             <param name="annotations">The custom annotations on the table that have changed.</param>
+             <param name="anonymousArguments">
+             Additional arguments that may be processed by providers. Use anonymous type syntax to
+             specify arguments e.g. 'new { SampleArgument = "MyValue" }'.
+             </param>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.DbMigration.AddForeignKey(System.String,System.String,System.String,System.String,System.Boolean,System.String,System.Object)">
+             <summary>
+             Adds an operation to create a new foreign key constraint.
+            
+             Entity Framework Migrations APIs are not designed to accept input provided by untrusted sources 
+             (such as the end user of an application). If input is accepted from such sources it should be validated 
+             before being passed to these APIs to protect against SQL injection attacks etc.
+             </summary>
+             <param name="dependentTable">
+             The table that contains the foreign key column. Schema name is optional, if no schema is
+             specified then dbo is assumed.
+             </param>
+             <param name="dependentColumn"> The foreign key column. </param>
+             <param name="principalTable">
+             The table that contains the column this foreign key references. Schema name is optional,
+             if no schema is specified then dbo is assumed.
+             </param>
+             <param name="principalColumn">
+             The column this foreign key references. If no value is supplied the primary key of the
+             principal table will be referenced.
+             </param>
+             <param name="cascadeDelete">
+             A value indicating if cascade delete should be configured for the foreign key
+             relationship. If no value is supplied, cascade delete will be off.
+             </param>
+             <param name="name">
+             The name of the foreign key constraint in the database. If no value is supplied a unique name will
+             be generated.
+             </param>
+             <param name="anonymousArguments">
+             Additional arguments that may be processed by providers. Use anonymous type syntax to
+             specify arguments e.g. 'new { SampleArgument = "MyValue" }'.
+             </param>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.DbMigration.AddForeignKey(System.String,System.String[],System.String,System.String[],System.Boolean,System.String,System.Object)">
+             <summary>
+             Adds an operation to create a new foreign key constraint.
+            
+             Entity Framework Migrations APIs are not designed to accept input provided by untrusted sources 
+             (such as the end user of an application). If input is accepted from such sources it should be validated 
+             before being passed to these APIs to protect against SQL injection attacks etc.
+             </summary>
+             <param name="dependentTable">
+             The table that contains the foreign key columns. Schema name is optional, if no schema is
+             specified then dbo is assumed.
+             </param>
+             <param name="dependentColumns"> The foreign key columns. </param>
+             <param name="principalTable">
+             The table that contains the columns this foreign key references. Schema name is optional,
+             if no schema is specified then dbo is assumed.
+             </param>
+             <param name="principalColumns">
+             The columns this foreign key references. If no value is supplied the primary key of the
+             principal table will be referenced.
+             </param>
+             <param name="cascadeDelete">
+             A value indicating if cascade delete should be configured for the foreign key
+             relationship. If no value is supplied, cascade delete will be off.
+             </param>
+             <param name="name">
+             The name of the foreign key constraint in the database. If no value is supplied a unique name will
+             be generated.
+             </param>
+             <param name="anonymousArguments">
+             Additional arguments that may be processed by providers. Use anonymous type syntax to
+             specify arguments e.g. 'new { SampleArgument = "MyValue" }'.
+             </param>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.DbMigration.DropForeignKey(System.String,System.String,System.Object)">
+             <summary>
+             Adds an operation to drop a foreign key constraint based on its name.
+            
+             Entity Framework Migrations APIs are not designed to accept input provided by untrusted sources 
+             (such as the end user of an application). If input is accepted from such sources it should be validated 
+             before being passed to these APIs to protect against SQL injection attacks etc.
+             </summary>
+             <param name="dependentTable">
+             The table that contains the foreign key column. Schema name is optional, if no schema is
+             specified then dbo is assumed.
+             </param>
+             <param name="name"> The name of the foreign key constraint in the database. </param>
+             <param name="anonymousArguments">
+             Additional arguments that may be processed by providers. Use anonymous type syntax to
+             specify arguments e.g. 'new { SampleArgument = "MyValue" }'.
+             </param>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.DbMigration.DropForeignKey(System.String,System.String,System.String,System.Object)">
+             <summary>
+             Adds an operation to drop a foreign key constraint based on the column it targets.
+            
+             Entity Framework Migrations APIs are not designed to accept input provided by untrusted sources 
+             (such as the end user of an application). If input is accepted from such sources it should be validated 
+             before being passed to these APIs to protect against SQL injection attacks etc.
+             </summary>
+             <param name="dependentTable">
+             The table that contains the foreign key column. Schema name is optional, if no schema is
+             specified then dbo is assumed.
+             </param>
+             <param name="dependentColumn"> The foreign key column. </param>
+             <param name="principalTable">
+             The table that contains the column this foreign key references. Schema name is optional,
+             if no schema is specified then dbo is assumed.
+             </param>
+             <param name="anonymousArguments">
+             Additional arguments that may be processed by providers. Use anonymous type syntax to
+             specify arguments e.g. 'new { SampleArgument = "MyValue" }'.
+             </param>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.DbMigration.DropForeignKey(System.String,System.String,System.String,System.String,System.Object)">
+             <summary>
+             Adds an operation to drop a foreign key constraint based on the column it targets.
+            
+             Entity Framework Migrations APIs are not designed to accept input provided by untrusted sources 
+             (such as the end user of an application). If input is accepted from such sources it should be validated 
+             before being passed to these APIs to protect against SQL injection attacks etc.
+             </summary>
+             <param name="dependentTable">
+             The table that contains the foreign key column.
+             Schema name is optional, if no schema is specified then dbo is assumed.
+             </param>
+             <param name="dependentColumn">The foreign key column.</param>
+             <param name="principalTable">
+             The table that contains the column this foreign key references.
+             Schema name is optional, if no schema is specified then dbo is assumed.
+             </param>
+             <param name="principalColumn">The columns this foreign key references.</param>
+             <param name="anonymousArguments">
+             Additional arguments that may be processed by providers.
+             Use anonymous type syntax to specify arguments e.g. 'new { SampleArgument = "MyValue" }'.
+             </param>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.DbMigration.DropForeignKey(System.String,System.String[],System.String,System.Object)">
+             <summary>
+             Adds an operation to drop a foreign key constraint based on the columns it targets.
+            
+             Entity Framework Migrations APIs are not designed to accept input provided by untrusted sources 
+             (such as the end user of an application). If input is accepted from such sources it should be validated 
+             before being passed to these APIs to protect against SQL injection attacks etc.
+             </summary>
+             <param name="dependentTable">
+             The table that contains the foreign key columns. Schema name is optional, if no schema is
+             specified then dbo is assumed.
+             </param>
+             <param name="dependentColumns"> The foreign key columns. </param>
+             <param name="principalTable">
+             The table that contains the columns this foreign key references. Schema name is optional,
+             if no schema is specified then dbo is assumed.
+             </param>
+             <param name="anonymousArguments">
+             Additional arguments that may be processed by providers. Use anonymous type syntax to
+             specify arguments e.g. 'new { SampleArgument = "MyValue" }'.
+             </param>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.DbMigration.DropTable(System.String,System.Object)">
+             <summary>
+             Adds an operation to drop a table.
+            
+             Entity Framework Migrations APIs are not designed to accept input provided by untrusted sources 
+             (such as the end user of an application). If input is accepted from such sources it should be validated 
+             before being passed to these APIs to protect against SQL injection attacks etc.
+             </summary>
+             <param name="name">
+             The name of the table to be dropped. Schema name is optional, if no schema is specified then dbo is
+             assumed.
+             </param>
+             <param name="anonymousArguments">
+             Additional arguments that may be processed by providers. Use anonymous type syntax to
+             specify arguments e.g. 'new { SampleArgument = "MyValue" }'.
+             </param>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.DbMigration.DropTable(System.String,System.Collections.Generic.IDictionary{System.String,System.Collections.Generic.IDictionary{System.String,System.Object}},System.Object)">
+             <summary>
+             Adds an operation to drop a table.
+            
+             Entity Framework Migrations APIs are not designed to accept input provided by untrusted sources 
+             (such as the end user of an application). If input is accepted from such sources it should be validated 
+             before being passed to these APIs to protect against SQL injection attacks etc.
+             </summary>
+             <param name="name">
+             The name of the table to be dropped. Schema name is optional, if no schema is specified then dbo is
+             assumed.
+             </param>
+             <param name="removedColumnAnnotations">Custom annotations that exist on columns of the table that is being dropped. May be null or empty.</param>
+             <param name="anonymousArguments">
+             Additional arguments that may be processed by providers. Use anonymous type syntax to
+             specify arguments e.g. 'new { SampleArgument = "MyValue" }'.
+             </param>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.DbMigration.DropTable(System.String,System.Collections.Generic.IDictionary{System.String,System.Object},System.Object)">
+             <summary>
+             Adds an operation to drop a table.
+            
+             Entity Framework Migrations APIs are not designed to accept input provided by untrusted sources 
+             (such as the end user of an application). If input is accepted from such sources it should be validated 
+             before being passed to these APIs to protect against SQL injection attacks etc.
+             </summary>
+             <param name="name">
+             The name of the table to be dropped. Schema name is optional, if no schema is specified then dbo is
+             assumed.
+             </param>
+             <param name="removedAnnotations">Custom annotations that exist on the table that is being dropped. May be null or empty.</param>
+             <param name="anonymousArguments">
+             Additional arguments that may be processed by providers. Use anonymous type syntax to
+             specify arguments e.g. 'new { SampleArgument = "MyValue" }'.
+             </param>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.DbMigration.DropTable(System.String,System.Collections.Generic.IDictionary{System.String,System.Object},System.Collections.Generic.IDictionary{System.String,System.Collections.Generic.IDictionary{System.String,System.Object}},System.Object)">
+             <summary>
+             Adds an operation to drop a table.
+            
+             Entity Framework Migrations APIs are not designed to accept input provided by untrusted sources 
+             (such as the end user of an application). If input is accepted from such sources it should be validated 
+             before being passed to these APIs to protect against SQL injection attacks etc.
+             </summary>
+             <param name="name">
+             The name of the table to be dropped. Schema name is optional, if no schema is specified then dbo is
+             assumed.
+             </param>
+             <param name="removedAnnotations">Custom annotations that exist on the table that is being dropped. May be null or empty.</param>
+             <param name="removedColumnAnnotations">Custom annotations that exist on columns of the table that is being dropped. May be null or empty.</param>
+             <param name="anonymousArguments">
+             Additional arguments that may be processed by providers. Use anonymous type syntax to
+             specify arguments e.g. 'new { SampleArgument = "MyValue" }'.
+             </param>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.DbMigration.MoveTable(System.String,System.String,System.Object)">
+             <summary>
+             Adds an operation to move a table to a new schema.
+            
+             Entity Framework Migrations APIs are not designed to accept input provided by untrusted sources 
+             (such as the end user of an application). If input is accepted from such sources it should be validated 
+             before being passed to these APIs to protect against SQL injection attacks etc.
+             </summary>
+             <param name="name">
+             The name of the table to be moved. Schema name is optional, if no schema is specified then dbo is
+             assumed.
+             </param>
+             <param name="newSchema"> The schema the table is to be moved to. </param>
+             <param name="anonymousArguments">
+             Additional arguments that may be processed by providers. Use anonymous type syntax to
+             specify arguments e.g. 'new { SampleArgument = "MyValue" }'.
+             </param>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.DbMigration.MoveStoredProcedure(System.String,System.String,System.Object)">
+             <summary>
+             Adds an operation to move a stored procedure to a new schema.
+            
+             Entity Framework Migrations APIs are not designed to accept input provided by untrusted sources 
+             (such as the end user of an application). If input is accepted from such sources it should be validated 
+             before being passed to these APIs to protect against SQL injection attacks etc.
+             </summary>
+             <param name="name">
+             The name of the stored procedure to be moved. Schema name is optional, if no schema is specified
+             then dbo is assumed.
+             </param>
+             <param name="newSchema"> The schema the stored procedure is to be moved to. </param>
+             <param name="anonymousArguments">
+             Additional arguments that may be processed by providers. Use anonymous type syntax to
+             specify arguments e.g. 'new { SampleArgument = "MyValue" }'.
+             </param>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.DbMigration.RenameTable(System.String,System.String,System.Object)">
+             <summary>
+             Adds an operation to rename a table. To change the schema of a table use MoveTable.
+            
+             Entity Framework Migrations APIs are not designed to accept input provided by untrusted sources 
+             (such as the end user of an application). If input is accepted from such sources it should be validated 
+             before being passed to these APIs to protect against SQL injection attacks etc.
+             </summary>
+             <param name="name">
+             The name of the table to be renamed. Schema name is optional, if no schema is specified then dbo is
+             assumed.
+             </param>
+             <param name="newName">
+             The new name for the table. Schema name is optional, if no schema is specified then dbo is
+             assumed.
+             </param>
+             <param name="anonymousArguments">
+             Additional arguments that may be processed by providers. Use anonymous type syntax to
+             specify arguments e.g. 'new { SampleArgument = "MyValue" }'.
+             </param>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.DbMigration.RenameStoredProcedure(System.String,System.String,System.Object)">
+             <summary>
+             Adds an operation to rename a stored procedure. To change the schema of a stored procedure use MoveStoredProcedure
+            
+             Entity Framework Migrations APIs are not designed to accept input provided by untrusted sources 
+             (such as the end user of an application). If input is accepted from such sources it should be validated 
+             before being passed to these APIs to protect against SQL injection attacks etc.
+             </summary>
+             <param name="name">
+             The name of the stored procedure to be renamed. Schema name is optional, if no schema is specified
+             then dbo is assumed.
+             </param>
+             <param name="newName">
+             The new name for the stored procedure. Schema name is optional, if no schema is specified then
+             dbo is assumed.
+             </param>
+             <param name="anonymousArguments">
+             Additional arguments that may be processed by providers. Use anonymous type syntax to
+             specify arguments e.g. 'new { SampleArgument = "MyValue" }'.
+             </param>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.DbMigration.RenameColumn(System.String,System.String,System.String,System.Object)">
+             <summary>
+             Adds an operation to rename a column.
+            
+             Entity Framework Migrations APIs are not designed to accept input provided by untrusted sources 
+             (such as the end user of an application). If input is accepted from such sources it should be validated 
+             before being passed to these APIs to protect against SQL injection att

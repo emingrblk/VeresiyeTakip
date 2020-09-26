@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VsixLanguagePack Version="1.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema-lp/2010">
+  <LocalizedName>Microsoft 已連線的服務</LocalizedName>
+  <LocalizedDescription>為 [新增已連線的服務] 對話方塊提供基底工具及擴充性架構。</LocalizedDescription>
+</VsixLanguagePack>

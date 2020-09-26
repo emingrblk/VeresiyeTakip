@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VsixLanguagePack Version="1.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema-lp/2010">
+  <LocalizedName>Microsoft Azure 儲存體已連線服務</LocalizedName>
+  <LocalizedDescription>可讓開發人員使用逐步指南輕鬆建立及連接 Azure 儲存體帳戶。</LocalizedDescription>
+  <MoreInfoUrl>https://go.microsoft.com/fwlink/?LinkId=534855</MoreInfoUrl>
+</VsixLanguagePack>

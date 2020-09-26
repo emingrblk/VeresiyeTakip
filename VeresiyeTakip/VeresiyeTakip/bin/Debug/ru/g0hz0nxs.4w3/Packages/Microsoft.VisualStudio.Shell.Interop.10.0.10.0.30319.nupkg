@@ -1,0 +1,1363 @@
+" />, a generic delegate that represents the compiled LINQ to Entities query.
+            </returns>
+            <param name="query">The lambda expression to compile.</param>
+            <typeparam name="TArg0">
+            A type derived from <see cref="T:System.Data.Entity.Core.Objects.ObjectContext" />.
+            </typeparam>
+            <typeparam name="TArg1">Represents the type of the parameter that has to be passed in when executing the delegate returned by this method.  TArg1  must be a primitive type.</typeparam>
+            <typeparam name="TArg2">Represents the type of the parameter that has to be passed in when executing the delegate returned by this method.  TArg2  must be a primitive type.</typeparam>
+            <typeparam name="TArg3">Represents the type of the parameter that has to be passed in when executing the delegate returned by this method.  TArg3  must be a primitive type.</typeparam>
+            <typeparam name="TArg4">Represents the type of the parameter that has to be passed in when executing the delegate returned by this method.  TArg4  must be a primitive type.</typeparam>
+            <typeparam name="TArg5">Represents the type of the parameter that has to be passed in when executing the delegate returned by this method.  TArg5  must be a primitive type.</typeparam>
+            <typeparam name="TArg6">Represents the type of the parameter that has to be passed in when executing the delegate returned by this method.  TArg6  must be a primitive type.</typeparam>
+            <typeparam name="TArg7">Represents the type of the parameter that has to be passed in when executing the delegate returned by this method.  TArg7  must be a primitive type.</typeparam>
+            <typeparam name="TArg8">Represents the type of the parameter that has to be passed in when executing the delegate returned by this method.  TArg8  must be a primitive type.</typeparam>
+            <typeparam name="TArg9">Represents the type of the parameter that has to be passed in when executing the delegate returned by this method.  TArg9  must be a primitive type.</typeparam>
+            <typeparam name="TArg10">Represents the type of the parameter that has to be passed in when executing the delegate returned by this method.  TArg10  must be a primitive type.</typeparam>
+            <typeparam name="TResult">
+            The type  T  of the query results returned by executing the delegate returned by the
+            <see
+                cref="M:System.Data.Entity.Core.Objects.CompiledQuery.Compile``12(System.Linq.Expressions.Expression{System.Func{``0,``1,``2,``3,``4,``5,``6,``7,``8,``9,``10,``11}})" />
+            method.
+            </typeparam>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.CompiledQuery.Compile``11(System.Linq.Expressions.Expression{System.Func{``0,``1,``2,``3,``4,``5,``6,``7,``8,``9,``10}})">
+            <summary>Creates a new delegate that represents the compiled LINQ to Entities query.</summary>
+            <returns>
+            <see cref="T:System.Func`11" />, a generic delegate that represents the compiled LINQ to Entities query.
+            </returns>
+            <param name="query">The lambda expression to compile.</param>
+            <typeparam name="TArg0">
+            A type derived from <see cref="T:System.Data.Entity.Core.Objects.ObjectContext" />.
+            </typeparam>
+            <typeparam name="TArg1">Represents the type of the parameter that has to be passed in when executing the delegate returned by this method.  TArg1  must be a primitive type.</typeparam>
+            <typeparam name="TArg2">Represents the type of the parameter that has to be passed in when executing the delegate returned by this method.  TArg2  must be a primitive type.</typeparam>
+            <typeparam name="TArg3">Represents the type of the parameter that has to be passed in when executing the delegate returned by this method.  TArg3  must be a primitive type.</typeparam>
+            <typeparam name="TArg4">Represents the type of the parameter that has to be passed in when executing the delegate returned by this method.  TArg4  must be a primitive type.</typeparam>
+            <typeparam name="TArg5">Represents the type of the parameter that has to be passed in when executing the delegate returned by this method.  TArg5  must be a primitive type.</typeparam>
+            <typeparam name="TArg6">Represents the type of the parameter that has to be passed in when executing the delegate returned by this method.  TArg6  must be a primitive type.</typeparam>
+            <typeparam name="TArg7">Represents the type of the parameter that has to be passed in when executing the delegate returned by this method.  TArg7  must be a primitive type.</typeparam>
+            <typeparam name="TArg8">Represents the type of the parameter that has to be passed in when executing the delegate returned by this method.  TArg8  must be a primitive type.</typeparam>
+            <typeparam name="TArg9">Represents the type of the parameter that has to be passed in when executing the delegate returned by this method.  TArg9  must be a primitive type.</typeparam>
+            <typeparam name="TResult">
+            The type  T  of the query results returned by executing the delegate returned by the
+            <see
+                cref="M:System.Data.Entity.Core.Objects.CompiledQuery.Compile``11(System.Linq.Expressions.Expression{System.Func{``0,``1,``2,``3,``4,``5,``6,``7,``8,``9,``10}})" />
+            method.
+            </typeparam>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.CompiledQuery.Compile``10(System.Linq.Expressions.Expression{System.Func{``0,``1,``2,``3,``4,``5,``6,``7,``8,``9}})">
+            <summary>Creates a new delegate that represents the compiled LINQ to Entities query.</summary>
+            <returns>
+            <see cref="T:System.Func`10" />, a generic delegate that represents the compiled LINQ to Entities query.
+            </returns>
+            <param name="query">The lambda expression to compile.</param>
+            <typeparam name="TArg0">
+            A type derived from <see cref="T:System.Data.Entity.Core.Objects.ObjectContext" />.
+            </typeparam>
+            <typeparam name="TArg1">Represents the type of the parameter that has to be passed in when executing the delegate returned by this method.  TArg1  must be a primitive type.</typeparam>
+            <typeparam name="TArg2">Represents the type of the parameter that has to be passed in when executing the delegate returned by this method.  TArg2  must be a primitive type.</typeparam>
+            <typeparam name="TArg3">Represents the type of the parameter that has to be passed in when executing the delegate returned by this method.  TArg3  must be a primitive type.</typeparam>
+            <typeparam name="TArg4">Represents the type of the parameter that has to be passed in when executing the delegate returned by this method.  TArg4  must be a primitive type.</typeparam>
+            <typeparam name="TArg5">Represents the type of the parameter that has to be passed in when executing the delegate returned by this method.  TArg5  must be a primitive type.</typeparam>
+            <typeparam name="TArg6">Represents the type of the parameter that has to be passed in when executing the delegate returned by this method.  TArg6  must be a primitive type.</typeparam>
+            <typeparam name="TArg7">Represents the type of the parameter that has to be passed in when executing the delegate returned by this method.  TArg7  must be a primitive type.</typeparam>
+            <typeparam name="TArg8">Represents the type of the parameter that has to be passed in when executing the delegate returned by this method.  TArg8  must be a primitive type.</typeparam>
+            <typeparam name="TResult">
+            The type  T  of the query results returned by executing the delegate returned by the
+            <see
+                cref="M:System.Data.Entity.Core.Objects.CompiledQuery.Compile``10(System.Linq.Expressions.Expression{System.Func{``0,``1,``2,``3,``4,``5,``6,``7,``8,``9}})" />
+            method.
+            </typeparam>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.CompiledQuery.Compile``9(System.Linq.Expressions.Expression{System.Func{``0,``1,``2,``3,``4,``5,``6,``7,``8}})">
+            <summary>Creates a new delegate that represents the compiled LINQ to Entities query.</summary>
+            <returns>
+            <see cref="T:System.Func`9" />, a generic delegate that represents the compiled LINQ to Entities query.
+            </returns>
+            <param name="query">The lambda expression to compile.</param>
+            <typeparam name="TArg0">
+            A type derived from <see cref="T:System.Data.Entity.Core.Objects.ObjectContext" />.
+            </typeparam>
+            <typeparam name="TArg1">Represents the type of the parameter that has to be passed in when executing the delegate returned by this method.  TArg1  must be a primitive type.</typeparam>
+            <typeparam name="TArg2">Represents the type of the parameter that has to be passed in when executing the delegate returned by this method.  TArg2  must be a primitive type.</typeparam>
+            <typeparam name="TArg3">Represents the type of the parameter that has to be passed in when executing the delegate returned by this method.  TArg3  must be a primitive type.</typeparam>
+            <typeparam name="TArg4">Represents the type of the parameter that has to be passed in when executing the delegate returned by this method.  TArg4  must be a primitive type.</typeparam>
+            <typeparam name="TArg5">Represents the type of the parameter that has to be passed in when executing the delegate returned by this method.  TArg5  must be a primitive type.</typeparam>
+            <typeparam name="TArg6">Represents the type of the parameter that has to be passed in when executing the delegate returned by this method.  TArg6  must be a primitive type.</typeparam>
+            <typeparam name="TArg7">Represents the type of the parameter that has to be passed in when executing the delegate returned by this method.  TArg7  must be a primitive type.</typeparam>
+            <typeparam name="TResult">
+            The type  T  of the query results returned by executing the delegate returned by the
+            <see
+                cref="M:System.Data.Entity.Core.Objects.CompiledQuery.Compile``9(System.Linq.Expressions.Expression{System.Func{``0,``1,``2,``3,``4,``5,``6,``7,``8}})" />
+            method.
+            </typeparam>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.CompiledQuery.Compile``8(System.Linq.Expressions.Expression{System.Func{``0,``1,``2,``3,``4,``5,``6,``7}})">
+            <summary>Creates a new delegate that represents the compiled LINQ to Entities query.</summary>
+            <returns>
+            <see cref="T:System.Func`8" />, a generic delegate that represents the compiled LINQ to Entities query.
+            </returns>
+            <param name="query">The lambda expression to compile.</param>
+            <typeparam name="TArg0">
+            A type derived from <see cref="T:System.Data.Entity.Core.Objects.ObjectContext" />.
+            </typeparam>
+            <typeparam name="TArg1">Represents the type of the parameter that has to be passed in when executing the delegate returned by this method.  TArg1  must be a primitive type.</typeparam>
+            <typeparam name="TArg2">Represents the type of the parameter that has to be passed in when executing the delegate returned by this method.  TArg2  must be a primitive type.</typeparam>
+            <typeparam name="TArg3">Represents the type of the parameter that has to be passed in when executing the delegate returned by this method.  TArg3  must be a primitive type.</typeparam>
+            <typeparam name="TArg4">Represents the type of the parameter that has to be passed in when executing the delegate returned by this method.  TArg4  must be a primitive type.</typeparam>
+            <typeparam name="TArg5">Represents the type of the parameter that has to be passed in when executing the delegate returned by this method.  TArg5  must be a primitive type.</typeparam>
+            <typeparam name="TArg6">Represents the type of the parameter that has to be passed in when executing the delegate returned by this method.  TArg6  must be a primitive type.</typeparam>
+            <typeparam name="TResult">
+            The type  T  of the query results returned by executing the delegate returned by the
+            <see
+                cref="M:System.Data.Entity.Core.Objects.CompiledQuery.Compile``8(System.Linq.Expressions.Expression{System.Func{``0,``1,``2,``3,``4,``5,``6,``7}})" />
+            method.
+            </typeparam>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.CompiledQuery.Compile``7(System.Linq.Expressions.Expression{System.Func{``0,``1,``2,``3,``4,``5,``6}})">
+            <summary>Creates a new delegate that represents the compiled LINQ to Entities query.</summary>
+            <returns>
+            <see cref="T:System.Func`7" />, a generic delegate that represents the compiled LINQ to Entities query.
+            </returns>
+            <param name="query">The lambda expression to compile.</param>
+            <typeparam name="TArg0">
+            A type derived from <see cref="T:System.Data.Entity.Core.Objects.ObjectContext" />.
+            </typeparam>
+            <typeparam name="TArg1">Represents the type of the parameter that has to be passed in when executing the delegate returned by this method.  TArg1  must be a primitive type.</typeparam>
+            <typeparam name="TArg2">Represents the type of the parameter that has to be passed in when executing the delegate returned by this method.  TArg2  must be a primitive type.</typeparam>
+            <typeparam name="TArg3">Represents the type of the parameter that has to be passed in when executing the delegate returned by this method.  TArg3  must be a primitive type.</typeparam>
+            <typeparam name="TArg4">Represents the type of the parameter that has to be passed in when executing the delegate returned by this method.  TArg4  must be a primitive type.</typeparam>
+            <typeparam name="TArg5">Represents the type of the parameter that has to be passed in when executing the delegate returned by this method.  TArg5  must be a primitive type.</typeparam>
+            <typeparam name="TResult">
+            The type  T  of the query results returned by executing the delegate returned by the
+            <see
+                cref="M:System.Data.Entity.Core.Objects.CompiledQuery.Compile``7(System.Linq.Expressions.Expression{System.Func{``0,``1,``2,``3,``4,``5,``6}})" />
+            method.
+            </typeparam>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.CompiledQuery.Compile``6(System.Linq.Expressions.Expression{System.Func{``0,``1,``2,``3,``4,``5}})">
+            <summary>Creates a new delegate that represents the compiled LINQ to Entities query.</summary>
+            <returns>
+            <see cref="T:System.Func`6" />, a generic delegate that represents the compiled LINQ to Entities query.
+            </returns>
+            <param name="query">The lambda expression to compile.</param>
+            <typeparam name="TArg0">
+            A type derived from <see cref="T:System.Data.Entity.Core.Objects.ObjectContext" />.
+            </typeparam>
+            <typeparam name="TArg1">Represents the type of the parameter that has to be passed in when executing the delegate returned by this method.  TArg1  must be a primitive type.</typeparam>
+            <typeparam name="TArg2">Represents the type of the parameter that has to be passed in when executing the delegate returned by this method.  TArg2  must be a primitive type.</typeparam>
+            <typeparam name="TArg3">Represents the type of the parameter that has to be passed in when executing the delegate returned by this method.  TArg3  must be a primitive type.</typeparam>
+            <typeparam name="TArg4">Represents the type of the parameter that has to be passed in when executing the delegate returned by this method.  TArg4  must be a primitive type.</typeparam>
+            <typeparam name="TResult">
+            The type  T  of the query results returned by executing the delegate returned by the
+            <see
+                cref="M:System.Data.Entity.Core.Objects.CompiledQuery.Compile``6(System.Linq.Expressions.Expression{System.Func{``0,``1,``2,``3,``4,``5}})" />
+            method.
+            </typeparam>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.CompiledQuery.Compile``5(System.Linq.Expressions.Expression{System.Func{``0,``1,``2,``3,``4}})">
+            <summary>Creates a new delegate that represents the compiled LINQ to Entities query.</summary>
+            <returns>
+            <see cref="T:System.Func`5" />, a generic delegate that represents the compiled LINQ to Entities query.
+            </returns>
+            <param name="query">The lambda expression to compile.</param>
+            <typeparam name="TArg0">
+            A type derived from <see cref="T:System.Data.Entity.Core.Objects.ObjectContext" />.
+            </typeparam>
+            <typeparam name="TArg1">Represents the type of the parameter that has to be passed in when executing the delegate returned by this method.  TArg1  must be a primitive type.</typeparam>
+            <typeparam name="TArg2">Represents the type of the parameter that has to be passed in when executing the delegate returned by this method.  TArg2  must be a primitive type.</typeparam>
+            <typeparam name="TArg3">Represents the type of the parameter that has to be passed in when executing the delegate returned by this method.  TArg3  must be a primitive type.</typeparam>
+            <typeparam name="TResult">
+            The type  T  of the query results returned by executing the delegate returned by the
+            <see
+                cref="M:System.Data.Entity.Core.Objects.CompiledQuery.Compile``5(System.Linq.Expressions.Expression{System.Func{``0,``1,``2,``3,``4}})" />
+            method.
+            </typeparam>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.CompiledQuery.Compile``4(System.Linq.Expressions.Expression{System.Func{``0,``1,``2,``3}})">
+            <summary>Creates a new delegate that represents the compiled LINQ to Entities query.</summary>
+            <returns>
+            <see cref="T:System.Func`4" />, a generic delegate that represents the compiled LINQ to Entities query.
+            </returns>
+            <param name="query">The lambda expression to compile.</param>
+            <typeparam name="TArg0">
+            A type derived from <see cref="T:System.Data.Entity.Core.Objects.ObjectContext" />.
+            </typeparam>
+            <typeparam name="TArg1">Represents the type of the parameter that has to be passed in when executing the delegate returned by this method.  TArg1  must be a primitive type.</typeparam>
+            <typeparam name="TArg2">Represents the type of the parameter that has to be passed in when executing the delegate returned by this method.  TArg2  must be a primitive type.</typeparam>
+            <typeparam name="TResult">
+            The type  T  of the query results returned by executing the delegate returned by the
+            <see
+                cref="M:System.Data.Entity.Core.Objects.CompiledQuery.Compile``4(System.Linq.Expressions.Expression{System.Func{``0,``1,``2,``3}})" />
+            method.
+            </typeparam>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.CompiledQuery.Compile``3(System.Linq.Expressions.Expression{System.Func{``0,``1,``2}})">
+            <summary>Creates a new delegate that represents the compiled LINQ to Entities query.</summary>
+            <returns>
+            <see cref="T:System.Func`3" />, a generic delegate that represents the compiled LINQ to Entities query.
+            </returns>
+            <param name="query">The lambda expression to compile.</param>
+            <typeparam name="TArg0">
+            A type derived from <see cref="T:System.Data.Entity.Core.Objects.ObjectContext" />.
+            </typeparam>
+            <typeparam name="TArg1">Represents the type of the parameter that has to be passed in when executing the delegate returned by this method.  TArg1 must be a primitive type.</typeparam>
+            <typeparam name="TResult">
+            The type  T  of the query results returned by executing the delegate returned by the
+            <see
+                cref="M:System.Data.Entity.Core.Objects.CompiledQuery.Compile``3(System.Linq.Expressions.Expression{System.Func{``0,``1,``2}})" />
+            method.
+            </typeparam>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.CompiledQuery.Compile``2(System.Linq.Expressions.Expression{System.Func{``0,``1}})">
+            <summary>Creates a new delegate that represents the compiled LINQ to Entities query.</summary>
+            <returns>
+            <see cref="T:System.Func`2" />, a generic delegate that represents the compiled LINQ to Entities query.
+            </returns>
+            <param name="query">The lambda expression to compile.</param>
+            <typeparam name="TArg0">
+            A type derived from <see cref="T:System.Data.Entity.Core.Objects.ObjectContext" />.
+            </typeparam>
+            <typeparam name="TResult">
+            The type  T  of the query results returned by executing the delegate returned by the
+            <see
+                cref="M:System.Data.Entity.Core.Objects.CompiledQuery.Compile``2(System.Linq.Expressions.Expression{System.Func{``0,``1}})" />
+            method.
+            </typeparam>
+        </member>
+        <member name="T:System.Data.Entity.Core.Objects.CurrentValueRecord">
+            <summary>
+            The values currently assigned to the properties of an entity.
+            </summary>
+        </member>
+        <member name="T:System.Data.Entity.Core.Objects.DbUpdatableDataRecord">
+            <summary>
+            Provides access to the original values of object data. The DbUpdatableDataRecord implements methods that allow updates to the original values of an object.
+            </summary>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DbUpdatableDataRecord.GetBoolean(System.Int32)">
+            <summary>Retrieves the field value as a Boolean.</summary>
+            <returns>The field value as a Boolean.</returns>
+            <param name="i">The ordinal of the field.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DbUpdatableDataRecord.GetByte(System.Int32)">
+            <summary>Retrieves the field value as a byte.</summary>
+            <returns>The field value as a byte.</returns>
+            <param name="i">The ordinal of the field.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DbUpdatableDataRecord.GetBytes(System.Int32,System.Int64,System.Byte[],System.Int32,System.Int32)">
+            <summary>Retrieves the field value as a byte array.</summary>
+            <returns>The number of bytes copied.</returns>
+            <param name="i">The ordinal of the field.</param>
+            <param name="dataIndex">The index at which to start copying data.</param>
+            <param name="buffer">The destination buffer where data is copied.</param>
+            <param name="bufferIndex">The index in the destination buffer where copying will begin.</param>
+            <param name="length">The number of bytes to copy.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DbUpdatableDataRecord.GetChar(System.Int32)">
+            <summary>Retrieves the field value as a char.</summary>
+            <returns>The field value as a char.</returns>
+            <param name="i">The ordinal of the field.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DbUpdatableDataRecord.GetChars(System.Int32,System.Int64,System.Char[],System.Int32,System.Int32)">
+            <summary>Retrieves the field value as a char array.</summary>
+            <returns>The number of characters copied.</returns>
+            <param name="i">The ordinal of the field.</param>
+            <param name="dataIndex">The index at which to start copying data.</param>
+            <param name="buffer">The destination buffer where data is copied.</param>
+            <param name="bufferIndex">The index in the destination buffer where copying will begin.</param>
+            <param name="length">The number of characters to copy.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DbUpdatableDataRecord.System#Data#IDataRecord#GetData(System.Int32)">
+            <summary>
+            Retrieves the field value as an <see cref="T:System.Data.IDataReader" />.
+            </summary>
+            <returns>
+            The field value as an <see cref="T:System.Data.IDataReader" />.
+            </returns>
+            <param name="ordinal">The ordinal of the field.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DbUpdatableDataRecord.GetDbDataReader(System.Int32)">
+            <summary>
+            Retrieves the field value as a <see cref="T:System.Common.DbDataReader" />
+            </summary>
+            <returns>
+            The field value as a <see cref="T:System.Data.Common.DbDataReader" />.
+            </returns>
+            <param name="i">The ordinal of the field.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DbUpdatableDataRecord.GetDataTypeName(System.Int32)">
+            <summary>Retrieves the name of the field data type.</summary>
+            <returns>The name of the field data type.</returns>
+            <param name="i">The ordinal of the field.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DbUpdatableDataRecord.GetDateTime(System.Int32)">
+            <summary>
+            Retrieves the field value as a <see cref="T:System.DateTime" />.
+            </summary>
+            <returns>
+            The field value as a <see cref="T:System.DateTime" />.
+            </returns>
+            <param name="i">The ordinal of the field.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DbUpdatableDataRecord.GetDecimal(System.Int32)">
+            <summary>Retrieves the field value as a decimal.</summary>
+            <returns>The field value as a decimal.</returns>
+            <param name="i">The ordinal of the field.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DbUpdatableDataRecord.GetDouble(System.Int32)">
+            <summary>Retrieves the field value as a double.</summary>
+            <returns>The field value as a double.</returns>
+            <param name="i">The ordinal of the field.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DbUpdatableDataRecord.GetFieldType(System.Int32)">
+            <summary>Retrieves the type of a field.</summary>
+            <returns>The field type.</returns>
+            <param name="i">The ordinal of the field.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DbUpdatableDataRecord.GetFloat(System.Int32)">
+            <summary>Retrieves the field value as a float.</summary>
+            <returns>The field value as a float.</returns>
+            <param name="i">The ordinal of the field.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DbUpdatableDataRecord.GetGuid(System.Int32)">
+            <summary>
+            Retrieves the field value as a <see cref="T:System.Guid" />.
+            </summary>
+            <returns>
+            The field value as a <see cref="T:System.Guid" />.
+            </returns>
+            <param name="i">The ordinal of the field.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DbUpdatableDataRecord.GetInt16(System.Int32)">
+            <summary>
+            Retrieves the field value as an <see cref="T:System.Int16" />.
+            </summary>
+            <returns>
+            The field value as an <see cref="T:System.Int16" />.
+            </returns>
+            <param name="i">The ordinal of the field.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DbUpdatableDataRecord.GetInt32(System.Int32)">
+            <summary>
+            Retrieves the field value as an <see cref="T:System.Int32" />.
+            </summary>
+            <returns>
+            The field value as an <see cref="T:System.Int32" />.
+            </returns>
+            <param name="i">The ordinal of the field.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DbUpdatableDataRecord.GetInt64(System.Int32)">
+            <summary>
+            Retrieves the field value as an <see cref="T:System.Int64" />.
+            </summary>
+            <returns>
+            The field value as an <see cref="T:System.Int64" />.
+            </returns>
+            <param name="i">The ordinal of the field.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DbUpdatableDataRecord.GetName(System.Int32)">
+            <summary>Retrieves the name of a field.</summary>
+            <returns>The name of the field.</returns>
+            <param name="i">The ordinal of the field.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DbUpdatableDataRecord.GetOrdinal(System.String)">
+            <summary>Retrieves the ordinal of a field by using the name of the field.</summary>
+            <returns>The ordinal of the field.</returns>
+            <param name="name">The name of the field.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DbUpdatableDataRecord.GetString(System.Int32)">
+            <summary>Retrieves the field value as a string.</summary>
+            <returns>The field value.</returns>
+            <param name="i">The ordinal of the field.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DbUpdatableDataRecord.GetValue(System.Int32)">
+            <summary>Retrieves the value of a field.</summary>
+            <returns>The field value.</returns>
+            <param name="i">The ordinal of the field.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DbUpdatableDataRecord.GetRecordValue(System.Int32)">
+            <summary>Retrieves the value of a field.</summary>
+            <returns>The field value.</returns>
+            <param name="ordinal">The ordinal of the field.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DbUpdatableDataRecord.GetValues(System.Object[])">
+            <summary>Populates an array of objects with the field values of the current record.</summary>
+            <returns>The number of field values returned.</returns>
+            <param name="values">An array of objects to store the field values.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DbUpdatableDataRecord.IsDBNull(System.Int32)">
+            <summary>
+            Returns whether the specified field is set to <see cref="T:System.DBNull" />.
+            </summary>
+            <returns>
+            true if the field is set to <see cref="T:System.DBNull" />; otherwise false.
+            </returns>
+            <param name="i">The ordinal of the field.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DbUpdatableDataRecord.SetBoolean(System.Int32,System.Boolean)">
+            <summary>Sets the value of a field in a record.</summary>
+            <param name="ordinal">The ordinal of the field.</param>
+            <param name="value">The value of the field.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DbUpdatableDataRecord.SetByte(System.Int32,System.Byte)">
+            <summary>Sets the value of a field in a record.</summary>
+            <param name="ordinal">The ordinal of the field.</param>
+            <param name="value">The value of the field.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DbUpdatableDataRecord.SetChar(System.Int32,System.Char)">
+            <summary>Sets the value of a field in a record.</summary>
+            <param name="ordinal">The ordinal of the field.</param>
+            <param name="value">The value of the field.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DbUpdatableDataRecord.SetDataRecord(System.Int32,System.Data.IDataRecord)">
+            <summary>Sets the value of a field in a record.</summary>
+            <param name="ordinal">The ordinal of the field.</param>
+            <param name="value">The value of the field.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DbUpdatableDataRecord.SetDateTime(System.Int32,System.DateTime)">
+            <summary>Sets the value of a field in a record.</summary>
+            <param name="ordinal">The ordinal of the field.</param>
+            <param name="value">The value of the field.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DbUpdatableDataRecord.SetDecimal(System.Int32,System.Decimal)">
+            <summary>Sets the value of a field in a record.</summary>
+            <param name="ordinal">The ordinal of the field.</param>
+            <param name="value">The value of the field.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DbUpdatableDataRecord.SetDouble(System.Int32,System.Double)">
+            <summary>Sets the value of a field in a record.</summary>
+            <param name="ordinal">The ordinal of the field.</param>
+            <param name="value">The value of the field.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DbUpdatableDataRecord.SetFloat(System.Int32,System.Single)">
+            <summary>Sets the value of a field in a record.</summary>
+            <param name="ordinal">The ordinal of the field.</param>
+            <param name="value">The value of the field.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DbUpdatableDataRecord.SetGuid(System.Int32,System.Guid)">
+            <summary>Sets the value of a field in a record.</summary>
+            <param name="ordinal">The ordinal of the field.</param>
+            <param name="value">The value of the field.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DbUpdatableDataRecord.SetInt16(System.Int32,System.Int16)">
+            <summary>Sets the value of a field in a record.</summary>
+            <param name="ordinal">The ordinal of the field.</param>
+            <param name="value">The value of the field.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DbUpdatableDataRecord.SetInt32(System.Int32,System.Int32)">
+            <summary>Sets the value of a field in a record.</summary>
+            <param name="ordinal">The ordinal of the field.</param>
+            <param name="value">The value of the field.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DbUpdatableDataRecord.SetInt64(System.Int32,System.Int64)">
+            <summary>Sets the value of a field in a record.</summary>
+            <param name="ordinal">The ordinal of the field.</param>
+            <param name="value">The value of the field.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DbUpdatableDataRecord.SetString(System.Int32,System.String)">
+            <summary>Sets the value of a field in a record.</summary>
+            <param name="ordinal">The ordinal of the field.</param>
+            <param name="value">The value of the field.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DbUpdatableDataRecord.SetValue(System.Int32,System.Object)">
+            <summary>Sets the value of a field in a record.</summary>
+            <param name="ordinal">The ordinal of the field.</param>
+            <param name="value">The value of the field.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DbUpdatableDataRecord.SetValues(System.Object[])">
+            <summary>Sets field values in a record.</summary>
+            <returns>The number of the fields that were set.</returns>
+            <param name="values">The values of the field.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DbUpdatableDataRecord.SetDBNull(System.Int32)">
+            <summary>
+            Sets a field to the <see cref="T:System.DBNull" /> value.
+            </summary>
+            <param name="ordinal">The ordinal of the field.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DbUpdatableDataRecord.GetDataRecord(System.Int32)">
+            <summary>
+            Retrieves a field value as a <see cref="T:System.Data.Common.DbDataRecord" />.
+            </summary>
+            <returns>
+            A field value as a <see cref="T:System.Data.Common.DbDataRecord" />.
+            </returns>
+            <param name="i">The ordinal of the field.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DbUpdatableDataRecord.GetDataReader(System.Int32)">
+            <summary>
+            Retrieves the field value as a <see cref="T:System.Common.DbDataReader" />.
+            </summary>
+            <returns>
+            The field value as a <see cref="T:System.Data.Common.DbDataReader" />.
+            </returns>
+            <param name="i">The ordinal of the field.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DbUpdatableDataRecord.SetRecordValue(System.Int32,System.Object)">
+            <summary>Sets the value of a field in a record.</summary>
+            <param name="ordinal">The ordinal of the field.</param>
+            <param name="value">The value of the field.</param>
+        </member>
+        <member name="P:System.Data.Entity.Core.Objects.DbUpdatableDataRecord.FieldCount">
+            <summary>Gets the number of fields in the record.</summary>
+            <returns>An integer value that is the field count.</returns>
+        </member>
+        <member name="P:System.Data.Entity.Core.Objects.DbUpdatableDataRecord.Item(System.Int32)">
+            <summary>Returns a value that has the given field ordinal.</summary>
+            <returns>The value that has the given field ordinal.</returns>
+            <param name="i">The ordinal of the field.</param>
+        </member>
+        <member name="P:System.Data.Entity.Core.Objects.DbUpdatableDataRecord.Item(System.String)">
+            <summary>Gets a value that has the given field name.</summary>
+            <returns>The field value.</returns>
+            <param name="name">The name of the field.</param>
+        </member>
+        <member name="P:System.Data.Entity.Core.Objects.DbUpdatableDataRecord.DataRecordInfo">
+            <summary>Gets data record information.</summary>
+            <returns>
+            A <see cref="T:System.Data.Entity.Core.Common.DataRecordInfo" /> object.
+            </returns>
+        </member>
+        <member name="T:System.Data.Entity.Core.Objects.DataClasses.ComplexObject">
+            <summary>
+            This is the interface that represent the minimum interface required
+            to be an entity in ADO.NET.
+            </summary>
+        </member>
+        <member name="T:System.Data.Entity.Core.Objects.DataClasses.StructuralObject">
+            <summary>
+            This class contains the common methods need for an date object.
+            </summary>
+        </member>
+        <member name="F:System.Data.Entity.Core.Objects.DataClasses.StructuralObject.EntityKeyPropertyName">
+            <summary>
+            Public constant name used for change tracking
+            Providing this definition allows users to use this constant instead of
+            hard-coding the string. This helps to ensure the property name is correct
+            and allows faster comparisons in places where we are looking for this specific string.
+            Users can still use the case-sensitive string directly instead of the constant,
+            it will just be slightly slower on comparison.
+            Including the dash (-) character around the name ensures that this will not conflict with
+            a real data property, because -EntityKey- is not a valid identifier name
+            </summary>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.StructuralObject.OnPropertyChanged(System.String)">
+            <summary>
+            Raises the <see cref="E:System.Data.Entity.Core.Objects.DataClasses.StructuralObject.PropertyChanged" /> event.
+            </summary>
+            <param name="property">The name of the changed property.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.StructuralObject.OnPropertyChanging(System.String)">
+            <summary>
+            Raises the <see cref="E:System.Data.Entity.Core.Objects.DataClasses.StructuralObject.PropertyChanging" /> event.
+            </summary>
+            <param name="property">The name of the property changing.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.StructuralObject.DefaultDateTimeValue">
+            <summary>Returns the minimum date time value supported by the data source.</summary>
+            <returns>
+            A <see cref="T:System.DateTime" /> value that is the minimum date time that is supported by the data source.
+            </returns>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.StructuralObject.ReportPropertyChanging(System.String)">
+            <summary>Raises an event that is used to report that a property change is pending.</summary>
+            <param name="property">The name of the changing property.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.StructuralObject.ReportPropertyChanged(System.String)">
+            <summary>Raises an event that is used to report that a property change has occurred.</summary>
+            <param name="property">The name for the changed property.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.StructuralObject.GetValidValue``1(``0,System.String,System.Boolean,System.Boolean)">
+            <summary>Returns a complex type for the specified property.</summary>
+            <remarks>
+            Unlike most of the other helper methods in this class, this one is not static
+            because it references the SetValidValue for complex objects, which is also not static
+            because it needs a reference to this.
+            </remarks>        
+            <returns>A complex type object for the property.</returns>
+            <param name="currentValue">A complex object that inherits from complex object.</param>
+            <param name="property">The name of the complex property that is the complex object.</param>
+            <param name="isNullable">Indicates whether the type supports null values.</param>
+            <param name="isInitialized">Indicates whether the type is initialized.</param>
+            <typeparam name="T">The type of the complex object being requested.</typeparam>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.StructuralObject.BinaryEquals(System.Byte[],System.Byte[])">
+            <summary>Determines whether the specified byte arrays contain identical values.</summary>
+            <returns>true if both arrays are of the same length and contain the same byte values or if both arrays are null; otherwise, false.</returns>
+            <param name="first">The first byte array value to compare.</param>
+            <param name="second">The second byte array to compare.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.StructuralObject.GetValidValue(System.Byte[])">
+            <summary>Returns a copy of the current byte value.</summary>
+            <returns>
+            A copy of the current <see cref="T:System.Byte" /> value.
+            </returns>
+            <param name="currentValue">The current byte array value.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.StructuralObject.SetValidValue(System.Byte[],System.Boolean,System.String)">
+            <summary>
+            Makes sure the <see cref="T:System.Byte[]" /> value being set for a property is valid.
+            </summary>
+            <returns>
+            The <see cref="T:System.Byte" /> value being validated.
+            </returns>
+            <param name="value">The value passed into the property setter.</param>
+            <param name="isNullable">Flag indicating if this property is allowed to be null.</param>
+            <param name="propertyName">The name of the property that is being validated.</param>
+            <exception cref="T:System.Data.ConstraintException">If value is null for a non nullable value.</exception>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.StructuralObject.SetValidValue(System.Byte[],System.Boolean)">
+            <summary>
+            Makes sure the <see cref="T:System.Byte[]" /> value being set for a property is valid.
+            </summary>
+            <returns>
+            A <see cref="T:System.Byte" /> value being set.
+            </returns>
+            <param name="value">The value being set.</param>
+            <param name="isNullable">Indicates whether the property is nullable.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.StructuralObject.SetValidValue(System.Boolean,System.String)">
+            <summary>
+            Makes sure the <see cref="T:System.Boolean" /> value being set for a property is valid.
+            </summary>
+            <returns>
+            The <see cref="T:System.Boolean" /> value being set.
+            </returns>
+            <param name="value">The Boolean value.</param>
+            <param name="propertyName">The name of the property that is being validated.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.StructuralObject.SetValidValue(System.Boolean)">
+            <summary>
+            Makes sure the <see cref="T:System.Boolean" /> value being set for a property is valid.
+            </summary>
+            <returns>
+            The <see cref="T:System.Boolean" /> value being set.
+            </returns>
+            <param name="value">The Boolean value.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.StructuralObject.SetValidValue(System.Nullable{System.Boolean},System.String)">
+            <summary>
+            Makes sure the <see cref="T:System.Boolean" /> value being set for a property is valid.
+            </summary>
+            <returns>
+            The nullable <see cref="T:System.Boolean" /> value being set.
+            </returns>
+            <param name="value">
+            The nullable <see cref="T:System.Boolean" /> value.
+            </param>
+            <param name="propertyName">The name of the property that is being validated.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.StructuralObject.SetValidValue(System.Nullable{System.Boolean})">
+            <summary>
+            Makes sure the <see cref="T:System.Boolean" /> value being set for a property is valid.
+            </summary>
+            <returns>
+            The nullable <see cref="T:System.Boolean" /> value being set.
+            </returns>
+            <param name="value">
+            The nullable <see cref="T:System.Boolean" /> value.
+            </param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.StructuralObject.SetValidValue(System.Byte,System.String)">
+            <summary>
+            Makes sure the <see cref="T:System.Byte" /> value being set for a property is valid.
+            </summary>
+            <returns>
+            A <see cref="T:System.Byte" /> that is set.
+            </returns>
+            <param name="value">
+            The <see cref="T:System.Byte" /> value.
+            </param>
+            <param name="propertyName">The name of the property that is being validated.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.StructuralObject.SetValidValue(System.Byte)">
+            <summary>
+            Makes sure the <see cref="T:System.Byte" /> value being set for a property is valid.
+            </summary>
+            <returns>
+            The <see cref="T:System.Byte" /> value that is set.
+            </returns>
+            <param name="value">The value that is being validated.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.StructuralObject.SetValidValue(System.Nullable{System.Byte},System.String)">
+            <summary>
+            Makes sure the <see cref="T:System.Byte" /> value being set for a property is valid.
+            </summary>
+            <returns>
+            The nullable <see cref="T:System.Byte" /> value being set.
+            </returns>
+            <param name="value">
+            The nullable <see cref="T:System.Byte" /> value.
+            </param>
+            <param name="propertyName">The name of the property that is being validated.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.StructuralObject.SetValidValue(System.Nullable{System.Byte})">
+            <summary>
+            Makes sure the <see cref="T:System.Byte" /> value being set for a property is valid.
+            </summary>
+            <returns>
+            The nullable <see cref="T:System.Byte" /> value being set.
+            </returns>
+            <param name="value">
+            The nullable <see cref="T:System.Byte" /> value.
+            </param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.StructuralObject.SetValidValue(System.SByte,System.String)">
+            <summary>
+            Makes sure the <see cref="T:System.SByte" /> value being set for a property is valid.
+            </summary>
+            <returns>
+            The <see cref="T:System.SByte" /> value being set.
+            </returns>
+            <param name="value">
+            The <see cref="T:System.SByte" /> value.
+            </param>
+            <param name="propertyName">The name of the property that is being validated.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.StructuralObject.SetValidValue(System.SByte)">
+            <summary>
+            Makes sure the <see cref="T:System.SByte" /> value being set for a property is valid.
+            </summary>
+            <returns>
+            The <see cref="T:System.SByte" /> value being set.
+            </returns>
+            <param name="value">
+            The <see cref="T:System.SByte" /> value.
+            </param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.StructuralObject.SetValidValue(System.Nullable{System.SByte},System.String)">
+            <summary>
+            Makes sure the <see cref="T:System.SByte" /> value being set for a property is valid.
+            </summary>
+            <returns>
+            The nullable <see cref="T:System.SByte" /> value being set.
+            </returns>
+            <param name="value">
+            The nullable <see cref="T:System.SByte" /> value.
+            </param>
+            <param name="propertyName">The name of the property that is being validated.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.StructuralObject.SetValidValue(System.Nullable{System.SByte})">
+            <summary>
+            Makes sure the <see cref="T:System.SByte" /> value being set for a property is valid.
+            </summary>
+            <returns>
+            The nullable <see cref="T:System.SByte" /> value being set.
+            </returns>
+            <param name="value">
+            The nullable <see cref="T:System.SByte" /> value.
+            </param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.StructuralObject.SetValidValue(System.DateTime,System.String)">
+            <summary>
+            Makes sure the <see cref="T:System.DateTime" /> value being set for a property is valid.
+            </summary>
+            <returns>
+            The <see cref="T:System.DateTime" /> value being set.
+            </returns>
+            <param name="value">
+            The <see cref="T:System.DateTime" /> value.
+            </param>
+            <param name="propertyName">The name of the property that is being validated.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.StructuralObject.SetValidValue(System.DateTime)">
+            <summary>
+            Makes sure the <see cref="T:System.DateTime" /> value being set for a property is valid.
+            </summary>
+            <returns>
+            The <see cref="T:System.DateTime" /> value being set.
+            </returns>
+            <param name="value">
+            The <see cref="T:System.DateTime" /> value.
+            </param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.StructuralObject.SetValidValue(System.Nullable{System.DateTime},System.String)">
+            <summary>
+            Makes sure the <see cref="T:System.DateTime" /> value being set for a property is valid.
+            </summary>
+            <returns>
+            The nullable <see cref="T:System.DateTime" /> value being set.
+            </returns>
+            <param name="value">
+            The nullable <see cref="T:System.DateTime" /> value.
+            </param>
+            <param name="propertyName">The name of the property that is being validated.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.StructuralObject.SetValidValue(System.Nullable{System.DateTime})">
+            <summary>
+            Makes sure the <see cref="T:System.DateTime" /> value being set for a property is valid.
+            </summary>
+            <returns>
+            The nullable <see cref="T:System.DateTime" /> value being set.
+            </returns>
+            <param name="value">
+            The nullable <see cref="T:System.DateTime" /> value.
+            </param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.StructuralObject.SetValidValue(System.TimeSpan,System.String)">
+            <summary>
+            Makes sure the <see cref="T:System.TimeSpan" /> value being set for a property is valid.
+            </summary>
+            <returns>
+            The <see cref="T:System.TimeSpan" /> value being set.
+            </returns>
+            <param name="value">
+            The <see cref="T:System.TimeSpan" /> value.
+            </param>
+            <param name="propertyName">The name of the property that is being validated.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.StructuralObject.SetValidValue(System.TimeSpan)">
+            <summary>
+            Makes sure the <see cref="T:System.TimeSpan" /> value being set for a property is valid.
+            </summary>
+            <returns>
+            The <see cref="T:System.TimeSpan" /> value being set.
+            </returns>
+            <param name="value">
+            The <see cref="T:System.TimeSpan" /> value.
+            </param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.StructuralObject.SetValidValue(System.Nullable{System.TimeSpan},System.String)">
+            <summary>
+            Makes sure the <see cref="T:System.TimeSpan" /> value being set for a property is valid.
+            </summary>
+            <returns>
+            The nullable <see cref="T:System.TimeSpan" /> value being set.
+            </returns>
+            <param name="value">
+            The nullable <see cref="T:System.TimeSpan" /> value.
+            </param>
+            <param name="propertyName">The name of the property that is being validated.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.StructuralObject.SetValidValue(System.Nullable{System.TimeSpan})">
+            <summary>
+            Makes sure the <see cref="T:System.TimeSpan" /> value being set for a property is valid.
+            </summary>
+            <returns>
+            The nullable <see cref="T:System.TimeSpan" /> value being set.
+            </returns>
+            <param name="value">
+            The nullable <see cref="T:System.TimeSpan" /> value.
+            </param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.StructuralObject.SetValidValue(System.DateTimeOffset,System.String)">
+            <summary>
+            Makes sure the <see cref="T:System.DateTimeOffset" /> value being set for a property is valid.
+            </summary>
+            <returns>
+            The <see cref="T:System.DateTimeOffset" /> value being set.
+            </returns>
+            <param name="value">
+            The <see cref="T:System.DateTimeOffset" /> value.
+            </param>
+            <param name="propertyName">The name of the property that is being validated.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.StructuralObject.SetValidValue(System.DateTimeOffset)">
+            <summary>
+            Makes sure the <see cref="T:System.DateTimeOffset" /> value being set for a property is valid.
+            </summary>
+            <returns>
+            A <see cref="T:System.DateTimeOffset" /> value being set.
+            </returns>
+            <param name="value">
+            The <see cref="T:System.DateTimeOffset" /> value.
+            </param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.StructuralObject.SetValidValue(System.Nullable{System.DateTimeOffset},System.String)">
+            <summary>
+            Makes sure the <see cref="T:System.DateTimeOffset" /> value being set for a property is valid.
+            </summary>
+            <returns>
+            The <see cref="T:System.DateTimeOffset" /> value being set.
+            </returns>
+            <param name="value">
+            The <see cref="T:System.DateTimeOffset" /> value.
+            </param>
+            <param name="propertyName">The name of the property that is being validated.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.StructuralObject.SetValidValue(System.Nullable{System.DateTimeOffset})">
+            <summary>
+            Makes sure the <see cref="T:System.DateTimeOffset" /> value being set for a property is valid.
+            </summary>
+            <returns>
+            The nullable <see cref="T:System.DateTimeOffset" /> value being set.
+            </returns>
+            <param name="value">
+            The nullable <see cref="T:System.DateTimeOffset" /> value.
+            </param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.StructuralObject.SetValidValue(System.Decimal,System.String)">
+            <summary>
+            Makes sure the <see cref="T:System.Decimal" /> value being set for a property is valid.
+            </summary>
+            <returns>
+            The <see cref="T:System.Decimal" /> value being set.
+            </returns>
+            <param name="value">
+            The <see cref="T:System.Decimal" /> value.
+            </param>
+            <param name="propertyName">The name of the property that is being validated.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.StructuralObject.SetValidValue(System.Decimal)">
+            <summary>
+            Makes sure the <see cref="T:System.Decimal" /> value being set for a property is valid.
+            </summary>
+            <returns>
+            The <see cref="T:System.Decimal" /> value being set.
+            </returns>
+            <param name="value">
+            The <see cref="T:System.Decimal" /> value.
+            </param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.StructuralObject.SetValidValue(System.Nullable{System.Decimal},System.String)">
+            <summary>
+            Makes sure the <see cref="T:System.Decimal" /> value being set for a property is valid.
+            </summary>
+            <returns>
+            The nullable <see cref="T:System.Decimal" /> value being set.
+            </returns>
+            <param name="value">
+            The nullable <see cref="T:System.Decimal" /> value.
+            </param>
+            <param name="propertyName">The name of the property that is being validated.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.StructuralObject.SetValidValue(System.Nullable{System.Decimal})">
+            <summary>
+            Makes sure the <see cref="T:System.Decimal" /> value being set for a property is valid.
+            </summary>
+            <returns>
+            The nullable <see cref="T:System.Decimal" /> value being set.
+            </returns>
+            <param name="value">
+            The nullable <see cref="T:System.Decimal" /> value.
+            </param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.StructuralObject.SetValidValue(System.Double,System.String)">
+            <summary>
+            Makes sure the <see cref="T:System.Double" /> value being set for a property is valid.
+            </summary>
+            <returns>
+            The <see cref="T:System.Double" /> value being set.
+            </returns>
+            <param name="value">
+            The <see cref="T:System.Double" /> value.
+            </param>
+            <param name="propertyName">The name of the property that is being validated.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.StructuralObject.SetValidValue(System.Double)">
+            <summary>
+            Makes sure the <see cref="T:System.Double" /> value being set for a property is valid.
+            </summary>
+            <returns>
+            The <see cref="T:System.Double" /> value being set.
+            </returns>
+            <param name="value">
+            The <see cref="T:System.Double" /> value.
+            </param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.StructuralObject.SetValidValue(System.Nullable{System.Double},System.String)">
+            <summary>
+            Makes sure the <see cref="T:System.Double" /> value being set for a property is valid.
+            </summary>
+            <returns>
+            The nullable <see cref="T:System.Double" /> value being set.
+            </returns>
+            <param name="value">
+            The nullable <see cref="T:System.Double" /> value.
+            </param>
+            <param name="propertyName">The name of the property that is being validated.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.StructuralObject.SetValidValue(System.Nullable{System.Double})">
+            <summary>
+            Makes sure the <see cref="T:System.Double" /> value being set for a property is valid.
+            </summary>
+            <returns>
+            The nullable <see cref="T:System.Double" /> value being set.
+            </returns>
+            <param name="value">
+            The nullable <see cref="T:System.Double" /> value.
+            </param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.StructuralObject.SetValidValue(System.Single,System.String)">
+            <summary>Makes sure the Single value being set for a property is valid.</summary>
+            <returns>
+            The <see cref="T:System.Single" /> value being set.
+            </returns>
+            <param name="value">
+            The <see cref="T:System.Single" /> value.
+            </param>
+            <param name="propertyName">The name of the property that is being validated.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.StructuralObject.SetValidValue(System.Single)">
+            <summary>Makes sure the Single value being set for a property is valid.</summary>
+            <returns>
+            The <see cref="T:System.Single" /> value being set.
+            </returns>
+            <param name="value">
+            The <see cref="T:System.Single" /> value.
+            </param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.StructuralObject.SetValidValue(System.Nullable{System.Single},System.String)">
+            <summary>
+            Makes sure the <see cref="T:System.Single" /> value being set for a property is valid.
+            </summary>
+            <returns>
+            The nullable <see cref="T:System.Single" /> value being set.
+            </returns>
+            <param name="value">
+            The nullable <see cref="T:System.Single" /> value.
+            </param>
+            <param name="propertyName">The name of the property that is being validated.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.StructuralObject.SetValidValue(System.Nullable{System.Single})">
+            <summary>
+            Makes sure the <see cref="T:System.Single" /> value being set for a property is valid.
+            </summary>
+            <returns>
+            The nullable <see cref="T:System.Single" /> value being set.
+            </returns>
+            <param name="value">
+            The nullable <see cref="T:System.Single" /> value.
+            </param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.StructuralObject.SetValidValue(System.Guid,System.String)">
+            <summary>
+            Makes sure the <see cref="T:System.Guid" /> value being set for a property is valid.
+            </summary>
+            <returns>
+            The <see cref="T:System.Guid" /> value being set.
+            </returns>
+            <param name="value">
+            The <see cref="T:System.Guid" /> value.
+            </param>
+            <param name="propertyName">Name of the property that is being validated.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.StructuralObject.SetValidValue(System.Guid)">
+            <summary>
+            Makes sure the <see cref="T:System.Guid" /> value being set for a property is valid.
+            </summary>
+            <returns>
+            The <see cref="T:System.Guid" /> value being set.
+            </returns>
+            <param name="value">
+            The <see cref="T:System.Guid" /> value.
+            </param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.StructuralObject.SetValidValue(System.Nullable{System.Guid},System.String)">
+            <summary>
+            Makes sure the <see cref="T:System.Guid" /> value being set for a property is valid.
+            </summary>
+            <returns>
+            The nullable <see cref="T:System.Guid" /> value being set.
+            </returns>
+            <param name="value">
+            The nullable <see cref="T:System.Guid" /> value.
+            </param>
+            <param name="propertyName">The name of the property that is being validated.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.StructuralObject.SetValidValue(System.Nullable{System.Guid})">
+            <summary>
+            Makes sure the <see cref="T:System.Guid" /> value being set for a property is valid.
+            </summary>
+            <returns>
+            The nullable <see cref="T:System.Guid" /> value being set.
+            </returns>
+            <param name="value">
+            The nullable <see cref="T:System.Guid" /> value.
+            </param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.StructuralObject.SetValidValue(System.Int16,System.String)">
+            <summary>
+            Makes sure the <see cref="T:System.Int16" /> value being set for a property is valid.
+            </summary>
+            <returns>
+            The <see cref="T:System.Int16" /> value being set.
+            </returns>
+            <param name="value">
+            The <see cref="T:System.Int16" /> value.
+            </param>
+            <param name="propertyName">The name of the property that is being validated.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.StructuralObject.SetValidValue(System.Int16)">
+            <summary>
+            Makes sure the <see cref="T:System.Int16" /> value being set for a property is valid.
+            </summary>
+            <returns>
+            The <see cref="T:System.Int16" /> value being set.
+            </returns>
+            <param name="value">
+            The <see cref="T:System.Int16" /> value.
+            </param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.StructuralObject.SetValidValue(System.Nullable{System.Int16},System.String)">
+            <summary>
+            Makes sure the <see cref="T:System.Int16" /> value being set for a property is valid.
+            </summary>
+            <returns>
+            The nullable <see cref="T:System.Int16" /> value being set.
+            </returns>
+            <param name="value">
+            The nullable <see cref="T:System.Int16" /> value.
+            </param>
+            <param name="propertyName">The name of the property that is being validated.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.StructuralObject.SetValidValue(System.Nullable{System.Int16})">
+            <summary>
+            Makes sure the <see cref="T:System.Int16" /> value being set for a property is valid.
+            </summary>
+            <returns>
+            The nullable <see cref="T:System.Int16" /> value being set.
+            </returns>
+            <param name="value">
+            The nullable <see cref="T:System.Int16" /> value.
+            </param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.StructuralObject.SetValidValue(System.Int32,System.String)">
+            <summary>
+            Makes sure the <see cref="T:System.Int32" /> value being set for a property is valid.
+            </summary>
+            <returns>
+            The <see cref="T:System.Int32" /> value being set.
+            </returns>
+            <param name="value">
+            The <see cref="T:System.Int32" /> value.
+            </param>
+            <param name="propertyName">The name of the property that is being validated.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.StructuralObject.SetValidValue(System.Int32)">
+            <summary>
+            Makes sure the <see cref="T:System.Int32" /> value being set for a property is valid.
+            </summary>
+            <returns>
+            The <see cref="T:System.Int32" /> value being set.
+            </returns>
+            <param name="value">
+            The <see cref="T:System.Int32" /> value.
+            </param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.StructuralObject.SetValidValue(System.Nullable{System.Int32},System.String)">
+            <summary>
+            Makes sure the <see cref="T:System.Int32" /> value being set for a property is valid.
+            </summary>
+            <returns>
+            The nullable <see cref="T:System.Int32" /> value being set.
+            </returns>
+            <param name="value">
+            The nullable <see cref="T:System.Int32" /> value.
+            </param>
+            <param name="propertyName">The name of the property that is being validated.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.StructuralObject.SetValidValue(System.Nullable{System.Int32})">
+            <summary>
+            Makes sure the <see cref="T:System.Int32" /> value being set for a property is valid.
+            </summary>
+            <returns>
+            The nullable <see cref="T:System.Int32" /> value being set.
+            </returns>
+            <param name="value">
+            The nullable <see cref="T:System.Int32" /> value.
+            </param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.StructuralObject.SetValidValue(System.Int64,System.String)">
+            <summary>
+            Makes sure the <see cref="T:System.Int64" /> value being set for a property is valid.
+            </summary>
+            <returns>
+            The <see cref="T:System.Int64" /> value being set.
+            </returns>
+            <param name="value">
+            The <see cref="T:System.Int64" /> value.
+            </param>
+            <param name="propertyName">The name of the property that is being validated.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.StructuralObject.SetValidValue(System.Int64)">
+            <summary>
+            Makes sure the <see cref="T:System.Int64" /> value being set for a property is valid.
+            </summary>
+            <returns>
+            The <see cref="T:System.Int64" /> value being set.
+            </returns>
+            <param name="value">
+            The <see cref="T:System.Int64" /> value.
+            </param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.StructuralObject.SetValidValue(System.Nullable{System.Int64},System.String)">
+            <summary>
+            Makes sure the <see cref="T:System.Int64" /> value being set for a property is valid.
+            </summary>
+            <returns>
+            The nullable <see cref="T:System.Int64" /> value being set.
+            </returns>
+            <param name="value">
+            The nullable <see cref="T:System.Int64" /> value.
+            </param>
+            <param name="propertyName">The name of the property that is being validated.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.StructuralObject.SetValidValue(System.Nullable{System.Int64})">
+            <summary>
+            Makes sure the <see cref="T:System.Int64" /> value being set for a property is valid.
+            </summary>
+            <returns>
+            The nullable <see cref="T:System.Int64" /> value being set.
+            </returns>
+            <param name="value">
+            The nullable <see cref="T:System.Int64" /> value.
+            </param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.StructuralObject.SetValidValue(System.UInt16,System.String)">
+            <summary>
+            Makes sure the <see cref="T:System.UInt16" /> value being set for a property is valid.
+            </summary>
+            <returns>
+            The <see cref="T:System.UInt16" /> value being set.
+            </returns>
+            <param name="value">
+            The <see cref="T:System.UInt16" /> value.
+            </param>
+            <param name="propertyName">The name of the property that is being validated.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.StructuralObject.SetValidValue(System.UInt16)">
+            <summary>
+            Makes sure the <see cref="T:System.UInt16" /> value being set for a property is valid.
+            </summary>
+            <returns>
+            The <see cref="T:System.UInt16" /> value being set.
+            </returns>
+            <param name="value">
+            The <see cref="T:System.UInt16" /> value.
+            </param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.StructuralObject.SetValidValue(System.Nullable{System.UInt16},System.String)">
+            <summary>Makes sure the UInt16 value being set for a property is valid.</summary>
+            <returns>The nullable UInt16 value being set.</returns>
+            <param name="value">The nullable UInt16 value.</param>
+            <param name="propertyName">The name of the property that is being validated.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.StructuralObject.SetValidValue(System.Nullable{System.UInt16})">
+            <summary>Makes sure the UInt16 value being set for a property is valid.</summary>
+            <returns>The nullable UInt16 value being set.</returns>
+            <param name="value">The nullable UInt16 value.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.StructuralObject.SetValidValue(System.UInt32,System.String)">
+            <summary>
+            Makes sure the <see cref="T:System.UInt32" /> value being set for a property is valid.
+            </summary>
+            <returns>
+            The <see cref="T:System.UInt32" /> value being set.
+            </returns>
+            <param name="value">
+            The <see cref="T:System.UInt32" /> value.
+            </param>
+            <param name="propertyName">The name of the property that is being validated.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.StructuralObject.SetValidValue(System.UInt32)">
+            <summary>
+            Makes sure the <see cref="T:System.UInt32" /> value being set for a property is valid.
+            </summary>
+            <returns>
+            The <see cref="T:System.UInt32" /> value being set.
+            </returns>
+            <param name="value">
+            The <see cref="T:System.UInt32" /> value.
+            </param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.StructuralObject.SetValidValue(System.Nullable{System.UInt32},System.String)">
+            <summary>Makes sure the UInt32 value being set for a property is valid.</summary>
+            <returns>The nullable UInt32 value being set.</returns>
+            <param name="value">The nullable UInt32 value.</param>
+            <param name="propertyName">The name of the property that is being validated.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.StructuralObject.SetValidValue(System.Nullable{System.UInt32})">
+            <summary>Makes sure the UInt32 value being set for a property is valid.</summary>
+            <returns>The nullable UInt32 value being set.</returns>
+            <param name="value">The nullable UInt32 value.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.StructuralObject.SetValidValue(System.UInt64,System.String)">
+            <summary>
+            Makes sure the <see cref="T:System.UInt64" /> value being set for a property is valid.
+            </summary>
+            <returns>
+            The <see cref="T:System.UInt64" /> value being set.
+            </returns>
+            <param name="value">
+            The <see cref="T:System.UInt64" /> value.
+            </param>
+            <param name="propertyName">The name of the property that is being validated.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.StructuralObject.SetValidValue(System.UInt64)">
+            <summary>
+            Makes sure the <see cref="T:System.UInt64" /> value being set for a property is valid.
+            </summary>
+            <returns>
+            The <see cref="T:System.UInt64" /> value being set.
+            </returns>
+            <param name="value">
+            The <see cref="T:System.UInt64" /> value.
+            </param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.StructuralObject.SetValidValue(System.Nullable{System.UInt64},System.String)">
+            <summary>
+            Makes sure the <see cref="T:System.UInt64" /> value being set for a property is valid.
+            </summary>
+            <returns>The nullable UInt64 value being set.</returns>
+            <param name="value">The nullable UInt64 value.</param>
+            <param name="propertyName">The name of the property that is being validated.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.StructuralObject.SetValidValue(System.Nullable{System.UInt64})">
+            <summary>
+            Makes sure the <see cref="T:System.UInt64" /> value being set for a property is valid.
+            </summary>
+            <returns>The nullable UInt64 value being set.</returns>
+            <param name="value">The nullable UInt64 value.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.StructuralObject.SetValidValue(System.String,System.Boolean,System.String)">
+            <summary>Validates that the property is not null, and throws if it is.</summary>
+            <returns>The validated property.</returns>
+            <param name="value">The string value to be checked.</param>
+            <param name="isNullable">Flag indicating if this property is allowed to be null.</param>
+            <param name="propertyName">The name of the property that is being validated.</param>
+            <exception cref="T:System.Data.ConstraintException">The string value is null for a non-nullable string.</exception>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.StructuralObject.SetValidValue(System.String,System.Boolean)">
+            <summary>Validates that the property is not null, and throws if it is.</summary>
+            <returns>
+            The validated <see cref="T:System.String" /> value.
+            </returns>
+            <param name="value">The string value to be checked.</param>
+            <param name="isNullable">Flag indicating if this property is allowed to be null.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.StructuralObject.SetValidValue(System.Data.Entity.Spatial.DbGeography,System.Boolean,System.String)">
+            <summary>Validates that the property is not null, and throws if it is.</summary>
+            <returns>
+            The <see cref="T:System.Data.Entity.Spatial.DbGeography" /> value being set.
+            </returns>
+            <param name="value">
+            The <see cref="T:System.Data.Entity.Spatial.DbGeography" /> value to be checked.
+            </param>
+            <param name="isNullable">Flag indicating if this property is allowed to be null.</param>
+            <param name="propertyName">Name of the property that is being validated.</param>
+            <exception cref="T:System.Data.ConstraintException">The value is null for a non-nullable property.</exception>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.StructuralObject.SetValidValue(System.Data.Entity.Spatial.DbGeography,System.Boolean)">
+            <summary>Validates that the property is not null, and throws if it is.</summary>
+            <returns>
+            The <see cref="T:System.Data.Entity.Spatial.DbGeography" /> value being set.
+            </returns>
+            <param name="value">
+            <see cref="T:System.Data.Entity.Spatial.DbGeography" /> value to be checked.
+            </param>
+            <param name="isNullable">Flag indicating if this property is allowed to be null.</param>
+            <exception cref="T:System.Data.ConstraintException">The value is null for a non-nullable property.</exception>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.StructuralObject.SetValidValue(System.Data.Entity.Spatial.DbGeometry,System.Boolean,System.String)">
+            <summary>Validates that the property is not null, and throws if it is.</summary>
+            <returns>
+            The <see cref="T:System.Data.Entity.Spatial.DbGeometry" /> value being set.
+            </returns>
+            <param name="value">
+            <see cref="T:System.Data.Entity.Spatial.DbGeometry" /> value to be checked.
+            </param>
+            <param name="isNullable">Flag indicating if this property is allowed to be null.</param>
+    

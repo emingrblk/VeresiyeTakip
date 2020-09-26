@@ -1,0 +1,8 @@
+[$RootKey$\Menus]
+"{f5aee24d-62a8-4a0e-8164-75a76da2ddb7}"=", 1000.ctmenu, 1"
+
+[$RootKey$\Packages\{f5aee24d-62a8-4a0e-8164-75a76da2ddb7}]
+@="Microsoft.VisualStudio.Progression.Native.VSPackage, Microsoft.VisualStudio.Progression.Native.VSPackage, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
+"Assembly"="Microsoft.VisualStudio.Progression.Native.VSPackage, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
+"Class"="Microsoft.VisualStudio.Progression.NativeProviderVSPackage"
+"InprocServer32"="$System$\mscoree.dll"

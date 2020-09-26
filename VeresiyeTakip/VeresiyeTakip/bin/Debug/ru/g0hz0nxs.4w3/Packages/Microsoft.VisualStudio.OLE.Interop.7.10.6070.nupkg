@@ -1,0 +1,1240 @@
+ts a referential constraint between two entities specifying the "to" and "from" ends of the relationship.
+            </summary>
+        </member>
+        <member name="M:System.Data.Entity.Core.Metadata.Edm.ReferentialConstraint.#ctor(System.Data.Entity.Core.Metadata.Edm.RelationshipEndMember,System.Data.Entity.Core.Metadata.Edm.RelationshipEndMember,System.Collections.Generic.IEnumerable{System.Data.Entity.Core.Metadata.Edm.EdmProperty},System.Collections.Generic.IEnumerable{System.Data.Entity.Core.Metadata.Edm.EdmProperty})">
+            <summary>
+            Constructs a new constraint on the relationship
+            </summary>
+            <param name="fromRole"> role from which the relationship originates </param>
+            <param name="toRole"> role to which the relationship is linked/targeted to </param>
+            <param name="fromProperties"> properties on entity type of to role which take part in the constraint </param>
+            <param name="toProperties"> properties on entity type of from role which take part in the constraint </param>
+            <exception cref="T:System.ArgumentNullException">Argument Null exception if any of the arguments is null</exception>
+        </member>
+        <member name="M:System.Data.Entity.Core.Metadata.Edm.ReferentialConstraint.ToString">
+            <summary>
+            Returns the combination of the names of the
+            <see
+                cref="P:System.Data.Entity.Core.Metadata.Edm.ReferentialConstraint.FromRole" />
+            and the
+            <see
+                cref="P:System.Data.Entity.Core.Metadata.Edm.ReferentialConstraint.ToRole" />
+            .
+            </summary>
+            <returns>
+            The combination of the names of the
+            <see
+                cref="P:System.Data.Entity.Core.Metadata.Edm.ReferentialConstraint.FromRole" />
+            and the
+            <see
+                cref="P:System.Data.Entity.Core.Metadata.Edm.ReferentialConstraint.ToRole" />
+            .
+            </returns>
+        </member>
+        <member name="P:System.Data.Entity.Core.Metadata.Edm.ReferentialConstraint.BuiltInTypeKind">
+            <summary>
+            Gets the built-in type kind for this <see cref="T:System.Data.Entity.Core.Metadata.Edm.ReferentialConstraint" />.
+            </summary>
+            <returns>
+            A <see cref="T:System.Data.Entity.Core.Metadata.Edm.BuiltInTypeKind" /> object that represents the built-in type kind for this
+            <see
+                cref="T:System.Data.Entity.Core.Metadata.Edm.ReferentialConstraint" />
+            .
+            </returns>
+        </member>
+        <member name="P:System.Data.Entity.Core.Metadata.Edm.ReferentialConstraint.FromRole">
+            <summary>
+            Gets the "from role" that takes part in this
+            <see cref="T:System.Data.Entity.Core.Metadata.Edm.ReferentialConstraint"/>
+            .
+            </summary>
+            <returns>
+            A <see cref="T:System.Data.Entity.Core.Metadata.Edm.RelationshipEndMember"/> object that represents the "from role" that takes part in this
+            <see cref="T:System.Data.Entity.Core.Metadata.Edm.ReferentialConstraint"/>
+            .
+            </returns>
+            <exception cref="T:System.ArgumentNullException">Thrown if value passed into setter is null</exception>
+            <exception cref="T:System.InvalidOperationException">Thrown if the ReferentialConstraint instance is in ReadOnly state</exception>
+        </member>
+        <member name="P:System.Data.Entity.Core.Metadata.Edm.ReferentialConstraint.ToRole">
+            <summary>
+            Gets the "to role" that takes part in this <see cref="T:System.Data.Entity.Core.Metadata.Edm.ReferentialConstraint"/>.
+            </summary>
+            <returns>
+            A <see cref="T:System.Data.Entity.Core.Metadata.Edm.RelationshipEndMember"/> object that represents the "to role" that takes part in this
+            <see cref="T:System.Data.Entity.Core.Metadata.Edm.ReferentialConstraint"/>
+            .
+            </returns>
+            <exception cref="T:System.ArgumentNullException">Thrown if value passed into setter is null</exception>
+            <exception cref="T:System.InvalidOperationException">Thrown if the ReferentialConstraint instance is in ReadOnly state</exception>
+        </member>
+        <member name="P:System.Data.Entity.Core.Metadata.Edm.ReferentialConstraint.FromProperties">
+            <summary>
+            Gets the list of properties for the "from role" on which this
+            <see
+                cref="T:System.Data.Entity.Core.Metadata.Edm.ReferentialConstraint" />
+            is defined.
+            </summary>
+            <returns>
+            A collection of type <see cref="T:System.Data.Entity.Core.Metadata.Edm.ReadOnlyMetadataCollection`1" /> that contains the list of properties for "from role" on which this
+            <see
+                cref="T:System.Data.Entity.Core.Metadata.Edm.ReferentialConstraint" />
+            is defined.
+            </returns>
+        </member>
+        <member name="P:System.Data.Entity.Core.Metadata.Edm.ReferentialConstraint.ToProperties">
+            <summary>
+            Gets the list of properties for the "to role" on which this
+            <see
+                cref="T:System.Data.Entity.Core.Metadata.Edm.ReferentialConstraint" />
+            is defined.
+            </summary>
+            <returns>
+            A collection of type <see cref="T:System.Data.Entity.Core.Metadata.Edm.ReadOnlyMetadataCollection`1" /> that contains the list of properties for the "to role" on which this
+            <see
+                cref="T:System.Data.Entity.Core.Metadata.Edm.ReferentialConstraint" />
+            is defined.
+            </returns>
+        </member>
+        <member name="T:System.Data.Entity.Core.Metadata.Edm.RefType">
+            <summary>
+            Class representing a ref type
+            </summary>
+        </member>
+        <member name="M:System.Data.Entity.Core.Metadata.Edm.RefType.GetHashCode">
+            <inheritdoc />
+        </member>
+        <member name="M:System.Data.Entity.Core.Metadata.Edm.RefType.Equals(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="P:System.Data.Entity.Core.Metadata.Edm.RefType.BuiltInTypeKind">
+            <summary>
+            Gets the built-in type kind for this <see cref="T:System.Data.Entity.Core.Metadata.Edm.RefType" />.
+            </summary>
+            <returns>
+            A <see cref="T:System.Data.Entity.Core.Metadata.Edm.BuiltInTypeKind" /> object that represents the built-in type kind for this
+            <see
+                cref="T:System.Data.Entity.Core.Metadata.Edm.RefType" />
+            .
+            </returns>
+        </member>
+        <member name="P:System.Data.Entity.Core.Metadata.Edm.RefType.ElementType">
+            <summary>
+            Gets the entity type referenced by this <see cref="T:System.Data.Entity.Core.Metadata.Edm.RefType" />.
+            </summary>
+            <returns>
+            An <see cref="T:System.Data.Entity.Core.Metadata.Edm.EntityTypeBase" /> object that represents the entity type referenced by this
+            <see
+                cref="T:System.Data.Entity.Core.Metadata.Edm.RefType" />
+            .
+            </returns>
+        </member>
+        <member name="T:System.Data.Entity.Core.Metadata.Edm.RelationshipMultiplicity">
+            <summary>
+            Represents the multiplicity information about the end of a relationship type
+            </summary>
+        </member>
+        <member name="F:System.Data.Entity.Core.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne">
+            <summary>
+            Lower Bound is Zero and Upper Bound is One
+            </summary>
+        </member>
+        <member name="F:System.Data.Entity.Core.Metadata.Edm.RelationshipMultiplicity.One">
+            <summary>
+            Both lower bound and upper bound is one
+            </summary>
+        </member>
+        <member name="F:System.Data.Entity.Core.Metadata.Edm.RelationshipMultiplicity.Many">
+            <summary>
+            Lower bound is zero and upper bound is null
+            </summary>
+        </member>
+        <member name="T:System.Data.Entity.Core.Metadata.Edm.RowType">
+            <summary>
+            Represents the Edm Row Type
+            </summary>
+        </member>
+        <member name="M:System.Data.Entity.Core.Metadata.Edm.RowType.Create(System.Collections.Generic.IEnumerable{System.Data.Entity.Core.Metadata.Edm.EdmProperty},System.Collections.Generic.IEnumerable{System.Data.Entity.Core.Metadata.Edm.MetadataProperty})">
+            <summary>
+            The factory method for constructing the <see cref="T:System.Data.Entity.Core.Metadata.Edm.RowType"/> object.
+            </summary>
+            <param name="properties">Properties of the row type object.</param>
+            <param name="metadataProperties">Metadata properties that will be added to the function. Can be null.</param>
+            <returns>
+            A new, read-only instance of the <see cref="T:System.Data.Entity.Core.Metadata.Edm.RowType"/> object.
+            </returns>
+        </member>
+        <member name="P:System.Data.Entity.Core.Metadata.Edm.RowType.BuiltInTypeKind">
+            <summary>
+            Gets the built-in type kind for this <see cref="T:System.Data.Entity.Core.Metadata.Edm.RowType" />.
+            </summary>
+            <returns>
+            A <see cref="T:System.Data.Entity.Core.Metadata.Edm.BuiltInTypeKind" /> object that represents the built-in type kind for this
+            <see
+                cref="T:System.Data.Entity.Core.Metadata.Edm.RowType" />
+            .
+            </returns>
+        </member>
+        <member name="P:System.Data.Entity.Core.Metadata.Edm.RowType.Properties">
+            <summary>
+            Gets the list of properties on this <see cref="T:System.Data.Entity.Core.Metadata.Edm.RowType" />.
+            </summary>
+            <returns>
+            A collection of type <see cref="T:System.Data.Entity.Core.Metadata.Edm.ReadOnlyMetadataCollection`1" /> that contains the list of properties on this
+            <see
+                cref="T:System.Data.Entity.Core.Metadata.Edm.RowType" />
+            .
+            </returns>
+        </member>
+        <member name="P:System.Data.Entity.Core.Metadata.Edm.RowType.DeclaredProperties">
+            <summary>Gets a collection of the properties defined by the current type.</summary>
+            <returns>A collection of the properties defined by the current type.</returns>
+        </member>
+        <member name="T:System.Data.Entity.Core.Metadata.Edm.TypeUsage">
+            <summary>
+            Class representing a type information for an item
+            </summary>
+        </member>
+        <member name="M:System.Data.Entity.Core.Metadata.Edm.TypeUsage.Create(System.Data.Entity.Core.Metadata.Edm.EdmType,System.Collections.Generic.IEnumerable{System.Data.Entity.Core.Metadata.Edm.Facet})">
+            <summary>
+            Factory method for creating a TypeUsage with specified EdmType and facets
+            </summary>
+            <param name="edmType"> EdmType for which to create a type usage </param>
+            <param name="facets"> facets to be copied into the new TypeUsage </param>
+            <returns> new TypeUsage instance </returns>
+        </member>
+        <member name="M:System.Data.Entity.Core.Metadata.Edm.TypeUsage.CreateDefaultTypeUsage(System.Data.Entity.Core.Metadata.Edm.EdmType)">
+            <summary>
+            Creates a <see cref="T:System.Data.Entity.Core.Metadata.Edm.TypeUsage" /> object with the specified conceptual model type.
+            </summary>
+            <returns>
+            A <see cref="T:System.Data.Entity.Core.Metadata.Edm.TypeUsage" /> object with the default facet values for the specified
+            <see
+                cref="T:System.Data.Entity.Core.Metadata.Edm.EdmType" />
+            .
+            </returns>
+            <param name="edmType">
+            A <see cref="T:System.Data.Entity.Core.Metadata.Edm.EdmType" /> for which the
+            <see
+                cref="T:System.Data.Entity.Core.Metadata.Edm.TypeUsage" />
+            object is created.
+            </param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Metadata.Edm.TypeUsage.CreateStringTypeUsage(System.Data.Entity.Core.Metadata.Edm.PrimitiveType,System.Boolean,System.Boolean,System.Int32)">
+            <summary>
+            Creates a <see cref="T:System.Data.Entity.Core.Metadata.Edm.TypeUsage" /> object to describe a string type by using the specified facet values.
+            </summary>
+            <returns>
+            A <see cref="T:System.Data.Entity.Core.Metadata.Edm.TypeUsage" /> object describing a string type by using the specified facet values.
+            </returns>
+            <param name="primitiveType">
+            A <see cref="T:System.Data.Entity.Core.Metadata.Edm.PrimitiveType" /> for which the
+            <see
+                cref="T:System.Data.Entity.Core.Metadata.Edm.TypeUsage" />
+            object is created.
+            </param>
+            <param name="isUnicode">true to set the character-encoding standard of the string type to Unicode; otherwise, false.</param>
+            <param name="isFixedLength">true to set the character-encoding standard of the string type to Unicode; otherwise, false.</param>
+            <param name="maxLength">true to set the length of the string type to fixed; otherwise, false.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Metadata.Edm.TypeUsage.CreateStringTypeUsage(System.Data.Entity.Core.Metadata.Edm.PrimitiveType,System.Boolean,System.Boolean)">
+            <summary>
+            Creates a <see cref="T:System.Data.Entity.Core.Metadata.Edm.TypeUsage" /> object to describe a string type by using the specified facet values and unbounded MaxLength.
+            </summary>
+            <returns>
+            A <see cref="T:System.Data.Entity.Core.Metadata.Edm.TypeUsage" /> object describing a string type by using the specified facet values and unbounded MaxLength.
+            </returns>
+            <param name="primitiveType">
+            A <see cref="T:System.Data.Entity.Core.Metadata.Edm.PrimitiveType" /> for which the
+            <see
+                cref="T:System.Data.Entity.Core.Metadata.Edm.TypeUsage" />
+            object is created.
+            </param>
+            <param name="isUnicode">true to set the character-encoding standard of the string type to Unicode; otherwise, false.</param>
+            <param name="isFixedLength">true to set the length of the string type to fixed; otherwise, false</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Metadata.Edm.TypeUsage.CreateBinaryTypeUsage(System.Data.Entity.Core.Metadata.Edm.PrimitiveType,System.Boolean,System.Int32)">
+            <summary>
+            Creates a <see cref="T:System.Data.Entity.Core.Metadata.Edm.TypeUsage" /> object to describe a binary type by using the specified facet values.
+            </summary>
+            <returns>
+            A <see cref="T:System.Data.Entity.Core.Metadata.Edm.TypeUsage" /> object describing a binary type by using the specified facet values.
+            </returns>
+            <param name="primitiveType">
+            A <see cref="T:System.Data.Entity.Core.Metadata.Edm.PrimitiveType" /> for which the
+            <see
+                cref="T:System.Data.Entity.Core.Metadata.Edm.TypeUsage" />
+            object is created.
+            </param>
+            <param name="isFixedLength">true to set the length of the binary type to fixed; otherwise, false.</param>
+            <param name="maxLength">The maximum length of the binary type.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Metadata.Edm.TypeUsage.CreateBinaryTypeUsage(System.Data.Entity.Core.Metadata.Edm.PrimitiveType,System.Boolean)">
+            <summary>
+            Creates a <see cref="T:System.Data.Entity.Core.Metadata.Edm.TypeUsage" /> object to describe a binary type by using the specified facet values.
+            </summary>
+            <returns>
+            A <see cref="T:System.Data.Entity.Core.Metadata.Edm.TypeUsage" /> object describing a binary type by using the specified facet values.
+            </returns>
+            <param name="primitiveType">
+            A <see cref="T:System.Data.Entity.Core.Metadata.Edm.PrimitiveType" /> for which the
+            <see
+                cref="T:System.Data.Entity.Core.Metadata.Edm.TypeUsage" />
+            object is created.
+            </param>
+            <param name="isFixedLength">true to set the length of the binary type to fixed; otherwise, false. </param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Metadata.Edm.TypeUsage.CreateDateTimeTypeUsage(System.Data.Entity.Core.Metadata.Edm.PrimitiveType,System.Nullable{System.Byte})">
+            <summary>
+            Creates a <see cref="T:System.Data.Metadata.Edm.DateTimeTypeUsage" /> object of the type that the parameters describe.
+            </summary>
+            <returns>
+            A <see cref="T:System.Data.Metadata.Edm.DateTimeTypeUsage" /> object.
+            </returns>
+            <param name="primitiveType">
+            The simple type that defines the units of measurement of the <see cref="T:System." />DateTime object.
+            </param>
+            <param name="precision">
+            The degree of granularity of the <see cref="T:System." />DateTimeOffset in fractions of a second, based on the number of decimal places supported. For example a precision of 3 means the granularity supported is milliseconds.
+            </param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Metadata.Edm.TypeUsage.CreateDateTimeOffsetTypeUsage(System.Data.Entity.Core.Metadata.Edm.PrimitiveType,System.Nullable{System.Byte})">
+            <summary>
+            Creates a <see cref="T:System.Data.Metadata.Edm.DateTimeOffsetTypeUsage" /> object of the type that the parameters describe.
+            </summary>
+            <returns>
+            A <see cref="T:System.Data.Metadata.Edm.DateTimeOffsetTypeUsage" /> object.
+            </returns>
+            <param name="primitiveType">The simple type that defines the units of measurement of the offset.</param>
+            <param name="precision">
+            The degree of granularity of the <see cref="T:System." />DateTimeOffset in fractions of a second, based on the number of decimal places supported. For example a precision of 3 means the granularity supported is milliseconds.
+            </param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Metadata.Edm.TypeUsage.CreateTimeTypeUsage(System.Data.Entity.Core.Metadata.Edm.PrimitiveType,System.Nullable{System.Byte})">
+            <summary>
+            Creates a <see cref="T:System.Data.Metadata.Edm.TimeTypeUsage" /> object of the type that the parameters describe.
+            </summary>
+            <returns>
+            A <see cref="T:System.Data.Metadata.Edm.TimeTypeUsage" /> object.
+            </returns>
+            <param name="primitiveType">
+            The simple type that defines the units of measurement of the <see cref="T:System." />DateTime object.
+            </param>
+            <param name="precision">
+            The degree of granularity of the <see cref="T:System." />DateTimeOffset in fractions of a second, based on the number of decimal places supported. For example a precision of 3 means the granularity supported is milliseconds.
+            </param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Metadata.Edm.TypeUsage.CreateDecimalTypeUsage(System.Data.Entity.Core.Metadata.Edm.PrimitiveType,System.Byte,System.Byte)">
+            <summary>
+            Creates a <see cref="T:System.Data.Entity.Core.Metadata.Edm.TypeUsage" /> object to describe a decimal type by using the specified facet values.
+            </summary>
+            <returns>
+            A <see cref="T:System.Data.Entity.Core.Metadata.Edm.TypeUsage" /> object describing a decimal type by using the specified facet values.
+            </returns>
+            <param name="primitiveType">
+            A <see cref="T:System.Data.Entity.Core.Metadata.Edm.PrimitiveType" /> for which the
+            <see
+                cref="T:System.Data.Entity.Core.Metadata.Edm.TypeUsage" />
+            object is created.
+            </param>
+            <param name="precision">
+            The precision of the decimal type as type <see cref="T:System.Byte" />.
+            </param>
+            <param name="scale">
+            The scale of the decimal type as type <see cref="T:System.Byte" />.
+            </param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Metadata.Edm.TypeUsage.CreateDecimalTypeUsage(System.Data.Entity.Core.Metadata.Edm.PrimitiveType)">
+            <summary>
+            Creates a <see cref="T:System.Data.Entity.Core.Metadata.Edm.TypeUsage" /> object to describe a decimal type with unbounded precision and scale facet values.
+            </summary>
+            <returns>
+            A <see cref="T:System.Data.Entity.Core.Metadata.Edm.TypeUsage" /> object describing a decimal type with unbounded precision and scale facet values.
+            </returns>
+            <param name="primitiveType">
+            A <see cref="T:System.Data.Entity.Core.Metadata.Edm.PrimitiveType" /> for which the
+            <see
+                cref="T:System.Data.Entity.Core.Metadata.Edm.TypeUsage" />
+            object is created.
+            </param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Metadata.Edm.TypeUsage.IsSubtypeOf(System.Data.Entity.Core.Metadata.Edm.TypeUsage)">
+            <summary>
+            Checks whether this <see cref="T:System.Data.Entity.Core.Metadata.Edm.TypeUsage" /> is a subtype of the specified
+            <see
+                cref="T:System.Data.Entity.Core.Metadata.Edm.TypeUsage" />
+            .
+            </summary>
+            <returns>
+            true if this <see cref="T:System.Data.Entity.Core.Metadata.Edm.TypeUsage" /> is a subtype of the specified
+            <see
+                cref="T:System.Data.Entity.Core.Metadata.Edm.TypeUsage" />
+            ; otherwise, false.
+            </returns>
+            <param name="typeUsage">
+            The <see cref="T:System.Data.Entity.Core.Metadata.Edm.TypeUsage" /> object to be checked.
+            </param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Metadata.Edm.TypeUsage.ToString">
+            <summary>
+            Returns the full name of the type described by this <see cref="T:System.Data.Entity.Core.Metadata.Edm.TypeUsage" />.
+            </summary>
+            <returns>
+            The full name of the type described by this <see cref="T:System.Data.Entity.Core.Metadata.Edm.TypeUsage" /> as string.
+            </returns>
+        </member>
+        <member name="P:System.Data.Entity.Core.Metadata.Edm.TypeUsage.BuiltInTypeKind">
+            <summary>
+            Gets the built-in type kind for this <see cref="T:System.Data.Entity.Core.Metadata.Edm.TypeUsage" />.
+            </summary>
+            <returns>
+            A <see cref="T:System.Data.Entity.Core.Metadata.Edm.BuiltInTypeKind" /> object that represents the built-in type kind for this
+            <see
+                cref="T:System.Data.Entity.Core.Metadata.Edm.TypeUsage" />
+            .
+            </returns>
+        </member>
+        <member name="P:System.Data.Entity.Core.Metadata.Edm.TypeUsage.EdmType">
+            <summary>
+            Gets the type information described by this <see cref="T:System.Data.Entity.Core.Metadata.Edm.TypeUsage" />.
+            </summary>
+            <returns>
+            An <see cref="T:System.Data.Entity.Core.Metadata.Edm.EdmType" /> object that represents the type information described by this
+            <see
+                cref="T:System.Data.Entity.Core.Metadata.Edm.TypeUsage" />
+            .
+            </returns>
+        </member>
+        <member name="P:System.Data.Entity.Core.Metadata.Edm.TypeUsage.Facets">
+            <summary>
+            Gets the list of facets for the type that is described by this
+            <see
+                cref="T:System.Data.Entity.Core.Metadata.Edm.TypeUsage" />
+            .
+            </summary>
+            <returns>
+            A collection of type <see cref="T:System.Data.Entity.Core.Metadata.Edm.ReadOnlyMetadataCollection`1" /> that contains the list of facets for the type that is described by this
+            <see
+                cref="T:System.Data.Entity.Core.Metadata.Edm.TypeUsage" />
+            .
+            </returns>
+        </member>
+        <member name="P:System.Data.Entity.Core.Metadata.Edm.TypeUsage.ModelTypeUsage">
+            <summary>
+            Returns a Model type usage for a provider type
+            </summary>
+            <value> Model (CSpace) type usage </value>
+        </member>
+        <member name="F:System.Data.Entity.Core.Metadata.Edm.MetadataArtifactLoader.ExtensionCheck.None">
+            <summary>
+            Do not perform any extension check
+            </summary>
+        </member>
+        <member name="F:System.Data.Entity.Core.Metadata.Edm.MetadataArtifactLoader.ExtensionCheck.Specific">
+            <summary>
+            Check the extension against a specific value
+            </summary>
+        </member>
+        <member name="F:System.Data.Entity.Core.Metadata.Edm.MetadataArtifactLoader.ExtensionCheck.All">
+            <summary>
+            Check the extension against the set of acceptable extensions
+            </summary>
+        </member>
+        <member name="T:System.Data.Entity.Core.Metadata.Edm.MetadataWorkspace">
+            <summary>
+            Runtime Metadata Workspace
+            </summary>
+        </member>
+        <member name="M:System.Data.Entity.Core.Metadata.Edm.MetadataWorkspace.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:System.Data.Entity.Core.Metadata.Edm.MetadataWorkspace" /> class.
+            </summary>
+        </member>
+        <member name="M:System.Data.Entity.Core.Metadata.Edm.MetadataWorkspace.#ctor(System.Func{System.Data.Entity.Core.Metadata.Edm.EdmItemCollection},System.Func{System.Data.Entity.Core.Metadata.Edm.StoreItemCollection},System.Func{System.Data.Entity.Core.Mapping.StorageMappingItemCollection},System.Func{System.Data.Entity.Core.Metadata.Edm.ObjectItemCollection})">
+            <summary>
+            Constructs a <see cref="T:System.Data.Entity.Core.Metadata.Edm.MetadataWorkspace"/> with loaders for all item collections (<see cref="T:System.Data.Entity.Core.Metadata.Edm.ItemCollection"/>)
+            needed by EF except the o/c mapping which will be created automatically based on the given o-space and c-space
+            loaders. The item collection delegates are executed lazily when a given collection is used for the first
+            time. It is acceptable to pass a delegate that returns null if the collection will never be used, but this
+            is rarely done, and any attempt by EF to use the collection in such cases will result in an exception.
+            </summary>
+            <param name="cSpaceLoader">Delegate to return the c-space (CSDL) item collection.</param>
+            <param name="sSpaceLoader">Delegate to return the s-space (SSDL) item collection.</param>
+            <param name="csMappingLoader">Delegate to return the c/s mapping (MSL) item collection.</param>
+            <param name="oSpaceLoader">Delegate to return the o-space item collection.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Metadata.Edm.MetadataWorkspace.#ctor(System.Func{System.Data.Entity.Core.Metadata.Edm.EdmItemCollection},System.Func{System.Data.Entity.Core.Metadata.Edm.StoreItemCollection},System.Func{System.Data.Entity.Core.Mapping.StorageMappingItemCollection})">
+            <summary>
+            Constructs a <see cref="T:System.Data.Entity.Core.Metadata.Edm.MetadataWorkspace"/> with loaders for all item collections (<see cref="T:System.Data.Entity.Core.Metadata.Edm.ItemCollection"/>)
+            that come from traditional EDMX mapping. Default o-space and o/c mapping collections will be used.
+            The item collection delegates are executed lazily when a given collection is used for the first
+            time. It is acceptable to pass a delegate that returns null if the collection will never be used, but this
+            is rarely done, and any attempt by EF to use the collection in such cases will result in an exception.
+            </summary>
+            <param name="cSpaceLoader">Delegate to return the c-space (CSDL) item collection.</param>
+            <param name="sSpaceLoader">Delegate to return the s-space (SSDL) item collection.</param>
+            <param name="csMappingLoader">Delegate to return the c/s mapping (MSL) item collection.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Metadata.Edm.MetadataWorkspace.#ctor(System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IEnumerable{System.Reflection.Assembly})">
+            <summary>
+            Initializes a new instance of the <see cref="T:System.Data.Entity.Core.Metadata.Edm.MetadataWorkspace" /> class using the specified paths and assemblies.
+            </summary>
+            <param name="paths">The paths to workspace metadata.</param>
+            <param name="assembliesToConsider">The names of assemblies used to construct workspace.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Metadata.Edm.MetadataWorkspace.CreateEntitySqlParser">
+            <summary>
+            Creates an <see cref="T:System.Data.Entity.Core.Common.EntitySql.EntitySqlParser" /> configured to use the
+            <see
+                cref="F:System.Data.Entity.Core.Metadata.Edm.DataSpace.CSpace" />
+            data space.
+            </summary>
+            <returns>The created parser object.</returns>
+        </member>
+        <member name="M:System.Data.Entity.Core.Metadata.Edm.MetadataWorkspace.CreateQueryCommandTree(System.Data.Entity.Core.Common.CommandTrees.DbExpression)">
+            <summary>
+            Creates a new <see cref="T:System.Data.Entity.Core.Common.CommandTrees.DbQueryCommandTree"/> bound to this metadata workspace based on the specified query expression.
+            </summary>
+            <returns>
+            A new <see cref="T:System.Data.Entity.Core.Common.CommandTrees.DbQueryCommandTree"/> with the specified expression as it's
+            <see cref="P:System.Data.Entity.Core.Common.CommandTrees.DbQueryCommandTree.Query"/>
+            property.
+            </returns>
+            <param name="query">
+            A <see cref="T:System.Data.Entity.Core.Common.CommandTrees.DbExpression"/> that defines the query.
+            </param>
+            <exception cref="T:System.ArgumentNullException">
+            If
+            <paramref name="query"/>
+            is null
+            </exception>
+            <exception cref="T:System.ArgumentException">
+            If
+            <paramref name="query"/>
+            contains metadata that cannot be resolved in this metadata workspace
+            </exception>
+            <exception cref="T:System.ArgumentException">
+            If
+            <paramref name="query"/>
+            is not structurally valid because it contains unresolvable variable references
+            </exception>
+        </member>
+        <member name="M:System.Data.Entity.Core.Metadata.Edm.MetadataWorkspace.GetItemCollection(System.Data.Entity.Core.Metadata.Edm.DataSpace)">
+            <summary>
+            Gets <see cref="T:System.Data.Entity.Core.Metadata.Edm.MetadataWorkspace" /> items.
+            </summary>
+            <returns>
+            The <see cref="T:System.Data.Entity.Core.Metadata.Edm.MetadataWorkspace" /> items.
+            </returns>
+            <param name="dataSpace">
+            The <see cref="T:System.Data.Entity.Core.Metadata.Edm.DataSpace" /> from which to retrieve items.
+            </param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Metadata.Edm.MetadataWorkspace.RegisterItemCollection(System.Data.Entity.Core.Metadata.Edm.ItemCollection)">
+            <summary>Registers the item collection with each associated data model.</summary>
+            <param name="collection">The output parameter collection that needs to be filled up.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Metadata.Edm.MetadataWorkspace.LoadFromAssembly(System.Reflection.Assembly)">
+            <summary>Loads metadata from the given assembly.</summary>
+            <param name="assembly">The assembly from which the metadata will be loaded.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Metadata.Edm.MetadataWorkspace.LoadFromAssembly(System.Reflection.Assembly,System.Action{System.String})">
+            <summary>Loads metadata from the given assembly.</summary>
+            <param name="assembly">The assembly from which the metadata will be loaded.</param>
+            <param name="logLoadMessage">The delegate for logging the load messages.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Metadata.Edm.MetadataWorkspace.GetItem``1(System.String,System.Data.Entity.Core.Metadata.Edm.DataSpace)">
+            <summary>Returns an item by using the specified identity and the data model.</summary>
+            <returns>The item that matches the given identity in the specified data model.</returns>
+            <param name="identity">The identity of the item.</param>
+            <param name="dataSpace">The conceptual model in which the item is searched.</param>
+            <typeparam name="T">The type returned by the method.</typeparam>
+            <exception cref="T:System.ArgumentException">Thrown if the space is not a valid space. Valid space is either C, O, CS or OCSpace</exception>
+        </member>
+        <member name="M:System.Data.Entity.Core.Metadata.Edm.MetadataWorkspace.TryGetItem``1(System.String,System.Data.Entity.Core.Metadata.Edm.DataSpace,``0@)">
+            <summary>Returns an item by using the specified identity and the data model.</summary>
+            <returns>true if there is an item that matches the search criteria; otherwise, false.</returns>
+            <param name="identity">The conceptual model on which the item is searched.</param>
+            <param name="space">The conceptual model on which the item is searched.</param>
+            <param name="item">
+            When this method returns, contains a <see cref="T:System.Data.Metadata.Edm.GlobalIem" /> object. This parameter is passed uninitialized.
+            </param>
+            <typeparam name="T">The type returned by the method.</typeparam>
+        </member>
+        <member name="M:System.Data.Entity.Core.Metadata.Edm.MetadataWorkspace.GetItem``1(System.String,System.Boolean,System.Data.Entity.Core.Metadata.Edm.DataSpace)">
+            <summary>Returns an item by using the specified identity and the data model.</summary>
+            <returns>The item that matches the given identity in the specified data model.</returns>
+            <param name="identity">The identity of the item.</param>
+            <param name="ignoreCase">true to perform the case-insensitive search; otherwise, false.</param>
+            <param name="dataSpace">The conceptual model on which the item is searched.</param>
+            <typeparam name="T">The type returned by the method.</typeparam>
+            <exception cref="T:System.ArgumentException">Thrown if the space is not a valid space. Valid space is either C, O, CS or OCSpace</exception>
+        </member>
+        <member name="M:System.Data.Entity.Core.Metadata.Edm.MetadataWorkspace.TryGetItem``1(System.String,System.Boolean,System.Data.Entity.Core.Metadata.Edm.DataSpace,``0@)">
+            <summary>Returns an item by using the specified identity and the data model.</summary>
+            <returns>true if there is an item that matches the search criteria; otherwise, false.</returns>
+            <param name="identity">The conceptual model on which the item is searched.</param>
+            <param name="ignoreCase">true to perform the case-insensitive search; otherwise, false.</param>
+            <param name="dataSpace">The conceptual model on which the item is searched.</param>
+            <param name="item">
+            When this method returns, contains a <see cref="T:System.Data.Metadata.Edm.GlobalIem" /> object. This parameter is passed uninitialized.
+            </param>
+            <typeparam name="T">The type returned by the method.</typeparam>
+        </member>
+        <member name="M:System.Data.Entity.Core.Metadata.Edm.MetadataWorkspace.GetItems``1(System.Data.Entity.Core.Metadata.Edm.DataSpace)">
+            <summary>Gets all the items in the specified data model.</summary>
+            <returns>
+            A collection of type <see cref="T:System.Collections.ObjectModel.ReadOnlyCollection`1"/> that contains all the items in the specified data model.
+            </returns>
+            <param name="dataSpace">The conceptual model for which the list of items is needed.</param>
+            <typeparam name="T">The type returned by the method.</typeparam>
+            <exception cref="T:System.ArgumentException">Thrown if the space is not a valid space. Valid space is either C, O, CS or OCSpace</exception>
+        </member>
+        <member name="M:System.Data.Entity.Core.Metadata.Edm.MetadataWorkspace.GetType(System.String,System.String,System.Data.Entity.Core.Metadata.Edm.DataSpace)">
+            <summary>
+            Returns an <see cref="T:System.Data.Entity.Core.Metadata.Edm.EdmType"/> object by using the specified type name, namespace name, and data model.
+            </summary>
+            <returns>
+            An <see cref="T:System.Data.Entity.Core.Metadata.Edm.EdmType"/> object that represents the type that matches the given type name and the namespace name in the specified data model. If there is no matched type, this method returns null.
+            </returns>
+            <param name="name">The name of the type.</param>
+            <param name="namespaceName">The namespace of the type.</param>
+            <param name="dataSpace">The conceptual model on which the type is searched.</param>
+            <exception cref="T:System.ArgumentException">Thrown if the space is not a valid space. Valid space is either C, O, CS or OCSpace</exception>
+        </member>
+        <member name="M:System.Data.Entity.Core.Metadata.Edm.MetadataWorkspace.TryGetType(System.String,System.String,System.Data.Entity.Core.Metadata.Edm.DataSpace,System.Data.Entity.Core.Metadata.Edm.EdmType@)">
+            <summary>
+            Returns an <see cref="T:System.Data.Entity.Core.Metadata.Edm.EdmType" /> object by using the specified type name, namespace name, and data model.
+            </summary>
+            <returns>true if there is a type that matches the search criteria; otherwise, false.</returns>
+            <param name="name">The name of the type.</param>
+            <param name="namespaceName">The namespace of the type.</param>
+            <param name="dataSpace">The conceptual model on which the type is searched.</param>
+            <param name="type">
+            When this method returns, contains an <see cref="T:System.Data.Entity.Core.Metadata.Edm.EdmType" /> object. This parameter is passed uninitialized.
+            </param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Metadata.Edm.MetadataWorkspace.GetType(System.String,System.String,System.Boolean,System.Data.Entity.Core.Metadata.Edm.DataSpace)">
+            <summary>
+            Returns an <see cref="T:System.Data.Entity.Core.Metadata.Edm.EdmType"/> object by using the specified type name, namespace name, and data model.
+            </summary>
+            <returns>
+            An <see cref="T:System.Data.Entity.Core.Metadata.Edm.EdmType"/> object.
+            </returns>
+            <param name="name">The name of the type.</param>
+            <param name="namespaceName">The namespace of the type.</param>
+            <param name="ignoreCase">true to perform the case-insensitive search; otherwise, false.</param>
+            <param name="dataSpace">The conceptual model on which the type is searched.</param>
+            <exception cref="T:System.ArgumentException">Thrown if the space is not a valid space. Valid space is either C, O, CS or OCSpace</exception>
+        </member>
+        <member name="M:System.Data.Entity.Core.Metadata.Edm.MetadataWorkspace.TryGetType(System.String,System.String,System.Boolean,System.Data.Entity.Core.Metadata.Edm.DataSpace,System.Data.Entity.Core.Metadata.Edm.EdmType@)">
+            <summary>
+            Returns an <see cref="T:System.Data.Entity.Core.Metadata.Edm.EdmType" /> object by using the specified type name, namespace name, and data model.
+            </summary>
+            <returns>true if there is a type that matches the search criteria; otherwise, false.</returns>
+            <param name="name">The name of the type.</param>
+            <param name="namespaceName">The namespace of the type.</param>
+            <param name="ignoreCase">true to perform the case-insensitive search; otherwise, false.</param>
+            <param name="dataSpace">The conceptual model on which the type is searched.</param>
+            <param name="type">
+            When this method returns, contains an <see cref="T:System.Data.Entity.Core.Metadata.Edm.EdmType" /> object. This parameter is passed uninitialized.
+            </param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Metadata.Edm.MetadataWorkspace.GetEntityContainer(System.String,System.Data.Entity.Core.Metadata.Edm.DataSpace)">
+            <summary>
+            Returns an <see cref="T:System.Data.Entity.Core.Metadata.Edm.EntityContainer"/> object by using the specified entity container name and the data model.
+            </summary>
+            <returns>If there is no entity container, this method returns null; otherwise, it returns the first entity container.</returns>
+            <param name="name">The name of the entity container.</param>
+            <param name="dataSpace">The conceptual model on which the entity container is searched.</param>
+            <exception cref="T:System.ArgumentException">Thrown if the space is not a valid space. Valid space is either C, O, CS or OCSpace</exception>
+        </member>
+        <member name="M:System.Data.Entity.Core.Metadata.Edm.MetadataWorkspace.TryGetEntityContainer(System.String,System.Data.Entity.Core.Metadata.Edm.DataSpace,System.Data.Entity.Core.Metadata.Edm.EntityContainer@)">
+            <summary>
+            Returns an <see cref="T:System.Data.Entity.Core.Metadata.Edm.EntityContainer" /> object by using the specified entity container name and the data model.
+            </summary>
+            <returns>true if there is an entity container that matches the search criteria; otherwise, false.</returns>
+            <param name="name">The name of the entity container.</param>
+            <param name="dataSpace">The conceptual model on which the entity container is searched.</param>
+            <param name="entityContainer">
+            When this method returns, contains an <see cref="T:System.Data.Entity.Core.Metadata.Edm.EntityContainer" /> object. If there is no entity container, this output parameter contains null; otherwise, it returns the first entity container. This parameter is passed uninitialized.
+            </param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Metadata.Edm.MetadataWorkspace.GetEntityContainer(System.String,System.Boolean,System.Data.Entity.Core.Metadata.Edm.DataSpace)">
+            <summary>
+            Returns an <see cref="T:System.Data.Entity.Core.Metadata.Edm.EntityContainer"/> object by using the specified entity container name and the data model.
+            </summary>
+            <returns>If there is no entity container, this method returns null; otherwise, it returns the first entity container.</returns>
+            <param name="name">The name of the entity container.</param>
+            <param name="ignoreCase">true to perform the case-insensitive search; otherwise, false.</param>
+            <param name="dataSpace">The conceptual model on which the entity container is searched.</param>
+            <exception cref="T:System.ArgumentException">Thrown if the space is not a valid space. Valid space is either C, O, CS or OCSpace</exception>
+        </member>
+        <member name="M:System.Data.Entity.Core.Metadata.Edm.MetadataWorkspace.TryGetEntityContainer(System.String,System.Boolean,System.Data.Entity.Core.Metadata.Edm.DataSpace,System.Data.Entity.Core.Metadata.Edm.EntityContainer@)">
+            <summary>
+            Returns an <see cref="T:System.Data.Entity.Core.Metadata.Edm.EntityContainer" /> object by using the specified entity container name and the data model.
+            </summary>
+            <returns>true if there is an entity container that matches the search criteria; otherwise, false.</returns>
+            <param name="name">The name of the entity container.</param>
+            <param name="ignoreCase">true to perform the case-insensitive search; otherwise, false.</param>
+            <param name="dataSpace">The conceptual model on which the entity container is searched.</param>
+            <param name="entityContainer">
+            When this method returns, contains an <see cref="T:System.Data.Entity.Core.Metadata.Edm.EntityContainer" /> object. If there is no entity container, this output parameter contains null; otherwise, it returns the first entity container. This parameter is passed uninitialized.
+            </param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Metadata.Edm.MetadataWorkspace.GetFunctions(System.String,System.String,System.Data.Entity.Core.Metadata.Edm.DataSpace)">
+            <summary>Returns all the overloads of the functions by using the specified name, namespace name, and data model.</summary>
+            <returns>
+            A collection of type <see cref="T:System.Collections.ObjectModel.ReadOnlyCollection`1"/> that contains all the functions that match the specified name in a given namespace and a data model.
+            </returns>
+            <param name="name">The name of the function.</param>
+            <param name="namespaceName">The namespace of the function.</param>
+            <param name="dataSpace">The conceptual model in which the functions are searched.</param>
+            <exception cref="T:System.ArgumentException">Thrown if the space is not a valid space. Valid space is either C, O, CS or OCSpace</exception>
+        </member>
+        <member name="M:System.Data.Entity.Core.Metadata.Edm.MetadataWorkspace.GetFunctions(System.String,System.String,System.Data.Entity.Core.Metadata.Edm.DataSpace,System.Boolean)">
+            <summary>Returns all the overloads of the functions by using the specified name, namespace name, and data model.</summary>
+            <returns>
+            A collection of type <see cref="T:System.Collections.ObjectModel.ReadOnlyCollection`1"/> that contains all the functions that match the specified name in a given namespace and a data model.
+            </returns>
+            <param name="name">The name of the function.</param>
+            <param name="namespaceName">The namespace of the function.</param>
+            <param name="dataSpace">The conceptual model in which the functions are searched.</param>
+            <param name="ignoreCase">true to perform the case-insensitive search; otherwise, false.</param>
+            <exception cref="T:System.ArgumentException">Thrown if the space is not a valid space. Valid space is either C, O, CS or OCSpace</exception>
+        </member>
+        <member name="M:System.Data.Entity.Core.Metadata.Edm.MetadataWorkspace.GetPrimitiveTypes(System.Data.Entity.Core.Metadata.Edm.DataSpace)">
+            <summary>Returns the list of primitive types in the specified data model.</summary>
+            <returns>
+            A collection of type <see cref="T:System.Collections.ObjectModel.ReadOnlyCollection`1"/> that contains all the primitive types in the specified data model.
+            </returns>
+            <param name="dataSpace">The data model for which you need the list of primitive types.</param>
+            <exception cref="T:System.ArgumentException">Thrown if the space is not a valid space. Valid space is either C, O, CS or OCSpace</exception>
+        </member>
+        <member name="M:System.Data.Entity.Core.Metadata.Edm.MetadataWorkspace.GetItems(System.Data.Entity.Core.Metadata.Edm.DataSpace)">
+            <summary>Gets all the items in the specified data model.</summary>
+            <returns>
+            A collection of type <see cref="T:System.Collections.ObjectModel.ReadOnlyCollection`1"/> that contains all the items in the specified data model.
+            </returns>
+            <param name="dataSpace">The conceptual model for which the list of items is needed.</param>
+            <exception cref="T:System.ArgumentException">Thrown if the space is not a valid space. Valid space is either C, O, CS or OCSpace</exception>
+        </member>
+        <member name="M:System.Data.Entity.Core.Metadata.Edm.MetadataWorkspace.TryGetItemCollection(System.Data.Entity.Core.Metadata.Edm.DataSpace,System.Data.Entity.Core.Metadata.Edm.ItemCollection@)">
+            <summary>
+            Tests the retrieval of <see cref="T:System.Data.Entity.Core.Metadata.Edm.MetadataWorkspace" />.
+            </summary>
+            <returns>true if the retrieval was successful; otherwise, false.</returns>
+            <param name="dataSpace">
+            The <see cref="T:System.Data.Entity.Core.Metadata.Edm.DataSpace" /> from which to attempt retrieval of
+            <see
+                cref="T:System.Data.Entity.Core.Metadata.Edm.MetadataWorkspace" />
+            .
+            </param>
+            <param name="collection">When this method returns, contains the item collection. This parameter is passed uninitialized.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Metadata.Edm.MetadataWorkspace.GetObjectSpaceType(System.Data.Entity.Core.Metadata.Edm.StructuralType)">
+            <summary>
+            Returns a <see cref="T:System.Data.Entity.Core.Metadata.Edm.StructuralType" /> object that represents the object space type that matches the type supplied by the parameter  edmSpaceType .
+            </summary>
+            <returns>
+            A <see cref="T:System.Data.Entity.Core.Metadata.Edm.StructuralType" /> object that represents the Object space type. If there is no matched type, this method returns null.
+            </returns>
+            <param name="edmSpaceType">
+            A <see cref="T:System.Data.Entity.Core.Metadata.Edm.StructuralType" /> object that represents the
+            <see
+                cref="T:System.Data.Entity.Core.Metadata.Edm.EdmType" />
+            .
+            </param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Metadata.Edm.MetadataWorkspace.TryGetObjectSpaceType(System.Data.Entity.Core.Metadata.Edm.StructuralType,System.Data.Entity.Core.Metadata.Edm.StructuralType@)">
+            <summary>
+            Returns a <see cref="T:System.Data.Entity.Core.Metadata.Edm.StructuralType" /> object via the out parameter  objectSpaceType  that represents the type that matches the
+            <see
+                cref="T:System.Data.Entity.Core.Metadata.Edm.EdmType" />
+            supplied by the parameter  edmSpaceType .
+            </summary>
+            <returns>true if there is a type that matches the search criteria; otherwise, false.</returns>
+            <param name="edmSpaceType">
+            A <see cref="T:System.Data.Entity.Core.Metadata.Edm.StructuralType" /> object that represents the
+            <see
+                cref="T:System.Data.Entity.Core.Metadata.Edm.EdmType" />
+            .
+            </param>
+            <param name="objectSpaceType">
+            When this method returns, contains a <see cref="T:System.Data.Entity.Core.Metadata.Edm.StructuralType" /> object that represents the Object space type. This parameter is passed uninitialized.
+            </param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Metadata.Edm.MetadataWorkspace.GetObjectSpaceType(System.Data.Entity.Core.Metadata.Edm.EnumType)">
+            <summary>
+            Returns a <see cref="T:System.Data.Entity.Core.Metadata.Edm.StructuralType" /> object that represents the object space type that matches the type supplied by the parameter  edmSpaceType .
+            </summary>
+            <returns>
+            A <see cref="T:System.Data.Entity.Core.Metadata.Edm.StructuralType" /> object that represents the Object space type. If there is no matched type, this method returns null.
+            </returns>
+            <param name="edmSpaceType">
+            A <see cref="T:System.Data.Entity.Core.Metadata.Edm.EnumType" /> object that represents the
+            <see
+                cref="T:System.Data.Entity.Core.Metadata.Edm.EdmType" />
+            .
+            </param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Metadata.Edm.MetadataWorkspace.TryGetObjectSpaceType(System.Data.Entity.Core.Metadata.Edm.EnumType,System.Data.Entity.Core.Metadata.Edm.EnumType@)">
+            <summary>
+            Returns a <see cref="T:System.Data.Entity.Core.Metadata.Edm.EnumType" /> object via the out parameter  objectSpaceType  that represents the type that matches the
+            <see
+                cref="T:System.Data.Entity.Core.Metadata.Edm.EdmType" />
+            supplied by the parameter  edmSpaceType .
+            </summary>
+            <returns>true if there is a type that matches the search criteria; otherwise, false.</returns>
+            <param name="edmSpaceType">
+            A <see cref="T:System.Data.Entity.Core.Metadata.Edm.EnumType" /> object that represents the
+            <see
+                cref="T:System.Data.Entity.Core.Metadata.Edm.EdmType" />
+            .
+            </param>
+            <param name="objectSpaceType">
+            When this method returns, contains a <see cref="T:System.Data.Entity.Core.Metadata.Edm.EnumType" /> object that represents the Object space type. This parameter is passed uninitialized.
+            </param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Metadata.Edm.MetadataWorkspace.GetEdmSpaceType(System.Data.Entity.Core.Metadata.Edm.StructuralType)">
+            <summary>
+            Returns a <see cref="T:System.Data.Entity.Core.Metadata.Edm.StructuralType" /> object that represents the
+            <see
+                cref="T:System.Data.Entity.Core.Metadata.Edm.EdmType" />
+            that matches the type supplied by the parameter  objectSpaceType .
+            </summary>
+            <returns>
+            A <see cref="T:System.Data.Entity.Core.Metadata.Edm.StructuralType" /> object that represents the
+            <see
+                cref="T:System.Data.Entity.Core.Metadata.Edm.EdmType" />
+            . If there is no matched type, this method returns null.
+            </returns>
+            <param name="objectSpaceType">
+            A <see cref="T:System.Data.Entity.Core.Metadata.Edm.StructuralType" /> that supplies the type in the object space.
+            </param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Metadata.Edm.MetadataWorkspace.TryGetEdmSpaceType(System.Data.Entity.Core.Metadata.Edm.StructuralType,System.Data.Entity.Core.Metadata.Edm.StructuralType@)">
+            <summary>
+            Returns a <see cref="T:System.Data.Entity.Core.Metadata.Edm.StructuralType" /> object via the out parameter  edmSpaceType  that represents the
+            <see
+                cref="T:System.Data.Entity.Core.Metadata.Edm.EdmType" />
+            that matches the type supplied by the parameter  objectSpaceType .
+            </summary>
+            <returns>true if there is a type that matches the search criteria; otherwise, false.</returns>
+            <param name="objectSpaceType">
+            A <see cref="T:System.Data.Entity.Core.Metadata.Edm.StructuralType" /> object that represents the object space type.
+            </param>
+            <param name="edmSpaceType">
+            When this method returns, contains a <see cref="T:System.Data.Entity.Core.Metadata.Edm.StructuralType" /> object that represents the
+            <see
+                cref="T:System.Data.Entity.Core.Metadata.Edm.EdmType" />
+            . This parameter is passed uninitialized.
+            </param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Metadata.Edm.MetadataWorkspace.GetEdmSpaceType(System.Data.Entity.Core.Metadata.Edm.EnumType)">
+            <summary>
+            Returns a <see cref="T:System.Data.Entity.Core.Metadata.Edm.StructuralType" /> object that represents the
+            <see
+                cref="T:System.Data.Entity.Core.Metadata.Edm.EdmType" />
+            that matches the type supplied by the parameter  objectSpaceType .
+            </summary>
+            <returns>
+            A <see cref="T:System.Data.Entity.Core.Metadata.Edm.StructuralType" /> object that represents the
+            <see
+                cref="T:System.Data.Entity.Core.Metadata.Edm.EdmType" />
+            . If there is no matched type, this method returns null.
+            </returns>
+            <param name="objectSpaceType">
+            A <see cref="T:System.Data.Metadata.Edm.EnumlType" /> that supplies the type in the object space.
+            </param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Metadata.Edm.MetadataWorkspace.TryGetEdmSpaceType(System.Data.Entity.Core.Metadata.Edm.EnumType,System.Data.Entity.Core.Metadata.Edm.EnumType@)">
+            <summary>
+            Returns a <see cref="T:System.Data.Entity.Core.Metadata.Edm.EnumType" /> object via the out parameter  edmSpaceType  that represents the
+            <see
+                cref="T:System.Data.Entity.Core.Metadata.Edm.EdmType" />
+            that matches the type supplied by the parameter  objectSpaceType .
+            </summary>
+            <returns>true on success, false on failure.</returns>
+            <param name="objectSpaceType">
+            A <see cref="T:System.Data.Entity.Core.Metadata.Edm.EnumType" /> object that represents the object space type.
+            </param>
+            <param name="edmSpaceType">
+            When this method returns, contains a <see cref="T:System.Data.Entity.Core.Metadata.Edm.EnumType" /> object that represents the
+            <see
+                cref="T:System.Data.Entity.Core.Metadata.Edm.EdmType" />
+            . This parameter is passed uninitialized.
+            </param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Metadata.Edm.MetadataWorkspace.ClearCache">
+            <summary>Clears all the metadata cache entries.</summary>
+        </member>
+        <member name="M:System.Data.Entity.Core.Metadata.Edm.MetadataWorkspace.GetRequiredOriginalValueMembers(System.Data.Entity.Core.Metadata.Edm.EntitySetBase,System.Data.Entity.Core.Metadata.Edm.EntityTypeBase)">
+            <summary>Gets original value members from an entity set and entity type.</summary>
+            <returns>The original value members from an entity set and entity type.</returns>
+            <param name="entitySet">The entity set from which to retrieve original values.</param>
+            <param name="entityType">The entity type of which to retrieve original values.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Metadata.Edm.MetadataWorkspace.GetRelevantMembersForUpdate(System.Data.Entity.Core.Metadata.Edm.EntitySetBase,System.Data.Entity.Core.Metadata.Edm.EntityTypeBase,System.Boolean)">
+            <summary>
+            Returns members of a given <see cref="T:System.Data.Entity.Core.Metadata.Edm.EntitySet" />/
+            <see
+                cref="T:System.Data.Entity.Core.Metadata.Edm.EntityType" />
+            for which original values are needed when modifying an entity.
+            </summary>
+            <returns>
+            The <see cref="T:System.Data.Entity.Core.Metadata.Edm.EdmMember" />s for which original value is required.
+            </returns>
+            <param name="entitySet">
+            An <see cref="T:System.Data.Entity.Core.Metadata.Edm.EntitySet" /> belonging to the C-Space.
+            </param>
+            <param name="entityType">
+            An <see cref="T:System.Data.Entity.Core.Metadata.Edm.EntityType" /> that participates in the given
+            <see
+                cref="T:System.Data.Entity.Core.Metadata.Edm.EntitySet" />
+            .
+            </param>
+            <param name="partialUpdateSupported">true if entities may be updated partially; otherwise, false.</param>
+        </member>
+        <member name="P:System.Data.Entity.Core.Metadata.Edm.MetadataWorkspace.MaximumEdmVersionSupported">
+            <summary>
+            The Max EDM version thats going to be supported by the runtime.
+            </summary>
+        </member>
+        <member name="T:System.Data.Entity.Core.Metadata.Edm.ObjectItemCollection">
+            <summary>
+            Class for representing a collection of items for the object layer.
+            Most of the implementation for actual maintenance of the collection is
+            done by ItemCollection
+            </summary>
+        </member>
+        <member name="M:System.Data.Entity.Core.Metadata.Edm.ObjectItemCollection.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:System.Data.Entity.Core.Metadata.Edm.ObjectItemCollection" /> class.
+            </summary>
+        </member>
+        <member name="M:System.Data.Entity.Core.Metadata.Edm.ObjectItemCollection.LoadFromAssembly(System.Reflection.Assembly)">
+            <summary>Loads metadata from the given assembly.</summary>
+            <param name="assembly">The assembly from which the metadata will be loaded.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Metadata.Edm.ObjectItemCollection.LoadFromAssembly(System.Reflection.Assembly,System.Data.Entity.Core.Metadata.Edm.EdmItemCollection,System.Action{System.String})">
+            <summary>Loads metadata from the given assembly.</summary>
+            <param name="assembly">The assembly from which the metadata will be loaded.</param>
+            <param name="edmItemCollection">The EDM metadata source for the O space metadata.</param>
+            <param name="logLoadMessage">The delegate to which log messages are sent.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Metadata.Edm.ObjectItemCollection.LoadFromAssembly(System.Reflection.Assembly,System.Data.Entity.Core.Metadata.Edm.EdmItemCollection)">
+            <summary>Loads metadata from the specified assembly.</summary>
+            <param name="assembly">The assembly from which the metadata will be loaded.</param>
+            <param name="edmItemCollection">The EDM metadata source for the O space metadata.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Metadata.Edm.ObjectItemCollection.GetPrimitiveTypes">
+            <summary>Returns a collection of primitive type objects.</summary>
+            <returns>A collection of primitive type objects.</returns>
+        </member>
+        <member name="M:System.Data.Entity.Core.Metadata.Edm.ObjectItemCollection.GetClrType(System.Data.Entity.Core.Metadata.Edm.StructuralType)">
+            <summary>
+            Returns the CLR type that corresponds to the <see cref="T:System.Data.Entity.Core.Metadata.Edm.StructuralType" /> supplied by the objectSpaceType parameter.
+            </summary>
+            <returns>The CLR type of the OSpace argument.</returns>
+            <param name="objectSpaceType">
+            A <see cref="T:System.Data.Entity.Core.Metadata.Edm.StructuralType" /> that represents the object space type.
+            </param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Metadata.Edm.ObjectItemCollection.TryGetClrType(System.Data.Entity.Core.Metadata.Edm.StructuralType,System.Type@)">
+            <summary>
+            Returns a CLR type corresponding to the <see cref="T:System.Data.Entity.Core.Metadata.Edm.StructuralType" /> supplied by the objectSpaceType parameter.
+            </summary>
+            <returns>true if there is a type that matches the search criteria; otherwise, false.</returns>
+            <param name="objectSpaceType">
+            A <see cref="T:System.Data.Entity.Core.Metadata.Edm.StructuralType" /> that represents the object space type.
+            </param>
+            <param name="clrType">The CLR type.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Metadata.Edm.ObjectItemCollection.GetClrType(System.Data.Entity.Core.Metadata.Edm.EnumType)">
+            <summary> The method returns the underlying CLR type for the specified OSpace type argument. If the DataSpace of the parameter is not OSpace, an ArgumentException is thrown. </summary>
+            <returns>The CLR type of the OSpace argument.</returns>
+            <param name="objectSpaceType">The OSpace type to look up.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Metadata.Edm.ObjectItemCollection.TryGetClrType(System.Data.Entity.Core.Metadata.Edm.EnumType,System.Type@)">
+            <summary>Returns the underlying CLR type for the specified OSpace enum type argument. If the DataSpace of the parameter is not OSpace, the method returns false and sets the out parameter to null. </summary>
+            <returns>true on success, false on failure</returns>
+            <param name="objectSpaceType">The OSpace enum type to look up</param>
+            <param name="clrType">The CLR enum type of the OSpace argument</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Metadata.Edm.ObjectItemCollection.GetItems``1">
+            <summary>Returns all the items of the specified type from this item collection.</summary>
+            <returns>
+            A collection of type <see cref="T:System.Collections.ObjectModel.ReadOnlyCollection`1" /> that contains all items of the specified type.
+            </returns>
+            <typeparam name="T">The type returned by the method.</typeparam>
+        </member>
+        <member name="T:System.Data.Entity.Core.Metadata.Edm.ParameterTypeSemantics">
+            <summary>
+            The enumeration defining the type semantics used to resolve function overloads.
+            These flags are defined in the provider manifest per function definition.
+            </summary>
+        </member>
+        <member name="F:System.Data.Entity.Core.Metadata.Edm.ParameterTypeSemantics.AllowImplicitConversion">
+            <summary>
+            Allow Implicit Conversion between given and formal argument types (default).
+            </summary>
+        </member>
+        <member name="F:System.Data.Entity.Core.Metadata.Edm.ParameterTypeSemantics.AllowImplicitPromotion">
+            <summary>
+            Allow Type Promotion between given and formal argument types.
+            </summary>
+        </member>
+        <member name="F:System.Data.Entity.Core.Metadata.Edm.ParameterTypeSemantics.ExactMatchOnly">
+            <summary>
+            Use strict Equivalence only.
+            </summary>
+        </member>
+        <member name="T:System.Data.Entity.Core.Metadata.Edm.StoreItemCollection">
+            <summary>
+            Class for representing a collection of items in Store space.
+            </summary>
+        </member>
+        <member name="M:System.Data.Entity.Core.Metadata.Edm.StoreItemCollection.#ctor(System.Collections.Generic.IEnumerable{System.Xml.XmlReader})">
+            <summary>
+            Initializes a new instance of the <see cref="T:System.Data.Entity.Core.Metadata.Edm.StoreItemCollection" /> class using the specified XMLReader.
+            </summary>
+            <param name="xmlReaders">The XMLReader used to create metadata.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Metadata.Edm.StoreItemCollection.#ctor(System.Data.Entity.Core.Metadata.Edm.EdmModel)">
+            <summary>Initializes a new instances of the <see cref="T:System.Data.Entity.Core.Metadata.Edm.StoreItemCollection" /> class.</summary>
+            <param name="model">The model of the <see cref="T:System.Data.Entity.Core.Metadata.Edm.StoreItemCollection" />.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Metadata.Edm.StoreItemCollection.#ctor(System.String[])">
+            <summary>
+            Initializes a new instance of the <see cref="T:System.Data.Entity.Core.Metadata.Edm.StoreItemCollection" /> class using the specified file paths.
+            </summary>
+            <param name="filePaths">The file paths used to create metadata.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Metadata.Edm.StoreItemCollection.GetPrimitiveTypes">
+            <summary>
+            Returns a collection of the <see cref="T:System.Data.Entity.Core.Metadata.Edm.PrimitiveType" /> objects.
+            </summary>
+            <returns>
+            A <see cref="T:System.Collections.ObjectModel.ReadOnlyCollection`1" /> object that represents the collection of the
+            <see
+                cref="T:System.Data.Entity.Core.Metadata.Edm.PrimitiveType" />
+            objects.
+            </returns>
+        </member>
+        <member name="M:System.Data.Entity.Core.Metadata.Edm.StoreItemCollection.Create(System.Collections.Generic.IEnumerable{System.Xml.XmlReader},System.Collections.ObjectModel.ReadOnlyCollection{System.String},System.Data.Entity.Infrastructure.DependencyResolution.IDbDependencyResolver,System.Collections.Generic.IList{System.Data.Entity.Core.Metadata.Edm.EdmSchemaError}@)">
+            <summary>
+            Factory method that creates a <see cref="T:System.Data.Entity.Core.Metadata.Edm.StoreItemCollection"/>.
+            </summary>
+            <param name="xmlReaders">
+            SSDL artifacts to load. Must not be <c>null</c>.
+            </param>
+            <param name="filePaths">
+            Paths to SSDL artifacts. Used in error messages. Can be <c>null</c> in which case
+            the base Uri of the XmlReader will be used as a path.
+            </param>
+            <param name="resolver">
+            Custom resolver. Currently used to resolve DbProviderServices implementation. If <c>null</c>
+            the default resolver will be used.
+            </param>
+            <param name="errors">
+            The collection of errors encountered while loading.
+            </param>
+            <returns>
+            <see cref="T:System.Data.Entity.Core.Metadata.Edm.StoreItemCollection"/> instance if no errors encountered. Otherwise <c>null</c>.
+            </returns>
+        </member>
+        <member name="P:System.Data.Entity.Core.Metadata.Edm.StoreItemCollection.ProviderFactory">
+            <summary>Gets the provider factory of the StoreItemCollection.</summary>
+            <returns>The provider factory of the StoreItemCollection.</returns>
+        </member>
+        <member name="P:System.Data.Entity.Core.Metadata.Edm.StoreItemCollection.ProviderManifest">
+            <summary>Gets the provider manifest of the StoreItemCollection.</summary>
+            <returns>The provider manifest of the StoreItemCollection.</returns>
+        </member>
+        <member name="P:System.Data.Entity.Core.Metadata.Edm.StoreItemCollection.ProviderManifestToken">
+            <summary>Gets the manifest token of the StoreItemCollection.</summary>
+            <returns>The manifest token of the StoreItemCollection.</returns>
+        </member>
+        <member name="P:System.Data.Entity.Core.Metadata.Edm.StoreItemCollection.ProviderInvariantName">
+            <summary>Gets the invariant name of the StoreItemCollection.</summary>
+            <returns>The invariant name of the StoreItemCollection.</returns>
+        </member>
+        <member name="P:System.Data.Entity.Core.Metadata.Edm.StoreItemCollection.StoreSchemaVersion">
+            <summary>Gets the version of the store schema for this collection.</summary>
+            <returns>The version of the store schema for this collection.</returns>
+        </member>
+        <member name="T:System.Data.Entity.Core.ObjectNotFoundException">
+            <summary>
+            This exception is thrown when a requested object is not found in the store.
+            </summary>
+        </member>
+        <member name="M:System.Data.Entity.Core.ObjectNotFoundException.#ctor">
+            <summary>
+            Initializes a new instance of <see cref="T:System.Data.Entity.Core.ObjectNotFoundException" />.
+            </summary>
+        </member>
+        <member name="M:System.Data.Entity.Core.ObjectNotFoundException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of <see cref="T:System.Data.Entity.Core.ObjectNotFoundException" /> with a specialized error message.
+            </summary>
+            <param name="message">The message that describes the error.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.ObjectNotFoundException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of <see cref="T:System.Data.Entity.Core.ObjectNotFoundException" /> class that uses a specified error message and a reference to the inner exception.
+            </summary>
+            <param name="message">The message that describes the error.</param>
+            <param name="innerException">The exception that is the cause of the current exception, or a null reference (Nothing in Visual Basic) if no inner exception is specified.</param>
+        </member>
+        <member name="T:System.Data.Entity.Core.Objects.CompiledQuery">
+            <summary>
+            Caches an ELinq query
+            </summary>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.CompiledQuery.Compile``17(System.Linq.Expressions.Expression{System.Func{``0,``1,``2,``3,``4,``5,``6,``7,``8,``9,``10,``11,``12,``13,``14,``15,``16}})">
+            <summary>Creates a new delegate that represents the compiled LINQ to Entities query.</summary>
+            <returns>
+            <see cref="T:System.Func`17" />, a generic delegate that represents the compiled LINQ to Entities query.
+            </returns>
+            <param name="query">The lambda expression to compile.</param>
+            <typeparam name="TArg0">
+            A type derived from <see cref="T:System.Data.Entity.Core.Objects.ObjectContext" />.
+            </typeparam>
+            <typeparam name="TArg1">Represents the type of the parameter that has to be passed in when executing the delegate returned by this method.  TArg1  must be a primitive type.</typeparam>
+            <typeparam name="TArg2">Represents the type of the parameter that has to be passed in when executing the delegate returned by this method.  TArg2  must be a primitive type.</typeparam>
+            <typeparam name="TArg3">Represents the type of the parameter that has to be passed in when executing the delegate returned by this method.  TArg3  must be a primitive type.</typeparam>
+            <typeparam name="TArg4">Represents the type of the parameter that has to be passed in when executing the delegate returned by this method.  TArg4  must be a primitive type.</typeparam>
+            <typeparam name="TArg5">Represents the type of the parameter that has to be passed in when executing the delegate returned by this method.  TArg5  must be a primitive type.</typeparam>
+            <typeparam name="TArg6">Represents the type of the parameter that has to be passed in when executing the delegate returned by this method.  TArg6  must be a primitive type.</typeparam>
+            <typeparam name="TArg7">Represents the type of the parameter that has to be passed in when executing the delegate returned by this method.  TArg7  must be a primitive type.</typeparam>
+            <typeparam name="TArg8">Represents the type of the parameter that has to be passed in when executing the delegate returned by this method.  TArg8  must be a primitive type.</typeparam>
+            <typeparam name="TArg9">Represents the type of the parameter that has to be passed in when executing the delegate returned by this method.  TArg9  must be a primitive type.</typeparam>
+            <typeparam name="TArg10">Represents the type of the parameter that has to be passed in when executing the delegate returned by this method.  TArg10  must be a primitive type.</typeparam>
+            <typeparam name="TArg11">Represents the type of the parameter that has to be passed in when executing the delegate returned by this method.  TArg11  must be a primitive type.</typeparam>
+            <typeparam name="TArg12">Represents the type of the parameter that has to be passed in when executing the delegate returned by this method.  TArg12  must be a primitive type.</typeparam>
+            <typeparam name="TArg13">Represents the type of the parameter that has to be passed in when executing the delegate returned by this method.  TArg13  must be a primitive type.</typeparam>
+            <typeparam name="TArg14">Represents the type of the parameter that has to be passed in when executing the delegate returned by this method.  TArg14  must be a primitive type.</typeparam>
+            <typeparam name="TArg15">Represents the type of the parameter that has to be passed in when executing the delegate returned by this method.  TArg15  must be a primitive type.</typeparam>
+            <typeparam name="TResult">
+            The type  T  of the query results returned by executing the delegate returned by the
+            <see
+                cref="M:System.Data.Entity.Core.Objects.CompiledQuery.Compile``17(System.Linq.Expressions.Expression{System.Func{``0,``1,``2,``3,``4,``5,``6,``7,``8,``9,``10,``11,``12,``13,``14,``15,``16}})" />
+            method.
+            </typeparam>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.CompiledQuery.Compile``16(System.Linq.Expressions.Expression{System.Func{``0,``1,``2,``3,``4,``5,``6,``7,``8,``9,``10,``11,``12,``13,``14,``15}})">
+            <summary>Creates a new delegate that represents the compiled LINQ to Entities query.</summary>
+            <returns>
+            <see cref="T:System.Func`16" />, a generic delegate that represents the compiled LINQ to Entities query.
+            </returns>
+            <param name="query">The lambda expression to compile.</param>
+            <typeparam name="TArg0">
+            A type derived from <see cref="T:System.Data.Entity.Core.Objects.ObjectContext" />.
+            </typeparam>
+            <typeparam name="TArg1">Represents the type of the parameter that has to be passed in when executing the delegate returned by this method.  TArg1  must be a primitive type.</typeparam>
+            <typeparam name="TArg2">Represents the type of the parameter that has to be passed in when executing the delegate returned by this method.  TArg2  must be a primitive type.</typeparam>
+            <typeparam name="TArg3">Represents the type of the parameter that has to be passed in when executing the delegate returned by this method.  TArg3  must be a primitive type.</typeparam>
+            <typeparam name="TArg4">Represents the type of the parameter that has to be passed in when executing the delegate returned by this method.  TArg4  must be a primitive type.</typeparam>
+            <typeparam name="TArg5">Represents the type of the parameter that has to be passed in when executing the delegate returned by this method.  TArg5  must be a primitive type.</typeparam>
+            <typeparam name="TArg6">Represents the type of the parameter that has to be passed in when executing the delegate returned by this method.  TArg6  must be a primitive type.</typeparam>
+            <typeparam name="TArg7">Represents the type of the parameter that has to be passed in when executing the delegate returned by this method.  TArg7  must be a primitive type.</typeparam>
+            <typeparam name="TArg8">Represents the type of the parameter that has to be passed in when executing the delegate returned by this method.  TArg8  must be a primitive type.</typeparam>
+            <typeparam name="TArg9">Represents the type of the parameter that has to be passed in when executing the delegate returned by this method.  TArg9  must be a primitive type.</typeparam>
+            <typeparam name="TArg10">Represents the type of the parameter that has to be passed in when executing the delegate returned by this method.  TArg10  must be a primitive type.</typeparam>
+            <typeparam name="TArg11">Represents the type of the parameter that has to be passed in when executing the delegate returned by this method.  TArg11  must be a primitive type.</typeparam>
+            <typeparam name="TArg12">Represents the type of the parameter that has to be passed in when executing the delegate returned by this method.  TArg12  must be a primitive type.</typeparam>
+            <typeparam name="TArg13">Represents the type of the parameter that has to be passed in when executing the delegate returned by this method.  TArg13  must be a primitive type.</typeparam>
+            <typeparam name="TArg14">Represents the type of the parameter that has to be passed in when executing the delegate returned by this method.  TArg14  must be a primitive type.</typeparam>
+            <typeparam name="TResult">
+            The type  T  of the query results returned by executing the delegate returned by the
+            <see
+                cref="M:System.Data.Entity.Core.Objects.CompiledQuery.Compile``16(System.Linq.Expressions.Expression{System.Func{``0,``1,``2,``3,``4,``5,``6,``7,``8,``9,``10,``11,``12,``13,``14,``15}})" />
+            method.
+            </typeparam>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.CompiledQuery.Compile``15(System.Linq.Expressions.Expression{System.Func{``0,``1,``2,``3,``4,``5,``6,``7,``8,``9,``10,``11,``12,``13,``14}})">
+            <summary>Creates a new delegate that represents the compiled LINQ to Entities query.</summary>
+            <returns>
+            <see cref="T:System.Func`15" />, a generic delegate that represents the compiled LINQ to Entities query.
+            </returns>
+            <param name="query">The lambda expression to compile.</param>
+            <typeparam name="TArg0">
+            A type derived from <see cref="T:System.Data.Entity.Core.Objects.ObjectContext" />.
+            </typeparam>
+            <typeparam name="TArg1">Represents the type of the parameter that has to be passed in when executing the delegate returned by this method.  TArg1  must be a primitive type.</typeparam>
+            <typeparam name="TArg2">Represents the type of the parameter that has to be passed in when executing the delegate returned by this method.  TArg2  must be a primitive type.</typeparam>
+            <typeparam name="TArg3">Represents the type of the parameter that has to be passed in when executing the delegate returned by this method.  TArg3  must be a primitive type.</typeparam>
+            <typeparam name="TArg4">Represents the type of the parameter that has to be passed in when executing the delegate returned by this method.  TArg4  must be a primitive type.</typeparam>
+            <typeparam name="TArg5">Represents the type of the parameter that has to be passed in when executing the delegate returned by this method.  TArg5  must be a primitive type.</typeparam>
+            <typeparam name="TArg6">Represents the type of the parameter that has to be passed in when executing the delegate returned by this method.  TArg6  must be a primitive type.</typeparam>
+            <typeparam name="TArg7">Represents the type of the parameter that has to be passed in when executing the delegate returned by this method.  TArg7  must be a primitive type.</typeparam>
+            <typeparam name="TArg8">Represents the type of the parameter that has to be passed in when executing the delegate returned by this method.  TArg8  must be a primitive type.</typeparam>
+            <typeparam name="TArg9">Represents the type of the parameter that has to be passed in when executing the delegate returned by this method.  TArg9  must be a primitive type.</typeparam>
+            <typeparam name="TArg10">Represents the type of the parameter that has to be passed in when executing the delegate returned by this method.  TArg10  must be a primitive type.</typeparam>
+            <typeparam name="TArg11">Represents the type of the parameter that has to be passed in when executing the delegate returned by this method.  TArg11  must be a primitive type.</typeparam>
+            <typeparam name="TArg12">Represents the type of the parameter that has to be passed in when executing the delegate returned by this method.  TArg12  must be a primitive type.</typeparam>
+            <typeparam name="TArg13">Represents the type of the parameter that has to be passed in when executing the delegate returned by this method.  TArg13  must be a primitive type.</typeparam>
+            <typeparam name="TResult">
+            The type  T  of the query results returned by executing the delegate returned by the
+            <see
+                cref="M:System.Data.Entity.Core.Objects.CompiledQuery.Compile``15(System.Linq.Expressions.Expression{System.Func{``0,``1,``2,``3,``4,``5,``6,``7,``8,``9,``10,``11,``12,``13,``14}})" />
+            method.
+            </typeparam>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.CompiledQuery.Compile``14(System.Linq.Expressions.Expression{System.Func{``0,``1,``2,``3,``4,``5,``6,``7,``8,``9,``10,``11,``12,``13}})">
+            <summary>Creates a new delegate that represents the compiled LINQ to Entities query.</summary>
+            <returns>
+            <see cref="T:System.Func`14" />, a generic delegate that represents the compiled LINQ to Entities query.
+            </returns>
+            <param name="query">The lambda expression to compile.</param>
+            <typeparam name="TArg0">
+            A type derived from <see cref="T:System.Data.Entity.Core.Objects.ObjectContext" />.
+            </typeparam>
+            <typeparam name="TArg1">Represents the type of the parameter that has to be passed in when executing the delegate returned by this method.  TArg1  must be a primitive type.</typeparam>
+            <typeparam name="TArg2">Represents the type of the parameter that has to be passed in when executing the delegate returned by this method.  TArg2  must be a primitive type.</typeparam>
+            <typeparam name="TArg3">Represents the type of the parameter that has to be passed in when executing the delegate returned by this method.  TArg3  must be a primitive type.</typeparam>
+            <typeparam name="TArg4">Represents the type of the parameter that has to be passed in when executing the delegate returned by this method.  TArg4  must be a primitive type.</typeparam>
+            <typeparam name="TArg5">Represents the type of the parameter that has to be passed in when executing the delegate returned by this method.  TArg5  must be a primitive type.</typeparam>
+            <typeparam name="TArg6">Represents the type of the parameter that has to be passed in when executing the delegate returned by this method.  TArg6  must be a primitive type.</typeparam>
+            <typeparam name="TArg7">Represents the type of the parameter that has to be passed in when executing the delegate returned by this method.  TArg7  must be a primitive type.</typeparam>
+            <typeparam name="TArg8">Represents the type of the parameter that has to be passed in when executing the delegate returned by this method.  TArg8  must be a primitive type.</typeparam>
+            <typeparam name="TArg9">Represents the type of the parameter that has to be passed in when executing the delegate returned by this method.  TArg9  must be a primitive type.</typeparam>
+            <typeparam name="TArg10">Represents the type of the parameter that has to be passed in when executing the delegate returned by this method.  TArg10  must be a primitive type.</typeparam>
+            <typeparam name="TArg11">Represents the type of the parameter that has to be passed in when executing the delegate returned by this method.  TArg11  must be a primitive type.</typeparam>
+            <typeparam name="TArg12">Represents the type of the parameter that has to be passed in when executing the delegate returned by this method.  TArg12  must be a primitive type.</typeparam>
+            <typeparam name="TResult">
+            The type  T  of the query results returned by executing the delegate returned by the
+            <see
+                cref="M:System.Data.Entity.Core.Objects.CompiledQuery.Compile``14(System.Linq.Expressions.Expression{System.Func{``0,``1,``2,``3,``4,``5,``6,``7,``8,``9,``10,``11,``12,``13}})" />
+            method.
+            </typeparam>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.CompiledQuery.Compile``13(System.Linq.Expressions.Expression{System.Func{``0,``1,``2,``3,``4,``5,``6,``7,``8,``9,``10,``11,``12}})">
+            <summary>Creates a new delegate that represents the compiled LINQ to Entities query.</summary>
+            <returns>
+            <see cref="T:System.Func`13" />, a generic delegate that represents the compiled LINQ to Entities query.
+            </returns>
+            <param name="query">The lambda expression to compile.</param>
+            <typeparam name="TArg0">
+            A type derived from <see cref="T:System.Data.Entity.Core.Objects.ObjectContext" />.
+            </typeparam>
+            <typeparam name="TArg1">Represents the type of the parameter that has to be passed in when executing the delegate returned by this method.  TArg1  must be a primitive type.</typeparam>
+            <typeparam name="TArg2">Represents the type of the parameter that has to be passed in when executing the delegate returned by this method.  TArg2  must be a primitive type.</typeparam>
+            <typeparam name="TArg3">Represents the type of the parameter that has to be passed in when executing the delegate returned by this method.  TArg3  must be a primitive type.</typeparam>
+            <typeparam name="TArg4">Represents the type of the parameter that has to be passed in when executing the delegate returned by this method.  TArg4  must be a primitive type.</typeparam>
+            <typeparam name="TArg5">Represents the type of the parameter that has to be passed in when executing the delegate returned by this method.  TArg5  must be a primitive type.</typeparam>
+            <typeparam name="TArg6">Represents the type of the parameter that has to be passed in when executing the delegate returned by this method.  TArg6  must be a primitive type.</typeparam>
+            <typeparam name="TArg7">Represents the type of the parameter that has to be passed in when executing the delegate returned by this method.  TArg7  must be a primitive type.</typeparam>
+            <typeparam name="TArg8">Represents the type of the parameter that has to be passed in when executing the delegate returned by this method.  TArg8  must be a primitive type.</typeparam>
+            <typeparam name="TArg9">Represents the type of the parameter that has to be passed in when executing the delegate returned by this method.  TArg9  must be a primitive type.</typeparam>
+            <typeparam name="TArg10">Represents the type of the parameter that has to be passed in when executing the delegate returned by this method.  TArg10  must be a primitive type.</typeparam>
+            <typeparam name="TArg11">Represents the type of the parameter that has to be passed in when executing the delegate returned by this method.  TArg11  must be a primitive type.</typeparam>
+            <typeparam name="TResult">
+            The type  T  of the query results returned by executing the delegate returned by the
+            <see
+                cref="M:System.Data.Entity.Core.Objects.CompiledQuery.Compile``13(System.Linq.Expressions.Expression{System.Func{``0,``1,``2,``3,``4,``5,``6,``7,``8,``9,``10,``11,``12}})" />
+            method.
+            </typeparam>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.CompiledQuery.Compile``12(System.Linq.Expressions.Expression{System.

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VsixLanguagePack Version="1.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema-lp/2010">
+  <LocalizedName>Microsoft 连接的服务</LocalizedName>
+  <LocalizedDescription>为“添加连接的服务”对话框提供基本工具和扩展性框架。</LocalizedDescription>
+</VsixLanguagePack>

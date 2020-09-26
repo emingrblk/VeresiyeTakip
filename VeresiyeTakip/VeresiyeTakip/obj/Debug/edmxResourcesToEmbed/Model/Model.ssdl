@@ -1,0 +1,316 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="VeresiyeDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Aciklama">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="aciklama" Type="nvarchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="Ayarlar">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Tema" Type="nvarchar" MaxLength="50" />
+    <Property Name="Firma" Type="int" />
+    <Property Name="Sorgu" Type="int" />
+    <Property Name="Hesap" Type="int" />
+    <Property Name="Filtre" Type="int" />
+  </EntityType>
+  <EntityType Name="Borc">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="tarih" Type="date" />
+    <Property Name="saat" Type="int" />
+    <Property Name="cariHesap" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="aciklama" Type="int" />
+    <Property Name="tutar" Type="decimal" Precision="18" Scale="0" />
+  </EntityType>
+  <EntityType Name="CariKart">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="unvani" Type="nvarchar" MaxLength="50" />
+    <Property Name="yetkili" Type="nvarchar" MaxLength="50" />
+    <Property Name="telefonNo" Type="nchar" MaxLength="16" />
+    <Property Name="vergiDairesi" Type="varchar" MaxLength="50" />
+    <Property Name="adres" Type="nvarchar" MaxLength="500" />
+    <Property Name="ePosta" Type="varchar" MaxLength="50" />
+    <Property Name="gsm" Type="nchar" MaxLength="16" />
+    <Property Name="faksNo" Type="nchar" MaxLength="16" />
+    <Property Name="webAdresi" Type="varchar" MaxLength="50" />
+    <Property Name="cariLimit" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="notu" Type="nvarchar(max)" />
+    <Property Name="tarih" Type="datetime" />
+    <Property Name="vergiNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="firmaId" Type="int" />
+    <Property Name="ilId" Type="int" />
+    <Property Name="ilce" Type="int" />
+    <Property Name="borcId" Type="int" />
+    <Property Name="hesapId" Type="int" />
+  </EntityType>
+  <EntityType Name="Firma">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="kod" Type="nvarchar" MaxLength="50" />
+    <Property Name="firmaUnvani" Type="nvarchar" MaxLength="50" />
+    <Property Name="telefonNo" Type="nchar" MaxLength="16" />
+    <Property Name="adres" Type="nvarchar" MaxLength="500" />
+    <Property Name="il" Type="int" />
+    <Property Name="vergiDairesi" Type="nvarchar" MaxLength="50" />
+    <Property Name="faksNo" Type="nchar" MaxLength="16" />
+    <Property Name="ilce" Type="int" />
+    <Property Name="vergiNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="borcLimit" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="donem" Type="int" />
+    <Property Name="paraBirimi" Type="int" />
+    <Property Name="sifreId" Type="int" />
+  </EntityType>
+  <EntityType Name="Hesap">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="durum" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="ilceler">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="ilce" Type="nvarchar" MaxLength="255" />
+    <Property Name="sehir" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="iller">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="sehir" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="ParaBirimi">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="birim" Type="nvarchar" MaxLength="25" />
+  </EntityType>
+  <EntityType Name="Sifre">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="sifre" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'VeresiyeDB.dbo.CariFirmaWiev' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="CariFirmaWiev">
+          <Property Name="ayar_id" Type="int" />
+          <Property Name="ayar_firmaid" Type="int" />
+          <Property Name="unvani" Type="nvarchar" MaxLength="50" />
+          <Property Name="firmaUnvani" Type="nvarchar" MaxLength="50" />
+          <Property Name="FSeh" Type="nvarchar" MaxLength="255" />
+          <Property Name="Filc" Type="nvarchar" MaxLength="255" />
+          <Property Name="Cseh" Type="nvarchar" MaxLength="255" />
+          <Property Name="Cilc" Type="nvarchar" MaxLength="255" />
+          <Property Name="durum" Type="nvarchar" MaxLength="50" />
+          <Property Name="birim" Type="nvarchar" MaxLength="25" />
+          <Property Name="cariHesap" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="Expr3" Type="int" />
+          <Property Name="telefonNo" Type="nchar" MaxLength="16" />
+          <Property Name="adres" Type="nvarchar" MaxLength="500" />
+          <Property Name="faksNo" Type="nchar" MaxLength="16" />
+          <Property Name="Expr1" Type="nchar" MaxLength="16" />
+          <Property Name="tarih" Type="datetime" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'VeresiyeDB.dbo.View_1' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="View_1">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Tema" Type="nvarchar" MaxLength="50" />
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Firma" Type="int" />
+  </EntityType>
+  <Association Name="FK_Borc_Aciklama">
+    <End Role="Aciklama" Type="Self.Aciklama" Multiplicity="0..1" />
+    <End Role="Borc" Type="Self.Borc" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Aciklama">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Borc">
+        <PropertyRef Name="aciklama" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CariKart_Borc">
+    <End Role="Borc" Type="Self.Borc" Multiplicity="0..1" />
+    <End Role="CariKart" Type="Self.CariKart" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Borc">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="CariKart">
+        <PropertyRef Name="borcId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CariKart_Firma1">
+    <End Role="Firma" Type="Self.Firma" Multiplicity="0..1" />
+    <End Role="CariKart" Type="Self.CariKart" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Firma">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="CariKart">
+        <PropertyRef Name="firmaId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CariKart_Hesap">
+    <End Role="Hesap" Type="Self.Hesap" Multiplicity="0..1" />
+    <End Role="CariKart" Type="Self.CariKart" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Hesap">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="CariKart">
+        <PropertyRef Name="hesapId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CariKart_iller">
+    <End Role="iller" Type="Self.iller" Multiplicity="0..1" />
+    <End Role="CariKart" Type="Self.CariKart" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="iller">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="CariKart">
+        <PropertyRef Name="ilId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Firma_iller">
+    <End Role="iller" Type="Self.iller" Multiplicity="0..1" />
+    <End Role="Firma" Type="Self.Firma" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="iller">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Firma">
+        <PropertyRef Name="il" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Firma_ParaBirimi">
+    <End Role="ParaBirimi" Type="Self.ParaBirimi" Multiplicity="0..1" />
+    <End Role="Firma" Type="Self.Firma" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ParaBirimi">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Firma">
+        <PropertyRef Name="paraBirimi" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Firma_Sifre">
+    <End Role="Sifre" Type="Self.Sifre" Multiplicity="0..1" />
+    <End Role="Firma" Type="Self.Firma" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sifre">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Firma">
+        <PropertyRef Name="sifreId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ilceler_iller">
+    <End Role="iller" Type="Self.iller" Multiplicity="1" />
+    <End Role="ilceler" Type="Self.ilceler" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="iller">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="ilceler">
+        <PropertyRef Name="sehir" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="VeresiyeDBModelStoreContainer">
+    <EntitySet Name="Aciklama" EntityType="Self.Aciklama" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Ayarlar" EntityType="Self.Ayarlar" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Borc" EntityType="Self.Borc" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CariKart" EntityType="Self.CariKart" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Firma" EntityType="Self.Firma" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Hesap" EntityType="Self.Hesap" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ilceler" EntityType="Self.ilceler" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="iller" EntityType="Self.iller" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ParaBirimi" EntityType="Self.ParaBirimi" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Sifre" EntityType="Self.Sifre" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="View_1" EntityType="Self.View_1" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [View_1].[Tema] AS [Tema], 
+    [View_1].[Id] AS [Id], 
+    [View_1].[Firma] AS [Firma]
+    FROM [dbo].[View_1] AS [View_1]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK_Borc_Aciklama" Association="Self.FK_Borc_Aciklama">
+      <End Role="Aciklama" EntitySet="Aciklama" />
+      <End Role="Borc" EntitySet="Borc" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CariKart_Borc" Association="Self.FK_CariKart_Borc">
+      <End Role="Borc" EntitySet="Borc" />
+      <End Role="CariKart" EntitySet="CariKart" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CariKart_Firma1" Association="Self.FK_CariKart_Firma1">
+      <End Role="Firma" EntitySet="Firma" />
+      <End Role="CariKart" EntitySet="CariKart" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CariKart_Hesap" Association="Self.FK_CariKart_Hesap">
+      <End Role="Hesap" EntitySet="Hesap" />
+      <End Role="CariKart" EntitySet="CariKart" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CariKart_iller" Association="Self.FK_CariKart_iller">
+      <End Role="iller" EntitySet="iller" />
+      <End Role="CariKart" EntitySet="CariKart" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Firma_iller" Association="Self.FK_Firma_iller">
+      <End Role="iller" EntitySet="iller" />
+      <End Role="Firma" EntitySet="Firma" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Firma_ParaBirimi" Association="Self.FK_Firma_ParaBirimi">
+      <End Role="ParaBirimi" EntitySet="ParaBirimi" />
+      <End Role="Firma" EntitySet="Firma" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Firma_Sifre" Association="Self.FK_Firma_Sifre">
+      <End Role="Sifre" EntitySet="Sifre" />
+      <End Role="Firma" EntitySet="Firma" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ilceler_iller" Association="Self.FK_ilceler_iller">
+      <End Role="iller" EntitySet="iller" />
+      <End Role="ilceler" EntitySet="ilceler" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

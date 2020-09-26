@@ -1,0 +1,1393 @@
+      The <see cref="T:System.Data.Entity.Core.Common.CommandTrees.DbNotExpression" /> that is being visited.
+            </param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Common.CommandTrees.DbExpressionVisitor`1.Visit(System.Data.Entity.Core.Common.CommandTrees.DbNullExpression)">
+            <summary>
+            When overridden in a derived class, implements the visitor pattern for
+            <see
+                cref="T:System.Data.Entity.Core.Common.CommandTrees.DbNullExpression" />
+            .
+            </summary>
+            <returns>A result value of a specific type.</returns>
+            <param name="expression">
+            The <see cref="T:System.Data.Entity.Core.Common.CommandTrees.DbNullExpression" /> that is being visited.
+            </param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Common.CommandTrees.DbExpressionVisitor`1.Visit(System.Data.Entity.Core.Common.CommandTrees.DbOfTypeExpression)">
+            <summary>
+            When overridden in a derived class, implements the visitor pattern for
+            <see
+                cref="T:System.Data.Entity.Core.Common.CommandTrees.DbOfTypeExpression" />
+            .
+            </summary>
+            <returns>A result value of a specific type.</returns>
+            <param name="expression">
+            The <see cref="T:System.Data.Entity.Core.Common.CommandTrees.DbOfTypeExpression" /> that is being visited.
+            </param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Common.CommandTrees.DbExpressionVisitor`1.Visit(System.Data.Entity.Core.Common.CommandTrees.DbOrExpression)">
+            <summary>
+            When overridden in a derived class, implements the visitor pattern for
+            <see
+                cref="T:System.Data.Entity.Core.Common.CommandTrees.DbOrExpression" />
+            .
+            </summary>
+            <returns>A result value of a specific type.</returns>
+            <param name="expression">
+            The <see cref="T:System.Data.Entity.Core.Common.CommandTrees.DbOrExpression" /> that is being visited.
+            </param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Common.CommandTrees.DbExpressionVisitor`1.Visit(System.Data.Entity.Core.Common.CommandTrees.DbParameterReferenceExpression)">
+            <summary>
+            When overridden in a derived class, implements the visitor pattern for
+            <see
+                cref="T:System.Data.Entity.Core.Common.CommandTrees.DbParameterReferenceExpression" />
+            .
+            </summary>
+            <returns>A result value of a specific type.</returns>
+            <param name="expression">
+            The <see cref="T:System.Data.Entity.Core.Common.CommandTrees.DbParameterReferenceExpression" /> that is being visited.
+            </param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Common.CommandTrees.DbExpressionVisitor`1.Visit(System.Data.Entity.Core.Common.CommandTrees.DbProjectExpression)">
+            <summary>
+            When overridden in a derived class, implements the visitor pattern for
+            <see
+                cref="T:System.Data.Entity.Core.Common.CommandTrees.DbProjectExpression" />
+            .
+            </summary>
+            <returns>A result value of a specific type.</returns>
+            <param name="expression">
+            The <see cref="T:System.Data.Entity.Core.Common.CommandTrees.DbProjectExpression" /> that is being visited.
+            </param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Common.CommandTrees.DbExpressionVisitor`1.Visit(System.Data.Entity.Core.Common.CommandTrees.DbPropertyExpression)">
+            <summary>
+            When overridden in a derived class, implements the visitor pattern for
+            <see
+                cref="T:System.Data.Entity.Core.Common.CommandTrees.DbPropertyExpression" />
+            .
+            </summary>
+            <returns>A result value of a specific type.</returns>
+            <param name="expression">
+            The <see cref="T:System.Data.Entity.Core.Common.CommandTrees.DbPropertyExpression" /> that is being visited.
+            </param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Common.CommandTrees.DbExpressionVisitor`1.Visit(System.Data.Entity.Core.Common.CommandTrees.DbQuantifierExpression)">
+            <summary>
+            When overridden in a derived class, implements the visitor pattern for
+            <see
+                cref="T:System.Data.Entity.Core.Common.CommandTrees.DbQuantifierExpression" />
+            .
+            </summary>
+            <returns>A result value of a specific type.</returns>
+            <param name="expression">
+            The <see cref="T:System.Data.Entity.Core.Common.CommandTrees.DbQuantifierExpression" /> that is being visited.
+            </param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Common.CommandTrees.DbExpressionVisitor`1.Visit(System.Data.Entity.Core.Common.CommandTrees.DbRefExpression)">
+            <summary>
+            When overridden in a derived class, implements the visitor pattern for
+            <see
+                cref="T:System.Data.Entity.Core.Common.CommandTrees.DbRefExpression" />
+            .
+            </summary>
+            <returns>A result value of a specific type.</returns>
+            <param name="expression">
+            The <see cref="T:System.Data.Entity.Core.Common.CommandTrees.DbRefExpression" /> that is being visited.
+            </param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Common.CommandTrees.DbExpressionVisitor`1.Visit(System.Data.Entity.Core.Common.CommandTrees.DbRelationshipNavigationExpression)">
+            <summary>
+            When overridden in a derived class, implements the visitor pattern for
+            <see
+                cref="T:System.Data.Entity.Core.Common.CommandTrees.DbRelationshipNavigationExpression" />
+            .
+            </summary>
+            <returns>A result value of a specific type.</returns>
+            <param name="expression">
+            The <see cref="T:System.Data.Entity.Core.Common.CommandTrees.DbRelationshipNavigationExpression" /> that is being visited.
+            </param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Common.CommandTrees.DbExpressionVisitor`1.Visit(System.Data.Entity.Core.Common.CommandTrees.DbScanExpression)">
+            <summary>
+            When overridden in a derived class, implements the visitor pattern for
+            <see
+                cref="T:System.Data.Entity.Core.Common.CommandTrees.DbScanExpression" />
+            .
+            </summary>
+            <returns>A result value of a specific type.</returns>
+            <param name="expression">
+            The <see cref="T:System.Data.Entity.Core.Common.CommandTrees.DbScanExpression" /> that is being visited.
+            </param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Common.CommandTrees.DbExpressionVisitor`1.Visit(System.Data.Entity.Core.Common.CommandTrees.DbSortExpression)">
+            <summary>
+            When overridden in a derived class, implements the visitor pattern for
+            <see
+                cref="T:System.Data.Entity.Core.Common.CommandTrees.DbSortExpression" />
+            .
+            </summary>
+            <returns>A result value of a specific type.</returns>
+            <param name="expression">
+            The <see cref="T:System.Data.Entity.Core.Common.CommandTrees.DbSortExpression" /> that is being visited.
+            </param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Common.CommandTrees.DbExpressionVisitor`1.Visit(System.Data.Entity.Core.Common.CommandTrees.DbSkipExpression)">
+            <summary>
+            When overridden in a derived class, implements the visitor pattern for
+            <see
+                cref="T:System.Data.Entity.Core.Common.CommandTrees.DbSkipExpression" />
+            .
+            </summary>
+            <returns>A result value of a specific type.</returns>
+            <param name="expression">
+            The <see cref="T:System.Data.Entity.Core.Common.CommandTrees.DbSkipExpression" /> that is being visited.
+            </param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Common.CommandTrees.DbExpressionVisitor`1.Visit(System.Data.Entity.Core.Common.CommandTrees.DbTreatExpression)">
+            <summary>
+            When overridden in a derived class, implements the visitor pattern for
+            <see
+                cref="T:System.Data.Entity.Core.Common.CommandTrees.DbTreatExpression" />
+            .
+            </summary>
+            <returns>A result value of a specific type.</returns>
+            <param name="expression">
+            The <see cref="T:System.Data.Entity.Core.Common.CommandTrees.DbTreatExpression" /> that is being visited.
+            </param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Common.CommandTrees.DbExpressionVisitor`1.Visit(System.Data.Entity.Core.Common.CommandTrees.DbUnionAllExpression)">
+            <summary>
+            When overridden in a derived class, implements the visitor pattern for
+            <see
+                cref="T:System.Data.Entity.Core.Common.CommandTrees.DbUnionAllExpression" />
+            .
+            </summary>
+            <returns>A result value of a specific type.</returns>
+            <param name="expression">
+            The <see cref="T:System.Data.Entity.Core.Common.CommandTrees.DbUnionAllExpression" /> that is being visited.
+            </param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Common.CommandTrees.DbExpressionVisitor`1.Visit(System.Data.Entity.Core.Common.CommandTrees.DbVariableReferenceExpression)">
+            <summary>
+            When overridden in a derived class, implements the visitor pattern for
+            <see
+                cref="T:System.Data.Entity.Core.Common.CommandTrees.DbVariableReferenceExpression" />
+            .
+            </summary>
+            <returns>A result value of a specific type.</returns>
+            <param name="expression">
+            The <see cref="T:System.Data.Entity.Core.Common.CommandTrees.DbVariableReferenceExpression" /> that is being visited.
+            </param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Common.CommandTrees.DbExpressionVisitor`1.Visit(System.Data.Entity.Core.Common.CommandTrees.DbInExpression)">
+            <summary>
+            Typed visitor pattern method for DbInExpression.
+            </summary>
+            <param name="expression"> The DbInExpression that is being visited. </param>
+            <returns> An instance of TResultType. </returns>
+        </member>
+        <member name="M:System.Data.Entity.Core.Common.CommandTrees.DefaultExpressionVisitor.#ctor">
+            <summary>
+            Initializes a new instance of the
+            <see
+                cref="T:System.Data.Entity.Core.Common.CommandTrees.DefaultExpressionVisitor" />
+            class.
+            </summary>
+        </member>
+        <member name="M:System.Data.Entity.Core.Common.CommandTrees.DefaultExpressionVisitor.OnExpressionReplaced(System.Data.Entity.Core.Common.CommandTrees.DbExpression,System.Data.Entity.Core.Common.CommandTrees.DbExpression)">
+            <summary>Replaces an old expression with a new one for the expression visitor.</summary>
+            <param name="oldExpression">The old expression.</param>
+            <param name="newExpression">The new expression.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Common.CommandTrees.DefaultExpressionVisitor.OnVariableRebound(System.Data.Entity.Core.Common.CommandTrees.DbVariableReferenceExpression,System.Data.Entity.Core.Common.CommandTrees.DbVariableReferenceExpression)">
+            <summary>Represents an event when the variable is rebound for the expression visitor.</summary>
+            <param name="fromVarRef">The location of the variable.</param>
+            <param name="toVarRef">The reference of the variable where it is rebounded.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Common.CommandTrees.DefaultExpressionVisitor.OnEnterScope(System.Collections.Generic.IEnumerable{System.Data.Entity.Core.Common.CommandTrees.DbVariableReferenceExpression})">
+            <summary>Represents an event when entering the scope for the expression visitor with specified scope variables.</summary>
+            <param name="scopeVariables">The collection of scope variables.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Common.CommandTrees.DefaultExpressionVisitor.OnExitScope">
+            <summary>Exits the scope for the expression visitor.</summary>
+        </member>
+        <member name="M:System.Data.Entity.Core.Common.CommandTrees.DefaultExpressionVisitor.VisitExpression(System.Data.Entity.Core.Common.CommandTrees.DbExpression)">
+            <summary>Implements the visitor pattern for the expression.</summary>
+            <returns>The implemented visitor pattern.</returns>
+            <param name="expression">The expression.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Common.CommandTrees.DefaultExpressionVisitor.VisitExpressionList(System.Collections.Generic.IList{System.Data.Entity.Core.Common.CommandTrees.DbExpression})">
+            <summary>Implements the visitor pattern for the expression list.</summary>
+            <returns>The implemented visitor pattern.</returns>
+            <param name="list">The expression list.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Common.CommandTrees.DefaultExpressionVisitor.VisitExpressionBinding(System.Data.Entity.Core.Common.CommandTrees.DbExpressionBinding)">
+            <summary>Implements the visitor pattern for expression binding.</summary>
+            <returns>The implemented visitor pattern.</returns>
+            <param name="binding">The expression binding.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Common.CommandTrees.DefaultExpressionVisitor.VisitExpressionBindingList(System.Collections.Generic.IList{System.Data.Entity.Core.Common.CommandTrees.DbExpressionBinding})">
+            <summary>Implements the visitor pattern for the expression binding list.</summary>
+            <returns>The implemented visitor pattern.</returns>
+            <param name="list">The expression binding list.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Common.CommandTrees.DefaultExpressionVisitor.VisitGroupExpressionBinding(System.Data.Entity.Core.Common.CommandTrees.DbGroupExpressionBinding)">
+            <summary>Implements the visitor pattern for the group expression binding.</summary>
+            <returns>The implemented visitor pattern.</returns>
+            <param name="binding">The binding.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Common.CommandTrees.DefaultExpressionVisitor.VisitSortClause(System.Data.Entity.Core.Common.CommandTrees.DbSortClause)">
+            <summary>Implements the visitor pattern for the sort clause.</summary>
+            <returns>The implemented visitor pattern.</returns>
+            <param name="clause">The sort clause.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Common.CommandTrees.DefaultExpressionVisitor.VisitSortOrder(System.Collections.Generic.IList{System.Data.Entity.Core.Common.CommandTrees.DbSortClause})">
+            <summary>Implements the visitor pattern for the sort order.</summary>
+            <returns>The implemented visitor pattern.</returns>
+            <param name="sortOrder">The sort order.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Common.CommandTrees.DefaultExpressionVisitor.VisitAggregate(System.Data.Entity.Core.Common.CommandTrees.DbAggregate)">
+            <summary>Implements the visitor pattern for the aggregate.</summary>
+            <returns>The implemented visitor pattern.</returns>
+            <param name="aggregate">The aggregate.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Common.CommandTrees.DefaultExpressionVisitor.VisitFunctionAggregate(System.Data.Entity.Core.Common.CommandTrees.DbFunctionAggregate)">
+            <summary>Implements the visitor pattern for the function aggregate.</summary>
+            <returns>The implemented visitor pattern.</returns>
+            <param name="aggregate">The aggregate.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Common.CommandTrees.DefaultExpressionVisitor.VisitGroupAggregate(System.Data.Entity.Core.Common.CommandTrees.DbGroupAggregate)">
+            <summary>Implements the visitor pattern for the group aggregate.</summary>
+            <returns>The implemented visitor pattern.</returns>
+            <param name="aggregate">The aggregate.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Common.CommandTrees.DefaultExpressionVisitor.VisitLambda(System.Data.Entity.Core.Common.CommandTrees.DbLambda)">
+            <summary>Implements the visitor pattern for the Lambda function.</summary>
+            <returns>The implemented visitor pattern.</returns>
+            <param name="lambda">The lambda function.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Common.CommandTrees.DefaultExpressionVisitor.VisitType(System.Data.Entity.Core.Metadata.Edm.EdmType)">
+            <summary>Implements the visitor pattern for the type.</summary>
+            <returns>The implemented visitor pattern.</returns>
+            <param name="type">The type.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Common.CommandTrees.DefaultExpressionVisitor.VisitTypeUsage(System.Data.Entity.Core.Metadata.Edm.TypeUsage)">
+            <summary>Implements the visitor pattern for the type usage.</summary>
+            <returns>The implemented visitor pattern.</returns>
+            <param name="type">The type.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Common.CommandTrees.DefaultExpressionVisitor.VisitEntitySet(System.Data.Entity.Core.Metadata.Edm.EntitySetBase)">
+            <summary>Implements the visitor pattern for the entity set.</summary>
+            <returns>The implemented visitor pattern.</returns>
+            <param name="entitySet">The entity set.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Common.CommandTrees.DefaultExpressionVisitor.VisitFunction(System.Data.Entity.Core.Metadata.Edm.EdmFunction)">
+            <summary>Implements the visitor pattern for the function.</summary>
+            <returns>The implemented visitor pattern.</returns>
+            <param name="functionMetadata">The function metadata.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Common.CommandTrees.DefaultExpressionVisitor.Visit(System.Data.Entity.Core.Common.CommandTrees.DbExpression)">
+            <summary>Implements the visitor pattern for the basic functionality required by expression types.</summary>
+            <returns>The implemented visitor.</returns>
+            <param name="expression">The expression.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Common.CommandTrees.DefaultExpressionVisitor.Visit(System.Data.Entity.Core.Common.CommandTrees.DbConstantExpression)">
+            <summary>Implements the visitor pattern for the different kinds of constants.</summary>
+            <returns>The implemented visitor.</returns>
+            <param name="expression">The constant expression.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Common.CommandTrees.DefaultExpressionVisitor.Visit(System.Data.Entity.Core.Common.CommandTrees.DbNullExpression)">
+            <summary>Implements the visitor pattern for a reference to a typed null literal.</summary>
+            <returns>The implemented visitor.</returns>
+            <param name="expression">The expression.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Common.CommandTrees.DefaultExpressionVisitor.Visit(System.Data.Entity.Core.Common.CommandTrees.DbVariableReferenceExpression)">
+            <summary>Implements the visitor pattern for a reference to a variable that is currently in scope.</summary>
+            <returns>The implemented visitor.</returns>
+            <param name="expression">The expression.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Common.CommandTrees.DefaultExpressionVisitor.Visit(System.Data.Entity.Core.Common.CommandTrees.DbParameterReferenceExpression)">
+            <summary>Implements the visitor pattern for a reference to a parameter declared on the command tree that contains this expression.</summary>
+            <returns>The implemented visitor.</returns>
+            <param name="expression">The expression.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Common.CommandTrees.DefaultExpressionVisitor.Visit(System.Data.Entity.Core.Common.CommandTrees.DbFunctionExpression)">
+            <summary>Implements the visitor pattern for an invocation of a function.</summary>
+            <returns>The implemented visitor.</returns>
+            <param name="expression">The function expression.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Common.CommandTrees.DefaultExpressionVisitor.Visit(System.Data.Entity.Core.Common.CommandTrees.DbLambdaExpression)">
+            <summary>Implements the visitor pattern for the application of a lambda function to arguments represented by DbExpression objects.</summary>
+            <returns>The implemented visitor.</returns>
+            <param name="expression">The expression.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Common.CommandTrees.DefaultExpressionVisitor.Visit(System.Data.Entity.Core.Common.CommandTrees.DbPropertyExpression)">
+            <summary>Implements the visitor pattern for retrieving an instance property.</summary>
+            <returns>The implemented visitor.</returns>
+            <param name="expression">The expression.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Common.CommandTrees.DefaultExpressionVisitor.Visit(System.Data.Entity.Core.Common.CommandTrees.DbComparisonExpression)">
+            <summary>Implements the visitor pattern for the comparison operation applied to two arguments.</summary>
+            <returns>The implemented visitor.</returns>
+            <param name="expression">The cast expression.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Common.CommandTrees.DefaultExpressionVisitor.Visit(System.Data.Entity.Core.Common.CommandTrees.DbLikeExpression)">
+            <summary>Implements the visitor pattern for a string comparison against the specified pattern with an optional escape string.</summary>
+            <returns>The implemented visitor.</returns>
+            <param name="expression">The expression.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Common.CommandTrees.DefaultExpressionVisitor.Visit(System.Data.Entity.Core.Common.CommandTrees.DbLimitExpression)">
+            <summary>Implements the visitor pattern for the restriction of the number of elements in the argument collection to the specified limit value.</summary>
+            <returns>The implemented visitor.</returns>
+            <param name="expression">The expression.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Common.CommandTrees.DefaultExpressionVisitor.Visit(System.Data.Entity.Core.Common.CommandTrees.DbIsNullExpression)">
+            <summary>Implements the visitor pattern for the null determination applied to a single argument.</summary>
+            <returns>The implemented visitor.</returns>
+            <param name="expression">The expression.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Common.CommandTrees.DefaultExpressionVisitor.Visit(System.Data.Entity.Core.Common.CommandTrees.DbArithmeticExpression)">
+            <summary>Implements the visitor pattern for the arithmetic operation applied to numeric arguments.</summary>
+            <returns>The implemented visitor.</returns>
+            <param name="expression">The arithmetic expression.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Common.CommandTrees.DefaultExpressionVisitor.Visit(System.Data.Entity.Core.Common.CommandTrees.DbAndExpression)">
+            <summary>Implements the visitor pattern for the logical AND expression.</summary>
+            <returns>The implemented visitor.</returns>
+            <param name="expression">The logical AND expression.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Common.CommandTrees.DefaultExpressionVisitor.Visit(System.Data.Entity.Core.Common.CommandTrees.DbOrExpression)">
+            <summary>Implements the visitor pattern for the logical OR of two Boolean arguments.</summary>
+            <returns>The implemented visitor.</returns>
+            <param name="expression">The expression.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Common.CommandTrees.DefaultExpressionVisitor.Visit(System.Data.Entity.Core.Common.CommandTrees.DbInExpression)">
+            <summary>Implements the visitor pattern for the DbInExpression.</summary>
+            <returns>The implemented visitor.</returns>
+            <param name="expression">The DbInExpression that is being visited.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Common.CommandTrees.DefaultExpressionVisitor.Visit(System.Data.Entity.Core.Common.CommandTrees.DbNotExpression)">
+            <summary>Implements the visitor pattern for the logical NOT of a single Boolean argument.</summary>
+            <returns>The implemented visitor.</returns>
+            <param name="expression">The expression.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Common.CommandTrees.DefaultExpressionVisitor.Visit(System.Data.Entity.Core.Common.CommandTrees.DbDistinctExpression)">
+            <summary>Implements the visitor pattern for the removed duplicate elements from the specified set argument.</summary>
+            <returns>The implemented visitor.</returns>
+            <param name="expression">The distinct expression.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Common.CommandTrees.DefaultExpressionVisitor.Visit(System.Data.Entity.Core.Common.CommandTrees.DbElementExpression)">
+            <summary>Implements the visitor pattern for the conversion of the specified set argument to a singleton the conversion of the specified set argument to a singleton.</summary>
+            <returns>The implemented visitor.</returns>
+            <param name="expression">The element expression.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Common.CommandTrees.DefaultExpressionVisitor.Visit(System.Data.Entity.Core.Common.CommandTrees.DbIsEmptyExpression)">
+            <summary>Implements the visitor pattern for an empty set determination applied to a single set argument.</summary>
+            <returns>The implemented visitor.</returns>
+            <param name="expression">The expression.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Common.CommandTrees.DefaultExpressionVisitor.Visit(System.Data.Entity.Core.Common.CommandTrees.DbUnionAllExpression)">
+            <summary>Implements the visitor pattern for the set union operation between the left and right operands.</summary>
+            <returns>The implemented visitor.</returns>
+            <param name="expression">The expression.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Common.CommandTrees.DefaultExpressionVisitor.Visit(System.Data.Entity.Core.Common.CommandTrees.DbIntersectExpression)">
+            <summary>Implements the visitor pattern for the set intersection operation between the left and right operands.</summary>
+            <returns>The implemented visitor.</returns>
+            <param name="expression">The expression.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Common.CommandTrees.DefaultExpressionVisitor.Visit(System.Data.Entity.Core.Common.CommandTrees.DbExceptExpression)">
+            <summary>Implements the visitor pattern for the set subtraction operation between the left and right operands.</summary>
+            <returns>The implemented visitor.</returns>
+            <param name="expression">The expression.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Common.CommandTrees.DefaultExpressionVisitor.Visit(System.Data.Entity.Core.Common.CommandTrees.DbTreatExpression)">
+            <summary>Implements the visitor pattern for a type conversion operation applied to a polymorphic argument.</summary>
+            <returns>The implemented visitor.</returns>
+            <param name="expression">The expression.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Common.CommandTrees.DefaultExpressionVisitor.Visit(System.Data.Entity.Core.Common.CommandTrees.DbIsOfExpression)">
+            <summary>Implements the visitor pattern for the type comparison of a single argument against the specified type.</summary>
+            <returns>The implemented visitor.</returns>
+            <param name="expression">The expression.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Common.CommandTrees.DefaultExpressionVisitor.Visit(System.Data.Entity.Core.Common.CommandTrees.DbCastExpression)">
+            <summary>Implements the visitor pattern for the type conversion of a single argument to the specified type.</summary>
+            <returns>The implemented visitor.</returns>
+            <param name="expression">The cast expression.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Common.CommandTrees.DefaultExpressionVisitor.Visit(System.Data.Entity.Core.Common.CommandTrees.DbCaseExpression)">
+            <summary>Implements the visitor pattern for the When, Then, and Else clauses.</summary>
+            <returns>The implemented visitor.</returns>
+            <param name="expression">The case expression.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Common.CommandTrees.DefaultExpressionVisitor.Visit(System.Data.Entity.Core.Common.CommandTrees.DbOfTypeExpression)">
+            <summary>Implements the visitor pattern for the retrieval of elements of the specified type from the given set argument.</summary>
+            <returns>The implemented visitor.</returns>
+            <param name="expression">The expression.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Common.CommandTrees.DefaultExpressionVisitor.Visit(System.Data.Entity.Core.Common.CommandTrees.DbNewInstanceExpression)">
+            <summary>Implements the visitor pattern for the construction of a new instance of a given type, including set and record types.</summary>
+            <returns>The implemented visitor.</returns>
+            <param name="expression">The expression.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Common.CommandTrees.DefaultExpressionVisitor.Visit(System.Data.Entity.Core.Common.CommandTrees.DbRefExpression)">
+            <summary>Implements the visitor pattern for a strongly typed reference to a specific instance within an entity set.</summary>
+            <returns>The implemented visitor.</returns>
+            <param name="expression">The expression.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Common.CommandTrees.DefaultExpressionVisitor.Visit(System.Data.Entity.Core.Common.CommandTrees.DbRelationshipNavigationExpression)">
+            <summary>Implements the visitor pattern for the navigation of a relationship.</summary>
+            <returns>The implemented visitor.</returns>
+            <param name="expression">The expression.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Common.CommandTrees.DefaultExpressionVisitor.Visit(System.Data.Entity.Core.Common.CommandTrees.DbDerefExpression)">
+            <summary>Implements the visitor pattern for the expression that retrieves an entity based on the specified reference.</summary>
+            <returns>The implemented visitor.</returns>
+            <param name="expression">The DEREF expression.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Common.CommandTrees.DefaultExpressionVisitor.Visit(System.Data.Entity.Core.Common.CommandTrees.DbRefKeyExpression)">
+            <summary>Implements the visitor pattern for the retrieval of the key value from the underlying reference value.</summary>
+            <returns>The implemented visitor.</returns>
+            <param name="expression">The expression.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Common.CommandTrees.DefaultExpressionVisitor.Visit(System.Data.Entity.Core.Common.CommandTrees.DbEntityRefExpression)">
+            <summary>Implements the visitor pattern for the expression that extracts a reference from the underlying entity instance.</summary>
+            <returns>The implemented visitor.</returns>
+            <param name="expression">The entity reference expression.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Common.CommandTrees.DefaultExpressionVisitor.Visit(System.Data.Entity.Core.Common.CommandTrees.DbScanExpression)">
+            <summary>Implements the visitor pattern for a scan over an entity set or relationship set, as indicated by the Target property.</summary>
+            <returns>The implemented visitor.</returns>
+            <param name="expression">The expression.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Common.CommandTrees.DefaultExpressionVisitor.Visit(System.Data.Entity.Core.Common.CommandTrees.DbFilterExpression)">
+            <summary>Implements the visitor pattern for a predicate applied to filter an input set.</summary>
+            <returns>The implemented visitor.</returns>
+            <param name="expression">The filter expression.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Common.CommandTrees.DefaultExpressionVisitor.Visit(System.Data.Entity.Core.Common.CommandTrees.DbProjectExpression)">
+            <summary>Implements the visitor pattern for the projection of a given input set over the specified expression.</summary>
+            <returns>The implemented visitor.</returns>
+            <param name="expression">The expression.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Common.CommandTrees.DefaultExpressionVisitor.Visit(System.Data.Entity.Core.Common.CommandTrees.DbCrossJoinExpression)">
+            <summary>Implements the visitor pattern for the unconditional join operation between the given collection arguments.</summary>
+            <returns>The implemented visitor.</returns>
+            <param name="expression">The join expression.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Common.CommandTrees.DefaultExpressionVisitor.Visit(System.Data.Entity.Core.Common.CommandTrees.DbJoinExpression)">
+            <summary>Implements the visitor pattern for an inner, left outer, or full outer join operation between the given collection arguments on the specified join condition.</summary>
+            <returns>The implemented visitor.</returns>
+            <param name="expression">The expression.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Common.CommandTrees.DefaultExpressionVisitor.Visit(System.Data.Entity.Core.Common.CommandTrees.DbApplyExpression)">
+            <summary>Implements the visitor pattern for the invocation of the specified function for each element in the specified input set.</summary>
+            <returns>The implemented visitor.</returns>
+            <param name="expression">The APPLY expression.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Common.CommandTrees.DefaultExpressionVisitor.Visit(System.Data.Entity.Core.Common.CommandTrees.DbGroupByExpression)">
+            <summary>Implements the visitor pattern for a group by operation.</summary>
+            <returns>The implemented visitor.</returns>
+            <param name="expression">The expression.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Common.CommandTrees.DefaultExpressionVisitor.Visit(System.Data.Entity.Core.Common.CommandTrees.DbSkipExpression)">
+            <summary>Implements the visitor pattern for the skip expression.</summary>
+            <returns>The implemented visitor.</returns>
+            <param name="expression">The expression.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Common.CommandTrees.DefaultExpressionVisitor.Visit(System.Data.Entity.Core.Common.CommandTrees.DbSortExpression)">
+            <summary>Implements the visitor pattern for a sort key that can be used as part of the sort order.</summary>
+            <returns>The implemented visitor.</returns>
+            <param name="expression">The expression.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Common.CommandTrees.DefaultExpressionVisitor.Visit(System.Data.Entity.Core.Common.CommandTrees.DbQuantifierExpression)">
+            <summary>Implements the visitor pattern for a quantifier operation of the specified kind over the elements of the specified input set.</summary>
+            <returns>The implemented visitor.</returns>
+            <param name="expression">The expression.</param>
+        </member>
+        <member name="T:System.ComponentModel.DataAnnotations.Schema.IndexAttribute">
+            <summary>
+            When this attribute is placed on a property it indicates that the database column to which the
+            property is mapped has an index.
+            </summary>
+            <remarks>
+            This attribute is used by Entity Framework Migrations to create indexes on mapped database columns.
+            Multi-column indexes are created by using the same index name in multiple attributes. The information
+            in these attributes is then merged together to specify the actual database index.
+            </remarks>
+        </member>
+        <member name="M:System.ComponentModel.DataAnnotations.Schema.IndexAttribute.#ctor">
+            <summary>
+            Creates a <see cref="T:System.ComponentModel.DataAnnotations.Schema.IndexAttribute"/> instance for an index that will be named by convention and
+            has no column order, clustering, or uniqueness specified.
+            </summary>
+        </member>
+        <member name="M:System.ComponentModel.DataAnnotations.Schema.IndexAttribute.#ctor(System.String)">
+            <summary>
+            Creates a <see cref="T:System.ComponentModel.DataAnnotations.Schema.IndexAttribute"/> instance for an index with the given name and
+            has no column order, clustering, or uniqueness specified.
+            </summary>
+            <param name="name">The index name.</param>
+        </member>
+        <member name="M:System.ComponentModel.DataAnnotations.Schema.IndexAttribute.#ctor(System.String,System.Int32)">
+            <summary>
+            Creates a <see cref="T:System.ComponentModel.DataAnnotations.Schema.IndexAttribute"/> instance for an index with the given name and column order, 
+            but with no clustering or uniqueness specified.
+            </summary>
+            <remarks>
+            Multi-column indexes are created by using the same index name in multiple attributes. The information
+            in these attributes is then merged together to specify the actual database index.
+            </remarks>
+            <param name="name">The index name.</param>
+            <param name="order">A number which will be used to determine column ordering for multi-column indexes.</param>
+        </member>
+        <member name="M:System.ComponentModel.DataAnnotations.Schema.IndexAttribute.Equals(System.ComponentModel.DataAnnotations.Schema.IndexAttribute)">
+            <summary>
+            Returns true if this attribute specifies the same name and configuration as the given attribute.
+            </summary>
+            <param name="other">The attribute to compare.</param>
+            <returns>True if the other object is equal to this object; otherwise false.</returns>
+        </member>
+        <member name="M:System.ComponentModel.DataAnnotations.Schema.IndexAttribute.ToString">
+            <inheritdoc />
+        </member>
+        <member name="M:System.ComponentModel.DataAnnotations.Schema.IndexAttribute.Equals(System.Object)">
+            <summary>
+            Returns true if this attribute specifies the same name and configuration as the given attribute.
+            </summary>
+            <param name="obj">The attribute to compare.</param>
+            <returns>True if the other object is equal to this object; otherwise false.</returns>
+        </member>
+        <member name="M:System.ComponentModel.DataAnnotations.Schema.IndexAttribute.GetHashCode">
+            <inheritdoc/>
+        </member>
+        <member name="P:System.ComponentModel.DataAnnotations.Schema.IndexAttribute.Name">
+            <summary>
+            The index name.
+            </summary>
+            <remarks>
+            Multi-column indexes are created by using the same index name in multiple attributes. The information
+            in these attributes is then merged together to specify the actual database index.
+            </remarks>
+        </member>
+        <member name="P:System.ComponentModel.DataAnnotations.Schema.IndexAttribute.Order">
+            <summary>
+            A number which will be used to determine column ordering for multi-column indexes. This will be -1 if no
+            column order has been specified.
+            </summary>
+            <remarks>
+            Multi-column indexes are created by using the same index name in multiple attributes. The information
+            in these attributes is then merged together to specify the actual database index.
+            </remarks>
+        </member>
+        <member name="P:System.ComponentModel.DataAnnotations.Schema.IndexAttribute.IsClustered">
+            <summary>
+            Set this property to true to define a clustered index. Set this property to false to define a 
+            non-clustered index.
+            </summary>
+            <remarks>
+            The value of this property is only relevant if <see cref="P:System.ComponentModel.DataAnnotations.Schema.IndexAttribute.IsClusteredConfigured"/> returns true.
+            If <see cref="P:System.ComponentModel.DataAnnotations.Schema.IndexAttribute.IsClusteredConfigured"/> returns false, then the value of this property is meaningless.
+            </remarks>
+        </member>
+        <member name="P:System.ComponentModel.DataAnnotations.Schema.IndexAttribute.IsClusteredConfigured">
+            <summary>
+            Returns true if <see cref="P:System.ComponentModel.DataAnnotations.Schema.IndexAttribute.IsClustered"/> has been set to a value.
+            </summary>
+        </member>
+        <member name="P:System.ComponentModel.DataAnnotations.Schema.IndexAttribute.IsUnique">
+            <summary>
+            Set this property to true to define a unique index. Set this property to false to define a 
+            non-unique index.
+            </summary>
+            <remarks>
+            The value of this property is only relevant if <see cref="P:System.ComponentModel.DataAnnotations.Schema.IndexAttribute.IsUniqueConfigured"/> returns true.
+            If <see cref="P:System.ComponentModel.DataAnnotations.Schema.IndexAttribute.IsUniqueConfigured"/> returns false, then the value of this property is meaningless.
+            </remarks>
+        </member>
+        <member name="P:System.ComponentModel.DataAnnotations.Schema.IndexAttribute.IsUniqueConfigured">
+            <summary>
+            Returns true if <see cref="P:System.ComponentModel.DataAnnotations.Schema.IndexAttribute.IsUnique"/> has been set to a value.
+            </summary>
+        </member>
+        <member name="P:System.ComponentModel.DataAnnotations.Schema.IndexAttribute.TypeId">
+            <summary>
+            Returns a different ID for each object instance such that type descriptors won't
+            attempt to combine all IndexAttribute instances into a single instance.
+            </summary>
+        </member>
+        <member name="T:System.Data.Entity.DbConfiguration">
+            <summary>
+            A class derived from this class can be placed in the same assembly as a class derived from
+            <see cref="T:System.Data.Entity.DbContext"/> to define Entity Framework configuration for an application.
+            Configuration is set by calling protected methods and setting protected properties of this
+            class in the constructor of your derived type.
+            The type to use can also be registered in the config file of the application.
+            See http://go.microsoft.com/fwlink/?LinkId=260883 for more information about Entity Framework configuration.
+            </summary>
+        </member>
+        <member name="M:System.Data.Entity.DbConfiguration.#ctor">
+            <summary>
+            Any class derived from <see cref="T:System.Data.Entity.DbConfiguration"/> must have a public parameterless constructor
+            and that constructor should call this constructor.
+            </summary>
+        </member>
+        <member name="M:System.Data.Entity.DbConfiguration.SetConfiguration(System.Data.Entity.DbConfiguration)">
+            <summary>
+            The Singleton instance of <see cref="T:System.Data.Entity.DbConfiguration"/> for this app domain. This can be
+            set at application start before any Entity Framework features have been used and afterwards
+            should be treated as read-only.
+            </summary>
+            <param name="configuration">The instance of <see cref="T:System.Data.Entity.DbConfiguration"/>.</param>
+        </member>
+        <member name="M:System.Data.Entity.DbConfiguration.LoadConfiguration(System.Type)">
+            <summary>
+            Attempts to discover and load the <see cref="T:System.Data.Entity.DbConfiguration"/> associated with the given
+            <see cref="T:System.Data.Entity.DbContext"/> type. This method is intended to be used by tooling to ensure that
+            the correct configuration is loaded into the app domain. Tooling should use this method
+            before accessing the <see cref="P:System.Data.Entity.DbConfiguration.DependencyResolver"/> property.
+            </summary>
+            <param name="contextType">A <see cref="T:System.Data.Entity.DbContext"/> type to use for configuration discovery.</param>
+        </member>
+        <member name="M:System.Data.Entity.DbConfiguration.LoadConfiguration(System.Reflection.Assembly)">
+            <summary>
+            Attempts to discover and load the <see cref="T:System.Data.Entity.DbConfiguration"/> from the given assembly.
+            This method is intended to be used by tooling to ensure that the correct configuration is loaded into
+            the app domain. Tooling should use this method before accessing the <see cref="P:System.Data.Entity.DbConfiguration.DependencyResolver"/>
+            property. If the tooling knows the <see cref="T:System.Data.Entity.DbContext"/> type being used, then the
+            <see cref="M:System.Data.Entity.DbConfiguration.LoadConfiguration(System.Type)"/> method should be used since it gives a greater chance that
+            the correct configuration will be found.
+            </summary>
+            <param name="assemblyHint">An <see cref="T:System.Reflection.Assembly"/> to use for configuration discovery.</param>
+        </member>
+        <member name="M:System.Data.Entity.DbConfiguration.AddDependencyResolver(System.Data.Entity.Infrastructure.DependencyResolution.IDbDependencyResolver)">
+            <summary>
+            Call this method from the constructor of a class derived from <see cref="T:System.Data.Entity.DbConfiguration"/> to
+            add a <see cref="T:System.Data.Entity.Infrastructure.DependencyResolution.IDbDependencyResolver"/> instance to the Chain of Responsibility of resolvers that
+            are used to resolve dependencies needed by the Entity Framework.
+            </summary>
+            <remarks>
+            Resolvers are asked to resolve dependencies in reverse order from which they are added. This means
+            that a resolver can be added to override resolution of a dependency that would already have been
+            resolved in a different way.
+            The exceptions to this is that any dependency registered in the application's config file
+            will always be used in preference to using a dependency resolver added here.
+            </remarks>
+            <param name="resolver"> The resolver to add. </param>
+        </member>
+        <member name="M:System.Data.Entity.DbConfiguration.AddDefaultResolver(System.Data.Entity.Infrastructure.DependencyResolution.IDbDependencyResolver)">
+            <summary>
+            Call this method from the constructor of a class derived from <see cref="T:System.Data.Entity.DbConfiguration"/> to
+            add a <see cref="T:System.Data.Entity.Infrastructure.DependencyResolution.IDbDependencyResolver"/> instance to the Chain of Responsibility of resolvers that
+            are used to resolve dependencies needed by the Entity Framework. Unlike the AddDependencyResolver
+            method, this method puts the resolver at the bottom of the Chain of Responsibility such that it will only
+            be used to resolve a dependency that could not be resolved by any of the other resolvers.
+            </summary>
+            <remarks>
+            A <see cref="T:System.Data.Entity.Core.Common.DbProviderServices"/> implementation is automatically registered as a default resolver
+            when it is added with a call to <see cref="M:System.Data.Entity.DbConfiguration.SetProviderServices(System.String,System.Data.Entity.Core.Common.DbProviderServices)"/>. This allows EF providers to act as
+            resolvers for other services that may need to be overridden by the provider.
+            </remarks>
+            <param name="resolver"> The resolver to add. </param>
+        </member>
+        <member name="M:System.Data.Entity.DbConfiguration.SetProviderServices(System.String,System.Data.Entity.Core.Common.DbProviderServices)">
+            <summary>
+            Call this method from the constructor of a class derived from <see cref="T:System.Data.Entity.DbConfiguration"/> to register
+            an Entity Framework provider.
+            </summary>
+            <remarks>
+            Note that the provider is both registered as a service itself and also registered as a default resolver with
+            a call to AddDefaultResolver.  This allows EF providers to act as resolvers for other services that
+            may need to be overridden by the provider.
+            This method is provided as a convenient and discoverable way to add configuration to the Entity Framework.
+            Internally it works in the same way as using AddDependencyResolver to add an appropriate resolver for
+            <see cref="T:System.Data.Entity.Core.Common.DbProviderServices"/> and also using AddDefaultResolver to add the provider as a default
+            resolver. This means that, if desired, the same functionality can be achieved using a custom resolver or a
+            resolver backed by an Inversion-of-Control container.
+            </remarks>
+            <param name="providerInvariantName"> The ADO.NET provider invariant name indicating the type of ADO.NET connection for which this provider will be used. </param>
+            <param name="provider"> The provider instance. </param>
+        </member>
+        <member name="M:System.Data.Entity.DbConfiguration.SetProviderFactory(System.String,System.Data.Common.DbProviderFactory)">
+            <summary>
+            Call this method from the constructor of a class derived from <see cref="T:System.Data.Entity.DbConfiguration"/> to register
+            an ADO.NET provider.
+            </summary>
+            <remarks>
+            This method is provided as a convenient and discoverable way to add configuration to the Entity Framework.
+            Internally it works in the same way as using AddDependencyResolver to add an appropriate resolvers for
+            <see cref="T:System.Data.Common.DbProviderFactory"/> and <see cref="T:System.Data.Entity.Infrastructure.IProviderInvariantName"/>. This means that, if desired,
+            the same functionality can be achieved using a custom resolver or a resolver backed by an
+            Inversion-of-Control container.
+            </remarks>
+            <param name="providerInvariantName"> The ADO.NET provider invariant name indicating the type of ADO.NET connection for which this provider will be used. </param>
+            <param name="providerFactory"> The provider instance. </param>
+        </member>
+        <member name="M:System.Data.Entity.DbConfiguration.SetExecutionStrategy(System.String,System.Func{System.Data.Entity.Infrastructure.IDbExecutionStrategy})">
+            <summary>
+            Call this method from the constructor of a class derived from <see cref="T:System.Data.Entity.DbConfiguration"/> to register an
+            <see cref="T:System.Data.Entity.Infrastructure.IDbExecutionStrategy"/> for use with the provider represented by the given invariant name.
+            </summary>
+            <remarks>
+            This method is provided as a convenient and discoverable way to add configuration to the Entity Framework.
+            Internally it works in the same way as using AddDependencyResolver to add an appropriate resolver for
+            <see cref="T:System.Data.Entity.Infrastructure.IDbExecutionStrategy"/>. This means that, if desired, the same functionality can be achieved using
+            a custom resolver or a resolver backed by an Inversion-of-Control container.
+            </remarks>
+            <param name="providerInvariantName"> The ADO.NET provider invariant name indicating the type of ADO.NET connection for which this execution strategy will be used. </param>
+            <param name="getExecutionStrategy"> A function that returns a new instance of an execution strategy. </param>
+        </member>
+        <member name="M:System.Data.Entity.DbConfiguration.SetExecutionStrategy(System.String,System.Func{System.Data.Entity.Infrastructure.IDbExecutionStrategy},System.String)">
+            <summary>
+            Call this method from the constructor of a class derived from <see cref="T:System.Data.Entity.DbConfiguration"/> to register an
+            <see cref="T:System.Data.Entity.Infrastructure.IDbExecutionStrategy"/> for use with the provider represented by the given invariant name and
+            for a given server name.
+            </summary>
+            <remarks>
+            This method is provided as a convenient and discoverable way to add configuration to the Entity Framework.
+            Internally it works in the same way as using <see cref="M:System.Data.Entity.DbConfiguration.AddDependencyResolver(System.Data.Entity.Infrastructure.DependencyResolution.IDbDependencyResolver)"/> to add an appropriate resolver for
+            <see cref="T:System.Data.Entity.Infrastructure.IDbExecutionStrategy"/>. This means that, if desired, the same functionality can be achieved using
+            a custom resolver or a resolver backed by an Inversion-of-Control container.
+            </remarks>
+            <param name="providerInvariantName">
+            The ADO.NET provider invariant name indicating the type of ADO.NET connection for which this execution strategy will be used.
+            </param>
+            <param name="getExecutionStrategy"> A function that returns a new instance of an execution strategy. </param>
+            <param name="serverName"> A string that will be matched against the server name in the connection string. </param>
+        </member>
+        <member name="M:System.Data.Entity.DbConfiguration.SetDefaultTransactionHandler(System.Func{System.Data.Entity.Infrastructure.TransactionHandler})">
+            <summary>
+            Call this method from the constructor of a class derived from <see cref="T:System.Data.Entity.DbConfiguration"/> to register a
+            <see cref="T:System.Data.Entity.Infrastructure.TransactionHandler"/>.
+            </summary>
+            <remarks>
+            This method is provided as a convenient and discoverable way to add configuration to the Entity Framework.
+            Internally it works in the same way as using <see cref="M:System.Data.Entity.DbConfiguration.AddDependencyResolver(System.Data.Entity.Infrastructure.DependencyResolution.IDbDependencyResolver)"/> to add an appropriate resolver for
+            <see cref="T:System.Data.Entity.Infrastructure.TransactionHandler"/>. This means that, if desired, the same functionality can be achieved using
+            a custom resolver or a resolver backed by an Inversion-of-Control container.
+            </remarks>
+            <param name="transactionHandlerFactory"> A function that returns a new instance of a transaction handler. </param>
+        </member>
+        <member name="M:System.Data.Entity.DbConfiguration.SetTransactionHandler(System.String,System.Func{System.Data.Entity.Infrastructure.TransactionHandler})">
+            <summary>
+            Call this method from the constructor of a class derived from <see cref="T:System.Data.Entity.DbConfiguration"/> to register a
+            <see cref="T:System.Data.Entity.Infrastructure.TransactionHandler"/> for use with the provider represented by the given invariant name.
+            </summary>
+            <remarks>
+            This method is provided as a convenient and discoverable way to add configuration to the Entity Framework.
+            Internally it works in the same way as using <see cref="M:System.Data.Entity.DbConfiguration.AddDependencyResolver(System.Data.Entity.Infrastructure.DependencyResolution.IDbDependencyResolver)"/> to add an appropriate resolver for
+            <see cref="T:System.Data.Entity.Infrastructure.TransactionHandler"/>. This means that, if desired, the same functionality can be achieved using
+            a custom resolver or a resolver backed by an Inversion-of-Control container.
+            </remarks>
+            <param name="providerInvariantName">
+            The ADO.NET provider invariant name indicating the type of ADO.NET connection for which this transaction handler will be used.
+            </param>
+            <param name="transactionHandlerFactory"> A function that returns a new instance of a transaction handler. </param>
+        </member>
+        <member name="M:System.Data.Entity.DbConfiguration.SetTransactionHandler(System.String,System.Func{System.Data.Entity.Infrastructure.TransactionHandler},System.String)">
+            <summary>
+            Call this method from the constructor of a class derived from <see cref="T:System.Data.Entity.DbConfiguration"/> to register a
+            <see cref="T:System.Data.Entity.Infrastructure.TransactionHandler"/> for use with the provider represented by the given invariant name and
+            for a given server name.
+            </summary>
+            <remarks>
+            This method is provided as a convenient and discoverable way to add configuration to the Entity Framework.
+            Internally it works in the same way as using <see cref="M:System.Data.Entity.DbConfiguration.AddDependencyResolver(System.Data.Entity.Infrastructure.DependencyResolution.IDbDependencyResolver)"/> to add an appropriate resolver for
+            <see cref="T:System.Data.Entity.Infrastructure.TransactionHandler"/>. This means that, if desired, the same functionality can be achieved using
+            a custom resolver or a resolver backed by an Inversion-of-Control container.
+            </remarks>
+            <param name="providerInvariantName">
+            The ADO.NET provider invariant name indicating the type of ADO.NET connection for which this transaction handler will be used.
+            </param>
+            <param name="transactionHandlerFactory"> A function that returns a new instance of a transaction handler. </param>
+            <param name="serverName"> A string that will be matched against the server name in the connection string. </param>
+        </member>
+        <member name="M:System.Data.Entity.DbConfiguration.SetDefaultConnectionFactory(System.Data.Entity.Infrastructure.IDbConnectionFactory)">
+            <summary>
+            Sets the <see cref="T:System.Data.Entity.Infrastructure.IDbConnectionFactory"/> that is used to create connections by convention if no other
+            connection string or connection is given to or can be discovered by <see cref="T:System.Data.Entity.DbContext"/>.
+            Note that a default connection factory is set in the app.config or web.config file whenever the
+            EntityFramework NuGet package is installed. As for all config file settings, the default connection factory
+            set in the config file will take precedence over any setting made with this method. Therefore the setting
+            must be removed from the config file before calling this method will have any effect.
+            Call this method from the constructor of a class derived from <see cref="T:System.Data.Entity.DbConfiguration"/> to change
+            the default connection factory being used.
+            </summary>
+            <remarks>
+            This method is provided as a convenient and discoverable way to add configuration to the Entity Framework.
+            Internally it works in the same way as using AddDependencyResolver to add an appropriate resolver for
+            <see cref="T:System.Data.Entity.Infrastructure.IDbConnectionFactory"/>. This means that, if desired, the same functionality can be achieved using
+            a custom resolver or a resolver backed by an Inversion-of-Control container.
+            </remarks>
+            <param name="connectionFactory"> The connection factory. </param>
+        </member>
+        <member name="M:System.Data.Entity.DbConfiguration.SetPluralizationService(System.Data.Entity.Infrastructure.Pluralization.IPluralizationService)">
+            <summary>
+            Call this method from the constructor of a class derived from <see cref="T:System.Data.Entity.DbConfiguration"/> to
+            set the pluralization service.
+            </summary>
+            <param name="pluralizationService"> The pluralization service to use. </param>
+        </member>
+        <member name="M:System.Data.Entity.DbConfiguration.SetDatabaseInitializer``1(System.Data.Entity.IDatabaseInitializer{``0})">
+            <summary>
+            Call this method from the constructor of a class derived from <see cref="T:System.Data.Entity.DbConfiguration"/> to
+            set the database initializer to use for the given context type.  The database initializer is called when a
+            the given <see cref="T:System.Data.Entity.DbContext"/> type is used to access a database for the first time.
+            The default strategy for Code First contexts is an instance of <see cref="T:System.Data.Entity.CreateDatabaseIfNotExists`1"/>.
+            </summary>
+            <remarks>
+            Calling this method is equivalent to calling <see cref="M:System.Data.Entity.Database.SetInitializer``1(System.Data.Entity.IDatabaseInitializer{``0})"/>.
+            This method is provided as a convenient and discoverable way to add configuration to the Entity Framework.
+            Internally it works in the same way as using AddDependencyResolver to add an appropriate resolver for
+            <see cref="T:System.Data.Entity.IDatabaseInitializer`1"/>. This means that, if desired, the same functionality can be achieved using
+            a custom resolver or a resolver backed by an Inversion-of-Control container.
+            </remarks>
+            <typeparam name="TContext"> The type of the context. </typeparam>
+            <param name="initializer"> The initializer to use, or null to disable initialization for the given context type. </param>
+        </member>
+        <member name="M:System.Data.Entity.DbConfiguration.SetMigrationSqlGenerator(System.String,System.Func{System.Data.Entity.Migrations.Sql.MigrationSqlGenerator})">
+            <summary>
+            Call this method from the constructor of a class derived from <see cref="T:System.Data.Entity.DbConfiguration"/> to register a
+            <see cref="T:System.Data.Entity.Migrations.Sql.MigrationSqlGenerator"/> for use with the provider represented by the given invariant name.
+            </summary>
+            <remarks>
+            This method is typically used by providers to register an associated SQL generator for Code First Migrations.
+            It is different from setting the generator in the <see cref="T:System.Data.Entity.Migrations.DbMigrationsConfiguration"/> because it allows
+            EF to use the Migrations pipeline to create a database even when there is no Migrations configuration in the project
+            and/or Migrations are not being explicitly used.
+            This method is provided as a convenient and discoverable way to add configuration to the Entity Framework.
+            Internally it works in the same way as using AddDependencyResolver to add an appropriate resolver for
+            <see cref="T:System.Data.Entity.Migrations.Sql.MigrationSqlGenerator"/>. This means that, if desired, the same functionality can be achieved using
+            a custom resolver or a resolver backed by an Inversion-of-Control container.
+            </remarks>
+            <param name="providerInvariantName"> The invariant name of the ADO.NET provider for which this generator should be used. </param>
+            <param name="sqlGenerator"> A delegate that returns a new instance of the SQL generator each time it is called. </param>
+        </member>
+        <member name="M:System.Data.Entity.DbConfiguration.SetManifestTokenResolver(System.Data.Entity.Infrastructure.IManifestTokenResolver)">
+            <summary>
+            Call this method from the constructor of a class derived from <see cref="T:System.Data.Entity.DbConfiguration"/> to set
+            an implementation of <see cref="T:System.Data.Entity.Infrastructure.IManifestTokenResolver"/> which allows provider manifest tokens to
+            be obtained from connections without necessarily opening the connection.
+            </summary>
+            <remarks>
+            This method is provided as a convenient and discoverable way to add configuration to the Entity Framework.
+            Internally it works in the same way as using AddDependencyResolver to add an appropriate resolver for
+            <see cref="T:System.Data.Entity.Infrastructure.IManifestTokenResolver"/>. This means that, if desired, the same functionality can be achieved using
+            a custom resolver or a resolver backed by an Inversion-of-Control container.
+            </remarks>
+            <param name="resolver"> The manifest token resolver. </param>
+        </member>
+        <member name="M:System.Data.Entity.DbConfiguration.SetMetadataAnnotationSerializer(System.String,System.Func{System.Data.Entity.Infrastructure.IMetadataAnnotationSerializer})">
+            <summary>
+            Call this method from the constructor of a class derived from <see cref="T:System.Data.Entity.DbConfiguration"/> to set
+            a factory for implementations of <see cref="T:System.Data.Entity.Infrastructure.IMetadataAnnotationSerializer"/> which allows custom annotations
+            represented by <see cref="T:System.Data.Entity.Core.Metadata.Edm.MetadataProperty"/> instances to be serialized to and from the EDMX XML.
+            </summary>
+            <remarks>
+            Note that an <see cref="T:System.Func`1"/> is not needed if the annotation uses a simple string value.
+            This method is provided as a convenient and discoverable way to add configuration to the Entity Framework.
+            Internally it works in the same way as using AddDependencyResolver to add an appropriate resolver for
+            <see cref="T:System.Data.Entity.Infrastructure.IMetadataAnnotationSerializer"/>. This means that, if desired, the same functionality can be achieved using
+            a custom resolver or a resolver backed by an Inversion-of-Control container.
+            </remarks>
+            <param name="annotationName"> The name of custom annotation that will be handled by this serializer. </param>
+            <param name="serializerFactory"> A delegate that will be used to create serializer instances. </param>
+        </member>
+        <member name="M:System.Data.Entity.DbConfiguration.SetProviderFactoryResolver(System.Data.Entity.Infrastructure.IDbProviderFactoryResolver)">
+            <summary>
+            Call this method from the constructor of a class derived from <see cref="T:System.Data.Entity.DbConfiguration"/> to set
+            an implementation of <see cref="T:System.Data.Entity.Infrastructure.IDbProviderFactoryResolver"/> which allows a <see cref="T:System.Data.Common.DbProviderFactory"/>
+            to be obtained from a <see cref="T:System.Data.Common.DbConnection"/> in cases where the default implementation is not
+            sufficient.
+            </summary>
+            <remarks>
+            This method is provided as a convenient and discoverable way to add configuration to the Entity Framework.
+            Internally it works in the same way as using AddDependencyResolver to add an appropriate resolver for
+            <see cref="T:System.Data.Entity.Infrastructure.IDbProviderFactoryResolver"/>. This means that, if desired, the same functionality can be achieved using
+            a custom resolver or a resolver backed by an Inversion-of-Control container.
+            </remarks>
+            <param name="providerFactoryResolver"> The provider factory service. </param>
+        </member>
+        <member name="M:System.Data.Entity.DbConfiguration.SetModelCacheKey(System.Func{System.Data.Entity.DbContext,System.Data.Entity.Infrastructure.IDbModelCacheKey})">
+            <summary>
+            Call this method from the constructor of a class derived from <see cref="T:System.Data.Entity.DbConfiguration"/> to set
+            a <see cref="T:System.Func`2"/> as the model cache key factory which allows the key
+            used to cache the model behind a <see cref="T:System.Data.Entity.DbContext"/> to be changed.
+            </summary>
+            <remarks>
+            This method is provided as a convenient and discoverable way to add configuration to the Entity Framework.
+            Internally it works in the same way as using AddDependencyResolver to add an appropriate resolver for
+            <see cref="T:System.Func`2"/>. This means that, if desired, the same functionality can
+            be achieved using a custom resolver or a resolver backed by an Inversion-of-Control container.
+            </remarks>
+            <param name="keyFactory"> The key factory. </param>
+        </member>
+        <member name="M:System.Data.Entity.DbConfiguration.SetDefaultHistoryContext(System.Func{System.Data.Common.DbConnection,System.String,System.Data.Entity.Migrations.History.HistoryContext})">
+            <summary>
+            Call this method from the constructor of a class derived from <see cref="T:System.Data.Entity.DbConfiguration"/> to set
+            a <see cref="T:System.Func`3"/> delegate which which be used for 
+            creation of the default  <see cref="T:System.Data.Entity.Migrations.History.HistoryContext"/> for a any
+            <see cref="T:System.Data.Entity.Migrations.DbMigrationsConfiguration"/>. This default factory will only be used if no factory is
+            set explicitly in the <see cref="T:System.Data.Entity.Migrations.DbMigrationsConfiguration"/> and if no factory has been registered
+            for the provider in use using the
+            <see cref="M:System.Data.Entity.DbConfiguration.SetHistoryContext(System.String,System.Func{System.Data.Common.DbConnection,System.String,System.Data.Entity.Migrations.History.HistoryContext})"/>
+            method.
+            </summary>
+            <remarks>
+            This method is provided as a convenient and discoverable way to add configuration to the Entity Framework.
+            Internally it works in the same way as using AddDependencyResolver to add an appropriate resolver for
+            <see cref="T:System.Func`3"/>. This means that, if desired, the same functionality
+            can be achieved using a custom resolver or a resolver backed by an Inversion-of-Control container.
+            </remarks>
+            <param name="factory"> 
+            A factory for creating <see cref="T:System.Data.Entity.Migrations.History.HistoryContext"/> instances for a given <see cref="T:System.Data.Common.DbConnection"/> and
+            <see cref="T:System.String"/> representing the default schema.
+            </param>
+        </member>
+        <member name="M:System.Data.Entity.DbConfiguration.SetHistoryContext(System.String,System.Func{System.Data.Common.DbConnection,System.String,System.Data.Entity.Migrations.History.HistoryContext})">
+            <summary>
+            Call this method from the constructor of a class derived from <see cref="T:System.Data.Entity.DbConfiguration"/> to set
+            a <see cref="T:System.Func`3"/> delegate which allows for creation of a customized
+            <see cref="T:System.Data.Entity.Migrations.History.HistoryContext"/> for the given provider for any <see cref="T:System.Data.Entity.Migrations.DbMigrationsConfiguration"/> 
+            that does not have an explicit factory set.
+            </summary>
+            <remarks>
+            This method is provided as a convenient and discoverable way to add configuration to the Entity Framework.
+            Internally it works in the same way as using AddDependencyResolver to add an appropriate resolver for
+            <see cref="T:System.Func`3"/>. This means that, if desired, the same functionality
+            can be achieved using a custom resolver or a resolver backed by an Inversion-of-Control container.
+            </remarks>
+            <param name="providerInvariantName"> The invariant name of the ADO.NET provider for which this generator should be used. </param>
+            <param name="factory"> 
+            A factory for creating <see cref="T:System.Data.Entity.Migrations.History.HistoryContext"/> instances for a given <see cref="T:System.Data.Common.DbConnection"/> and
+            <see cref="T:System.String"/> representing the default schema.
+            </param>
+        </member>
+        <member name="M:System.Data.Entity.DbConfiguration.SetDefaultSpatialServices(System.Data.Entity.Spatial.DbSpatialServices)">
+            <summary>
+            Call this method from the constructor of a class derived from <see cref="T:System.Data.Entity.DbConfiguration"/> to set
+            the global instance of <see cref="T:System.Data.Entity.Spatial.DbSpatialServices"/> which will be used whenever a spatial provider is
+            required and a provider-specific spatial provider cannot be found. Normally, a provider-specific spatial provider
+            is obtained from the a <see cref="T:System.Data.Entity.Core.Common.DbProviderServices"/> implementation which is in turn returned by resolving
+            a service for <see cref="T:System.Data.Entity.Spatial.DbSpatialServices"/> passing the provider invariant name as a key. However, this
+            cannot work for stand-alone instances of <see cref="T:System.Data.Entity.Spatial.DbGeometry"/> and <see cref="T:System.Data.Entity.Spatial.DbGeography"/> since
+            it is impossible to know the spatial provider to use. Therefore, when creating stand-alone instances
+            of <see cref="T:System.Data.Entity.Spatial.DbGeometry"/> and <see cref="T:System.Data.Entity.Spatial.DbGeography"/> the global spatial provider is always used.
+            </summary>
+            <remarks>
+            This method is provided as a convenient and discoverable way to add configuration to the Entity Framework.
+            Internally it works in the same way as using AddDependencyResolver to add an appropriate resolver for
+            <see cref="T:System.Data.Entity.Spatial.DbSpatialServices"/>. This means that, if desired, the same functionality can be achieved using
+            a custom resolver or a resolver backed by an Inversion-of-Control container.
+            </remarks>
+            <param name="spatialProvider"> The spatial provider. </param>
+        </member>
+        <member name="M:System.Data.Entity.DbConfiguration.SetSpatialServices(System.Data.Entity.Infrastructure.DbProviderInfo,System.Data.Entity.Spatial.DbSpatialServices)">
+            <summary>
+            Call this method from the constructor of a class derived from <see cref="T:System.Data.Entity.DbConfiguration"/> to set
+            an implementation of <see cref="T:System.Data.Entity.Spatial.DbSpatialServices"/> to use for a specific provider and provider
+            manifest token.
+            </summary>
+            <remarks>
+            Use <see cref="M:System.Data.Entity.DbConfiguration.SetSpatialServices(System.Data.Entity.Infrastructure.DbProviderInfo,System.Data.Entity.Spatial.DbSpatialServices)"/>
+            to register spatial services for use only when a specific manifest token is returned by the provider.
+            Use <see cref="M:System.Data.Entity.DbConfiguration.SetDefaultSpatialServices(System.Data.Entity.Spatial.DbSpatialServices)"/> to register global
+            spatial services to be used when provider information is not available or no provider-specific
+            spatial services are found.
+            This method is provided as a convenient and discoverable way to add configuration to the Entity Framework.
+            Internally it works in the same way as using AddDependencyResolver to add an appropriate resolver for
+            <see cref="T:System.Data.Entity.Spatial.DbSpatialServices"/>. This means that, if desired, the same functionality can be achieved using
+            a custom resolver or a resolver backed by an Inversion-of-Control container.
+            </remarks>
+            <param name="key">
+            The <see cref="T:System.Data.Entity.Infrastructure.DbProviderInfo"/> indicating the type of ADO.NET connection for which this spatial provider will be used.
+            </param>
+            <param name="spatialProvider"> The spatial provider. </param>
+        </member>
+        <member name="M:System.Data.Entity.DbConfiguration.SetSpatialServices(System.String,System.Data.Entity.Spatial.DbSpatialServices)">
+            <summary>
+            Call this method from the constructor of a class derived from <see cref="T:System.Data.Entity.DbConfiguration"/> to set
+            an implementation of <see cref="T:System.Data.Entity.Spatial.DbSpatialServices"/> to use for a specific provider with any
+            manifest token.
+            </summary>
+            <remarks>
+            Use <see cref="M:System.Data.Entity.DbConfiguration.SetSpatialServices(System.String,System.Data.Entity.Spatial.DbSpatialServices)"/> 
+            to register spatial services for use when any manifest token is returned by the provider.
+            Use <see cref="M:System.Data.Entity.DbConfiguration.SetDefaultSpatialServices(System.Data.Entity.Spatial.DbSpatialServices)"/> to register global
+            spatial services to be used when provider information is not available or no provider-specific
+            spatial services are found.
+            
+            This method is provided as a convenient and discoverable way to add configuration to the Entity Framework.
+            Internally it works in the same way as using AddDependencyResolver to add an appropriate resolver for
+            <see cref="T:System.Data.Entity.Spatial.DbSpatialServices"/>. This means that, if desired, the same functionality can be achieved using
+            a custom resolver or a resolver backed by an Inversion-of-Control container.
+            </remarks>
+            <param name="providerInvariantName"> The ADO.NET provider invariant name indicating the type of ADO.NET connection for which this spatial provider will be used. </param>
+            <param name="spatialProvider"> The spatial provider. </param>
+        </member>
+        <member name="M:System.Data.Entity.DbConfiguration.SetDatabaseLogFormatter(System.Func{System.Data.Entity.DbContext,System.Action{System.String},System.Data.Entity.Infrastructure.Interception.DatabaseLogFormatter})">
+            <summary>
+            Call this method from the constructor of a class derived from <see cref="T:System.Data.Entity.DbConfiguration"/> to set
+            a factory for the type of <see cref="T:System.Data.Entity.Infrastructure.Interception.DatabaseLogFormatter"/> to use with <see cref="P:System.Data.Entity.Database.Log"/>.
+            </summary>
+            <remarks>
+            Note that setting the type of formatter to use with this method does change the way command are
+            logged when <see cref="P:System.Data.Entity.Database.Log"/> is used. It is still necessary to set a <see cref="T:System.IO.TextWriter"/>
+            instance onto <see cref="P:System.Data.Entity.Database.Log"/> before any commands will be logged.
+            For more low-level control over logging/interception see <see cref="T:System.Data.Entity.Infrastructure.Interception.IDbCommandInterceptor"/> and
+            <see cref="T:System.Data.Entity.Infrastructure.Interception.DbInterception"/>.
+            This method is provided as a convenient and discoverable way to add configuration to the Entity Framework.
+            Internally it works in the same way as using AddDependencyResolver to add an appropriate resolver for
+            <see cref="T:System.Func`1"/>. This means that, if desired, the same functionality can be achieved using
+            a custom resolver or a resolver backed by an Inversion-of-Control container.
+            </remarks>
+            <param name="logFormatterFactory">A delegate that will create formatter instances.</param>
+        </member>
+        <member name="M:System.Data.Entity.DbConfiguration.AddInterceptor(System.Data.Entity.Infrastructure.Interception.IDbInterceptor)">
+            <summary>
+            Call this method from the constructor of a class derived from <see cref="T:System.Data.Entity.DbConfiguration"/> to
+            register an <see cref="T:System.Data.Entity.Infrastructure.Interception.IDbInterceptor"/> at application startup. Note that interceptors can also
+            be added and removed at any time using <see cref="T:System.Data.Entity.Infrastructure.Interception.DbInterception"/>.
+            </summary>
+            <remarks>
+            This method is provided as a convenient and discoverable way to add configuration to the Entity Framework.
+            Internally it works in the same way as using AddDependencyResolver to add an appropriate resolver for
+            <see cref="T:System.Data.Entity.Infrastructure.Interception.IDbInterceptor"/>. This means that, if desired, the same functionality can be achieved using
+            a custom resolver or a resolver backed by an Inversion-of-Control container.
+            </remarks>
+            <param name="interceptor">The interceptor to register.</param>
+        </member>
+        <member name="M:System.Data.Entity.DbConfiguration.SetContextFactory(System.Type,System.Func{System.Data.Entity.DbContext})">
+            <summary>
+            Call this method from the constructor of a class derived from <see cref="T:System.Data.Entity.DbConfiguration"/> to set
+            a factory to allow <see cref="T:System.Data.Entity.Infrastructure.DbContextInfo"/> to create instances of a context that does not have a public,
+            parameterless constructor.
+            </summary>
+            <remarks>
+            This is typically needed to allow design-time tools like Migrations or scaffolding code to use contexts that
+            do not have public, parameterless constructors.
+            This method is provided as a convenient and discoverable way to add configuration to the Entity Framework.
+            Internally it works in the same way as using AddDependencyResolver to add an appropriate resolver for
+            <see cref="T:System.Func`1"/> with the context <see cref="T:System.Type"/> as the key. This means that, if desired,
+            the same functionality can be achieved using a custom resolver or a resolver backed by an
+            Inversion-of-Control container.
+            </remarks>
+            <param name="contextType">The context type for which the factory should be used.</param>
+            <param name="factory">The delegate to use to create context instances.</param>
+        </member>
+        <member name="M:System.Data.Entity.DbConfiguration.SetContextFactory``1(System.Func{``0})">
+            <summary>
+            Call this method from the constructor of a class derived from <see cref="T:System.Data.Entity.DbConfiguration"/> to set
+            a factory to allow <see cref="T:System.Data.Entity.Infrastructure.DbContextInfo"/> to create instances of a context that does not have a public,
+            parameterless constructor.
+            </summary>
+            <remarks>
+            This is typically needed to allow design-time tools like Migrations or scaffolding code to use contexts that
+            do not have public, parameterless constructors.
+            This method is provided as a convenient and discoverable way to add configuration to the Entity Framework.
+            Internally it works in the same way as using AddDependencyResolver to add an appropriate resolver for
+            <see cref="T:System.Func`1"/> with the context <see cref="T:System.Type"/> as the key. This means that, if desired,
+            the same functionality can be achieved using a custom resolver or a resolver backed by an
+            Inversion-of-Control container.
+            </remarks>
+            <typeparam name="TContext">The context type for which the factory should be used.</typeparam>
+            <param name="factory">The delegate to use to create context instances.</param>
+        </member>
+        <member name="M:System.Data.Entity.DbConfiguration.SetModelStore(System.Data.Entity.Infrastructure.DbModelStore)">
+            <summary>
+            Sets a singleton model store implementation (persisted model cache).
+            </summary>
+            <param name="modelStore">The model store implementation.</param>
+        </member>
+        <member name="M:System.Data.Entity.DbConfiguration.SetTableExistenceChecker(System.String,System.Data.Entity.Infrastructure.TableExistenceChecker)">
+            <summary>
+            Call this method from the constructor of a class derived from <see cref="T:System.Data.Entity.DbConfiguration"/> to register
+            a database table existence checker for a given provider.
+            </summary>
+            <remarks>
+            This method is provided as a convenient and discoverable way to add configuration to the Entity Framework.
+            Internally it works in the same way as using AddDependencyResolver to add an appropriate resolver for
+            <see cref="T:System.Data.Entity.Core.Common.DbProviderServices"/> and also using AddDefaultResolver to add the provider as a default
+            resolver. This means that, if desired, the same functionality can be achieved using a custom resolver or a
+            resolver backed by an Inversion-of-Control container.
+            </remarks>
+            <param name="providerInvariantName"> The ADO.NET provider invariant name indicating the type of ADO.NET connection for which this provider will be used. </param>
+            <param name="tableExistenceChecker"> The table existence checker to use. </param>
+        </member>
+        <member name="M:System.Data.Entity.DbConfiguration.ToString">
+            <inheritdoc />
+        </member>
+        <member name="M:System.Data.Entity.DbConfiguration.Equals(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:System.Data.Entity.DbConfiguration.GetHashCode">
+            <inheritdoc />
+        </member>
+        <member name="M:System.Data.Entity.DbConfiguration.GetType">
+            <summary>
+            Gets the <see cref="T:System.Type"/> of the current instance.
+            </summary>
+            <returns>The exact runtime type of the current instance.</returns>
+        </member>
+        <member name="M:System.Data.Entity.DbConfiguration.MemberwiseClone">
+            <summary>
+            Creates a shallow copy of the current <see cref="T:System.Object"/>.
+            </summary>
+            <returns>A shallow copy of the current <see cref="T:System.Object"/>.</returns>
+        </member>
+        <member name="E:System.Data.Entity.DbConfiguration.Loaded">
+            <summary>
+            Occurs during EF initialization after the DbConfiguration has been constructed but just before
+            it is locked ready for use. Use this event to inspect and/or override services that have been
+            registered before the configuration is locked. Note that this event should be used carefully
+            since it may prevent tooling from discovering the same configuration that is used at runtime.
+            </summary>
+            <remarks>
+            Handlers can only be added before EF starts to use the configuration and so handlers should
+            generally be added as part of application initialization. Do not access the DbConfiguration
+            static methods inside the handler; instead use the the members of <see cref="T:System.Data.Entity.Infrastructure.DependencyResolution.DbConfigurationLoadedEventArgs"/>
+            to get current services and/or add overrides.
+            </remarks>
+        </member>
+        <member name="P:System.Data.Entity.DbConfiguration.DependencyResolver">
+            <summary>
+            Gets the <see cref="T:System.Data.Entity.Infrastructure.DependencyResolution.IDbDependencyResolver"/> that is being used to resolve service
+            dependencies in the Entity Framework.
+            </summary>
+        </member>
+        <member name="T:System.Data.Entity.DbConfigurationTypeAttribute">
+            <summary>
+            This attribute can be placed on a subclass of <see cref="T:System.Data.Entity.DbContext"/> to indicate that the subclass of
+            <see cref="T:System.Data.Entity.DbConfiguration"/> representing the code-based configuration for the application is in a different
+            assembly than the context type.
+            </summary>
+            <remarks>
+            Normally a subclass of <see cref="T:System.Data.Entity.DbConfiguration"/> should be placed in the same assembly as
+            the subclass of <see cref="T:System.Data.Entity.DbContext"/> used by the application. It will then be discovered automatically.
+            However, if this is not possible or if the application contains multiple context types in different
+            assemblies, then this attribute can be used to direct DbConfiguration discovery to the appropriate type.
+            An alternative to using this attribute is to specify the DbConfiguration type to use in the application's
+            config file. See http://go.microsoft.com/fwlink/?LinkId=260883 for more information.
+            </remarks>
+        </member>
+        <member name="M:System.Data.Entity.DbConfigurationTypeAttribute.#ctor(System.Type)">
+            <summary>
+            Indicates that the given subclass of <see cref="T:System.Data.Entity.DbConfiguration"/> should be used for code-based configuration
+            for this application.
+            </summary>
+            <param name="configurationType">
+            The <see cref="T:System.Data.Entity.DbConfiguration"/> type to use.
+            </param>
+        </member>
+        <member name="M:System.Data.Entity.DbConfigurationTypeAttribute.#ctor(System.String)">
+            <summary>
+            Indicates that the subclass of <see cref="T:System.Data.Entity.DbConfiguration"/> represented by the given assembly-qualified
+            name should be used for code-based configuration for this application.
+            </summary>
+            <param name="configurationTypeName">
+            The <see cref="T:System.Data.Entity.DbConfiguration"/> type to use.
+            </param>
+        </member>
+        <member name="P:System.Data.Entity.DbConfigurationTypeAttribute.ConfigurationType">
+            <summary>
+            Gets the subclass of <see cref="T:System.Data.Entity.DbConfiguration"/> that should be used for code-based configuration
+            for this application.
+            </summary>
+        </member>
+        <member name="T:System.Data.Entity.Core.Common.CommandTrees.DbAggregate">
+            <summary>Implements the basic functionality required by aggregates in a GroupBy clause. </summary>
+        </member>
+        <member name="P:System.Data.Entity.Core.Common.CommandTrees.DbAggregate.ResultType">
+            <summary>
+            Gets the result type of this <see cref="T:System.Data.Entity.Core.Common.CommandTrees.DbAggregate" />.
+            </summary>
+            <returns>
+            The result type of this <see cref="T:System.Data.Entity.Core.Common.CommandTrees.DbAggregate" />.
+            </returns>
+        </member>
+        <member name="P:System.Data.Entity.Core.Common.CommandTrees.DbAggregate.Arguments">
+            <summary>
+            Gets the list of expressions that define the arguments to this
+            <see
+                cref="T:System.Data.Entity.Core.Common.CommandTrees.DbAggregate" />
+            .
+            </summary>
+            <returns>
+            The list of expressions that define the arguments to this
+            <see
+                cref="T:System.Data.Entity.Core.Common.CommandTrees.DbAggregate" />
+            .
+            </returns>
+        </member>
+        <member name="T:System.Data.Entity.Core.Common.CommandTrees.DbAndExpression">
+            <summary>Represents the logical AND of two Boolean arguments. This class cannot be inherited. </summary>
+        </member>
+        <member name="T:System.Data.Entity.Core.Common.CommandTrees.DbBinaryExpression">
+            <summary>Implements the basic functionality required by expressions that accept two expression operands.</summary>
+        </member>
+        <member name="T:System.Data.Entity.Core.Common.CommandTrees.DbExpression">
+            <summary>Represents the base type for all expressions.</summary>
+        </member>
+        <member name="M:System.Data.Entity.Core.Common.CommandTrees.DbExpression.Accept(System.Data.Entity.Core.Common.CommandTrees.DbExpressionVisitor)">
+            <summary>Implements the visitor pattern for expressions that do not produce a result value.</summary>
+            <param name="visitor">
+            An instance of <see cref="T:System.Data.Entity.Core.Common.CommandTrees.DbExpressionVisitor" />.
+            </param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Common.CommandTrees.DbExpression.Accept``1(System.Data.Entity.Core.Common.CommandTrees.DbExpressionVisitor{``0})">
+            <summary>Implements the visitor pattern for expressions that produce a result value of a specific type.</summary>
+            <returns>
+            The type of the result produced by <see cref="T:System.Data.Entity.Core.Common.CommandTrees.DbExpressionVisitor" />.
+            </returns>
+            <param name="visitor">
+            An instance of <see cref="T:System.Data.Entity.Core.Common.CommandTrees.DbExpressionVisitor" />.
+            </param>
+            <typeparam name="TResultType">The type of the result produced by visitor.</typeparam>
+        </member>
+        <member name="M:System.Data.Entity.Core.Common.CommandTrees.DbExpression.Equals(System.Object)">
+            <summary>
+            Determines whether the specified <see cref="T:System.Object" /> is equal to the current DbExpression instance.
+            </summary>
+            <returns>
+            True if the specified <see cref="T:System.Object" /> is equal to the current DbExpression instance; otherwise, false.
+            </returns>
+            <param name="obj">
+            The object to compare to the current <see cref="T:System.Data.Entity.Core.Common.CommandTrees.DbExpression" />.
+            </param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Common.CommandTrees.DbExpression.GetHashCode">
+            <summary>Serves as a hash function for the type.</summary>
+            <returns>A hash code for the current expression.</returns>
+        </member>
+        <member name="M:System.Data.Entity.Core.Common.CommandTrees.DbExpression.FromBinary(System.Byte[])">
+            <summary>
+            Creates a <see cref="T:System.Data.Entity.Core.Common.CommandTrees.DbExpression" /> that represents the specified binary value, which may be null
+            </summary>
+            <returns>
+            A <see cref="T:System.Data.Entity.Core.Common.CommandTrees.DbExpression" /> that represents the specified binary value.
+            </returns>
+            <param name="value">The binary value on which the returned expression should be based.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Common.CommandTrees.DbExpression.op_Implicit(System.Byte[])~System.Data.Entity.Core.Common.CommandTrees.DbExpression">
+            <summary>
+            Enables implicit casting from a byte array.
+            </summary>
+            <param name="value">The value to be converted.</param>
+            <returns>The converted value.</returns>
+        </member>
+        <member name="M:System.Data.Entity.Core.Common.CommandTrees.DbExpression.FromBoolean(System.Nullable{System.Boolean})">
+            <summary>
+            Creates a <see cref="T:System.Data.Entity.Core.Common.CommandTrees.DbExpression" /> that represents the specified (nullable) Boolean value.
+            </summary>
+            <returns>
+            A <see cref="T:System.Data.Entity.Core.Common.CommandTrees.DbExpression" /> that represents the specified Boolean value.
+            </returns>
+            <param name="value">The Boolean value on which the returned expression should be based.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Common.CommandTrees.DbExpression.op_Implicit(System.Nullable{System.Boolean})~System.Data.Entity.Core.Common.CommandTrees.DbExpression">
+            <summary>
+            Enables implicit casting from <see cref="T:System.Nullable`1"/>.
+            </summary>
+            <param name="value">The value to be converted.</param>
+            <returns>The converted value.</returns>
+        </member>
+        <member name="M:System.Data.Entity.Core.Common.CommandTrees.DbExpression.FromByte(System.Nullable{System.Byte})">
+            <summary>
+            Creates a <see cref="T:System.Data.Entity.Core.Common.CommandTrees.DbExpression" /> that represents the specified (nullable) byte value.
+            </summary>
+            <returns>
+            A <see cref="T:System.Data.Entity.Core.Common.CommandTrees.DbExpression" /> that represents the specified byte value.
+            </returns>
+            <param name="value">The byte value on which the returned expression should be based.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Common.CommandTrees.DbExpression.op_Implicit(System.Nullable{System.Byte})~System.Data.Entity.Core.Common.CommandTrees.DbExpression">
+            <summary>
+            Enables implicit casting from <see cref="T:System.Nullable`1"/>.
+            </summary>
+            <param name="value">The value to be converted.</param>
+            <returns>The converted value.</returns>
+        </member>
+        <member name="M:System.Data.Entity.Core.Common.CommandTrees.DbExpression.FromDateTime(System.Nullable{System.DateTime})">
+            <summary>
+            Creates a <see cref="T:System.Data.Entity.Core.Common.CommandTrees.DbExpression" /> that represents the specified (nullable)
+            <see
+                cref="T:System.DateTime" />
+            value.
+            </summary>
+            <returns>
+            A <see cref="T:System.Data.Entity.Core.Common.CommandTrees.DbExpression" /> that represents the specified DateTime value.
+            </returns>
+            <param name="value">The DateTime value on which the returned expression should be based.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Common.CommandTrees.DbExpression.op_Implicit(System.Nullable{System.DateTime})~System.Data.Entity.Core.Common.CommandTrees.DbExpression">
+            <summary>
+            Enables implicit casting from <see cref="T:System.Nullable`1"/>.
+            </summary>
+            <param name="value">The expression to be converted.</param>
+            <returns>The converted value.</returns>
+        </member>
+        <member name="M:System.Data.Entity.Core.Common.CommandTrees.DbExpression.FromDateTimeOffset(System.Nullable{System.DateTimeOffset})">
+            <summary>
+            Creates a <see cref="T:System.Data.Entity.Core.Common.CommandTrees.DbExpression" /> that represents the specified (nullable)
+            <see
+                cref="T:System.DateTimeOffset" />
+            value.
+            </summary>
+            <returns>
+            A <see cref="T:System.Data.Entity.Core.Common.CommandTrees.DbExpression" /> that represents the specified DateTimeOffset value.
+            </returns>
+            <param name="value">The DateTimeOffset value on which the returned expression should be based.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Common.CommandTrees.DbExpression.op_Implicit(System.Nullable{System.DateTimeOffset})~System.Data.Entity.Core.Common.CommandTrees.DbExpression">
+            <summary>
+            Enables implicit casting from <see cref="T:System.Nullable`1"/>.
+            </summary>
+            <param name="value">The value to be converted.</param>
+            <returns>The converted value.</returns>
+        </member>
+        <member name="M:System.Data.Entity.Core.Common.CommandTrees.DbExpression.FromDecimal(System.Nullable{System.Decimal})">
+            <summary>
+            Creates a <see cref="T:System.Data.Entity.Core.Common.CommandTrees.DbExpression" /> that represents the specified (nullable) decimal value.
+            </summary>
+            <returns>
+            A <see cref="T:System.Data.Entity.Core.Common.CommandTrees.DbExpression" /> that represents the specified decimal value.
+            </returns>
+            <param name="value">The decimal value on which the returned expression should be based.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Common.CommandTrees.DbExpression.op_Implicit(System.Nullable{System.Decimal})~System.Data.Entity.Core.Common.CommandTrees.DbExpression">
+            <summary>
+            Enables implicit casting from <see cref="T:System.Nullable`1"/>.
+            </summary>
+            <param name="value">The value to be converted.</param>
+            <returns>The converted value.</returns>
+        </member>
+        <member name="M:System.Data.Entity.Core.Common.CommandTrees.DbExpression.FromDouble(System.Nullable{System.Double})">
+            <summary>
+            Creates a <see cref="T:System.Data.Entity.Core.Common.CommandTrees.DbExpression" /> that represents the specified (nullable) double value.
+            </summary>
+            <returns>
+            A <see cref="T:System.Data.Entity.Core.Common.CommandTrees.DbExpression" /> that represents the specified double value.
+            </returns>
+            <param name="value">The double value on which the returned expression should be based.</param>
+        </member>
+        <member name="M:System.Data.Entity.Core.Common.CommandTrees.DbExpression.op_Implicit(System.Nullable{System.Double})~System.Data.Entity.Core.Common.CommandTrees.DbExpression">
+            <summary>
+            Enables implicit casting from <see cref="T:System.Nullable`1"/>.
+            </summary>
+            <param name="value">The value to be converted.</param>
+            <returns>The converted value.</returns>
+        </member>
+        <member name="M:System.Data.Entity.Core.Common.CommandTrees.DbExpression.FromGeography(System.Data.Entity.Spatial.DbGeography)">
+            <summary>
+            Creates a <see cref="T:System.Data.Entity.Core.Common.CommandTrees.DbExpression" /> that represents the specified
+            <see
+                cref="T:System.Data.Entity.Spatial.DbGeography" />
+            value, which may be null.
+            </summary>
+            <returns>
+            A <see cref="T:System.Data.Entity.Core.Common.CommandTrees.DbExpression" /> that represents the specified DbGeography value.
+            </returns>
+   

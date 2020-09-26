@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VsixLanguagePack Version="1.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema-lp/2010">
+  <LocalizedName>Подключенные службы Майкрософт</LocalizedName>
+  <LocalizedDescription>Предоставляет базовые инструменты и платформу расширяемости для диалогового окна "Добавление подключенной службы".</LocalizedDescription>
+</VsixLanguagePack>

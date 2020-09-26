@@ -1,0 +1,13 @@
+  
+  </Dependencies>
+  <Configuration Id="SQL_SQL14_OldInstanceUnConfig">
+    <ConfigurationAction Id="SQL_SQL14_ConfigAction_remove_preuninstall" Scenario="uninstall" Timing="Preuninstall" Action="SlpConfigAction" ExtensionId="SqlConfigBase">
+      <ActionData Id="ConfigObjectType" Value="Microsoft.SqlServer.Configuration.SqlEngine.SqlEngineSetupPrivate" />
+    </ConfigurationAction>
+  </Configuration>
+  <!-- NLRegS/Sni Configuration Actions -->
+  <Configuration Id="SQL_SQL14_OldSniServerUnConfig">
+    <ConfigurationAction Id="SQL_SQL14_SniServerConfigAction_Remove_atPreuninstall" Scenario="uninstall" Timing="Preuninstall" ExtensionId="SqlConfigBase" Action="SlpConfigAction">
+      <ActionData Id="ConfigObjectType" Value="Microsoft.SqlServer.Configuration.SniServer.SniServerConfigurationPrivate" />
+    </ConfigurationAction>
+  </
